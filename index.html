@@ -9,8 +9,8 @@
 <div class="topnav" id="myTopnav">
   <a href="/"><img class="logo" src="Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></a>
   <a class="spacer"></a>
-  <a class="nav-item" href="/">Home</a>
-  <a class="nav-item" href="minesweeper.html">Minesweeper</a>
+  <a class="nav-item" id='Home' href="/">Home</a>
+  <a class="nav-item" id='Minesweeper' href="minesweeper.html">Minesweeper</a>
   <a class="nav-item" href="dokustash-generator.html">Dokustash Generator</a>
   <a class="nav-item" href="doku-banner-editor.html">Dokucraft Banner Editor</a>
   <div class="dropdown">
@@ -35,7 +35,11 @@
 
 <script>
 function checkActive() {
-  if 
+  if (document.location.pathname == '/Website/') {
+    document.getElementById('Home').class = 'nav-item active'
+  } else if (document.location.pathname == '/Website/minesweeper.html') {
+    document.getElementById('Minesweeper').class = 'nav-item active'
+  } else if
 }
 </script>
 <script>
