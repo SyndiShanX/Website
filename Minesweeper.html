@@ -1,12 +1,38 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html>
 <head>
-<title>Minesweeper</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="description" content="An App made to Play Minesweeper via HTML/JavaScript."/>
-<meta name="author" content="SyndiShanX"/>
-<meta name="language" content="English">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="Navbar.css">
 </head>
-<body style="background-color:#1A1A1A;" onload='generate_dif()'>
+<body>
+<div class="topnav" id="myTopnav">
+  <a href="/"><img class="logo" src="Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></a>
+  <a class="spacer"></a>
+  <a class="nav-item" id='Home' href="/">Home</a>
+  <a class="nav-item" id='Minesweeper' href="Minesweeper.html">Minesweeper</a>
+  <a class="nav-item" href="Dokustash-Generator.html">Dokustash Generator</a>
+  <a class="nav-item" href="Dokucraft-Banner-Editor.html">Dokucraft Banner Editor</a>
+  <div class="dropdown">
+    <button class="dropbtn">Black Ops 4<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+      <a href="BlackOps4/Voyage_of_Despair.html">Voyage of Despair</a>
+      <a href="BlackOps4/Voyage_of_Despair_Tool.html">Voyage of Despair Tool</a>
+      <a href="BlackOps4/IX.html">IX</a>
+      <a href="BlackOps4/Blood_of_The_Dead.html">Blood of The Dead</a>
+      <a href="BlackOps4/Classified.html">Classified</a>
+      <a href="BlackOps4/Dead_of_The_Night.html">Dead of The Night</a>
+      <a href="BlackOps4/Stake_Knife.html">Stake Knife</a>
+      <a href="BlackOps4/Ancient_Evil.html">Ancient Evil</a>
+      <a href="BlackOps4/Alpha_Omega.html">Alpha Omega</a>
+      <a href="BlackOps4/Alpha_Omega_Tool.html">Alpha Omega Tool</a>
+      <a href="BlackOps4/Tag_Der_Toten.html">Tag Der Toten</a>
+      <a href="BlackOps4/BO4_Gold_Weapons.html">BO4 Gold Weapons</a>
+      <a href="BlackOps4/Random_Map.html">Random Map</a>
+    </div>
+  </div> 
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
 <div id="content_text">
 <style type="text/css">
 	#minesweeper {
@@ -35,15 +61,15 @@
 		color: white !important;
 	}
 </style>
-<script src="https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/minesweepergame.js"></script>
+<script src="Minesweeper/Script/Minesweeper.js"></script>
 <audio id="win">
-  <source src="https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/win.mp3" type="audio/mp3">
+  <source src="Minesweeper/Sounds/Win.mp3" type="audio/mp3">
 </audio>
 <audio id="fail">
-  <source src="https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/explosion.ogg" type="audio/ogg">
+  <source src="Minesweeper/Sounds/Explosion.ogg" type="audio/ogg">
 </audio>
 <audio id="click">
-  <source src="https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/click.ogg" type="audio/ogg">
+  <source src="Minesweeper/Sounds/Click.ogg" type="audio/ogg">
 </audio>
 <script>
 var win = document.getElementById("win");
@@ -70,5 +96,25 @@ generate(14,14,30);
 update();
 </script>
 </div>
+
+<script>
+function checkActive() {
+  if (document.location.pathname == '/Website/') {
+    document.getElementById('Home').class = 'nav-item active'
+  } else if (document.location.pathname == '/Website/minesweeper.html') {
+    document.getElementById('Minesweeper').class = 'nav-item active'
+  }
+}
+</script>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 </body>
 </html>

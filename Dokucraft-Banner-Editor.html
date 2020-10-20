@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>SyndiShanX - Dokucraft Banner Editor</title>
+<meta name="description" content="An App to Edit Banners with Dokucraft Textures" />
+<meta name="keywords" content="Syn,SyndiShanx,Syndi,Doku,Craft,Banner,Editor,Dokycraft,Maker" />
+<link rel="icon" href="https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/skin_head_128x128.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="qeSloIXAHLVXYhXdlhSVH1zfOrsU-VSAiVtoM8K74n4" />
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1601425424" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {font-family:"Montserrat" !important;color:#4caac9 !important;}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Montserrat" !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {font-style:normal !important;}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-size:14px !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {font-size:19px !important;}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-size:48px !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+
+		<script src='files/templateArtifacts.js?1600877377'></script>
+<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='UNSET'; </script><script>_W = _W || {};
+			_W.customerLocale = "en_US";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "US";
+			_W.storeCurrency = "USD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "435220717303324016";
+			com_userID = "17142170";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"539932998850973093","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"996059520931518199","title":"Minesweeper","url":"minesweeper.html","target":"","nav_menu":false,"nonclickable":false},{"id":"182542068296417394","title":"Dokustash Generator","url":"dokustash-generator.html","target":"","nav_menu":false,"nonclickable":false},{"id":"859817518253771122","title":"Dokucraft Banner Editor","url":"doku-banner-editor.html","target":"","nav_menu":false,"nonclickable":false},{"id":"159405721227985059","title":"Tag Der Toten","url":"tagdertoten.html","target":"","nav_menu":false,"nonclickable":false},{"id":"816603422819521819","title":"Alpha Omega","url":"alphaomega.html","target":"","nav_menu":false,"nonclickable":false},{"id":"283624678796186908","title":"Ancient Evil","url":"ancientevil.html","target":"","nav_menu":false,"nonclickable":false},{"id":"607142694694296294","title":"Blood of The Dead","url":"bloodofthedead.html","target":"","nav_menu":false,"nonclickable":false},{"id":"293910381476769789","title":"IX","url":"ix.html","target":"","nav_menu":false,"nonclickable":false},{"id":"338174534168344521","title":"Classified","url":"classified.html","target":"","nav_menu":false,"nonclickable":false},{"id":"508770839546990847","title":"Dead of The Night","url":"deadofthenight.html","target":"","nav_menu":false,"nonclickable":false},{"id":"967743908781468682","title":"Stake Knife","url":"stakeknife.html","target":"","nav_menu":false,"nonclickable":false},{"id":"441642870712446885","title":"Voyage of Despair","url":"voyageofdespair.html","target":"","nav_menu":false,"nonclickable":false},{"id":"392374161877971484","title":"Voyage of Despair Tool","url":"voyageofdespairtool.html","target":"","nav_menu":false,"nonclickable":false},{"id":"683770241421087864","title":"Alpha Omega Tool","url":"alphaomegatool.html","target":"","nav_menu":false,"nonclickable":false},{"id":"927579666647050265","title":"Random Map Generator","url":"randommap.html","target":"","nav_menu":false,"nonclickable":false},{"id":"544066061745232335","title":"MW Gold Weapons","url":"mw-gold-weapons.html","target":"","nav_menu":false,"nonclickable":false},{"id":"924312809671068904","title":"Gold Weapons","url":"goldweapons.html","target":"","nav_menu":false,"nonclickable":false},{"id":"418946629534681251","title":"Challenges","url":"challenges.html","target":"","nav_menu":false,"nonclickable":false},{"id":"700354758594864692","title":"The Final Reich","url":"thefinalreich.html","target":"","nav_menu":false,"nonclickable":false},{"id":"286438871186796765","title":"Shadows of Evil","url":"shadowsofevil.html","target":"","nav_menu":false,"nonclickable":false},{"id":"322852059995865875","title":"GTA V Wheel Reference","url":"gtavwheelreference.html","target":"","nav_menu":false,"nonclickable":false}],
+			"859817518253771122",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		<script type="text/javascript" src="https://cdn.ywxi.net/app/weebly/trustmark.js?weeblySiteId=435220717303324016" async></script><script>console.log('McAfee SECURE Loaded');</script>
+	</head>
+	<body class="header-page  wsite-page-doku-banner-editor  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-dark"><div class="wrapper">
+    <div class="birdseye-header">
+      <div class="nav-wrap">
+        <div class="container">
+          <div class="logo"><span class="wsite-logo">
+
+	<a href="">
+		<img src="uploads/1/7/1/4/17142170/cut_1.png" alt="SyndiShanX" />
+	</a>
+
+</span></div>
+          <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg539932998850973093" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg996059520931518199" class="wsite-menu-item-wrap">
+			<a
+						href="minesweeper.html"
+				class="wsite-menu-item"
+				>
+				Minesweeper
+			</a>
+			
+		</li>
+		<li id="pg182542068296417394" class="wsite-menu-item-wrap">
+			<a
+						href="dokustash-generator.html"
+				class="wsite-menu-item"
+				>
+				Dokustash Generator
+			</a>
+			
+		</li>
+		<li id="active" class="wsite-menu-item-wrap">
+			<a
+						href="doku-banner-editor.html"
+				class="wsite-menu-item"
+				>
+				Dokucraft Banner Editor
+			</a>
+			
+		</li>
+		<li id="pg159405721227985059" class="wsite-menu-item-wrap">
+			<a
+						href="tagdertoten.html"
+				class="wsite-menu-item"
+				>
+				Tag Der Toten
+			</a>
+			
+		</li>
+		<li id="pg816603422819521819" class="wsite-menu-item-wrap">
+			<a
+						href="alphaomega.html"
+				class="wsite-menu-item"
+				>
+				Alpha Omega
+			</a>
+			
+		</li>
+		<li id="pg283624678796186908" class="wsite-menu-item-wrap">
+			<a
+						href="ancientevil.html"
+				class="wsite-menu-item"
+				>
+				Ancient Evil
+			</a>
+			
+		</li>
+		<li id="pg607142694694296294" class="wsite-menu-item-wrap">
+			<a
+						href="bloodofthedead.html"
+				class="wsite-menu-item"
+				>
+				Blood of The Dead
+			</a>
+			
+		</li>
+		<li id="pg293910381476769789" class="wsite-menu-item-wrap">
+			<a
+						href="ix.html"
+				class="wsite-menu-item"
+				>
+				IX
+			</a>
+			
+		</li>
+		<li id="pg338174534168344521" class="wsite-menu-item-wrap">
+			<a
+						href="classified.html"
+				class="wsite-menu-item"
+				>
+				Classified
+			</a>
+			
+		</li>
+		<li id="pg508770839546990847" class="wsite-menu-item-wrap">
+			<a
+						href="deadofthenight.html"
+				class="wsite-menu-item"
+				>
+				Dead of The Night
+			</a>
+			
+		</li>
+		<li id="pg967743908781468682" class="wsite-menu-item-wrap">
+			<a
+						href="stakeknife.html"
+				class="wsite-menu-item"
+				>
+				Stake Knife
+			</a>
+			
+		</li>
+		<li id="pg441642870712446885" class="wsite-menu-item-wrap">
+			<a
+						href="voyageofdespair.html"
+				class="wsite-menu-item"
+				>
+				Voyage of Despair
+			</a>
+			
+		</li>
+		<li id="pg392374161877971484" class="wsite-menu-item-wrap">
+			<a
+						href="voyageofdespairtool.html"
+				class="wsite-menu-item"
+				>
+				Voyage of Despair Tool
+			</a>
+			
+		</li>
+		<li id="pg683770241421087864" class="wsite-menu-item-wrap">
+			<a
+						href="alphaomegatool.html"
+				class="wsite-menu-item"
+				>
+				Alpha Omega Tool
+			</a>
+			
+		</li>
+		<li id="pg927579666647050265" class="wsite-menu-item-wrap">
+			<a
+						href="randommap.html"
+				class="wsite-menu-item"
+				>
+				Random Map Generator
+			</a>
+			
+		</li>
+		<li id="pg544066061745232335" class="wsite-menu-item-wrap">
+			<a
+						href="mw-gold-weapons.html"
+				class="wsite-menu-item"
+				>
+				MW Gold Weapons
+			</a>
+			
+		</li>
+		<li id="pg924312809671068904" class="wsite-menu-item-wrap">
+			<a
+						href="goldweapons.html"
+				class="wsite-menu-item"
+				>
+				Gold Weapons
+			</a>
+			
+		</li>
+		<li id="pg418946629534681251" class="wsite-menu-item-wrap">
+			<a
+						href="challenges.html"
+				class="wsite-menu-item"
+				>
+				Challenges
+			</a>
+			
+		</li>
+		<li id="pg700354758594864692" class="wsite-menu-item-wrap">
+			<a
+						href="thefinalreich.html"
+				class="wsite-menu-item"
+				>
+				The Final Reich
+			</a>
+			
+		</li>
+		<li id="pg286438871186796765" class="wsite-menu-item-wrap">
+			<a
+						href="shadowsofevil.html"
+				class="wsite-menu-item"
+				>
+				Shadows of Evil
+			</a>
+			
+		</li>
+		<li id="pg322852059995865875" class="wsite-menu-item-wrap">
+			<a
+						href="gtavwheelreference.html"
+				class="wsite-menu-item"
+				>
+				GTA V Wheel Reference
+			</a>
+			
+		</li>
+</ul>
+</div>
+          <label class="hamburger"><span></span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-wrap">
+      <div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-color" style="background-color: #1a1a1a;background-image: none;is_customized: 1;" >
+		<div class="wsite-section-content">
+			
+          <div class="container">
+            <div class="banner">
+				<div class="wsite-section-elements">
+					<div><div id="562478941720801263" align="inherit" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html lang="en">
+<head><script src="gdpr/gdprscript.js?buildTime=1234"></script>
+<meta charset="utf-8">
+<title>
+Minecraft Banners ::
+Miners Need Cool Shoes Skin Editor
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/banner.css">
+<style></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiI+PHBhdGggZmlsbD0iIzRiNGY1NiIgZD0iTTggMTUuNWw3LjUtNy41aC00LjV2LThoLTZ2OGgtNC41eiI+PC9wYXRoPjwvc3ZnPg==) no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+</head>
+<body id="unlogged" style="">
+<div class="container">
+<div id="content">
+<div class="banner">
+</div>
+<div id="banner" class="bg">
+<div id="hidey" class="hidey"></div>
+<div class="fix" id="main">
+ <div class="canvas-cont epic">
+ <div class="header"><div>Preview</div></div>
+ <div id="canvas-skew">
+ <div id="canvas-wave">
+ <div id="canvas">
+ <i ptn="base" id="base" clr="0"></i>
+ </div>
+ <div id="base-overlay"></div>
+ <div id="preview"></div>
+ </div>
+ </div>
+ <div class="canv-tool">
+ <div class="btn" onmousedown="chaos()">Randomize!</div>
+ <div class="btn" onmousedown="clearAll()">Clear All</div>
+ </div>
+ </div>
+ <div class="layers-cont" id="layers-cont">
+ <div class="header"><div>Layers</div></div>
+ <div id="layers">
+ <div class="layer vis">
+ <div class="layer-color white" title="white">
+ </div>
+ <div class="layer-pattern">
+ <div class="layer-hover">
+ <div class="layer-color-container">
+ <div class="tb-color black" title="black"></div>
+ <div class="tb-color gray" title="gray"></div>
+ <div class="tb-color light_gray" title="light_gray"></div>
+ <div class="tb-color white" title="white"></div>
+ <div class="tb-color pink" title="pink"></div>
+ <div class="tb-color magenta" title="magenta"></div>
+ <div class="tb-color purple" title="purple"></div>
+ <div class="tb-color blue" title="blue"></div>
+ <div class="tb-color cyan" title="cyan"></div>
+ <div class="tb-color light_blue" title="light_blue"></div>
+ <div class="tb-color green" title="green"></div>
+ <div class="tb-color lime" title="lime"></div>
+ <div class="tb-color yellow" title="yellow"></div>
+ <div class="tb-color orange" title="orange"></div>
+ <div class="tb-color brown" title="brown"></div>
+ <div class="tb-color red" title="red"></div>
+ </div>
+ </div>
+ <i class="tb-ptn" clr="0" ptn="base"></i>
+ </div><div class="layer-craft"><div class="craft-t"><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base"></div><div class="craft-u craft-base stick"></div><div class="craft-u craft-base"></div></div></div>
+ </div>
+ </div>
+ <div id="total"><div><span>6</span><div class="white craft-u craft-base"></div></div><div><span>1</span><div class="stick craft-u"></div></div></div>
+ </div>
+ <div class="toolbar-cont">
+ <div class="header"><div>Layer Creation</div></div>
+ <div id="toolbar">
+ <div id="toolbar-colors" onmousedown="colorsHandler(event)">
+ <div class="tb-color black sel" title="black"></div>
+ <div class="tb-color gray" title="gray"></div>
+ <div class="tb-color light_gray" title="light_gray"></div>
+ <div class="tb-color white" style="border: 1px solid #999"></div>
+ <div class="tb-color pink" title="pink"></div>
+ <div class="tb-color magenta" title="magenta"></div>
+ <div class="tb-color purple" title="purple"></div>
+ <div class="tb-color blue" title="blue"></div>
+ <div class="tb-color cyan" title="cyan"></div>
+ <div class="tb-color light_blue" title="light_blue"></div>
+ <div class="tb-color green" title="green"></div>
+ <div class="tb-color lime" title="lime"></div>
+ <div class="tb-color yellow" title="yellow"></div>
+ <div class="tb-color orange" title="orange"></div>
+ <div class="tb-color brown" title="brown"></div>
+ <div class="tb-color red" title="red"></div>
+ </div>
+ <div id="toolbar-patterns" onmousedown="patternsHandler(event)" onmouseover="showPreview(event)" onmouseout="hidePreview(event)">
+ <div class="tbc"><i class="tb-ptn" ptn="gra" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="gru" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="bri" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="hh" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="hhb" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="vh" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="vhr" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="ts" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="bs" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="ls" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="rs" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="ld" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="rud" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="lud" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="rd" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="cr" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="dls" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="drs" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="sc" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="cs" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="ms" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="tl" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="bl" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="tr" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="br" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="tt" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="bt" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="mr" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="mc" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="bts" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="tts" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="ss" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="bo" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="cbo" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="flo" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="cre" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="sku" clr="15"></i></div>
+ <div class="tbc"><i class="tb-ptn" ptn="moj" clr="15"></i></div>
+ </div>
+ </div>
+ <div class="overtool">
+ <div class="header">
+ <div>Share Code</div>
+ </div>
+ <input type="text" id="url" onclick="this.select()">
+ </div>
+ <div class="header"><div>Generate Command</div></div>
+ <div class="generate">
+ <div class="button" onclick="jsonOutput(0)">/give</div>
+ <div class="button" onclick="jsonOutput(1)">/setblock</div>
+ <div class="button" onclick="jsonOutput(2)">/replaceitem</div>
+ <span id="scrdl"><span></span></span>
+ <textarea id="code" onclick="this.select()"></textarea>
+ </div>
+ </div>
+ </div>
+<img src="https://i.imgur.com/AWtQBqG.png">
+<div id="saved-gal-cont" class="hidden">
+<div id="saved-gal"></div>
+<div class="saved-add" id="saved-add"></div><div class="saved-addall hidden" id="saved-addall"></div>
+</div>
+</div>
+</div>
+<script src="https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/jquery.min.js"></script>
+<script src="https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/banner.js"></script>
+</body>
+</html></div>
+
+
+
+</div>
+				</div>
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-36" style="height: auto;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<div id="220467655160360538"><div><style type="text/css">
+	#element-73a41404-6456-497e-82c2-95110bb52766 a.back-to-top {
+  display: none;
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  bottom: 70px;
+  background: #35AFEA url("//marketplace.editmysite.com/uploads/b/marketplace-elements-569198776394566218-1.0.1/assets/up-arrow.png") no-repeat center 43%;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+#element-73a41404-6456-497e-82c2-95110bb52766 a.back-to-top.back-to-top-left {
+  left: 30px;
+}
+#element-73a41404-6456-497e-82c2-95110bb52766 a.back-to-top.back-to-top-right {
+  right: 30px;
+}
+
+</style><div id="element-73a41404-6456-497e-82c2-95110bb52766" data-platform-element-id="569198776394566218-1.0.1" class="platform-element-contents">
+	<a href="#" class="back-to-top back-to-top-right"></a>
+
+</div>
+<div style="clear:both;"></div><script type="text/javascript" class="element-script">function setupElement220467655160360538() {
+	var requireFunc = window.platformElementRequire || window.require;
+
+	// Relies on a global require, specific to platform elements
+	requireFunc([
+		'w-global',
+		'underscore',
+		'jquery',
+		'backbone',
+		'util/platform/elements/PlatformElement',
+		'util/platform/elements/PlatformElementSettings'
+	], function(
+		_W,
+		_,
+		$,
+		Backbone,
+		PlatformElement,
+		PlatformElementSettings
+	) {
+		var dependencies = null || [];
+		var platform_element_id = "569198776394566218-1.0.1";
+
+		if (typeof _W.loadedPlatformDependencies === 'undefined') {
+			_W.loadedPlatformDependencies = [];
+		}
+
+		if (typeof _W.platformElements === 'undefined') {
+			_W.platformElements = [];
+		}
+
+		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+			_W.platformElements[platform_element_id] = {};
+			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+		}
+
+		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
+			_.reduce(dependencies, function(promise, nextScript){
+				_W.loadedPlatformDependencies.push(nextScript);
+				return promise.then(function(){
+					return $.getScript(nextScript);
+				});
+			}, $().promise()).then(function(){
+				_W.platformElements[platform_element_id].deferredObject.resolve();
+			});
+		}
+
+		if (dependencies.length === 0){
+			_W.platformElements[platform_element_id].deferredObject.resolve();
+		}
+
+		_W.platformElements[platform_element_id].deferredPromise.done(function(){
+			var _ElementDefinition = PlatformElement.extend({
+    initialize: function(options) {
+	    this.amountScrolled = 300;
+
+	    var self = this;
+
+	    $(window).bind('scroll', function (ev) {
+		    self.checkAppear();
+	    });
+    },
+
+    events: {
+    	"click a.back-to-top": "goBackToTop"
+    },
+
+	goBackToTop: function() {
+
+		var animateTimeMS = 1000 - (parseInt(this.settings.get("scroll_speed")) * 100);
+
+		$('html, body').animate({
+			scrollTop: 0
+		}, animateTimeMS);
+		
+		return false;
+	},
+
+	checkAppear: function() {
+		if ( $(window).scrollTop() > this.amountScrolled ) {
+			$('a.back-to-top').fadeIn('slow');
+		} else {
+			$('a.back-to-top').fadeOut('slow');
+		}
+	}
+});
+
+;
+
+			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+				var _ElementDefinition = PlatformElement.extend({});
+			}
+
+			var _Element = _ElementDefinition.extend({
+				initialize: function() {
+					// we still want to call the initialize function defined by the developer
+					// however, we don't want to call it until placeholders have been replaced
+					this.placeholderInterval = setInterval(function() {
+						// so use setInterval to check for placeholders.
+						if (this.$('.platform-element-child-placeholder').length == 0) {
+							clearInterval(this.placeholderInterval);
+							this.constructor.__super__.initialize.apply(this);
+						}
+					}.bind(this), 100);
+				}
+			});
+
+			_Element.prototype.settings = new PlatformElementSettings({"icon_size_each":[{"icon_size_index":0},{"icon_size_index":1},{"icon_size_index":2},{"icon_size_index":3},{"icon_size_index":4},{"icon_size_index":5},{"icon_size_index":6},{"icon_size_index":7},{"icon_size_index":8},{"icon_size_index":9},{"icon_size_index":10},{"icon_size_index":11},{"icon_size_index":12},{"icon_size_index":13},{"icon_size_index":14},{"icon_size_index":15},{"icon_size_index":16},{"icon_size_index":17},{"icon_size_index":18},{"icon_size_index":19},{"icon_size_index":20},{"icon_size_index":21},{"icon_size_index":22},{"icon_size_index":23},{"icon_size_index":24},{"icon_size_index":25},{"icon_size_index":26},{"icon_size_index":27},{"icon_size_index":28},{"icon_size_index":29},{"icon_size_index":30},{"icon_size_index":31},{"icon_size_index":32},{"icon_size_index":33},{"icon_size_index":34},{"icon_size_index":35},{"icon_size_index":36},{"icon_size_index":37},{"icon_size_index":38},{"icon_size_index":39},{"icon_size_index":40},{"icon_size_index":41},{"icon_size_index":42},{"icon_size_index":43},{"icon_size_index":44},{"icon_size_index":45},{"icon_size_index":46},{"icon_size_index":47},{"icon_size_index":48},{"icon_size_index":49},{"icon_size_index":50},{"icon_size_index":51},{"icon_size_index":52},{"icon_size_index":53},{"icon_size_index":54},{"icon_size_index":55},{"icon_size_index":56},{"icon_size_index":57},{"icon_size_index":58},{"icon_size_index":59}],"scroll_speed_each":[{"scroll_speed_index":0},{"scroll_speed_index":1},{"scroll_speed_index":2}],"margin_bottom_each":[{"margin_bottom_index":0},{"margin_bottom_index":1},{"margin_bottom_index":2},{"margin_bottom_index":3},{"margin_bottom_index":4},{"margin_bottom_index":5},{"margin_bottom_index":6},{"margin_bottom_index":7},{"margin_bottom_index":8},{"margin_bottom_index":9},{"margin_bottom_index":10},{"margin_bottom_index":11},{"margin_bottom_index":12},{"margin_bottom_index":13},{"margin_bottom_index":14},{"margin_bottom_index":15},{"margin_bottom_index":16},{"margin_bottom_index":17},{"margin_bottom_index":18},{"margin_bottom_index":19},{"margin_bottom_index":20},{"margin_bottom_index":21},{"margin_bottom_index":22},{"margin_bottom_index":23},{"margin_bottom_index":24},{"margin_bottom_index":25},{"margin_bottom_index":26},{"margin_bottom_index":27},{"margin_bottom_index":28},{"margin_bottom_index":29},{"margin_bottom_index":30},{"margin_bottom_index":31},{"margin_bottom_index":32},{"margin_bottom_index":33},{"margin_bottom_index":34},{"margin_bottom_index":35},{"margin_bottom_index":36},{"margin_bottom_index":37},{"margin_bottom_index":38},{"margin_bottom_index":39},{"margin_bottom_index":40},{"margin_bottom_index":41},{"margin_bottom_index":42},{"margin_bottom_index":43},{"margin_bottom_index":44},{"margin_bottom_index":45},{"margin_bottom_index":46},{"margin_bottom_index":47},{"margin_bottom_index":48},{"margin_bottom_index":49},{"margin_bottom_index":50},{"margin_bottom_index":51},{"margin_bottom_index":52},{"margin_bottom_index":53},{"margin_bottom_index":54},{"margin_bottom_index":55},{"margin_bottom_index":56},{"margin_bottom_index":57},{"margin_bottom_index":58},{"margin_bottom_index":59},{"margin_bottom_index":60},{"margin_bottom_index":61},{"margin_bottom_index":62},{"margin_bottom_index":63},{"margin_bottom_index":64},{"margin_bottom_index":65},{"margin_bottom_index":66},{"margin_bottom_index":67},{"margin_bottom_index":68},{"margin_bottom_index":69}],"margin_horizontal_each":[{"margin_horizontal_index":0},{"margin_horizontal_index":1},{"margin_horizontal_index":2},{"margin_horizontal_index":3},{"margin_horizontal_index":4},{"margin_horizontal_index":5},{"margin_horizontal_index":6},{"margin_horizontal_index":7},{"margin_horizontal_index":8},{"margin_horizontal_index":9},{"margin_horizontal_index":10},{"margin_horizontal_index":11},{"margin_horizontal_index":12},{"margin_horizontal_index":13},{"margin_horizontal_index":14},{"margin_horizontal_index":15},{"margin_horizontal_index":16},{"margin_horizontal_index":17},{"margin_horizontal_index":18},{"margin_horizontal_index":19},{"margin_horizontal_index":20},{"margin_horizontal_index":21},{"margin_horizontal_index":22},{"margin_horizontal_index":23},{"margin_horizontal_index":24},{"margin_horizontal_index":25},{"margin_horizontal_index":26},{"margin_horizontal_index":27},{"margin_horizontal_index":28},{"margin_horizontal_index":29}],"background_color":"#35AFEA","icon_size":60,"scroll_speed":3,"margin_bottom":70,"left_or_right":"right","margin_horizontal":30});
+			_Element.prototype.settings.page_element_id = "220467655160360538";
+
+			_Element.prototype.element_id = "73a41404-6456-497e-82c2-95110bb52766";
+			_Element.prototype.user_id = "17142170";
+			_Element.prototype.site_id = "435220717303324016";
+			_Element.prototype.assets_path = "//marketplace.editmysite.com/uploads/b/marketplace-elements-569198776394566218-1.0.1/assets/";
+			new _Element({
+				el: '#element-73a41404-6456-497e-82c2-95110bb52766'
+			});
+		});
+	});
+
+}
+
+if (typeof document.documentElement.appReady == 'undefined') {
+	document.documentElement.appReady = 0;
+}
+
+if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+	setupElement220467655160360538();
+} else if (document.createEvent && document.addEventListener) {
+	document.addEventListener('appReady', setupElement220467655160360538, false);
+} else {
+	document.documentElement.attachEvent('onpropertychange', function(event){
+		if (event.propertyName == 'appReady') {
+			setupElement220467655160360538();
+		}
+	});
+}
+
+</script></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
+    </div><!-- end footer-wrap -->
+  </div><!-- /.wrapper -->
+
+  <div id="navMobile" class="nav mobile-nav">
+    <label class="hamburger"><span></span></label>
+    <ul class="wsite-menu-default">
+    		<li id="pg539932998850973093" class="wsite-menu-item-wrap">
+    			<a
+    						href="index.html"
+    				class="wsite-menu-item"
+    				>
+    				Home
+    			</a>
+    			
+    		</li>
+    		<li id="pg996059520931518199" class="wsite-menu-item-wrap">
+    			<a
+    						href="minesweeper.html"
+    				class="wsite-menu-item"
+    				>
+    				Minesweeper
+    			</a>
+    			
+    		</li>
+    		<li id="pg182542068296417394" class="wsite-menu-item-wrap">
+    			<a
+    						href="dokustash-generator.html"
+    				class="wsite-menu-item"
+    				>
+    				Dokustash Generator
+    			</a>
+    			
+    		</li>
+    		<li id="active" class="wsite-menu-item-wrap">
+    			<a
+    						href="doku-banner-editor.html"
+    				class="wsite-menu-item"
+    				>
+    				Dokucraft Banner Editor
+    			</a>
+    			
+    		</li>
+    		<li id="pg159405721227985059" class="wsite-menu-item-wrap">
+    			<a
+    						href="tagdertoten.html"
+    				class="wsite-menu-item"
+    				>
+    				Tag Der Toten
+    			</a>
+    			
+    		</li>
+    		<li id="pg816603422819521819" class="wsite-menu-item-wrap">
+    			<a
+    						href="alphaomega.html"
+    				class="wsite-menu-item"
+    				>
+    				Alpha Omega
+    			</a>
+    			
+    		</li>
+    		<li id="pg283624678796186908" class="wsite-menu-item-wrap">
+    			<a
+    						href="ancientevil.html"
+    				class="wsite-menu-item"
+    				>
+    				Ancient Evil
+    			</a>
+    			
+    		</li>
+    		<li id="pg607142694694296294" class="wsite-menu-item-wrap">
+    			<a
+    						href="bloodofthedead.html"
+    				class="wsite-menu-item"
+    				>
+    				Blood of The Dead
+    			</a>
+    			
+    		</li>
+    		<li id="pg293910381476769789" class="wsite-menu-item-wrap">
+    			<a
+    						href="ix.html"
+    				class="wsite-menu-item"
+    				>
+    				IX
+    			</a>
+    			
+    		</li>
+    		<li id="pg338174534168344521" class="wsite-menu-item-wrap">
+    			<a
+    						href="classified.html"
+    				class="wsite-menu-item"
+    				>
+    				Classified
+    			</a>
+    			
+    		</li>
+    		<li id="pg508770839546990847" class="wsite-menu-item-wrap">
+    			<a
+    						href="deadofthenight.html"
+    				class="wsite-menu-item"
+    				>
+    				Dead of The Night
+    			</a>
+    			
+    		</li>
+    		<li id="pg967743908781468682" class="wsite-menu-item-wrap">
+    			<a
+    						href="stakeknife.html"
+    				class="wsite-menu-item"
+    				>
+    				Stake Knife
+    			</a>
+    			
+    		</li>
+    		<li id="pg441642870712446885" class="wsite-menu-item-wrap">
+    			<a
+    						href="voyageofdespair.html"
+    				class="wsite-menu-item"
+    				>
+    				Voyage of Despair
+    			</a>
+    			
+    		</li>
+    		<li id="pg392374161877971484" class="wsite-menu-item-wrap">
+    			<a
+    						href="voyageofdespairtool.html"
+    				class="wsite-menu-item"
+    				>
+    				Voyage of Despair Tool
+    			</a>
+    			
+    		</li>
+    		<li id="pg683770241421087864" class="wsite-menu-item-wrap">
+    			<a
+    						href="alphaomegatool.html"
+    				class="wsite-menu-item"
+    				>
+    				Alpha Omega Tool
+    			</a>
+    			
+    		</li>
+    		<li id="pg927579666647050265" class="wsite-menu-item-wrap">
+    			<a
+    						href="randommap.html"
+    				class="wsite-menu-item"
+    				>
+    				Random Map Generator
+    			</a>
+    			
+    		</li>
+    		<li id="pg544066061745232335" class="wsite-menu-item-wrap">
+    			<a
+    						href="mw-gold-weapons.html"
+    				class="wsite-menu-item"
+    				>
+    				MW Gold Weapons
+    			</a>
+    			
+    		</li>
+    		<li id="pg924312809671068904" class="wsite-menu-item-wrap">
+    			<a
+    						href="goldweapons.html"
+    				class="wsite-menu-item"
+    				>
+    				Gold Weapons
+    			</a>
+    			
+    		</li>
+    		<li id="pg418946629534681251" class="wsite-menu-item-wrap">
+    			<a
+    						href="challenges.html"
+    				class="wsite-menu-item"
+    				>
+    				Challenges
+    			</a>
+    			
+    		</li>
+    		<li id="pg700354758594864692" class="wsite-menu-item-wrap">
+    			<a
+    						href="thefinalreich.html"
+    				class="wsite-menu-item"
+    				>
+    				The Final Reich
+    			</a>
+    			
+    		</li>
+    		<li id="pg286438871186796765" class="wsite-menu-item-wrap">
+    			<a
+    						href="shadowsofevil.html"
+    				class="wsite-menu-item"
+    				>
+    				Shadows of Evil
+    			</a>
+    			
+    		</li>
+    		<li id="pg322852059995865875" class="wsite-menu-item-wrap">
+    			<a
+    						href="gtavwheelreference.html"
+    				class="wsite-menu-item"
+    				>
+    				GTA V Wheel Reference
+    			</a>
+    			
+    		</li>
+    </ul>
+  </div>
+
+	
+
+	<script type="text/javascript" src="files/theme/plugins.js"></script>
+  <script type="text/javascript" src="files/theme/custom.js"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="http://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234"></script>
+
+		
+	</body>
+</html>
