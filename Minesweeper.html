@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="Navbar.css">
 </head>
-<body>
+<body onload='generate_dif()'>
 <div class="topnav" id="myTopnav">
   <a href="/"><img class="logo" src="Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></a>
   <a class="spacer"></a>
@@ -101,7 +101,7 @@ update();
 function checkActive() {
   if (document.location.pathname == '/Website/') {
     document.getElementById('Home').class = 'nav-item active'
-  } else if (document.location.pathname == '/Website/minesweeper.html') {
+  } else if (document.location.pathname == '/Website/Minesweeper.html') {
     document.getElementById('Minesweeper').class = 'nav-item active'
   }
 }
