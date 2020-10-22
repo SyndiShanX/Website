@@ -122,7 +122,7 @@ img.logo:hover {
 
 .dropdown-content a:hover {
   background-color: #222;
-  color: black;
+  color: white;
 }
 
 .dropdown:hover .dropdown-content {
