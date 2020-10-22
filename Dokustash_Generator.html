@@ -1,0 +1,327 @@
+<!--Nav Template Start-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Random Stash Generator</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="Images/Global/Icon.png">
+<link rel="stylesheet" href="Navbar.css">
+<style type="text/css">
+textarea {
+ font-size: 25px;
+ color: #248d6c;
+ background-color: #383838;
+ border: none;
+ resize:none;
+}
+input {
+ background-color: #383838;
+ border: none;
+}
+font {
+font-family: 'Montserrat', sans-serif;
+letter-spacing: 0.15em;
+}
+a.syn {
+ color: #35AFEA;
+}
+.myButtonBlue {
+	-webkit-box-shadow:inset 0px -3px 7px 0px #8a8a8a;
+	box-shadow:inset 0px -3px 7px 0px #8a8a8a;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #35AFEA), color-stop(1, #1a1a1a));
+	background:-webkit-linear-gradient(top, #35AFEA 5%, #1a1a1a 100%);
+	background:-o-linear-gradient(top, #35AFEA 5%, #1a1a1a 100%);
+	background:-ms-linear-gradient(top, #35AFEA 5%, #1a1a1a 100%);
+	background:linear-gradient(to bottom, #35AFEA 5%, #1a1a1a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#35AFEA', endColorstr='#1a1a1a',GradientType=0);
+	background-color:#35AFEA;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+.myButtonBlue:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1a1a1a), color-stop(1, #35AFEA));
+	background:-webkit-linear-gradient(top, #1a1a1a 5%, #35AFEA 100%);
+	background:-o-linear-gradient(top, #1a1a1a 5%, #35AFEA 100%);
+	background:-ms-linear-gradient(top, #1a1a1a 5%, #35AFEA 100%);
+	background:linear-gradient(to bottom, #1a1a1a 5%, #35AFEA 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a1a1a', endColorstr='#35AFEA',GradientType=0);
+	background-color:#1a1a1a;
+}
+.myButtonBlue:active {
+	position:relative;
+	top:1px;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cbf2a), color-stop(1, #44c767));
+	background:-moz-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:-webkit-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:-o-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:-ms-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cbf2a', endColorstr='#44c767',GradientType=0);
+	background-color:#5cbf2a;
+}
+.myButtonBlue:focus {
+	position:relative;
+	top:1px;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #35AFEA), color-stop(1, #1a1a1a));
+	background:-moz-linear-gradient(top, #35AFEA 5%, #1a1a1a 100%);
+	background:-webkit-linear-gradient(top, #35AFEA 5%, #1a1a1a 100%);
+	background:-o-linear-gradient(top, #35AFEA 5%, #1a1a1a 100%);
+	background:-ms-linear-gradient(top, #35AFEA 5%, #1a1a1a 100%);
+	background:linear-gradient(to bottom, #35AFEA 5%, #1a1a1a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#35AFEA', endColorstr='#1a1a1a',GradientType=0);
+	background-color:#35AFEA;
+}
+</style>
+</head>
+<body onLoad="{getJSON();}">
+<div class="topnav" id="myTopnav">
+  <a href="/"><img class="logo" src="Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></a>
+  <a class="spacer"></a>
+  <a class="nav-item" id='Home-Page' href="/">Home</a>
+  <a class="nav-item" id='Minesweeper-Page' href="Minesweeper/Minesweeper.html">Minesweeper</a>
+  <a class="nav-item" href="Dokustash_Generator.html">Dokustash Generator</a>
+  <a class="nav-item" href="DokucraftBannerEditor/Dokucraft_Banner_Editor.html">Dokucraft Banner Editor</a>
+  <div class="dropdown">
+    <div class="dropbtn">Black Ops 4<i class="fa fa-caret-down"></i></div>
+    <div class="dropdown-content">
+      <a href="BlackOps4/Voyage_of_Despair.html">Voyage of Despair</a>
+      <a href="BlackOps4/Voyage_of_Despair_Tool.html">Voyage of Despair Tool</a>
+      <a href="BlackOps4/IX.html">IX</a>
+      <a href="BlackOps4/Blood_of_The_Dead.html">Blood of The Dead</a>
+      <a href="BlackOps4/Classified.html">Classified</a>
+      <a href="BlackOps4/Dead_of_The_Night.html">Dead of The Night</a>
+      <a href="BlackOps4/Stake_Knife.html">Stake Knife</a>
+      <a href="BlackOps4/Ancient_Evil.html">Ancient Evil</a>
+      <a href="BlackOps4/Alpha_Omega.html">Alpha Omega</a>
+      <a href="BlackOps4/Alpha_Omega_Tool.html">Alpha Omega Tool</a>
+      <a href="BlackOps4/Tag_Der_Toten.html">Tag Der Toten</a>
+      <a href="BlackOps4/BO4_Gold_Weapons.html">BO4 Gold Weapons</a>
+      <a href="BlackOps4/Random_Map.html">Random Map</a>
+    </div>
+  </div> 
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<div class="Main" align="center">
+<!--Nav Template End-->
+
+<font color="#8d2424" size="8">
+Random Stash Generator
+<br></font>
+<font color="#8d5024" size="4">
+Between
+</font>
+<textarea id="lownumber" rows="1" cols="5" maxlength="5">1</textarea>
+<font color="#8d7824" size="4">
+and
+</font>
+<textarea id="highnumber" rows="1" cols="5" maxlength="5"></textarea>
+<br><br>
+<button class="myButtonBlue" id="generateNum"
+onClick="
+{
+rollNumber();
+genStashFileData();
+}"
+>Generate</button>
+<br><br><textarea readonly id="randomnumber" rows="1" cols="5" maxlength="5"></textarea>
+<br><br><a class="syn" href="" target="_blank" alt="DokuStash" id="DokuLinkElement"></a>
+<br><br><font color="#8d7824" size="6">
+<p id="DokuContributorElement"></p>
+</font>
+<br><img id="DokuIMGElement" src="https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/skin_head_128x128.png" width="128" height="128">
+<br><br><font color="Purple" size="6">
+<p id="DokuTagElement"></p>
+</font>
+
+<!--Nav Template Start-->
+</div>
+<!--Custom Scripts-->
+<script>
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
+</script>
+<script>
+function getJSON() {
+    "use strict";
+    var fileName = "",
+		stashFiles,
+        StashID;
+		
+		StashID = document.getElementById("randomnumber").value;
+		
+		async function getFileData() {
+		await fetch('https://dokucraft.co.uk/stash-files/files.json').then(res => res.json()).then(files => {
+			async function StashFileData() {
+				await sleep(500);
+				
+				const fileNames = Object.keys(files)
+				window.stashFileNames = fileNames;
+
+				let maxID = 0
+				for (let fileName of fileNames) {
+					files[fileName].id = parseInt(fileName.match(/.+_(\d+)/)[1])
+					maxID = Math.max(maxID, files[fileName].id)
+				}
+				
+				fileNames.sort((a, b) => files[a].id - files[b].id)
+				window.stashFiles = files;
+				
+				maxID = Object.values(files).reduce((a,e) => a = Math.max(a, e.id), 0);
+				document.getElementById("highnumber").innerHTML = maxID;
+				
+				var stashRandomNumber = files[fileNames[Math.floor(Math.random()*fileNames.length)]].id
+				var numLowID = document.getElementById("lownumber").value
+				var numHighID = document.getElementById("highnumber").value
+
+				if (stashRandomNumber < numLowID) {
+					rollNumber()
+				}
+				if (stashRandomNumber > numHighID) {
+					rollNumber()
+				}
+				
+				document.getElementById("randomnumber").innerHTML = stashRandomNumber
+				genStashFileData()
+			}
+			StashFileData();
+			
+		})
+		}
+		getFileData();
+			
+}
+</script>
+<script>
+function genStashFileData() {
+    "use strict";
+    var DokuIMGWidth = "",
+        DokuIMGHeight,
+        DokuLink,
+        DokuIMGLink,
+		FileSize,
+		FileTags,
+		FileTags1,
+		StashFile0,
+		StashFile1,
+        StashID,
+		Contributor,
+        ContributorName,
+		StashFile,
+		StashIMGLink,
+		StashExtension1,
+		StashExtension2;
+		
+		StashID = document.getElementById("randomnumber").value;
+	
+	const nameOf = id => {
+	const bs = (s, e) => {
+		if (e < s) return null // No result
+	
+		const c = Math.floor((s + e) * .5)
+		if (stashFiles[stashFileNames[c]].id == id) {
+		return stashFileNames[c] // File found
+		}
+	
+		if (stashFiles[stashFileNames[c]].id < id) {
+		return bs(c + 1, e) // File is in upper half
+		} else {
+		return bs(s, c - 1) // File is in lower half
+		}
+	}
+	return bs(0, stashFileNames.length - 1)
+	}
+
+				console.log(nameOf(StashID))
+
+	StashFile = nameOf(StashID)
+	StashExtension1 = StashFile.split(".zip")
+	StashFile1 = nameOf(StashID)
+	
+	if (StashExtension1.length == "1") {
+		StashIMGLink = "https://dokucraft.co.uk/stash-files/files/";
+		
+	} else if (StashExtension1.length == "2") {
+		StashIMGLink = "https://dokucraft.co.uk/stash-files/thumbnails/";
+		StashExtension1 = StashFile.split(".zip");
+		StashExtension2 = StashExtension1[0] + ".png";
+		StashFile1 = StashExtension2;
+	}
+	
+	ContributorName = StashFile1.split("_" + StashID)
+	
+	Contributor = ContributorName[0]
+	
+	FileSize = (stashFiles[StashFile].S)
+	FileTags = (stashFiles[StashFile].T)
+	DokuIMGWidth = FileSize[0]
+	DokuIMGHeight = FileSize[1]
+	document.getElementById("DokuContributorElement").innerText = "Contributor: " + Contributor;
+	DokuLink = "https://dokucraft.co.uk/stash/?details=" + StashID;
+	document.getElementById("DokuLinkElement").innerHTML = DokuLink;
+	document.getElementById("DokuLinkElement").href = DokuLink;
+	DokuIMGLink = StashIMGLink + StashFile1;
+	document.getElementById("DokuIMGElement").src = DokuIMGLink;
+	document.getElementById("DokuIMGElement").width = DokuIMGWidth;
+	document.getElementById("DokuIMGElement").height = DokuIMGHeight;
+	if (FileTags == undefined) {
+	} else {
+	FileTags1 = FileTags.split(",")
+	document.getElementById("DokuTagElement").innerText = "Tags: " + FileTags1.join(', ');
+	}
+}
+</script>
+<script>
+function rollNumber() {
+	stashRandomNumber = stashFiles[stashFileNames[Math.floor(Math.random()*stashFileNames.length)]].id
+	numLowID = document.getElementById("lownumber").value
+	numHighID = document.getElementById("highnumber").value
+	var numLowID = document.getElementById("lownumber").value
+				var numHighID = document.getElementById("highnumber").value
+
+				if (stashRandomNumber < numLowID) {
+					rollNumber()
+				}
+				if (stashRandomNumber > numHighID) {
+					rollNumber()
+				}
+	document.getElementById("randomnumber").innerHTML = stashRandomNumber
+}
+</script>
+<!--Custom Scripts-->
+<script>
+function checkActive() {
+  if (document.location.pathname == '/Website/') {
+    document.getElementById('Home').class = 'nav-item active'
+  } else if (document.location.pathname == '/Website/Minesweeper.html') {
+    document.getElementById('Minesweeper').class = 'nav-item active'
+  }
+}
+</script>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>
+<!--Nav Template End-->
