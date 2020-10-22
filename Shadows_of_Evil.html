@@ -1,5 +1,12 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!--Nav Template Start-->
+<html>
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="Images/Global/Icon.png">
+<link rel="stylesheet" href="Navbar.css">
 <style type="text/css">
 .show{display:block;}
 .hide{display:none;}
@@ -114,14 +121,37 @@
 	background-color:#A67C00;
 }
 </style>
-<title>Shadows of Evil Easter Egg Tool</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="description" content="An App made to Act as a Way to Store information regarding the Easter Egg on The Final Reich."/>
-<meta name="keywords" content="Syndi,ShanX,BO3,Shadows,of,Evil,Easter,Egg"/>
-<meta name="author" content="SyndiShanX"/>
-<meta name="language" content="English">
 </head>
-<body style="background-color:#1a1a1a;">
+<body>
+<div class="topnav" id="myTopnav">
+  <a href="/Website/"><img class="logo" src="Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></a>
+  <a class="spacer"></a>
+  <a class="nav-item" id='Home-Page' href="/Website/">Home</a>
+  <a class="nav-item" id='Minesweeper-Page' href="Minesweeper/Minesweeper.html">Minesweeper</a>
+  <a class="nav-item" href="Dokustash_Generator.html">Dokustash Generator</a>
+  <a class="nav-item" href="DokucraftBannerEditor/Dokucraft_Banner_Editor.html">Dokucraft Banner Editor</a>
+  <div class="dropdown">
+    <div class="dropbtn">Black Ops 4<i class="fa fa-caret-down"></i></div>
+    <div class="dropdown-content">
+      <a href="BlackOps4/Voyage_of_Despair.html">Voyage of Despair</a>
+      <a href="BlackOps4/Voyage_of_Despair_Tool.html">Voyage of Despair Tool</a>
+      <a href="BlackOps4/IX.html">IX</a>
+      <a href="BlackOps4/Blood_of_The_Dead.html">Blood of The Dead</a>
+      <a href="BlackOps4/Classified.html">Classified</a>
+      <a href="BlackOps4/Dead_of_The_Night.html">Dead of The Night</a>
+      <a href="BlackOps4/Stake_Knife.html">Stake Knife</a>
+      <a href="BlackOps4/Ancient_Evil.html">Ancient Evil</a>
+      <a href="BlackOps4/Alpha_Omega.html">Alpha Omega</a>
+      <a href="BlackOps4/Alpha_Omega_Tool.html">Alpha Omega Tool</a>
+      <a href="BlackOps4/Tag_Der_Toten.html">Tag Der Toten</a>
+
+      <a href="BlackOps4/Random_Map.html">Random Map</a>
+    </div>
+  </div> 
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<div class="Main" align="center">
+<!--Nav Template End-->
 
 <script>
 function selected(id) {
@@ -437,7 +467,7 @@ function selected(id) {
 
 <div id="Symbol1" align="center">
 	<br>
-	<img src="https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/allsymbols.png" alt="All">
+	<img src="Images/Symbols/allsymbols.png" alt="All">
 	<br>
 	<button class="myButtonBlue" id="1" onClick="chooseSymbol1('Cross');selected(1)">Choose</button>
 	<button class="myButtonBlue" id="2" onClick="chooseSymbol1('Single');selected(2)">Choose</button>
@@ -459,7 +489,7 @@ function chooseSymbol1(choiceSOE1){
 
 <div id="Symbol2" align="center">
 	<br>
-	<img src="https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/allsymbols.png" alt="All">
+	<img src="Images/Symbols/allsymbols.png" alt="All">
 	<br>
     <button class="myButtonBlue" id="10" onClick="chooseSymbol2('Cross');selected(10)">Choose</button>
 	<button class="myButtonBlue" id="11" onClick="chooseSymbol2('Single');selected(11)">Choose</button>
@@ -481,7 +511,7 @@ function chooseSymbol2(choiceSOE2){
 
 <div id="Symbol3" align="center">
 	<br>
-	<img src="https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/allsymbols.png" alt="All">
+	<img src="Images/Symbols/allsymbols.png" alt="All">
 	<br>
     <button class="myButtonBlue" id="19" onClick="chooseSymbol3('Cross');selected(19)">Choose</button>
 	<button class="myButtonBlue" id="20" onClick="chooseSymbol3('Single');selected(20)">Choose</button>
@@ -590,9 +620,9 @@ SymbolImg3 = 'singledoublesingle';
 }
 
 function showSymbols() {
-show_image1('https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/' + SymbolImg1 + '.png');
-show_image2('https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/' + SymbolImg2 + '.png');
-show_image3('https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/' + SymbolImg3 + '.png');
+show_image1('Images/Symbols/' + SymbolImg1 + '.png');
+show_image2('Images/Symbols/' + SymbolImg2 + '.png');
+show_image3('Images/Symbols/' + SymbolImg3 + '.png');
 }
 
 function show_image1(SymbolImg1) {
@@ -646,5 +676,28 @@ showSymbols();
 </div>
 </td>
 </table>
+
+<!--Nav Template Start-->
+</div>
+<script>
+function checkActive() {
+  if (document.location.pathname == '/Website/') {
+    document.getElementById('Home').class = 'nav-item active'
+  } else if (document.location.pathname == '/Website/Minesweeper.html') {
+    document.getElementById('Minesweeper').class = 'nav-item active'
+  }
+}
+</script>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 </body>
 </html>
+<!--Nav Template End-->
