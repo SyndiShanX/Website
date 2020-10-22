@@ -1,75 +1,83 @@
+<!--Nav Template Start-->
 <html>
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minesweeper</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="Navbar.css">
+<link rel="icon" href="../Images/Global/Icon.png">
+<link rel="stylesheet" href="../Navbar.css">
+<style type="text/css">
+	#minesweeper {
+      margin:0px auto;
+	}
+	#box {
+      width:9px;
+      height:15px;
+      position:relative;
+      padding:5px 8px;
+      font-style:bold;
+      color:black;
+	}
+	#settings {
+      position:relative;
+      margin:0 auto;
+      width:400px;
+      text-align:center;
+	}
+	span,h2,div {
+      color:white;
+	}
+	button,select,input {
+	  background-color: #0e0e0e !important;
+	  border: 1px solid #000000;
+	  color: white !important;
+	}
+	h2 {
+	  font-size: 50px;
+	}
+</style>
 </head>
 <body onload='generate_dif()'>
 <div class="topnav" id="myTopnav">
-  <a href="/"><img class="logo" src="Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></a>
+  <a href="/"><img class="logo" src="../Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></a>
   <a class="spacer"></a>
-  <a class="nav-item" id='Home' href="/">Home</a>
-  <a class="nav-item" id='Minesweeper' href="Minesweeper.html">Minesweeper</a>
-  <a class="nav-item" href="Dokustash-Generator.html">Dokustash Generator</a>
-  <a class="nav-item" href="Dokucraft-Banner-Editor.html">Dokucraft Banner Editor</a>
+  <a class="nav-item" id='Home-Page' href="/">Home</a>
+  <a class="nav-item" id='Minesweeper-Page' href="Minesweeper.html">Minesweeper</a>
+  <a class="nav-item" href="../Dokustash_Generator.html">Dokustash Generator</a>
+  <a class="nav-item" href="../DokucraftBannerEditor/Dokucraft_Banner_Editor.html">Dokucraft Banner Editor</a>
   <div class="dropdown">
-    <button class="dropbtn">Black Ops 4<i class="fa fa-caret-down"></i></button>
+    <div class="dropbtn">Black Ops 4<i class="fa fa-caret-down"></i></div>
     <div class="dropdown-content">
-      <a href="BlackOps4/Voyage_of_Despair.html">Voyage of Despair</a>
-      <a href="BlackOps4/Voyage_of_Despair_Tool.html">Voyage of Despair Tool</a>
-      <a href="BlackOps4/IX.html">IX</a>
-      <a href="BlackOps4/Blood_of_The_Dead.html">Blood of The Dead</a>
-      <a href="BlackOps4/Classified.html">Classified</a>
-      <a href="BlackOps4/Dead_of_The_Night.html">Dead of The Night</a>
-      <a href="BlackOps4/Stake_Knife.html">Stake Knife</a>
-      <a href="BlackOps4/Ancient_Evil.html">Ancient Evil</a>
-      <a href="BlackOps4/Alpha_Omega.html">Alpha Omega</a>
-      <a href="BlackOps4/Alpha_Omega_Tool.html">Alpha Omega Tool</a>
-      <a href="BlackOps4/Tag_Der_Toten.html">Tag Der Toten</a>
-      <a href="BlackOps4/BO4_Gold_Weapons.html">BO4 Gold Weapons</a>
-      <a href="BlackOps4/Random_Map.html">Random Map</a>
+      <a href="../BlackOps4/Voyage_of_Despair.html">Voyage of Despair</a>
+      <a href="../BlackOps4/Voyage_of_Despair_Tool.html">Voyage of Despair Tool</a>
+      <a href="../BlackOps4/IX.html">IX</a>
+      <a href="../BlackOps4/Blood_of_The_Dead.html">Blood of The Dead</a>
+      <a href="../BlackOps4/Classified.html">Classified</a>
+      <a href="../BlackOps4/Dead_of_The_Night.html">Dead of The Night</a>
+      <a href="../BlackOps4/Stake_Knife.html">Stake Knife</a>
+      <a href="../BlackOps4/Ancient_Evil.html">Ancient Evil</a>
+      <a href="../BlackOps4/Alpha_Omega.html">Alpha Omega</a>
+      <a href="../BlackOps4/Alpha_Omega_Tool.html">Alpha Omega Tool</a>
+      <a href="../BlackOps4/Tag_Der_Toten.html">Tag Der Toten</a>
+      <a href="../BlackOps4/BO4_Gold_Weapons.html">BO4 Gold Weapons</a>
+      <a href="../BlackOps4/Random_Map.html">Random Map</a>
     </div>
   </div> 
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
+<!--Nav Template End-->
 
 <div id="content_text">
-<style type="text/css">
-	#minesweeper {
-		margin:0px auto;
-	}
-	#box {
-		width:9px;
-		height:15px;
-		position:relative;
-		padding:5px 8px;
-		font-style:bold;
-		color:black;
-	}
-	#settings {
-		position:relative;
-		margin:0 auto;
-		width:400px;
-		text-align:center;
-	}
-	span,h2,div {
-		color:white;
-	}
-	button,select,input {
-		background-color: #0e0e0e !important;
-		border: 1px solid #000000;
-		color: white !important;
-	}
-</style>
-<script src="Minesweeper/Script/Minesweeper.js"></script>
+<script src="Script/Minesweeper.js"></script>
 <audio id="win">
-  <source src="Minesweeper/Sounds/Win.mp3" type="audio/mp3">
+  <source src="Sounds/Win.mp3" type="audio/mp3">
 </audio>
 <audio id="fail">
-  <source src="Minesweeper/Sounds/Explosion.ogg" type="audio/ogg">
+  <source src="Sounds/Explosion.ogg" type="audio/ogg">
 </audio>
 <audio id="click">
-  <source src="Minesweeper/Sounds/Click.ogg" type="audio/ogg">
+  <source src="Sounds/Click.ogg" type="audio/ogg">
 </audio>
 <script>
 var win = document.getElementById("win");
@@ -97,6 +105,7 @@ update();
 </script>
 </div>
 
+<!--Nav Template Start-->
 <script>
 function checkActive() {
   if (document.location.pathname == '/Website/') {
@@ -118,3 +127,4 @@ function myFunction() {
 </script>
 </body>
 </html>
+<!--Nav Template End-->
