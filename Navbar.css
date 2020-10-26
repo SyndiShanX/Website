@@ -42,8 +42,8 @@ img.logo:hover {
 
 .Main {
   margin: 100px auto;
-  width: 975px;
-  padding: 30px;
+  width: 80%;
+  padding: 1%;
 }
 
 .topnav a {
@@ -137,15 +137,12 @@ img.logo:hover {
     position: absolute;
 		display: block;
 		margin-top: 12px;
-    left: 500;
+    left: 80%;
     top: 0;
   }
 	.spacer {
 		margin-left:0px;
 	}
-	.dropdown-content {
-    right: 90;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -156,7 +153,7 @@ img.logo:hover {
     position: absolute;
 		display: block;
 		margin-top: 12px;
-    left: 500;
+    left: 80%;
     top: 0;
   }
   .topnav.responsive a {
@@ -183,7 +180,7 @@ img.logo:hover {
 		left: 10;
 	}
 	.dropdown-content a:hover {
-		width: 178px;
+		width: 85%;
 	}
 }
 
