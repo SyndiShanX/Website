@@ -134,7 +134,7 @@ a.menu {
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .topnav a:not(:first-child), .dropdown .dropbtn, .nav-item {
     display: none;
   }
@@ -143,7 +143,7 @@ a.menu {
 	}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .topnav.responsive {
 		position: relative;
   }
