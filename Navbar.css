@@ -130,20 +130,33 @@ img.logo:hover {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
+  .topnav a:not(:first-child), .dropdown .dropbtn, .nav-item {
     display: none;
   }
-  .topnav a.icon {
-    float: right;
-    display: block;
+  a.icon {
+    position: absolute;
+		display: block;
+		margin-top: 12px;
+    left: 500;
+    top: 0;
+  }
+	.spacer {
+		margin-left:0px;
+	}
+	.dropdown-content {
+    right: 90;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+		position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
-    right: 0;
+		display: block;
+		margin-top: 12px;
+    left: 500;
     top: 0;
   }
   .topnav.responsive a {
@@ -151,13 +164,27 @@ img.logo:hover {
     display: block;
     text-align: left;
   }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown {
+		float: none;
+	}
+  .topnav.responsive .dropdown-content {
+		position: relative;
+	}
   .topnav.responsive .dropdown .dropbtn {
     display: block;
     width: 100%;
     text-align: left;
   }
+	a.nav-item {
+		width: 210px;
+	}
+	.dropdown-content a, .dropdown-content {
+		width: 210px;
+		left: 10;
+	}
+	.dropdown-content a:hover {
+		width: 178px;
+	}
 }
 
 ::-webkit-scrollbar {
