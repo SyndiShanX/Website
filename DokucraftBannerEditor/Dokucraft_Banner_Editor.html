@@ -14,10 +14,10 @@
 <div class="topnav" id="myTopnav">
   <a href="/Website/"><img class="logo" src="../Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></a>
   <a class="spacer"></a>
-  <a class="nav-item" id='Home-Page' href="/Website/">Home</a>
-  <a class="nav-item" id='Minesweeper-Page' href="../Minesweeper/Minesweeper.html">Minesweeper</a>
-  <a class="nav-item" id='Dokustash-Generator-Page' href="../Dokustash_Generator.html">Dokustash Generator</a>
-  <a class="nav-item" id='Dokucraft-Banner-Editor-Page' href="../DokucraftBannerEditor/Dokucraft_Banner_Editor.html">Dokucraft Banner Editor</a>
+  <a class="nav-item" href="/Website/">Home</a>
+  <a class="nav-item" href="../Minesweeper/Minesweeper.html">Minesweeper</a>
+  <a class="nav-item" href="../Dokustash_Generator.html">Dokustash Generator</a>
+  <a class="nav-item active" href="../DokucraftBannerEditor/Dokucraft_Banner_Editor.html">Dokucraft Banner Editor</a>
   <div class="dropdown">
     <div class="dropbtn">Black Ops 4<i class="fa fa-caret-down"></i></div>
     <div class="dropdown-content" style="right: 150;">
@@ -191,19 +191,6 @@
 
 <!--Nav Template Start-->
 </div>
-<script>
-function checkActive() {
-  if (document.location.pathname == '/Website/') {
-    document.getElementById('Home-Page').outerHTML = '<a class="nav-item active" id="Home-Page" href="/Website/">Home</a>'
-  } else if (document.location.pathname == '/Website/Minesweeper/Minesweeper.html') {
-    document.getElementById('Minesweeper-Page').outerHTML = '<a class="nav-item active" id="Minesweeper-Page" href="Minesweeper.html">Minesweeper</a>'
-  } else if (document.location.pathname == '/Website/Dokustash_Generator.html') {
-    document.getElementById('Dokustash-Generator-Page').outerHTML = '<a class="nav-item active" id="Dokustash-Generator-Page" href="../Dokustash_Generator.html">Dokustash Generator</a>'
-  } else if (document.location.pathname == '/Website/DokucraftBannerEditor/Dokucraft_Banner_Editor.html') {
-    document.getElementById('Dokucraft-Banner-Editor-Page').outerHTML = '<a class="nav-item active" id="Dokucraft-Banner-Editor-Page" href="../DokucraftBannerEditor/Dokucraft_Banner_Editor.html">Dokucraft Banner Editor</a>'
-  }
-}
-</script>
 <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
