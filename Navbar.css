@@ -27,7 +27,7 @@ img.logo:hover {
 }
 
 .spacer {
-  margin-left:350px;
+  margin-left:23%;
 }
 
 .topnav {
@@ -97,7 +97,8 @@ img.logo:hover {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border: 1px solid white;
   z-index: 1;
-  right: 90;
+  right: 6%;
+	top: 95%;
 }
 
 .dropdown-content a {
@@ -129,16 +130,13 @@ img.logo:hover {
   display: block;
 }
 
+a.menu {
+	display: none;
+}
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child), .dropdown .dropbtn, .nav-item {
     display: none;
-  }
-  a.icon {
-    position: absolute;
-		display: block;
-		margin-top: 12px;
-    left: 80%;
-    top: 0;
   }
 	.spacer {
 		margin-left:0px;
@@ -149,10 +147,11 @@ img.logo:hover {
   .topnav.responsive {
 		position: relative;
   }
-  .topnav.responsive .icon {
+  a.menu {
     position: absolute;
-		display: block;
+		display: block !important;
 		margin-top: 12px;
+		font-size:15px;
     left: 80%;
     top: 0;
   }
@@ -173,13 +172,13 @@ img.logo:hover {
     text-align: left;
   }
 	a.nav-item {
-		width: 210px;
+		width: 33%;
 	}
-	.dropdown-content a, .dropdown-content {
-		width: 210px;
-		left: 10;
+	.dropdown-content {
+		width: 33%;
+		left: 2%;
 	}
-	.dropdown-content a:hover {
+	.dropdown-content a, .dropdown-content a:hover {
 		width: 85%;
 	}
 }
