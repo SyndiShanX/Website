@@ -185,6 +185,9 @@ a.menu {
 		width: 50%;
 		padding: 1%;
 	}
+	.topnav {
+		width: 50%;
+	}
 }
 
 ::-webkit-scrollbar {
