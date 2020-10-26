@@ -141,9 +141,6 @@ a.menu {
 	.spacer {
 		margin-left:0px;
 	}
-	img.logo {
-		background-image: url(/Images/Mobile/Global/Logo.png);
-	}
 }
 
 @media screen and (max-width: 600px) {
@@ -183,9 +180,6 @@ a.menu {
 	}
 	.dropdown-content a, .dropdown-content a:hover {
 		width: 85%;
-	}
-	img.logo {
-		background-image: url(/Images/Global/Logo.png);
 	}
 }
 
