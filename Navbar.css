@@ -30,6 +30,12 @@ img.logo:hover {
   margin-left:23%;
 }
 
+.Main {
+	margin: 100px auto;
+	width: 80%;
+	padding: 1%;
+}
+
 .topnav {
   position: fixed;
   top:0;
@@ -135,11 +141,6 @@ a.menu {
 	.spacer {
 		margin-left:0px;
 	}
-	.Main {
-		margin: 100px auto;
-		width: 80%;
-		padding: 1%;
-	}
 }
 
 @media screen and (max-width: 600px) {
@@ -179,14 +180,6 @@ a.menu {
 	}
 	.dropdown-content a, .dropdown-content a:hover {
 		width: 85%;
-	}
-	.Main {
-		margin: 100px auto;
-		width: 50%;
-		padding: 1%;
-	}
-	.topnav {
-		width: 50%;
 	}
 }
 
