@@ -46,7 +46,7 @@ img.logo:hover {
   background-color: #000;
 }
 
-.topnav a {
+.topnav a, a{
   float: left;
   display: block;
   text-align: center;
