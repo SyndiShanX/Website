@@ -1,5 +1,111 @@
-@import url("https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/hljs.css");
-@import url("https://syndishanx.weebly.com/uploads/1/7/1/4/17142170/settingsicons.css");
+.hljs.css::before {content: "CSS";}
+.hljs.js::before {content: "Javascript";}
+.hljs.php::before {content: "PHP";}
+.hljs.java::before {content: "Java";}
+.hljs.csharp::before {content: "C#";}
+.hljs.c::before {content: "C";}
+.hljs.cpp::before {content: "C++";}
+.hljs.coffeescript::before {content: "Coffeescript";}
+.hljs.bash::before {content: "Bash";}
+.hljs.bat::before {content: "Batch";}
+.hljs.html::before {content: "HTML";}
+.hljs.apache::before {content: "Apache";}
+.hljs.diff::before {content: "Diff";}
+.hljs.http::before {content: "HTTP";}
+.hljs.json::before {content: "JSON";}
+.hljs.markdown::before {content: "Markdown";}
+.hljs.makfile::before {content: "Makefile";}
+.hljs.nginx::before {content: "Nginx";}
+.hljs.perl::before {content: "Perl";}
+.hljs.properties::before {content: "Properties";}
+.hljs.ruby::before {content: "Ruby";}
+.hljs.python::before {content: "Python";}
+.hljs.shell::before {content: "Shell";}
+.hljs.sql::before {content: "SQL";}
+.hljs.powershell::before {content: "PowerShell";}
+.hljs.xml::before {content: "XML";}
+.hljs.objectivec::before {content: "Objective-C";}
+.hljs.CSS::before {content: "CSS";}
+.hljs.py::before {content: "PY";}
+.hljs.ts::before {content: "TypeScript";}
+.hljs.typescript::before {content: "TypeScript";}
+.hljs.scss::before {content: "SCSS";}
+.hljs.sass::before {content: "SASS";}
+.hljs.less::before {content: "Less CSS";}
+.hljs.swift::before {content: "Swift";}
+.hljs.autoit::before {content: "AutoIt";}
+.hljs.basic::before {content: "BASIC";}
+.hljs.lisp::before {content: "Lisp";}
+.hljs.lua::before {content: "Lua";}
+.hljs.m::before {content: "M";}
+.hljs.javascript::before {content: "Javascript";}
+.hljs.pascal::before {content: "Pascal";}
+.hljs.clean::before {content: "Clean";}
+.hljs.erlang::before {content: "Erlang";}
+.hljs.fsharp::before {content: "F#";}
+.hljs.kotlin::before {content: "Kotlin";}
+.hljs.rs::before {content: "Rust";}
+.hljs.rust::before {content: "Rust";}
+.hljs.hs::before {content: "Haskell";}
+.hljs.haskell::before {content: "Haskell";}
+.hljs.go::before {content: "GO";}
+.hljs.asciidoc::before {content: "AsciiDoc";}
+.hljs.yaml::before {content: "YAML";}
+.hljs.x86asm::before {content: "x86asm";}
+.hljs.C::before {content: "C";}
+.hljs.cs::before {content: "C#";}
+.hljs.toml::before {content: "TOML";}
+.hljs.scheme::before {content: "Scheme";}
+.hljs.mips::before {content: "MIPS";}
+.hljs.MIPS::before {content: "MIPS";}
+.hljs.vb::before {content: "Visual Basic";}
+.hljs.VB::before {content: "Visual Basic";}
+.hljs.r::before {content: "R";}
+.hljs.R::before {content: "R";}
+
+.sidebar-CFHs9e .side-8zPYf6 #bd-settings-sidebar .ui-tab-bar-item:not(.role-3wi9Tf)::before,
+.side-8zPYf6 .item-PXvHYJ:not(.role-3wi9Tf)::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-size: cover!important;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.side-8zPYf6 #bd-settings-sidebar .ui-tab-bar-item, .side-8zPYf6 .item-PXvHYJ {padding-left: 40px;}
+div[aria-label="GUILD_SETTINGS"] .side-8zPYf6 #bd-settings-sidebar .ui-tab-bar-item,
+div[aria-label="GUILD_SETTINGS"] .side-8zPYf6 .item-PXvHYJ {padding-left: 10px;}
+
+.side-8zPYf6 #bd-settings-sidebar .ui-tab-bar-item:nth-child(3)::before{background:url(https://i.imgur.com/cdn4BUy.png) center}
+.side-8zPYf6 #bd-settings-sidebar .ui-tab-bar-item:nth-child(4)::before{background:url(https://i.imgur.com/30cqxll.png) center}
+.side-8zPYf6 #bd-settings-sidebar .ui-tab-bar-item:nth-child(5)::before{background:url(https://i.imgur.com/hyd9oGX.png) center}
+.side-8zPYf6 #bd-settings-sidebar .ui-tab-bar-item:nth-child(6)::before{background:url(https://i.imgur.com/zdD427V.png) center}
+.side-8zPYf6 #bd-settings-sidebar .ui-tab-bar-item:nth-child(7)::before{background:url(https://i.imgur.com/F5hOuYW.png) center}
+.side-8zPYf6 #bd-settings-sidebar .ui-tab-bar-item:nth-child(8)::before{background:url(https://i.imgur.com/DFYxY1Z.png) center}
+/*==  WINDOWS  ==*/
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(2)::before{background:url(https://i.imgur.com/MG0SlS6.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(3)::before{background:url(https://i.imgur.com/Hxr6XE6.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(4)::before{background:url(https://i.imgur.com/v8XNeCE.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(5)::before{background:url(https://i.imgur.com/QcEw49t.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(6)::before{background:url(https://i.imgur.com/9rKkZBO.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(8)::before{background:url(https://i.imgur.com/GUM6KPG.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(9)::before{background:url(https://i.imgur.com/jUKQQBL.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(10)::before{background:url(https://i.imgur.com/L3IaYx0.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(11)::before{background:url(https://i.imgur.com/TcHEd0d.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(14)::before{background:url(https://i.imgur.com/9DG8oPZ.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(15)::before{background:url(https://i.imgur.com/Ll8CCqv.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(16)::before{background:url(https://i.imgur.com/FoSUr1I.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(17)::before{background:url(https://i.imgur.com/351ppjR.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(18)::before{background:url(https://i.imgur.com/pdfXYSO.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(19)::before{background:url(https://i.imgur.com/cg4bgyb.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(20)::before{background:url(https://i.imgur.com/jxzraCc.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(21)::before{background:url(https://i.imgur.com/sT2drKP.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(22)::before{background:url(https://i.imgur.com/Yyx3xbv.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(23)::before{background:url(https://i.imgur.com/8CCah5s.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(25)::before{background:url(https://i.imgur.com/J9FePqr.png) center}
+.platform-win #user-settings .side-8zPYf6 .item-PXvHYJ:nth-child(28)::before{background:url(https://i.imgur.com/jXLQ5P4.png) center}
 
 :root {
 	--main-blue: #224466;
@@ -10,7 +116,7 @@
 	--main-purple: #4e377b;
 	--main-dark: #181818;
 	--main-light: #484848;
-	--bgImage: url(https://i.imgur.com/hunPyjW.png)
+	--bgImage: url("https://i.imgur.com/hunPyjW.png")
 }
 
 .base-3dtUhz,.theme-dark .contentRegion-3nDuYy,.theme-light .contentRegion-3nDuYy,.themeDark-3Ap_7i,.uploadModal-2ifh8j, .nowPlayingScroller-2XrVUt {
