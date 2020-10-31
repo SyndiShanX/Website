@@ -153,7 +153,7 @@
 		</tr>
 	</td>
 </table>
-<a title="Download file: hljs.css" onclick="Discord/hljs.css">Download File <i style="color: #fff;" class="fa fa-download"></i></a><br><br>
+<a title="Download file: hljs.css" href="Discord/hljs.css">Download File <i style="color: #fff;" class="fa fa-download"></i></a><br><br>
 
 <table>
 	<td>
@@ -177,30 +177,4 @@
 		</tr>
 	</td>
 </table>
-<a title="Download file: core.css">Download File <i style="color: #fff;" class="fa fa-download" onclick="fileToBase64('core.css', 'https://raw.githubusercontent.com/SyndiShanX/Website/master/Downloads/Discord/core.css').then(result => {console.log(result);});"></i></a>
-
-<script>
-const fileToBase64 = (filename, filepath) => {
-	console.log(filename)
-	console.log(filepath)
-	return new Promise(resolve => {
-		var file = new File([filename], filepath);
-		var reader = new FileReader();
-		reader.onload = function(event) {
-			resolve(event.target.result);
-		};
-		reader.readAsDataURL(file);
-	});
-};
-</script>
-
-<script>
-function download(link, name, extension) {
-	var syn = document.createElement('a');
-	console.log(link)
-	syn.href = link;
-	syn.target = '_blank';
-	syn.download = name + '.' + extension;
-	syn.click();
-}
-</script>
+<a title="Download file: core.css" href="Discord/core.css">Download File <i style="color: #fff;" class="fa fa-download"></i></a>
