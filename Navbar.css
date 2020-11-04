@@ -61,7 +61,7 @@ img.logo:hover {
   color: white;
 }
 
-.dropdown .dropbtn, .dropbtn a {  
+.dropdown .dropbtn, .dropbtn a, .dropbtn div {  
   border: none;
   outline: none;
   padding: 25px 16px;
