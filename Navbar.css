@@ -61,11 +61,17 @@ img.logo:hover {
   color: white;
 }
 
-.dropdown .dropbtn, .dropdown div, .dropbtn a {  
+.dropdown .dropbtn, .dropbtn a {  
   border: none;
   outline: none;
-  padding: 25px 16px;
   background-color: inherit;
+	margin: 0;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+	padding: 12px 0px;
 	text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
@@ -74,7 +80,6 @@ img.logo:hover {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: white;
-	margin: 0;
 }
 
 .dropdown-content a {
@@ -111,11 +116,6 @@ img.logo:hover {
 
 .topnav .icon {
   display: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
 }
 
 .topnav a:hover, .dropdown:hover .dropbtn {
