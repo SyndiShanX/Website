@@ -163,6 +163,7 @@ a.menu {
   }
   .topnav.responsive .dropdown {
 		float: none;
+		padding: 0px 0px;
 	}
   .topnav.responsive .dropdown-content {
 		position: relative;
