@@ -4,7 +4,8 @@
 // @namespace      https://greasyfork.org/users/390290
 // @author         SyndiShanX
 // @include        https://optifine.net/*
-// @version        1.18
+// @version        1.19
+// @run-at         document-body
 // ==/UserScript==
 if (document.getElementById('Download') != null) {
   if (document.getElementById('Download').children[0].tagName == 'IMG') {
