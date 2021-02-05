@@ -33,16 +33,12 @@ img.FirebaseZ {
     background-size: 400% 100%;
 }
 @keyframes rainbow_animation {
-    0%,100% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 100% 0;
-    }
+    0%,100% { background-position: 0 0; }
+    50% { background-position: 100% 0; }
 }
 </style>
 </head>
-<body>
+<body onload="autoColor();">
 <div class="topnav" id="myTopnav">
   <a href="/Website/"><picture><source media="(max-width: 999px)" srcset="../Images/Mobile/Global/Logo.png"><source media="(min-width: 1000px)" srcset="../Images/Global/Logo.png"><img class="logo" src="../Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></picture></a>
   <a class="spacer"></a>
@@ -103,46 +99,71 @@ img.FirebaseZ {
 
 <font size="7" color="#8d2424">Easter Egg Song</font><br><br>
 
-<font class="text" color="#9555c2" size="5">Song</font><br>
-<font class="text" color="#8d5024">Interact with 3 Items:</font><br>
-<font class="text" color="#8d7824">&nbsp; -Room - Location</font><br>
-<font class="text" color="#508d24">&nbsp; -Room - Location</font><br>
-<font class="text" color="#248d6c">&nbsp; -Room - Location</font><br><br>
+<font color="#9555c2" size="5">Song</font><br>
+<font class="text">Interact with 3 Items:</font><br>
+<font class="text">&nbsp; -Room - Location</font><br>
+<font class="text">&nbsp; -Room - Location</font><br>
+<font class="text">&nbsp; -Room - Location</font><br><br>
 
 <font size="7" color="#8d2424">Free RAI K-84</font><br><br>
 
-<font class="text" color="#24678d">Obtain all 4 Parts:</font><br>
-<font class="text" color="#5040ae">&nbsp; -Grab the Blueprint in Weapon Lab</font><br>
-<font class="text" color="#8640ae">&nbsp; -Take My Dudes Literal Eye in Scorched Defense</font><br>
-<font class="text" color="#ae40a5">&nbsp; -Scan Eye using Computer in Weapon Lab</font><br>
-<font class="text" color="#8d5024">&nbsp; -Open Lockers in Barracks until Mimic Spawns</font><br>
-<font class="text" color="#8d7824">&nbsp; -Kill it and take the Barrel Assembly</font><br>
-<font class="text" color="#508d24">&nbsp; -Kill a Mangler to get the Uncharged Power Cell (Spawns one starting on Round 15, Go through Portal to Farm)</font><br>
-<font class="text" color="#248d6c">&nbsp; -Charge the Ammo in Weapon Lab in front of the Upgrade Station (Takes 1 Full Round)</font><br>
-<font class="text" color="#24678d">&nbsp; -Get the Dart Board Combination from the Computer in Weapon Lab</font><br>
-<font class="text" color="#5040ae">&nbsp; -Go to Pack-A-Punch and Shoot the Dart Board in the Room to the Left to Enter the Combination</font><br>
-<font class="text" color="#8640ae">&nbsp; -Shoot the Dart Board in the Middle to Enter the Combination</font><br>
-<font class="text" color="#ae40a5">&nbsp; -Pick Up the Aetherium Converter</font><br>
-<font class="text" color="#8d5024">&nbsp; -Build the RAI K-84 at the Workbench in Weapon Lab</font><br><br>
+<font class="text">Obtain all 4 Parts:</font><br>
+<font class="text">&nbsp; -Grab the Blueprint in Weapon Lab</font><br>
+<font class="text">&nbsp; -Take My Dudes Literal Eye in Scorched Defense</font><br>
+<font class="text">&nbsp; -Scan Eye using Computer in Weapon Lab</font><br>
+<font class="text">&nbsp; -Open Lockers in Barracks until Mimic Spawns</font><br>
+<font class="text">&nbsp; -Kill it and take the Barrel Assembly</font><br>
+<font class="text">&nbsp; -Kill a Mangler to get the Uncharged Power Cell (Spawns one starting on Round 15, Go through Portal to Farm)</font><br>
+<font class="text">&nbsp; -Charge the Ammo in Weapon Lab in front of the Upgrade Station (Takes 1 Full Round)</font><br>
+<font class="text">&nbsp; -Get the Dart Board Combination from the Computer in Weapon Lab</font><br>
+<font class="text">&nbsp; -Go to Pack-A-Punch and Shoot the Dart Board in the Room to the Left to Enter the Combination</font><br>
+<font class="text">&nbsp; -Shoot the Dart Board in the Middle to Enter the Combination</font><br>
+<font class="text">&nbsp; -Pick Up the Aetherium Converter</font><br>
+<font class="text">&nbsp; -Build the RAI K-84 at the Workbench in Weapon Lab</font><br><br>
 
 
 <font size="7" color="#8d2424">Pack-A-Punch</font><br><br>
 
-<font class="text" color="#8d7824">Turn on the 3 Aether Reactors</font><br>
-<font class="text" color="#508d24">&nbsp; -Mission Control</font><br>
-<font class="text" color="#248d6c">&nbsp; -Data Center</font><br>
-<font class="text" color="#24678d">&nbsp; -Military Command - Aether Reactor</font><br>
-<font class="text" color="#5040ae">Return to The Village, the Pack-A-Punch is Right Next to Ravenov</font><br><br>
+<font class="text">Turn on the 3 Aether Reactors</font><br>
+<font class="text">&nbsp; -Mission Control</font><br>
+<font class="text">&nbsp; -Data Center</font><br>
+<font class="text">&nbsp; -Military Command - Aether Reactor</font><br>
+<font class="text">Return to The Village, the Pack-A-Punch is Right Next to Ravenov</font><br><br>
 
 
 <font size="7" color="#8d2424">Main Quest</font><br><br>
 
-<font class="text" color="#8640ae">Turn on the 3 Aether Reactors</font><br>
-<font class="text" color="#ae40a5">Talk to Peck in Mission Control</font><br>
+<font class="text">Turn on the 3 Aether Reactors</font><br>
+<font class="text">Talk to Peck in Mission Control</font><br>
 
 
 <!--Nav Template Start-->
 </div>
+<script>
+function autoColor() {
+	var text = document.getElementsByClassName('text');
+	for (i = 0; i < text.length; i++) {
+		var iRemainder = i % 8;
+		if (iRemainder == 0) {
+			text[i].color = '#8d5024'
+		} else if (iRemainder == 1) {
+			text[i].color = '#8d7824'
+		} else if (iRemainder == 2) {
+			text[i].color = '#508d24'
+		} else if (iRemainder == 3) {
+			text[i].color = '#248d6c'
+		} else if (iRemainder == 4) {
+			text[i].color = '#24678d'
+		} else if (iRemainder == 5) {
+			text[i].color = '#5040ae'
+		} else if (iRemainder == 6) {
+			text[i].color = '#8640ae'
+		} else if (iRemainder == 7) {
+			text[i].color = '#ae40a5'
+		}
+	}
+}
+</script>
 <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
