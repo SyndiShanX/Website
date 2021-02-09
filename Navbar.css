@@ -18,6 +18,14 @@ h2 {
   margin: 15px auto;
 }
 
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 img.logo:hover {
   opacity: 0.6;
 }
