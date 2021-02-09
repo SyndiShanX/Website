@@ -169,6 +169,9 @@ div[aria-label="GUILD_SETTINGS"] .side-8zPYf6 .item-PXvHYJ {padding-left: 10px;}
 	border-radius: 20px!important;
 	border: none!important
 }
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(55, 55, 55, 1)!important;
+}
 div#MemberCount {
 	background: transparent!important;
 	background-image: var(--bgSidebarTopCapImage)!important;

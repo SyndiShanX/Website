@@ -175,6 +175,9 @@ div#MemberCount {
 	border-radius: 20px!important;
 	border: none!important
 }
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(55, 55, 55, 1)!important;
+}
 --End Custom Code
 
 .searchAnswer-3Dz2-q, .searchFilter-2ESiM3 {
