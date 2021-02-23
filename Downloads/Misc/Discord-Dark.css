@@ -143,11 +143,8 @@ div[aria-label="GUILD_SETTINGS"] .side-8zPYf6 .item-PXvHYJ {padding-left: 10px;}
 .container-UC8Ug1:hover, .searchResult-9tQ1uo {
 	background-color: rgba(0, 0, 0, 0.25)!important
 }
-.container-PNkimc, .container-3w7J-x, .members-1998pB>div, .container-3baos1, .bd-addon-card, .bd-addon-header, .bd-search-wrapper, .container-3ayLPN, .wrapper-1Rf91z, .card-3DjzTQ, .container-UC8Ug1, .container-1CE3eW .flex-1xMQg5, .panels-j1Uci_, .container-1r6BKw, .background-1QDuV2, .fieldList-21DyL8, .item-26Dhrx, .formNotice-2_hHWR, .authedApp-mj2Hmd, .accountList-33MS45, .connection-1fbD7X, .connectionHeader-2MDqhu, .attendeeCTA-3ZZQWt, .selected-3s45Ha .da-selected, .feature-2w65J5, .card-3AyPWq, .input-cIJ7To, .preview-2nSL_2, .content-yTz4x3, .sidebar-2K8pFh, .code-2, .sidebar-2K8pFh da-sidebar, .content-3YMskv da-content, .contentRegionScroller-26nc1e, .friendsTable-133bsv .friendsTableBody-1ZhKif, .privateChannels-1nO12o, .root-SR8cQa, .scroller-1IIF0A, .scroller-1JbKMe, .scroller-9moviB, .sidebarRegionScroller-3MXcoP {
+.container-PNkimc, .container-3w7J-x, .members-1998pB>div, div#MemberCount, .container-3baos1, .bd-addon-card, .bd-addon-header, .bd-search-wrapper, .container-3ayLPN, .wrapper-1Rf91z, .card-3DjzTQ, .container-UC8Ug1, .container-1CE3eW .flex-1xMQg5, .panels-j1Uci_, .container-1r6BKw, .background-1QDuV2, .fieldList-21DyL8, .item-26Dhrx, .formNotice-2_hHWR, .authedApp-mj2Hmd, .accountList-33MS45, .connection-1fbD7X, .connectionHeader-2MDqhu, .attendeeCTA-3ZZQWt, .selected-3s45Ha .da-selected, .feature-2w65J5, .card-3AyPWq, .input-cIJ7To, .preview-2nSL_2, .content-yTz4x3, .sidebar-2K8pFh, .code-2, .sidebar-2K8pFh da-sidebar, .content-3YMskv da-content, .contentRegionScroller-26nc1e, .friendsTable-133bsv .friendsTableBody-1ZhKif, .privateChannels-1nO12o, .root-SR8cQa, .scroller-1IIF0A, .scroller-1JbKMe, .scroller-9moviB, .sidebarRegionScroller-3MXcoP {
 	background-color: rgba(0, 0, 0, 0.5)!important
-}
-div#MemberCount {
-	background: transparent!important;
 }
 .theme-dark, .root-1gCeng, .messagesPopoutWrap-1MQ1bW, .container-3ayLPN {
 	background-color: #1a1a1a!important
