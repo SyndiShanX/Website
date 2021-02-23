@@ -175,9 +175,9 @@ div[aria-label="GUILD_SETTINGS"] .side-8zPYf6 .item-PXvHYJ {padding-left: 10px;}
 div#MemberCount {
 	background: transparent!important;
 	background-image: var(--bgSidebarTopCapImage)!important;
-	margin-bottom: 30px;
+	margin-top: 0px;
 	width: 100%;
-	height: 10px;
+	height: 30px;
 }
 .header-2V-4Sw {
 	background-image: var(--bgSidebarHeaderImage)!important;
