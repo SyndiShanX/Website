@@ -179,7 +179,10 @@ div[aria-label="GUILD_SETTINGS"] .side-8zPYf6 .item-PXvHYJ {padding-left: 10px;}
 	background-color: #202020!important;
 	border: 1px solid #1a1a1a!important
 }
-.layout-2DM8Md:hover {
+.searchBarComponent-32dTOx, .searchBar-3dMhjb {
+	border: 1px solid #1a1a1a!important
+}
+.layout-2DM8Md:hover, .searchBarComponent-32dTOx:hover, .searchBar-3dMhjb:hover {
 	background-color: #202020!important;
 	border: 1px solid var(--main-light)!important
 }
