@@ -78,7 +78,7 @@
 div[aria-label="GUILD_SETTINGS"] .side-8zPYf6 #bd-settings-sidebar .ui-tab-bar-item,
 div[aria-label="GUILD_SETTINGS"] .side-8zPYf6 .item-PXvHYJ {padding-left: 10px;}
 
-.base-3dtUhz, .theme-dark .contentRegion-3nDuYy, .header-1TKi98, .quickswitcher-3JagVE, .unreadBar-3t3sYc, .button-14-BFJ:hover, .footer-2gL1pp, .tabBody-3YRQ8W, .container-1CE3eW, .modal-3O0aXp, .root-1gCeng, .theme-light .contentRegion-3nDuYy, .themeDark-3Ap_7i, .uploadModal-2ifh8j, .nowPlayingScroller-2XrVUt {
+.base-3dtUhz, .theme-dark .contentRegion-3nDuYy, .header-1TKi98, .channelTextArea-rNsIhG .channelTextArea-2VhZ6z, .quickswitcher-3JagVE, .unreadBar-3t3sYc, .button-14-BFJ:hover, .footer-2gL1pp, .tabBody-3YRQ8W, .container-1CE3eW, .modal-3O0aXp, .root-1gCeng, .theme-light .contentRegion-3nDuYy, .themeDark-3Ap_7i, .uploadModal-2ifh8j, .nowPlayingScroller-2XrVUt {
 	background-image: var(--bgImage)!important;
 	background-clip: border-box!important;
 	background-origin: padding-box!important;
@@ -137,13 +137,13 @@ div[aria-label="GUILD_SETTINGS"] .side-8zPYf6 .item-PXvHYJ {padding-left: 10px;}
 }
 
 --Custom Code
-.sidebar-2K8pFh, .form-2fGMdU:before, .scroller-2TZvBN, .colorHeaderPrimary-26Jzh-, .scroller-3sQKXg, .listContent-2_qb-y, .auto-Ge5KZx, .scrollerBase-289Jih, .code-1, .chat-3bRxxu form{
+.sidebar-2K8pFh, .form-2fGMdU:before, .scroller-2TZvBN, .scrollableContainer-2NUZem, .colorHeaderPrimary-26Jzh-, .scroller-3sQKXg, .listContent-2_qb-y, .auto-Ge5KZx, .scrollerBase-289Jih, .code-1, .chat-3bRxxu form{
 	background: 0 0!important
 }
 .container-UC8Ug1:hover, .searchResult-9tQ1uo, .actionButton-uPB8Fs, .button-F9qN4n, .resultFocused-3aIoYe {
 	background-color: rgba(0, 0, 0, 0.25)!important
 }
-.container-PNkimc, .container-3w7J-x, .members-1998pB>div, div#MemberCount, .scrollableContainer-2NUZem, .input-2VB9rf, .peopleListItem-2nzedh:hover, .searchBarComponent-32dTOx, .nowPlayingColumn-2sl4cE, .emptyCard-1RJw8n, .search-2oPWTC .searchBar-3dMhjb, .searchBar-1MOL6S, .searchBar-2_Yu-C .searchBarInner-1_Tg2R, .searchBox-3Y2Vi7, .container-3baos1, .bd-addon-card, .bd-addon-header, .bd-search-wrapper, .container-3ayLPN, .wrapper-1Rf91z, .card-3DjzTQ, .container-UC8Ug1, .container-1CE3eW .flex-1xMQg5, .panels-j1Uci_, .container-1r6BKw, .background-1QDuV2, .fieldList-21DyL8, .item-26Dhrx, .formNotice-2_hHWR, .authedApp-mj2Hmd, .accountList-33MS45, .connection-1fbD7X, .connectionHeader-2MDqhu, .attendeeCTA-3ZZQWt, .selected-3s45Ha .da-selected, .feature-2w65J5, .card-3AyPWq, .input-cIJ7To, .preview-2nSL_2, .content-yTz4x3, .sidebar-2K8pFh, .code-2, .sidebar-2K8pFh da-sidebar, .content-3YMskv da-content, .contentRegionScroller-26nc1e, .friendsTable-133bsv .friendsTableBody-1ZhKif, .privateChannels-1nO12o, .root-SR8cQa, .scroller-1IIF0A, .scroller-1JbKMe, .scroller-9moviB, .sidebarRegionScroller-3MXcoP {
+.container-PNkimc, .container-3w7J-x, .members-1998pB>div, div#MemberCount, .input-2VB9rf, .peopleListItem-2nzedh:hover, .searchBarComponent-32dTOx, .nowPlayingColumn-2sl4cE, .emptyCard-1RJw8n, .search-2oPWTC .searchBar-3dMhjb, .searchBar-1MOL6S, .searchBar-2_Yu-C .searchBarInner-1_Tg2R, .searchBox-3Y2Vi7, .container-3baos1, .bd-addon-card, .bd-addon-header, .bd-search-wrapper, .container-3ayLPN, .wrapper-1Rf91z, .card-3DjzTQ, .container-UC8Ug1, .container-1CE3eW .flex-1xMQg5, .panels-j1Uci_, .container-1r6BKw, .background-1QDuV2, .fieldList-21DyL8, .item-26Dhrx, .formNotice-2_hHWR, .authedApp-mj2Hmd, .accountList-33MS45, .connection-1fbD7X, .connectionHeader-2MDqhu, .attendeeCTA-3ZZQWt, .selected-3s45Ha .da-selected, .feature-2w65J5, .card-3AyPWq, .input-cIJ7To, .preview-2nSL_2, .content-yTz4x3, .sidebar-2K8pFh, .code-2, .sidebar-2K8pFh da-sidebar, .content-3YMskv da-content, .contentRegionScroller-26nc1e, .friendsTable-133bsv .friendsTableBody-1ZhKif, .privateChannels-1nO12o, .root-SR8cQa, .scroller-1IIF0A, .scroller-1JbKMe, .scroller-9moviB, .sidebarRegionScroller-3MXcoP {
 	background-color: rgba(0, 0, 0, 0.5)!important
 }
 .theme-dark, .root-1gCeng, .messagesPopoutWrap-1MQ1bW, .container-3ayLPN, .folderIconWrapper-226oVY, .wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9, .wrapper-1BJsBx:hover .childWrapper-anI2G9 {
