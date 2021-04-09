@@ -78,7 +78,7 @@
 div[aria-label="GUILD_SETTINGS"] .side-8zPYf6 #bd-settings-sidebar .ui-tab-bar-item,
 div[aria-label="GUILD_SETTINGS"] .side-8zPYf6 .item-PXvHYJ {padding-left: 10px;}
 
-.base-3dtUhz, .theme-dark .contentRegion-3nDuYy, .emojiSection-3Fb9ix, .channelTextArea-rNsIhG .channelTextArea-2VhZ6z, .quickswitcher-3JagVE, .unreadBar-3t3sYc, .button-14-BFJ:hover, .footer-2gL1pp, .tabBody-3YRQ8W, .container-1CE3eW, .theme-light .contentRegion-3nDuYy, .themeDark-3Ap_7i, .uploadModal-2ifh8j, .nowPlayingScroller-2XrVUt {
+.base-3dtUhz, .theme-dark .contentRegion-3nDuYy, .emojiSection-3Fb9ix, .channelTextArea-rNsIhG .channelTextArea-2VhZ6z, .quickswitcher-3JagVE, .unreadBar-3t3sYc, .footer-2gL1pp, .tabBody-3YRQ8W, .container-1CE3eW, .theme-light .contentRegion-3nDuYy, .themeDark-3Ap_7i, .uploadModal-2ifh8j, .nowPlayingScroller-2XrVUt {
 	background-image: var(--bgImage)!important;
 	background-clip: border-box!important;
 	background-origin: padding-box!important;
@@ -205,7 +205,7 @@ div#MemberCount {
 .selected-3LIHYU .content-1x5b-n {
 	background-color: #291F18!important
 }
-.content-1x5b-n:hover {
+.content-1x5b-n:hover, .button-14-BFJ:hover {
 	background-color: #352820!important
 }
 .layout-2DM8Md:hover, .searchBarComponent-32dTOx:hover, .searchBar-3dMhjb:hover {
