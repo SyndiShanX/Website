@@ -129,6 +129,10 @@ div[aria-label="GUILD_SETTINGS"] .side-8zPYf6 .item-PXvHYJ {padding-left: 10px;}
 }
 
 --Custom Code
+/* Hide GIF, and Gift Buttons */
+.buttonContainer-28fw2U:not(.send-button) .button-3AYNKb:not(.stickerButton-3OEgwj), .buttons-3JBrkn > .button-38aScr > :not(.translateButton-DhP9x8) {
+	display: none;
+}
 .sidebar-2K8pFh, .form-2fGMdU:before, .scroller-2TZvBN, .closeButton-1152MI, .button-1-5Aqk, .colorHeaderPrimary-26Jzh-, .scroller-3sQKXg, .listContent-2_qb-y, .auto-Ge5KZx, .scrollerBase-289Jih, .code-1, .chat-3bRxxu form{
 	background: 0 0!important
 }
