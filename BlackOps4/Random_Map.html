@@ -10,19 +10,19 @@
 <link rel="stylesheet" href="../Navbar.css">
 <style type="text/css">
 textarea {
- font-size: 25px;
- color: #248d6c;
- background-color: #383838;
- border: none;
- resize:none;
+	font-size: 25px;
+	color: #248d6c;
+	background-color: #383838;
+	border: none;
+	resize:none;
 }
 input {
- background-color: #383838;
- border: none;
+	background-color: #383838;
+	border: none;
 }
 font {
-font-family: 'Montserrat', sans-serif;
-letter-spacing: 0.15em;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0.15em;
 }
 .blueButton {
 	-webkit-box-shadow:inset 0px -3px 7px 0px #8a8a8a;
@@ -126,95 +126,92 @@ letter-spacing: 0.15em;
   </div>
   <a href="javascript:void(0);" class="menu" onclick="customNavList()"><i class="fa fa-bars"></i></a>
 </div>
-<div class="Main" align="center">
+<div class="MainWrapper" align="center">
 <!--Nav Template End-->
 
-<div id="LoadingImages" align="center">
-<b><font color="#248d6c" size="16">
-Loading Images, Please Wait...
-<br></font>
-<img src="../Images/Maps/nomap.png"></img>
-<img src="../Images/Maps/voyageofdespair.png"></img>
-<img src="../Images/Maps/ix.png"></img>
-<img src="../Images/Maps/bloodofthedead.png"></img>
-<img src="../Images/Maps/classified.png"></img>
-<img src="../Images/Maps/deadofthenight.png"></img>
-<img src="../Images/Maps/ancientevil.png"></img>
-<img src="../Images/Maps/alphaomega.png"></img>
+	<b>
+		<div id="LoadingImages" align="center">
+			<font color="#248d6c" size="16">Loading Images, Please Wait...</font><br>
+			<img src="../Images/Maps/nomap.png"></img>
+			<img src="../Images/Maps/voyageofdespair.png"></img>
+			<img src="../Images/Maps/ix.png"></img>
+			<img src="../Images/Maps/bloodofthedead.png"></img>
+			<img src="../Images/Maps/classified.png"></img>
+			<img src="../Images/Maps/deadofthenight.png"></img>
+			<img src="../Images/Maps/ancientevil.png"></img>
+			<img src="../Images/Maps/alphaomega.png"></img>
+		</div>
+		<div id="Main" align="center" style="display:none;">
+			<font color="#8d2424" size="8">Random Map Generator<br></font>
+			<font color="#8d5024" size="4">Between</font>
+			<textarea id="lownumber" rows="1" cols="1" maxlength="1">1</textarea>
+			<font color="#8d7824" size="4">and</font>
+			<textarea id="highnumber" rows="1" cols="1" maxlength="1">7</textarea><br>
+			<button class="blueButton" id="generateNum" onclick="{ resetMapImg();generateRandomNumber();resultsToImg(); }">Generate</button><br>
+			<textarea readonly id="randomnumber" rows="1" cols="1" maxlength="2"></textarea>
+		</div>
+	</b>
+
+	<div id="MapImgDiv"><img src="../Images/Maps/nomap.png"></img></div>
+
+<!--Nav Template Start-->
 </div>
-<div id="Main" align="center" style="display:none;">
-<font color="#8d2424" size="8">
-Random Map Generator
-<br></font>
-<font color="#8d5024" size="4">
-Between
-</font>
-<textarea id="lownumber" rows="1" cols="1" maxlength="1">1</textarea>
-<font color="#8d7824" size="4">
-and
-</font>
-<textarea id="highnumber" rows="1" cols="1" maxlength="1">7</textarea>
-<br>
-<button class="blueButton" id="generateNum"
-onclick="{resetMapImg();generateRandomNumber();resultsToImg();}"
->Generate</button>
-<br><textarea readonly id="randomnumber" rows="1" cols="1" maxlength="2"></textarea>
-</b><script>
+<script>
 function resultsToImg(){
-var mapImg = 'none';
-if (document.getElementById('randomnumber').value == "1") {
-var mapImg = 'voyageofdespair';
-var mapImg = 'voyageofdespair';
-var mapImg = 'voyageofdespair';
-}
-if (document.getElementById('randomnumber').value == "2") {
-var mapImg = 'ix';
-var mapImg = 'ix';
-var mapImg = 'ix';
-}
-if (document.getElementById('randomnumber').value == "3") {
-var mapImg = 'bloodofthedead';
-var mapImg = 'bloodofthedead';
-var mapImg = 'bloodofthedead';
-}
-if (document.getElementById('randomnumber').value == "4") {
-var mapImg = 'classified';
-var mapImg = 'classified';
-var mapImg = 'classified';
-}
-if (document.getElementById('randomnumber').value == "5") {
-var mapImg = 'deadofthenight';
-var mapImg = 'deadofthenight';
-var mapImg = 'deadofthenight';
-}
-if (document.getElementById('randomnumber').value == "6") {
-var mapImg = 'ancientevil';
-var mapImg = 'ancientevil';
-var mapImg = 'ancientevil';
-}
-if (document.getElementById('randomnumber').value == "7") {
-var mapImg = 'alphaomega';
-var mapImg = 'alphaomega';
-var mapImg = 'alphaomega';
-}
-console.log(mapImg)
-mapImgPathed = '../Images/Maps/' + mapImg + '.png'
-var mapImgFinal = document.createElement("img");
-mapImgFinal.src = mapImgPathed;
-mapImgFinal.id = "Map";
-document.getElementById('MapImgDiv').appendChild(mapImgFinal);
+	var mapImg = 'none';
+	if (document.getElementById('randomnumber').value == "1") {
+		var mapImg = 'voyageofdespair';
+		var mapImg = 'voyageofdespair';
+		var mapImg = 'voyageofdespair';
+	}
+	if (document.getElementById('randomnumber').value == "2") {
+		var mapImg = 'ix';
+		var mapImg = 'ix';
+		var mapImg = 'ix';
+	}
+	if (document.getElementById('randomnumber').value == "3") {
+		var mapImg = 'bloodofthedead';
+		var mapImg = 'bloodofthedead';
+		var mapImg = 'bloodofthedead';
+	}
+	if (document.getElementById('randomnumber').value == "4") {
+		var mapImg = 'classified';
+		var mapImg = 'classified';
+		var mapImg = 'classified';
+	}
+	if (document.getElementById('randomnumber').value == "5") {
+		var mapImg = 'deadofthenight';
+		var mapImg = 'deadofthenight';
+		var mapImg = 'deadofthenight';
+	}
+	if (document.getElementById('randomnumber').value == "6") {
+		var mapImg = 'ancientevil';
+		var mapImg = 'ancientevil';
+		var mapImg = 'ancientevil';
+	}
+	if (document.getElementById('randomnumber').value == "7") {
+		var mapImg = 'alphaomega';
+		var mapImg = 'alphaomega';
+		var mapImg = 'alphaomega';
+	}
+	console.log(mapImg)
+	mapImgPathed = '../Images/Maps/' + mapImg + '.png'
+	var mapImgFinal = document.createElement("img");
+	mapImgFinal.src = mapImgPathed;
+	mapImgFinal.id = "Map";
+	document.getElementById('MapImgDiv').appendChild(mapImgFinal);
 }
 </script>
 <script>
 function resetMapImg() {
-document.getElementById("MapImgDiv").childNodes[0].remove();
+	document.getElementById("MapImgDiv").childNodes[0].remove();
 }
 </script>
 <script>
 function generateRandomNumber(){
-function IsNumeric(n){
-    return !isNaN(n);
-}
+	function IsNumeric(n){
+		return !isNaN(n);
+	}
 	var numLow = $("#lownumber").val();
 	var numHigh = $("#highnumber").val();
 	var adjustedHigh = (parseFloat(numHigh) - parseFloat(numLow)) + 1;
@@ -239,17 +236,12 @@ function IsNumeric(n){
 </script>
 <script>
 function deleteLoadingDiv() {
-setTimeout(function(){
-    document.getElementById("LoadingImages").remove();
-	document.getElementById("Main").style.display = "block";
-}, 2000);
+	setTimeout(function(){
+		document.getElementById("LoadingImages").remove();
+		document.getElementById("Main").style.display = "block";
+	}, 2000);
 }
 </script>
-<div id="MapImgDiv"><img src="../Images/Maps/nomap.png"></img></div>
-
-<!--Nav Template Start-->
-</div>
-</div>
 <script>
 function customNavList() {
   var x = document.getElementById("customTopnav");

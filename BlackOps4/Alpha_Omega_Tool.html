@@ -9,20 +9,20 @@
 <link rel="stylesheet" href="../Navbar.css">
 <style type="text/css">
 textarea {
- font-size: 25px;
- color: #248d6c;
- background-color: #383838;
- border: none;
- resize:none;
- text-align: center;
+	font-size: 25px;
+	color: #248d6c;
+	background-color: #383838;
+	border: none;
+	resize:none;
+	text-align: center;
 }
 input {
- background-color: #383838;
- border: none;
+	background-color: #383838;
+	border: none;
 }
 font {
-font-family: 'Montserrat', sans-serif;
-letter-spacing: 0.15em;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0.15em;
 }
 .blueButton {
 	-webkit-box-shadow:inset 0px -3px 7px 0px #8a8a8a;
@@ -126,107 +126,82 @@ letter-spacing: 0.15em;
   </div>
   <a href="javascript:void(0);" class="menu" onclick="customNavList()"><i class="fa fa-bars"></i></a>
 </div>
-<div class="Main" align="left">
+<div class="MainWrapper" align="left">
 <!--Nav Template End-->
 
-<b>
-<font color="1a1a1a">..</font>
-<font color="#8d2424" size="8">
-A.D.A.M.
-<br></font>
-<font color="#8d5024" size="4">
-- Operation Toy Soldier      - Code #1 -
-<br></font>
-<font color="1a1a1a">...........</font>
-<textarea readonly id="Code1" rows="1" cols="6" maxlength="4">7262</textarea><br>
+	<b>
+		<font color="1a1a1a">..</font>
+		<font color="#8d2424" size="8">A.D.A.M.</font><br>
+		<font color="#8d5024" size="4">- Operation Toy Soldier - Code #1 -</font><br>
+		<font color="1a1a1a">...........</font>
+		<textarea readonly id="Code1" rows="1" cols="6" maxlength="4">7262</textarea><br>
 
-<font color="#8d7824" size="4">
-- Sawyer      - Code #2 -
-<br></font>
-<font color="1a1a1a">...........</font>
-<textarea id="Code2" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+		<font color="#8d7824" size="4">- Sawyer - Code #2 -</font><br>
+		<font color="1a1a1a">...........</font>
+		<textarea id="Code2" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
 
-<font color="#508d24" size="4">
-- Peter McCain      - Code #3 -
-<br></font>
-<font color="1a1a1a">...........</font>
-<textarea id="Code3" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+		<font color="#508d24" size="4">- Peter McCain - Code #3 -</font><br>
+		<font color="1a1a1a">...........</font>
+		<textarea id="Code3" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
 
-<font color="#248d6c" size="4">
-- Pernell      - Code #4 -
-<br></font>
-<font color="1a1a1a">...........</font>
-<textarea id="Code4" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
-<font color="6F6F6F" size="5">------------------------------</font><br>
+		<font color="#248d6c" size="4">- Pernell - Code #4 -</font><br>
+		<font color="1a1a1a">...........</font>
+		<textarea id="Code4" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+		<font color="6F6F6F" size="5">------------------------------</font><br>
 
-<font color="#24678d" size="4">
-- Raygun      - Code -
-<br></font>
-<font color="1a1a1a">..........</font>
-<textarea id="Code5" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
-<font color="6F6F6F" size="5">------------------------------</font><br>
+		<font color="#24678d" size="4">- Raygun - Code -</font><br>
+		<font color="1a1a1a">..........</font>
+		<textarea id="Code5" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+		<font color="6F6F6F" size="5">------------------------------</font><br>
 
-<font color="#5040ae" size="4">
-- Clocks      - Code -
-<br></font><br>
-<font color="#0c35d5" size="4">
-Input your First Code then Click the Button to Auto-Fill the Other Codes
-<br></font><br>
+		<font color="#5040ae" size="4">- Clocks - Code -</font><br><br>
+		<font color="#0c35d5" size="4">Input your First Code then Click the Button to Auto-Fill the Other Codes</font><br><br>
 
-<font color="1a1a1a">......</font> <textarea id="Code6" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
-<textarea id="Code7" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+		<font color="1a1a1a">......</font> <textarea id="Code6" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
+		<textarea id="Code7" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
 
-<div id="ResultButton" align="center">
-<button class="blueButton" 
-onClick="
-{
-clockCodes()
-}
-">Show Results</button>
+		<div id="ResultButton" align="center">
+			<button class="blueButton" onClick="{ clockCodes() }">Show Results</button>
+		</div><br>
+
+		<div id="ClockCode" align="left" style="display:none;">
+			<font color="1a1a1a">......</font> <textarea id="Code8" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
+			<textarea id="Code9" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+			<font color="1a1a1a">......</font> <textarea id="Code10" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
+			<textarea id="Code11" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+			<font color="1a1a1a">......</font> <textarea id="Code12" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
+			<textarea id="Code13" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+			<font color="1a1a1a">......</font> <textarea id="Code14" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
+			<textarea id="Code15" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+			<font color="1a1a1a">......</font> <textarea id="Code16" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
+			<textarea id="Code17" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+			<font color="1a1a1a">......</font> <textarea id="Code18" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
+			<textarea id="Code19" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+			<font color="6F6F6F" size="5">------------------------------</font><br>
+		</div>
+
+		<font color="#8640ae" size="4">- Pictures - Code -</font><br>
+		<font color="1a1a1a">...........</font>
+		<textarea id="Code20" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+		<font color="1a1a1a">...........</font>
+		<textarea id="Code21" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+		<font color="1a1a1a">...........</font>
+		<textarea id="Code22" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
+		<font color="6F6F6F" size="5">------------------------------</font><br>
+
+		<font color="#ae40a5" size="4">- Useful Secret Codes - Code -</font><br>
+		<font color="1a1a1a">..............</font>
+		<textarea readonly id="Code23" rows="1" cols="11" maxlength="9">Bank-2265</textarea><br>
+		<font color="1a1a1a">..............</font>
+		<textarea readonly id="Code24" rows="1" cols="11" maxlength="9">Nuke-3667</textarea><br>
+		<font color="1a1a1a">..............</font>
+		<textarea readonly id="Code25" rows="1" cols="11" maxlength="9">Shed-7433</textarea><br>
+		<font color="1a1a1a">..............</font>
+		<textarea readonly id="Code26" rows="1" cols="11" maxlength="9">Door-6853</textarea><br>
+	</b>
+
+<!--Nav Template Start-->
 </div>
-
-<br><div id="ClockCode" align="left" style="display:none;">
-
-<font color="1a1a1a">......</font> <textarea id="Code8" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
-<textarea id="Code9" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
-<font color="1a1a1a">......</font> <textarea id="Code10" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
-<textarea id="Code11" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
-<font color="1a1a1a">......</font> <textarea id="Code12" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
-<textarea id="Code13" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
-<font color="1a1a1a">......</font> <textarea id="Code14" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
-<textarea id="Code15" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
-<font color="1a1a1a">......</font> <textarea id="Code16" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
-<textarea id="Code17" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
-<font color="1a1a1a">......</font> <textarea id="Code18" rows="1" cols="1" maxlength="1" placeholder="A"></textarea>
-<textarea id="Code19" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
-<font color="6F6F6F" size="5">------------------------------</font><br>
-
-</div>
-
-<font color="#8640ae" size="4">
-- Pictures      - Code -
-<br></font>
-<font color="1a1a1a">...........</font>
-<textarea id="Code20" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
-<font color="1a1a1a">...........</font>
-<textarea id="Code21" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
-<font color="1a1a1a">...........</font>
-<textarea id="Code22" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
-<font color="6F6F6F" size="5">------------------------------</font><br>
-
-
-<font color="#ae40a5" size="4">
-- Useful Secret Codes      - Code -
-<br></font>
-<font color="1a1a1a">..............</font>
-<textarea readonly id="Code23" rows="1" cols="11" maxlength="9">Bank-2265</textarea><br>
-<font color="1a1a1a">..............</font>
-<textarea readonly id="Code24" rows="1" cols="11" maxlength="9">Nuke-3667</textarea><br>
-<font color="1a1a1a">..............</font>
-<textarea readonly id="Code25" rows="1" cols="11" maxlength="9">Shed-7433</textarea><br>
-<font color="1a1a1a">..............</font>
-<textarea readonly id="Code26" rows="1" cols="11" maxlength="9">Door-6853</textarea><br></b>
-
 <script>
 function clockCodes() {
 	if (document.getElementById("Code6").value == "D" && document.getElementById("Code7").value == "0745") {
@@ -316,9 +291,6 @@ function clockCodes() {
 	}
 }
 </script>
-
-<!--Nav Template Start-->
-</div>
 <script>
 function customNavList() {
   var x = document.getElementById("customTopnav");

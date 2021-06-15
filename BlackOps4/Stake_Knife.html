@@ -8,6 +8,17 @@
 <link rel="icon" href="../Images/Global/Icon.png">
 <link rel="stylesheet" href="../Navbar.css">
 <style type="text/css">
+textarea {
+	font-size: 25px;
+	color: Purple;
+	background-color: #383838;
+	border: none;
+	resize:none;
+}
+input {
+	background-color: #383838;
+	border: none;
+}
 .goldButton {
 	-webkit-box-shadow:inset 0px -3px 7px 0px #8a8a8a;
 	box-shadow:inset 0px -3px 7px 0px #8a8a8a;
@@ -63,17 +74,6 @@
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#A67C00', endColorstr='#383838',GradientType=0);
 	background-color:#A67C00;
 }
-textarea {
- font-size: 25px;
- color: Purple;
- background-color: #383838;
- border: none;
- resize:none;
-}
-input {
- background-color: #383838;
- border: none;
-}
 </style>
 </head>
 <body>
@@ -121,44 +121,48 @@ input {
   </div>
   <a href="javascript:void(0);" class="menu" onclick="customNavList()"><i class="fa fa-bars"></i></a>
 </div>
-<div class="Main" align="left">
+<div class="MainWrapper" align="left">
 <!--Nav Template End-->
 
-<b><font color="#248d6c" size="6">Main Tree:</font> <img src="../Images/Stake_Knife/air.png" alt="Air" align="right"><br>
+	<b>
+		<font color="#248d6c" size="6">Main Tree:</font> <img src="../Images/Stake_Knife/air.png" alt="Air" align="right"><br>
+		<textarea id="Symbol3" rows="1" cols="9" maxlength="5" placeholder="Symbol #1"></textarea><br>
 
-<textarea id="Symbol3" rows="1" cols="9" maxlength="5" placeholder="Symbol #1"></textarea>
+		<font color="#8d5024" size="6">Left Tree:</font> <img src="../Images/Stake_Knife/earth.png" alt="Earth" align="right"><br>
+		<textarea id="Symbol1" rows="1" cols="9" maxlength="5" placeholder="Symbol #2"></textarea><br>
 
-<br><font color="#8d5024" size="6">Left Tree:</font> <img src="../Images/Stake_Knife/earth.png" alt="Earth" align="right"><br>
+		<font color="#8d7824" size="6">Right Tree:</font> <img src="../Images/Stake_Knife/fire.png" alt="Fire" align="right"><br>
+		<textarea id="Symbol4" rows="1" cols="9" maxlength="5" placeholder="Symbol #3"></textarea><br>
 
-<textarea id="Symbol1" rows="1" cols="9" maxlength="5" placeholder="Symbol #2"></textarea>
+		<font color="#508d24" size="6">Back Tree:</font> <img src="../Images/Stake_Knife/water.png" alt="Water" align="right"><br>
+		<textarea id="Symbol2" rows="1" cols="9" maxlength="5" placeholder="Symbol #4"></textarea><br><br><br>
 
-<br><font color="#8d7824" size="6">Right Tree:</font> <img src="../Images/Stake_Knife/fire.png" alt="Fire" align="right"><br>
+		<font color="#8d2424" size="6">Stone Locations:</font><br><br>
+		<font color="#248d6c" size="6">Opposite Perk Machine:</font><br>
+		<textarea id="Stone1" rows="1" cols="9" maxlength="5" placeholder="Stone #1"></textarea><br>
 
-<textarea id="Symbol4" rows="1" cols="9" maxlength="5" placeholder="Symbol #3"></textarea>
+		<font color="#8d5024" size="6">Between Perk Machine and Gate:</font><br>
+		<textarea id="Stone2" rows="1" cols="9" maxlength="5" placeholder="Stone #2"></textarea><br>
 
-<br><font color="#508d24" size="6">Back Tree:</font> <img src="../Images/Stake_Knife/water.png" alt="Water" align="right"><br>
+		<font color="#8d7824" size="6">Vapr-XMG Wall-Buy:</font><br>
+		<textarea id="Stone3" rows="1" cols="9" maxlength="5" placeholder="Stone #3"></textarea><br>
 
-<textarea id="Symbol2" rows="1" cols="9" maxlength="5" placeholder="Symbol #4"></textarea><br><br><br>
+		<font color="#508d24" size="6">Gazebo Ledge:</font><br>
+		<textarea id="Stone4" rows="1" cols="9" maxlength="5" placeholder="Stone #4"></textarea><br>
 
-<font color="#8d2424" size="6">Stone Locations:</font><br><br>
+		<div id="ResultButton" align="center">
+			<button class="goldButton" onClick="{ finalStones1(); finalStones2(); finalStones3(); finalStones4(); }">Show Results</button>
+		</div>
 
-<font color="#248d6c" size="6">Opposite Perk Machine:</font><br>
+		<font color="#8d2424" size="6">Order to Shoot Stones:</font>
+		<font color="#8d7824" size="6"><p style="font-size:25px;" id="Symbol1Final"></p></font>
+		<font color="#248d6c" size="6"><p style="font-size:25px;" id="Symbol2Final"></p></font>
+		<font color="#508d24" size="6"><p style="font-size:25px;" id="Symbol3Final"></p></font>
+		<font color="#8d5024" size="6"><p style="font-size:25px;" id="Symbol4Final"></p></font>
+	</b>
 
-<textarea id="Stone1" rows="1" cols="9" maxlength="5" placeholder="Stone #1"></textarea>
-
-<br><font color="#8d5024" size="6">Between Perk Machine and Gate:</font><br>
-
-<textarea id="Stone2" rows="1" cols="9" maxlength="5" placeholder="Stone #2"></textarea>
-
-<br><font color="#8d7824" size="6">Vapr-XMG Wall-Buy:</font><br>
-
-<textarea id="Stone3" rows="1" cols="9" maxlength="5" placeholder="Stone #3"></textarea>
-
-<br><font color="#508d24" size="6">Gazebo Ledge:</font><br>
-
-<textarea id="Stone4" rows="1" cols="9" maxlength="5" placeholder="Stone #4"></textarea>
-<br>
-
+<!--Nav Template Start-->
+</div>
 <script>
 function finalStones1() {
 	if(document.getElementById("Symbol1").value === ""){
@@ -209,35 +213,6 @@ function finalStones4() {
 		document.getElementById("Symbol4Final").innerHTML = "Gazebo Ledge"
 	}}
 </script>
-
-<div id="ResultButton" align="center">
-<button class="goldButton" 
-onClick="
-{
-finalStones1();
-finalStones2();
-finalStones3();
-finalStones4();
-}
-">Show Results</button>
-</div>
-
-<font color="#8d2424" size="6">Order to Shoot Stones:</font>
-<font color="#8d7824" size="6">
-<p style="font-size:25px;" id="Symbol1Final"></p>
-</font>
-<font color="#248d6c" size="6">
-<p style="font-size:25px;" id="Symbol2Final"></p>
-</font>
-<font color="#508d24" size="6">
-<p style="font-size:25px;" id="Symbol3Final"></p>
-</font>
-<font color="#8d5024" size="6">
-<p style="font-size:25px;" id="Symbol4Final"></p>
-</font></b>
-
-<!--Nav Template Start-->
-</div>
 <script>
 function customNavList() {
   var x = document.getElementById("customTopnav");

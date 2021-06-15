@@ -128,21 +128,23 @@ a.syn {
   </div> 
   <a href="javascript:void(0);" class="menu" onclick="customNavList()"><i class="fa fa-bars"></i></a>
 </div>
-<div class="Main" align="center">
+<div class="MainWrapper" align="center">
 <!--Nav Template End-->
 
-<font color="#8d2424" size="8">Random Stash Generator<br></font>
-<font color="#8d5024" size="4">Between</font>
-<textarea id="lownumber" rows="1" cols="5" maxlength="5">1</textarea>
-<font color="#8d7824" size="4">and</font>
-<textarea id="highnumber" rows="1" cols="5" maxlength="5"></textarea><br><br>
-<button class="blueButton" id="generateNum" onClick="{ rollNumber(); genStashFileData();}">Generate</button><br><br>
-<textarea readonly id="randomnumber" rows="1" cols="5" maxlength="5"></textarea><br><br>
-<a class="syn" href="" target="_blank" alt="DokuStash" id="DokuLinkElement"></a><br><br>
-<font color="#8d7824" size="6"><p id="DokuContributorElement"></p></font><br>
-<img id="DokuIMGElement" src="Images/Global/Icon.png" width="128" height="128"><br><br>
-<font color="Purple" size="6"><p id="DokuTagElement"></p></font>
+	<font color="#8d2424" size="8">Random Stash Generator<br></font>
+	<font color="#8d5024" size="4">Between</font>
+	<textarea id="lownumber" rows="1" cols="5" maxlength="5">1</textarea>
+	<font color="#8d7824" size="4">and</font>
+	<textarea id="highnumber" rows="1" cols="5" maxlength="5"></textarea><br><br>
+	<button class="blueButton" id="generateNum" onClick="{ rollNumber(); genStashFileData();}">Generate</button><br><br>
+	<textarea readonly id="randomnumber" rows="1" cols="5" maxlength="5"></textarea><br><br>
+	<a class="syn" href="" target="_blank" alt="DokuStash" id="DokuLinkElement"></a><br><br>
+	<font color="#8d7824" size="6"><p id="DokuContributorElement"></p></font><br>
+	<img id="DokuIMGElement" src="Images/Global/Icon.png" width="128" height="128"><br><br>
+	<font color="Purple" size="6"><p id="DokuTagElement"></p></font>
 
+<!--Nav Template Start-->
+</div>
 <script>
 function sleep(milliseconds) {
   const date = Date.now();
@@ -221,9 +223,9 @@ function genStashFileData() {
 			StashIMGLink,
 			StashExtension1,
 			StashExtension2;
-		
+
 	StashID = document.getElementById("randomnumber").value;
-	
+
 	const nameOf = id => {
 		const bs = (s, e) => {
 			if (e < s) return null // No result
@@ -247,7 +249,7 @@ function genStashFileData() {
 	StashFile = nameOf(StashID)
 	StashExtension1 = StashFile.split(".zip")
 	StashFile1 = nameOf(StashID)
-	
+
 	if (StashExtension1.length == "1") {
 		StashIMGLink = "https://dokucraft.co.uk/stash-files/files/";
 	} else if (StashExtension1.length == "2") {
@@ -256,11 +258,11 @@ function genStashFileData() {
 		StashExtension2 = StashExtension1[0] + ".png";
 		StashFile1 = StashExtension2;
 	}
-	
+
 	ContributorName = StashFile1.split("_" + StashID)
-	
+
 	Contributor = ContributorName[0]
-	
+
 	FileSize = (stashFiles[StashFile].S)
 	FileTags = (stashFiles[StashFile].T)
 	DokuIMGWidth = FileSize[0]
@@ -297,9 +299,6 @@ function rollNumber() {
 	document.getElementById("randomnumber").innerHTML = stashRandomNumber
 }
 </script>
-
-<!--Nav Template Start-->
-</div>
 <script>
 function customNavList() {
   var x = document.getElementById("customTopnav");
