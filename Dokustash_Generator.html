@@ -26,7 +26,7 @@ letter-spacing: 0.15em;
 a.syn {
  color: #35AFEA;
 }
-.myButtonBlue {
+.blueButton {
 	-webkit-box-shadow:inset 0px -3px 7px 0px #8a8a8a;
 	box-shadow:inset 0px -3px 7px 0px #8a8a8a;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #35AFEA), color-stop(1, #1a1a1a));
@@ -48,7 +48,7 @@ a.syn {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #263666;
 }
-.myButtonBlue:hover {
+.blueButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1a1a1a), color-stop(1, #35AFEA));
 	background:-webkit-linear-gradient(top, #1a1a1a 5%, #35AFEA 100%);
 	background:-o-linear-gradient(top, #1a1a1a 5%, #35AFEA 100%);
@@ -57,7 +57,7 @@ a.syn {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a1a1a', endColorstr='#35AFEA',GradientType=0);
 	background-color:#1a1a1a;
 }
-.myButtonBlue:active {
+.blueButton:active {
 	position:relative;
 	top:1px;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cbf2a), color-stop(1, #44c767));
@@ -69,7 +69,7 @@ a.syn {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cbf2a', endColorstr='#44c767',GradientType=0);
 	background-color:#5cbf2a;
 }
-.myButtonBlue:focus {
+.blueButton:focus {
 	position:relative;
 	top:1px;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #35AFEA), color-stop(1, #1a1a1a));
@@ -84,7 +84,7 @@ a.syn {
 </style>
 </head>
 <body onLoad="getJSON()">
-<div class="topnav" id="myTopnav">
+<div class="topnav" id="customTopnav">
   <a href="/Website/"><picture><source media="(max-width: 999px)" srcset="Images/Mobile/Global/Logo.png"><source media="(min-width: 1000px)" srcset="Images/Global/Logo.png"><img class="logo" src="Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></picture></a>
   <a class="spacer"></a>
   <a class="nav-item" href="/Website/">Home</a>
@@ -126,39 +126,22 @@ a.syn {
 			<a href="Downloads/Downloads.html">Downloads</a>
     </div>
   </div> 
-  <a href="javascript:void(0);" class="menu" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+  <a href="javascript:void(0);" class="menu" onclick="customNavList()"><i class="fa fa-bars"></i></a>
 </div>
 <div class="Main" align="center">
 <!--Nav Template End-->
 
-<font color="#8d2424" size="8">
-Random Stash Generator
-<br></font>
-<font color="#8d5024" size="4">
-Between
-</font>
+<font color="#8d2424" size="8">Random Stash Generator<br></font>
+<font color="#8d5024" size="4">Between</font>
 <textarea id="lownumber" rows="1" cols="5" maxlength="5">1</textarea>
-<font color="#8d7824" size="4">
-and
-</font>
-<textarea id="highnumber" rows="1" cols="5" maxlength="5"></textarea>
-<br><br>
-<button class="myButtonBlue" id="generateNum"
-onClick="
-{
-rollNumber();
-genStashFileData();
-}"
->Generate</button>
-<br><br><textarea readonly id="randomnumber" rows="1" cols="5" maxlength="5"></textarea>
-<br><br><a class="syn" href="" target="_blank" alt="DokuStash" id="DokuLinkElement"></a>
-<br><br><font color="#8d7824" size="6">
-<p id="DokuContributorElement"></p>
-</font>
-<br><img id="DokuIMGElement" src="Images/Global/Icon.png" width="128" height="128">
-<br><br><font color="Purple" size="6">
-<p id="DokuTagElement"></p>
-</font>
+<font color="#8d7824" size="4">and</font>
+<textarea id="highnumber" rows="1" cols="5" maxlength="5"></textarea><br><br>
+<button class="blueButton" id="generateNum" onClick="{ rollNumber(); genStashFileData();}">Generate</button><br><br>
+<textarea readonly id="randomnumber" rows="1" cols="5" maxlength="5"></textarea><br><br>
+<a class="syn" href="" target="_blank" alt="DokuStash" id="DokuLinkElement"></a><br><br>
+<font color="#8d7824" size="6"><p id="DokuContributorElement"></p></font><br>
+<img id="DokuIMGElement" src="Images/Global/Icon.png" width="128" height="128"><br><br>
+<font color="Purple" size="6"><p id="DokuTagElement"></p></font>
 
 <script>
 function sleep(milliseconds) {
@@ -171,96 +154,95 @@ function sleep(milliseconds) {
 </script>
 <script>
 function getJSON() {
-    "use strict";
-    var fileName = "",
-		stashFiles,
-        StashID;
-		
-		StashID = document.getElementById("randomnumber").value;
-		
-		async function getFileData() {
-		await fetch('https://dokucraft.co.uk/stash-files/files.json').then(res => res.json()).then(files => {
-			async function StashFileData() {
-				await sleep(500);
-				
-				const fileNames = Object.keys(files)
-				window.stashFileNames = fileNames;
+	"use strict";
+	var fileName = "",
+			stashFiles,
+			StashID;
 
-				let maxID = 0
-				for (let fileName of fileNames) {
-					files[fileName].id = parseInt(fileName.match(/.+_(\d+)/)[1])
-					maxID = Math.max(maxID, files[fileName].id)
-				}
-				
-				fileNames.sort((a, b) => files[a].id - files[b].id)
-				window.stashFiles = files;
-				
-				maxID = Object.values(files).reduce((a,e) => a = Math.max(a, e.id), 0);
-				document.getElementById("highnumber").innerHTML = maxID;
-				
-				var stashRandomNumber = files[fileNames[Math.floor(Math.random()*fileNames.length)]].id
-				var numLowID = document.getElementById("lownumber").value
-				var numHighID = document.getElementById("highnumber").value
+	StashID = document.getElementById("randomnumber").value;
 
-				if (stashRandomNumber < numLowID) {
-					rollNumber()
-				}
-				if (stashRandomNumber > numHighID) {
-					rollNumber()
-				}
-				
-				document.getElementById("randomnumber").innerHTML = stashRandomNumber
-				genStashFileData()
+	async function getFileData() {
+	await fetch('https://dokucraft.co.uk/stash-files/files.json').then(res => res.json()).then(files => {
+		async function StashFileData() {
+			await sleep(500);
+
+			const fileNames = Object.keys(files)
+			window.stashFileNames = fileNames;
+
+			let maxID = 0
+			for (let fileName of fileNames) {
+				files[fileName].id = parseInt(fileName.match(/.+_(\d+)/)[1])
+				maxID = Math.max(maxID, files[fileName].id)
 			}
-			StashFileData();
-			
-		})
+
+			fileNames.sort((a, b) => files[a].id - files[b].id)
+			window.stashFiles = files;
+
+			maxID = Object.values(files).reduce((a,e) => a = Math.max(a, e.id), 0);
+			document.getElementById("highnumber").innerHTML = maxID;
+
+			var stashRandomNumber = files[fileNames[Math.floor(Math.random()*fileNames.length)]].id
+			var numLowID = document.getElementById("lownumber").value
+			var numHighID = document.getElementById("highnumber").value
+
+			if (stashRandomNumber < numLowID) {
+				rollNumber()
+			}
+			if (stashRandomNumber > numHighID) {
+				rollNumber()
+			}
+
+			document.getElementById("randomnumber").innerHTML = stashRandomNumber
+			genStashFileData()
 		}
-		getFileData();
-			
+		StashFileData();
+
+	})
+	}
+	getFileData();
 }
 </script>
 <script>
 function genStashFileData() {
-    "use strict";
-    var DokuIMGWidth = "",
-        DokuIMGHeight,
-        DokuLink,
-        DokuIMGLink,
-		FileSize,
-		FileTags,
-		FileTags1,
-		StashFile0,
-		StashFile1,
-        StashID,
-		Contributor,
-        ContributorName,
-		StashFile,
-		StashIMGLink,
-		StashExtension1,
-		StashExtension2;
+	"use strict";
+	var DokuIMGWidth = "",
+			DokuIMGHeight,
+			DokuLink,
+			DokuIMGLink,
+			FileSize,
+			FileTags,
+			FileTags1,
+			StashFile0,
+			StashFile1,
+			StashID,
+			Contributor,
+			ContributorName,
+			StashFile,
+			StashIMGLink,
+			StashExtension1,
+			StashExtension2;
 		
-		StashID = document.getElementById("randomnumber").value;
+	StashID = document.getElementById("randomnumber").value;
 	
 	const nameOf = id => {
-	const bs = (s, e) => {
-		if (e < s) return null // No result
-	
-		const c = Math.floor((s + e) * .5)
-		if (stashFiles[stashFileNames[c]].id == id) {
-		return stashFileNames[c] // File found
+		const bs = (s, e) => {
+			if (e < s) return null // No result
+
+			const c = Math.floor((s + e) * .5)
+			if (stashFiles[stashFileNames[c]].id == id) {
+				return stashFileNames[c] // File found
+			}
+
+			if (stashFiles[stashFileNames[c]].id < id) {
+				return bs(c + 1, e) // File is in upper half
+			} else {
+				return bs(s, c - 1) // File is in lower half
+			}
 		}
-	
-		if (stashFiles[stashFileNames[c]].id < id) {
-		return bs(c + 1, e) // File is in upper half
-		} else {
-		return bs(s, c - 1) // File is in lower half
-		}
-	}
-	return bs(0, stashFileNames.length - 1)
+		return bs(0, stashFileNames.length - 1)
 	}
 
-				console.log(nameOf(StashID))
+	console.log(nameOf(StashID))
 
 	StashFile = nameOf(StashID)
 	StashExtension1 = StashFile.split(".zip")
@@ -268,7 +250,6 @@ function genStashFileData() {
 	
 	if (StashExtension1.length == "1") {
 		StashIMGLink = "https://dokucraft.co.uk/stash-files/files/";
-		
 	} else if (StashExtension1.length == "2") {
 		StashIMGLink = "https://dokucraft.co.uk/stash-files/thumbnails/";
 		StashExtension1 = StashFile.split(".zip");
@@ -294,8 +275,8 @@ function genStashFileData() {
 	document.getElementById("DokuIMGElement").height = DokuIMGHeight;
 	if (FileTags == undefined) {
 	} else {
-	FileTags1 = FileTags.split(",")
-	document.getElementById("DokuTagElement").innerText = "Tags: " + FileTags1.join(', ');
+		FileTags1 = FileTags.split(",")
+		document.getElementById("DokuTagElement").innerText = "Tags: " + FileTags1.join(', ');
 	}
 }
 </script>
@@ -305,14 +286,14 @@ function rollNumber() {
 	numLowID = document.getElementById("lownumber").value
 	numHighID = document.getElementById("highnumber").value
 	var numLowID = document.getElementById("lownumber").value
-				var numHighID = document.getElementById("highnumber").value
+	var numHighID = document.getElementById("highnumber").value
 
-				if (stashRandomNumber < numLowID) {
-					rollNumber()
-				}
-				if (stashRandomNumber > numHighID) {
-					rollNumber()
-				}
+	if (stashRandomNumber < numLowID) {
+		rollNumber()
+	}
+	if (stashRandomNumber > numHighID) {
+		rollNumber()
+	}
 	document.getElementById("randomnumber").innerHTML = stashRandomNumber
 }
 </script>
@@ -320,8 +301,8 @@ function rollNumber() {
 <!--Nav Template Start-->
 </div>
 <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
+function customNavList() {
+  var x = document.getElementById("customTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {

@@ -62,7 +62,7 @@ position: relative;
 </style>
 </head>
 <body>
-<div class="topnav" id="myTopnav">
+<div class="topnav" id="customTopnav">
   <a href="/Website/"><picture><source media="(max-width: 999px)" srcset="Images/Mobile/Global/Logo.png"><source media="(min-width: 1000px)" srcset="Images/Global/Logo.png"><img class="logo" src="Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></picture></a>
   <a class="spacer"></a>
   <a class="nav-item" href="/Website/">Home</a>
@@ -104,7 +104,7 @@ position: relative;
 			<a href="Downloads/Downloads.html">Downloads</a>
     </div>
   </div>
-  <a href="javascript:void(0);" class="menu" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+  <a href="javascript:void(0);" class="menu" onclick="customNavList()"><i class="fa fa-bars"></i></a>
 </div>
 <div class="Main" align="center">
 <!--Nav Template End-->
@@ -188,8 +188,8 @@ position: relative;
 <!--Nav Template Start-->
 </div>
 <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
+function customNavList() {
+  var x = document.getElementById("customTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {

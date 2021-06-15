@@ -24,7 +24,7 @@ font {
 font-family: 'Montserrat', sans-serif;
 letter-spacing: 0.15em;
 }
-.myButtonBlue {
+.blueButton {
 	-webkit-box-shadow:inset 0px -3px 7px 0px #8a8a8a;
 	box-shadow:inset 0px -3px 7px 0px #8a8a8a;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #35AFEA), color-stop(1, #1a1a1a));
@@ -46,7 +46,7 @@ letter-spacing: 0.15em;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #263666;
 }
-.myButtonBlue:hover {
+.blueButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1a1a1a), color-stop(1, #35AFEA));
 	background:-webkit-linear-gradient(top, #1a1a1a 5%, #35AFEA 100%);
 	background:-o-linear-gradient(top, #1a1a1a 5%, #35AFEA 100%);
@@ -55,7 +55,7 @@ letter-spacing: 0.15em;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a1a1a', endColorstr='#35AFEA',GradientType=0);
 	background-color:#1a1a1a;
 }
-.myButtonBlue:active {
+.blueButton:active {
 	position:relative;
 	top:1px;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cbf2a), color-stop(1, #44c767));
@@ -67,7 +67,7 @@ letter-spacing: 0.15em;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cbf2a', endColorstr='#44c767',GradientType=0);
 	background-color:#5cbf2a;
 }
-.myButtonBlue:focus {
+.blueButton:focus {
 	position:relative;
 	top:1px;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #35AFEA), color-stop(1, #1a1a1a));
@@ -82,7 +82,7 @@ letter-spacing: 0.15em;
 </style>
 </head>
 <body>
-<div class="topnav" id="myTopnav">
+<div class="topnav" id="customTopnav">
   <a href="/Website/"><picture><source media="(max-width: 999px)" srcset="../Images/Mobile/Global/Logo.png"><source media="(min-width: 1000px)" srcset="../Images/Global/Logo.png"><img class="logo" src="../Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></picture></a>
   <a class="spacer"></a>
   <a class="nav-item" href="/Website/">Home</a>
@@ -124,7 +124,7 @@ letter-spacing: 0.15em;
 			<a href="../Downloads/Downloads.html">Downloads</a>
     </div>
   </div>
-  <a href="javascript:void(0);" class="menu" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+  <a href="javascript:void(0);" class="menu" onclick="customNavList()"><i class="fa fa-bars"></i></a>
 </div>
 <div class="Main" align="left">
 <!--Nav Template End-->
@@ -177,7 +177,7 @@ Input your First Code then Click the Button to Auto-Fill the Other Codes
 <textarea id="Code7" rows="1" cols="6" maxlength="4" placeholder="Code"></textarea><br>
 
 <div id="ResultButton" align="center">
-<button class="myButtonBlue" 
+<button class="blueButton" 
 onClick="
 {
 clockCodes()
@@ -320,8 +320,8 @@ function clockCodes() {
 <!--Nav Template Start-->
 </div>
 <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
+function customNavList() {
+  var x = document.getElementById("customTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {

@@ -8,7 +8,7 @@
 <link rel="icon" href="../Images/Global/Icon.png">
 <link rel="stylesheet" href="../Navbar.css">
 <style type="text/css">
-.myButtonGold {
+.goldButton {
 	-webkit-box-shadow:inset 0px -3px 7px 0px #8a8a8a;
 	box-shadow:inset 0px -3px 7px 0px #8a8a8a;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #A67C00), color-stop(1, #383838));
@@ -30,7 +30,7 @@
 	text-decoration:none;
 	text-shadow:0px 1px 0px #263666;
 }
-.myButtonGold:hover {
+.goldButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #383838), color-stop(1, #A67C00));
 	background:-webkit-linear-gradient(top, #383838 5%, #A67C00 100%);
 	background:-o-linear-gradient(top, #383838 5%, #A67C00 100%);
@@ -39,7 +39,7 @@
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#383838', endColorstr='#A67C00',GradientType=0);
 	background-color:#383838;
 }
-.myButtonGold:active {
+.goldButton:active {
 	position:relative;
 	top:1px;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cbf2a), color-stop(1, #44c767));
@@ -51,7 +51,7 @@
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cbf2a', endColorstr='#44c767',GradientType=0);
 	background-color:#5cbf2a;
 }
-.myButtonGold:focus {
+.goldButton:focus {
 	position:relative;
 	top:1px;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #A67C00), color-stop(1, #383838));
@@ -81,7 +81,7 @@ letter-spacing: 0.15em;
 </style>
 </head>
 <body>
-<div class="topnav" id="myTopnav">
+<div class="topnav" id="customTopnav">
   <a href="/Website/"><picture><source media="(max-width: 999px)" srcset="../Images/Mobile/Global/Logo.png"><source media="(min-width: 1000px)" srcset="../Images/Global/Logo.png"><img class="logo" src="../Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></picture></a>
   <a class="spacer"></a>
   <a class="nav-item" href="/Website/">Home</a>
@@ -123,7 +123,7 @@ letter-spacing: 0.15em;
 			<a href="../Downloads/Downloads.html">Downloads</a>
     </div>
   </div>
-  <a href="javascript:void(0);" class="menu" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+  <a href="javascript:void(0);" class="menu" onclick="customNavList()"><i class="fa fa-bars"></i></a>
 </div>
 <div class="Main" align="left">
 <!--Nav Template End-->
@@ -198,7 +198,7 @@ function finalCodes() {
 </script>
 
 <div id="ResultButton" align="center">
-<button class="myButtonGold" 
+<button class="goldButton" 
 onClick="
 {
 finalCodes()
@@ -228,8 +228,8 @@ Codes in Order:
 <!--Nav Template Start-->
 </div>
 <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
+function customNavList() {
+  var x = document.getElementById("customTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
