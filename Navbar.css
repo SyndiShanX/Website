@@ -59,7 +59,7 @@ img.logo:hover {
   background-color: #000;
 }
 
-.topnav a{
+.topnav a {
   float: left;
   display: block;
   text-align: center;
@@ -80,7 +80,7 @@ img.logo:hover {
   background-color: inherit;
 	text-decoration: none;
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: 12px !important;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.05em;
