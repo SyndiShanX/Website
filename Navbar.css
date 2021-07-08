@@ -40,7 +40,7 @@ img.logo:hover {
 }
 
 .spacer {
-  margin-left: 22vw;
+  margin-left: 25vw;
 }
 
 .Main {
@@ -57,6 +57,8 @@ img.logo:hover {
   max-width: 100%;
   padding: 4px 40px;
   background-color: #000;
+	max-height: 64px;
+	height: 64px;
 }
 
 .topnav a {
@@ -120,7 +122,7 @@ img.logo:hover {
   border: 1px solid white;
   z-index: 1;
   right: 6%;
-	top: 94%;
+	top: 92%;
 }
 
 .nav-item.active {
@@ -148,18 +150,17 @@ a.menu {
 	display: none;
 }
 
-@media screen and (max-width: 1260px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn, .nav-item {
+@media screen and (max-width: 1280px) {
+	.topnav a:not(#logo):not(.spacer), .dropdown .dropbtn, .nav-item {
     display: none;
   }
 	.spacer {
 		margin-left: 0px;
 	}
-}
-
-@media screen and (max-width: 1260px) {
   .topnav.responsive {
 		position: relative;
+		max-height: 64px;
+		height: 64px;
   }
   a.menu {
     position: absolute;
