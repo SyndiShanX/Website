@@ -76,6 +76,8 @@ img.FirebaseZ {
 <div class="MainWrapper" align="left">
 <!--Nav Template End-->
 
+	<font size="6" color="#35afea">Screen Size: </font><font id="screensize" size="6" color="#248d6c"></font><br><br>
+
 	<font size="7" color="#8d2424">Easter Egg Song</font><br><br>
 
 	<font color="#9555c2" size="5">Song</font><br>
@@ -231,6 +233,7 @@ function customNavList() {
     x.className = "topnav";
   }
 }
+document.getElementById("screensize").innerText = window.outerHeight + "px x " + window.outerWidth + "px"
 //if (document.getElementsByClassName("topnav")[0].offsetHeight > 70) {
 //	document.getElementsByClassName("spacer")[0].style = "margin-left: -100px;"
 //}
