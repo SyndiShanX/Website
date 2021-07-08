@@ -5,7 +5,7 @@ html {
 
 body {
   background-color: #1a1a1a;
-  margin:0;
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -40,7 +40,7 @@ img.logo:hover {
 }
 
 .spacer {
-  margin-left:22%;
+  margin-left: 22vw;
 }
 
 .Main {
@@ -51,7 +51,7 @@ img.logo:hover {
 
 .topnav {
   position: fixed;
-  top:0;
+  top: 0;
   z-index: 10;
   width: 100%;
   max-width: 100%;
@@ -148,16 +148,16 @@ a.menu {
 	display: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1260px) {
   .topnav a:not(:first-child), .dropdown .dropbtn, .nav-item {
     display: none;
   }
 	.spacer {
-		margin-left:0px;
+		margin-left: 0px;
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1260px) {
   .topnav.responsive {
 		position: relative;
   }
@@ -165,7 +165,7 @@ a.menu {
     position: absolute;
 		display: block !important;
 		margin-top: 12px;
-		font-size:15px;
+		font-size: 15px;
     left: 80%;
     top: 0;
   }
