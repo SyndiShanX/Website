@@ -36,7 +36,7 @@ img.logo:hover {
 }
 
 .nav-item {
-  margin-top: 12px;
+	padding: 12px 0px;
 }
 
 .spacer {
@@ -159,8 +159,8 @@ a.menu {
 	}
   .topnav.responsive {
 		position: relative;
-		max-height: 64px;
-		height: 64px;
+		max-height: 1000px;
+		height: 100%;
   }
   a.menu {
     position: absolute;
@@ -172,15 +172,23 @@ a.menu {
   }
   .topnav.responsive a {
     float: none;
-    display: block;
+    display: block !important;
     text-align: left;
   }
+	.topnav.responsive td {
+		float: none;
+		display: block !important;
+		text-align: left;
+		width: 500px;
+	}
   .topnav.responsive .dropdown {
 		float: none;
 		padding: 4px 0px;
 	}
   .topnav.responsive .dropdown-content {
-		position: relative;
+		float: right;
+		top: 25%;
+		left: 25%;
 	}
   .topnav.responsive .dropdown .dropbtn {
     display: block;
@@ -195,11 +203,9 @@ a.menu {
 		padding: 12px 16px 16px;
 	}
 	.dropdown-content {
-		width: 33%;
-		left: 2%;
-	}
-	.dropdown-content a, .dropdown-content a:hover {
-		width: 85%;
+		float: none;
+		width: 15%;
+		left: 55%;
 	}
 }
 

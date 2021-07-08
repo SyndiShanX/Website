@@ -80,20 +80,20 @@ input {
 <div class="topnav" id="customTopnav">
   <a href="/Website/"><img class="logo" src="../Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></a>
   <a class="spacer"></a>
-  <table><tbody class="nav-items"><tr><td>
-  <a class="nav-item" href="/Website/">Home</a>
-  <a class="nav-item" href="../Minesweeper/Minesweeper.html">Minesweeper</a>
-  <a class="nav-item" href="../Dokustash_Generator.html">Dokustash Generator</a>
-  <a class="nav-item end" href="../ColdWar/Firebase_Z.html">Firebase Z</a>
-  <div class="dropdown">
+  <table><tbody class="nav-items"><tr>
+  <td><a class="nav-item" href="/Website/">Home</a></td>
+  <td><a class="nav-item" href="../Minesweeper/Minesweeper.html">Minesweeper</a></td>
+  <td><a class="nav-item" href="../Dokustash_Generator.html">Dokustash Generator</a></td>
+  <td><a class="nav-item end" href="../ColdWar/Firebase_Z.html">Firebase Z</a></td>
+  <td><div class="dropdown">
     <a href="javascript:void(0);" class="dropbtn">Cold War...<i class="fa fa-caret-down"></i></a>
     <div class="dropdown-content" style="right: 18%;">
       <a href="../ColdWar/Die_Maschine.html">Die Maschine</a>
       <a href="../ColdWar/Outbreak.html">Outbreak</a>
       <a href="../ColdWar/Gold_Weapons.html">Cold War Gold Weapons</a>
     </div>
-  </div>
-  <div class="dropdown">
+  </div></td>
+  <td><div class="dropdown">
     <a href="javascript:void(0);" class="dropbtn">Black Ops 4<i class="fa fa-caret-down"></i></a>
     <div class="dropdown-content" style="right: 10%;">
       <a href="Voyage_of_Despair.html">Voyage of Despair</a>
@@ -109,8 +109,8 @@ input {
       <a href="Tag_Der_Toten.html">Tag Der Toten</a>
       <a href="Random_Map.html">Random Map</a>
     </div>
-  </div>
-  <div class="dropdown">
+  </div></td>
+  <td><div class="dropdown">
     <a href="javascript:void(0);" class="dropbtn">More...<i class="fa fa-caret-down"></i></a>
     <div class="dropdown-content">
       <a href="../MW_Gold_Weapons.html">MW Gold Weapons</a>
@@ -119,8 +119,8 @@ input {
       <a href="../DokucraftBannerEditor/Dokucraft_Banner_Editor.html">Dokucraft Banner Editor</a>
       <a href="../Downloads/Downloads.html">Downloads</a>
     </div>
-  </div>
-  </td></tr></tbody></table>
+  </div></td>
+  </tr></tbody></table>
   <a href="javascript:void(0);" class="menu" onclick="customNavList()"><i class="fa fa-bars"></i></a>
 </div>
 <div class="MainWrapper" align="left">
@@ -223,10 +223,20 @@ function customNavList() {
   } else {
     x.className = "topnav";
   }
+	if (document.getElementById("customTopnav").className === "topnav responsive") {
+    document.getElementsByClassName("responsive")[0].style = "position: relative; max-height: 1000px; height: " + (document.getElementsByClassName("nav-items")[0].clientHeight + 98) + ";"
+	} else {
+		document.getElementsByClassName("topnav")[0].style = "position: fixed; top: 0; z-index: 10; width: 100%; max-width: 100%; padding: 4px 40px; background-color: #000; max-height: 64px; height: 64px;"
+	}
 }
 function spacerSize() {
   var spacerWidth = window.outerWidth - (document.getElementsByClassName("logo")[0].offsetWidth + document.getElementsByClassName("nav-items")[0].offsetWidth)
   document.getElementsByClassName("spacer")[0].style = "margin-left: " + spacerWidth + "px;"
+	if (document.getElementById("customTopnav").className === "topnav responsive") {
+    document.getElementsByClassName("responsive")[0].style = "position: relative; max-height: 1000px; height: " + (document.getElementsByClassName("nav-items")[0].clientHeight + 98) + ";"
+	} else {
+		document.getElementsByClassName("topnav")[0].style = "position: fixed; top: 0; z-index: 10; width: 100%; max-width: 100%; padding: 4px 40px; background-color: #000; max-height: 64px; height: 64px;"
+	}
 }
 window.onresize = spacerSize;
 window.onmousemove = spacerSize;
