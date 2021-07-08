@@ -162,6 +162,8 @@ function spacerSize() {
 window.onresize = spacerSize;
 window.onmousemove = spacerSize;
 window.onscroll = spacerSize;
+let resizeSpacer
+resizeSpacer = setInterval(spacerSize, 1000);
 </script>
 </body>
 </html>
