@@ -38,7 +38,7 @@ img.logo:hover {
 }
 
 .spacer {
-  margin-left: 25vw;
+  margin-left: 19vw;
 }
 
 .Main {
@@ -49,7 +49,7 @@ img.logo:hover {
 
 .topnav {
   position: fixed;
-  top: 0;
+  top: 0px;
   z-index: 10;
   width: 100%;
   max-width: 100%;
@@ -72,6 +72,9 @@ img.logo:hover {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: white;
+}
+.nav-item {
+	width; 100%;
 }
 
 .dropdown .dropbtn, .dropbtn a {  
