@@ -21,6 +21,8 @@ h2 {
 div.MainWrapper {
 	margin-top: 100px;
 	margin-bottom: 75px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .vertical-center {
