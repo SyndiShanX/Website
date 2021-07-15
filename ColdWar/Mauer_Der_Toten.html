@@ -8,6 +8,19 @@
 <link rel="icon" href="../Images/Global/Icon.webp">
 <link rel="stylesheet" href="../Navbar.css">
 <style type="text/css">
+font.text_rainbow {
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+@keyframes rainbow_animation {
+  0%,100% { background-position: 0 0; }
+  50% { background-position: 100% 0; }
+}
+
 font {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -75,6 +88,8 @@ img.Mauer {
 </div>
 <div class="MainWrapper" align="left">
 <!--Nav Template End-->
+
+	<font class="text_rainbow" size="13">--------------------------------This Page is a WIP--------------------------------</font><br>
 
   <font size="7" color="#8d2424">Easter Egg Song</font><br><br>
 
