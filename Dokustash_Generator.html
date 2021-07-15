@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=0.5">
 <title>SyndiShanX - DokuStash Generator</title>
 <link rel="stylesheet" href="Fonts/Font_Awesome.min.css">
-<link rel="icon" href="Images/Global/Icon.png">
+<link rel="icon" href="Images/Global/Icon.webp">
 <link rel="stylesheet" href="Navbar.css">
 <style type="text/css">
 textarea {
@@ -85,7 +85,7 @@ a.syn {
 </head>
 <body onLoad="getJSON()">
 <div class="topnav" id="customTopnav">
-  <a id="logo" href="/Website/"><img class="logo" src="Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></a>
+  <a id="logo" href="/Website/"><img class="logo" src="Images/Global/Logo.webp" alt="SyndiShanX" width="200" height="37.5"></a>
   <a class="spacer"></a>
   <table><tbody class="nav-items"><tr>
   <td><a class="nav-item" href="/Website/">Home</a></td>
@@ -143,7 +143,7 @@ a.syn {
   <textarea readonly id="randomnumber" rows="1" cols="5" maxlength="5"></textarea><br><br>
   <a class="syn" href="" target="_blank" alt="DokuStash" id="DokuLinkElement"></a><br><br>
   <font color="#8d7824" size="6"><p id="DokuContributorElement"></p></font><br>
-  <img id="DokuIMGElement" src="Images/Global/Icon.png" width="128" height="128"><br><br>
+  <img id="DokuIMGElement" src="Images/Global/Icon.webp" width="128" height="128"><br><br>
   <font color="Purple" size="6"><p id="DokuTagElement"></p></font>
 
 <!--Nav Template Start-->
@@ -258,7 +258,7 @@ function genStashFileData() {
   } else if (StashExtension1.length == "2") {
     StashIMGLink = "https://dokucraft.co.uk/stash-files/thumbnails/";
     StashExtension1 = StashFile.split(".zip");
-    StashExtension2 = StashExtension1[0] + ".png";
+    StashExtension2 = StashExtension1[0] + ".webp";
     StashFile1 = StashExtension2;
   }
 

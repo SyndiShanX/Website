@@ -6,7 +6,7 @@
 <title>SyndiShanX - Random Map</title>
 <link rel="stylesheet" href="../Fonts/Font_Awesome.min.css">
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
-<link rel="icon" href="../Images/Global/Icon.png">
+<link rel="icon" href="../Images/Global/Icon.webp">
 <link rel="stylesheet" href="../Navbar.css">
 <style type="text/css">
 textarea {
@@ -83,7 +83,7 @@ font {
 </head>
 <body onload="{deleteLoadingDiv();}">
 <div class="topnav" id="customTopnav">
-  <a id="logo" href="/Website/"><img class="logo" src="../Images/Global/Logo.png" alt="SyndiShanX" width="200" height="37.5"></a>
+  <a id="logo" href="/Website/"><img class="logo" src="../Images/Global/Logo.webp" alt="SyndiShanX" width="200" height="37.5"></a>
   <a class="spacer"></a>
   <table><tbody class="nav-items"><tr>
   <td><a class="nav-item" href="/Website/">Home</a></td>
@@ -135,14 +135,14 @@ font {
   <b>
     <div id="LoadingImages" align="center">
       <font color="#248d6c" size="16">Loading Images, Please Wait...</font><br>
-      <img src="../Images/Maps/nomap.png"></img>
-      <img src="../Images/Maps/voyageofdespair.png"></img>
-      <img src="../Images/Maps/ix.png"></img>
-      <img src="../Images/Maps/bloodofthedead.png"></img>
-      <img src="../Images/Maps/classified.png"></img>
-      <img src="../Images/Maps/deadofthenight.png"></img>
-      <img src="../Images/Maps/ancientevil.png"></img>
-      <img src="../Images/Maps/alphaomega.png"></img>
+      <img src="../Images/Maps/nomap.webp"></img>
+      <img src="../Images/Maps/voyageofdespair.webp"></img>
+      <img src="../Images/Maps/ix.webp"></img>
+      <img src="../Images/Maps/bloodofthedead.webp"></img>
+      <img src="../Images/Maps/classified.webp"></img>
+      <img src="../Images/Maps/deadofthenight.webp"></img>
+      <img src="../Images/Maps/ancientevil.webp"></img>
+      <img src="../Images/Maps/alphaomega.webp"></img>
     </div>
     <div id="Main" align="center" style="display:none;">
       <font color="#8d2424" size="8">Random Map Generator<br></font>
@@ -155,7 +155,7 @@ font {
     </div>
   </b>
 
-  <div id="MapImgDiv"><img src="../Images/Maps/nomap.png"></img></div>
+  <div id="MapImgDiv"><img src="../Images/Maps/nomap.webp"></img></div>
 
 <!--Nav Template Start-->
 </div>
@@ -198,7 +198,7 @@ function resultsToImg(){
     var mapImg = 'alphaomega';
   }
   console.log(mapImg)
-  mapImgPathed = '../Images/Maps/' + mapImg + '.png'
+  mapImgPathed = '../Images/Maps/' + mapImg + '.webp'
   var mapImgFinal = document.createElement("img");
   mapImgFinal.src = mapImgPathed;
   mapImgFinal.id = "Map";
