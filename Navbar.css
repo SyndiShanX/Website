@@ -151,7 +151,7 @@ a.menu {
 	display: none;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 9999px) {
 	.topnav a:not(#logo):not(.spacer), .dropdown .dropbtn, .nav-item {
     display: none;
   }
