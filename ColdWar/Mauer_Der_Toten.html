@@ -223,7 +223,6 @@ function customNavList() {
   var x = document.getElementById("customTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
-		document.getElementById("customTopnav").outerHTML = document.getElementById("customTopnav").outerHTML.replace("<td>", "<tr>")
   } else {
     x.className = "topnav";
   }
