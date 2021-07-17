@@ -128,7 +128,7 @@ img.map {
   <font class="text">&nbsp; -Leg: Bar</font><br>
   <font class="text">&nbsp; -Leg: Grocery Store</font><br>
   <font class="text">Live through the Lockdown and Choose your Reward</font><br>
-  <font class="text">&nbsp; -1: Large Reward Crate</font><br>
+  <font class="text">&nbsp; -1: Large Loot Chest</font><br>
   <font class="text">&nbsp; -2: Rewards Crate</font><br>
   <font class="text">&nbsp; -3: Golden Chest</font><br>
   <font class="text">If you don't complete it in time you get kicked out and you get a Max Ammo, Carpenter, and a Bonus Points drop</font><br><br>
@@ -142,7 +142,9 @@ img.map {
   <font class="text">Give Klaus his Hands back to Activate Him</font><br>
 	<font class="text">Find the Microwave Dish by Digging in the Death Strip</font><br>
 	<font class="text">Tell Klaus to go to the Upgrade Station in Garment Factory once he Kills enough Zombies (The Screen will turn Green)</font><br>
-	<font class="text">Tell Klaus to go up to Panels around the Map, he will Melee them, one of them will have a Floppy Disk</font><br>
+	<font class="text">He will climb in, you have to Defend him for 1 minute</font><br>
+	<font class="text">There are Panels around the Map, some of them will have a Skull next to them when you Shine a Blacklight on it</font><br>
+	<font class="text">Tell Klaus to go up to one with the Skull, he will Melee it to reveal a Floppy Disk</font><br>
 	<font class="text">&nbsp; -Blasted Suite</font><br>
 	<font class="text">&nbsp; -West Berlin Street</font><br>
 	<font class="text">&nbsp; -Maintenance Tunnel</font><br>
@@ -221,6 +223,7 @@ function customNavList() {
   var x = document.getElementById("customTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
+		document.getElementById("customTopnav").outerHTML = document.getElementById("customTopnav").outerHTML.replace("<td>", "<tr>")
   } else {
     x.className = "topnav";
   }
