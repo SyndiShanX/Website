@@ -81,7 +81,6 @@ button,select,input {
     </div>
   </div></td>
   </tr></tbody></table>
-  <a href="javascript:void(0);" class="menu" onclick="customNavList()"><i class="fa fa-bars"></i></a>
 </div>
 <div class="MainWrapper" align="center">
 <!--Nav Template End-->
@@ -148,19 +147,6 @@ button,select,input {
 <!--Nav Template Start-->
 </div>
 <script>
-function customNavList() {
-  var x = document.getElementById("customTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-	if (document.getElementById("customTopnav").className === "topnav responsive") {
-    document.getElementsByClassName("responsive")[0].style = "position: relative; max-height: 1000px; height: " + (document.getElementsByClassName("nav-items")[0].clientHeight + 98) + ";"
-	} else {
-		document.getElementsByClassName("topnav")[0].style = "position: fixed; top: 0; z-index: 10; width: 100%; max-width: 100%; padding: 4px 40px; background-color: #000; max-height: 64px; height: 64px;"
-	}
-}
 function spacerSize() {
   var spacerWidth = window.outerWidth - (document.getElementsByClassName("logo")[0].offsetWidth + document.getElementsByClassName("nav-items")[0].offsetWidth)
   document.getElementsByClassName("spacer")[0].style = "margin-left: " + spacerWidth + "px;"
@@ -182,8 +168,6 @@ window.onresize = spacerSize;
 window.onmousemove = spacerSize;
 window.onscroll = spacerSize;
 window.onresize = navSwapper;
-window.onmousemove = navSwapper;
-window.onscroll = navSwapper;
 let resizeSpacer
 resizeSpacer = setInterval(spacerSize, 1000);
 navSwapper()
