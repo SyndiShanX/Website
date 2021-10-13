@@ -217,7 +217,7 @@ function finalStones4() {
 </script>
 <script>
 function spacerSize() {
-  var spacerWidth = window.outerWidth - (document.getElementsByClassName("logo")[0].offsetWidth + document.getElementsByClassName("nav-items")[0].offsetWidth)
+  var spacerWidth = window.outerWidth - (document.getElementsByClassName("logo")[0].offsetWidth + document.getElementsByClassName("nav-items")[0].offsetWidth) - 78
   document.getElementsByClassName("spacer")[0].style = "margin-left: " + spacerWidth + "px;"
 	if (document.getElementById("customTopnav").className === "topnav responsive") {
     document.getElementsByClassName("responsive")[0].style = "position: relative; max-height: 1000px; height: " + (document.getElementsByClassName("nav-items")[0].clientHeight + 98) + ";"
@@ -272,11 +272,8 @@ function navSwapper() {
 		}
 	} else {
 		if (document.getElementsByClassName("minesweeper")[0] != undefined) {
-			console.log('Yes')
 			document.getElementsByClassName("minesweeper")[0].remove()
 			document.getElementsByClassName("dokustashGenerator")[0].remove()
-		} else {
-			console.log('No')
 		}
 		var moreHTML1 = document.getElementsByClassName("moreDropdown")[0].outerHTML
 		if (moreHTML1.split('Minesweeper') > 1) {
