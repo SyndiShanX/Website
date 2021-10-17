@@ -1,6 +1,5 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
 	margin: 0;
-	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
@@ -94,16 +93,20 @@ input,textarea {
 	padding: 8px;
 	font-size: 14px;
 	line-height: 1.428571429;
-	color: #555;
+	color: white;
 	vertical-align: middle;
-	background-color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
 	background-image: none;
-	border: 2px solid #ccc;
+	border: 2px solid rgba(255, 255, 255, 0.5);
 	border-radius: 4px;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
 	-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+#url {
+	width: 98%!important;
 }
 
 input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
@@ -962,8 +965,8 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner .header {
-	background: #F5E9B7;
-	color: black;
+	background: rgba(0, 0, 0, 0.35);
+	color: white;
 	border-bottom: none;
 	overflow: hidden;
 	padding: 5px 10px;
@@ -1032,7 +1035,7 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
-	width: 24%;
+	width: 25%;
 	margin-right: .8%;
 }
 
@@ -1042,7 +1045,19 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 
 #banner #toolbar,#banner .generate,#banner #saved,#banner #saved-gal {
 	margin-bottom: 4px;
-	background: white;
+	background: rgba(0, 0, 0, 0.2)!important;
+}
+
+#banner .layers-cont, #banner .layer, #banner #total, #canvas-skew {
+	background: rgba(0, 0, 0, 0.2)!important;
+}
+
+.layer-color-container, .layer-pattern-container {
+	background: rgba(0, 0, 0, 0.75)!important;
+}
+
+#banner #total {
+	color: white!important;
 }
 
 #banner #canvas {
@@ -1222,10 +1237,6 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	margin-top: 3px;
 }
 
-#banner .layers-cont {
-	background: white;
-}
-
 #banner #layers {
 	display: inline-block;
 	min-height: 431px;
@@ -1241,7 +1252,6 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	padding: 4px 4px 4px 12px;
 	border-bottom: 1px solid rgba(0,0,0,0.05);
 	position: relative;
-	background: white;
 	transition: height 0.2s ease, padding 0.2s ease;
 	overflow: visible;
 	display: block;
@@ -1252,12 +1262,13 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner .tip ~ .layer {
-	background: #FAEEEE;
+	background: rgba(0, 0, 0, 0.75);
 }
 
 #banner .tip {
 	border-top: 1px solid red !important;
-	background: #FAEEEE;
+	background: rgba(0, 0, 0, 0.75);
+	color: white;
 }
 
 #banner .tip:hover:after {
@@ -1270,7 +1281,7 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	padding: 4px;
 	left: -190px;
 	top: -1px;
-	background: white;
+	background: rgba(0, 0, 0, 0.75);
 	border: 1px solid #aaa;
 }
 
@@ -1405,20 +1416,22 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner .craft-t {
-	margin-left: 120px;
+	margin-left: 16px;
 	cursor: initial;
-	width: 45px;
+	width: 128px;
+	height: 128px;
 	line-height: 0;
 	font-size: 0px;
+	background-image: url("../images/crafting_table.png");
 }
 
 #banner .craft-u {
-	width: 13px;
-	height: 13px;
+	width: 32px;
+	height: 32px;
 	padding: 0;
-	margin-bottom: 1px;
-	margin-left: 1px;
-	background-color: #ddd !important;
+	margin-top: 7px;
+	margin-left: 7.75px;
+	background-color: #211914 !important;
 	vertical-align: top;
 	overflow: visible !important;
 	box-shadow: 1px 1px 1px rgba(0,0,0,0.3) inset;
@@ -1427,22 +1440,21 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	font-size: 12px;
 }
 
-#banner .layer-drag {
-	height: 320px;
-	width: 18px;
-	background: url("../images/drag.webp") no-repeat 50% 50%;
-	float: right;
-	margin-right: 6px;
-	cursor: move !important;
-}
-
 #banner .layer-move {
 	width: 16px;
 	height: 32px;
 	float: right;
 	cursor: initial !important;
 	position: relative;
-	margin-top: 5px;
+}
+
+#banner .layer-del {
+	width: 16px;
+	height: 16px;
+	float: right;
+	background: url("../images/cross-script.webp");
+	margin-top: 32px;
+	cursor: pointer;
 }
 
 #banner .layer-up,#banner .layer-down {
@@ -1464,14 +1476,6 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	background: url("../images/arrow-dn.webp");
 }
 
-#banner .layer-del {
-	width: 16px;
-	height: 16px;
-	float: right;
-	background: url("../images/cross-script.webp");
-	margin-top: 12px;
-}
-
 #banner #total {
 	font-size: 12px;
 	border-top: 1px solid rgba(0,0,0,0.14);
@@ -1479,13 +1483,13 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	line-height: 20px;
 	color: #444;
 	white-space: normal;
-	background: white;
 }
 
 #banner #total .craft-u {
 	box-shadow: none;
 	vertical-align: middle;
-	background-color: #fff !important;
+	background-color: transparent !important;
+	margin-left: 5px;
 }
 
 #banner #total span {
@@ -2372,12 +2376,12 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner .craft-u.apple,#banner .craft-u.bn,#banner .craft-u.brick,#banner .craft-u.creeper,#banner .craft-u.black,#banner .craft-u.blue,#banner .craft-u.brown,#banner .craft-u.cyan,#banner .craft-u.gray,#banner .craft-u.green,#banner .craft-u.light_blue,#banner .craft-u.lime,#banner .craft-u.magenta,#banner .craft-u.orange,#banner .craft-u.pink,#banner .craft-u.purple,#banner .craft-u.red,#banner .craft-u.light_gray,#banner .craft-u.white,#banner .craft-u.yellow,#banner .craft-u.flower,#banner .craft-u.stick,#banner .craft-u.wither,#banner .craft-u.vine {
-	background-image: url("../images/craft.webp") !important;
+	background-image: url("../images/craft.png") !important;
 	background-repeat: no-repeat;
 }
 
 #banner .craft-base.craft-u.apple,#banner .craft-base.craft-u.bn,#banner .craft-base.craft-u.brick,#banner .craft-base.craft-u.creeper,#banner .craft-base.craft-u.black,#banner .craft-base.craft-u.blue,#banner .craft-base.craft-u.brown,#banner .craft-base.craft-u.cyan,#banner .craft-base.craft-u.gray,#banner .craft-base.craft-u.green,#banner .craft-base.craft-u.light_blue,#banner .craft-base.craft-u.lime,#banner .craft-base.craft-u.magenta,#banner .craft-base.craft-u.orange,#banner .craft-base.craft-u.pink,#banner .craft-base.craft-u.purple,#banner .craft-base.craft-u.red,#banner .craft-base.craft-u.light_gray,#banner .craft-base.craft-u.white,#banner .craft-base.craft-u.yellow,#banner .craft-base.craft-u.flower,#banner .craft-base.craft-u.stick,#banner .craft-base.craft-u.wither,#banner .craft-base.craft-u.vine {
-	background-image: url("../images/craft_b.webp") !important;
+	background-image: url("../images/craft_b.png") !important;
 	background-repeat: no-repeat;
 }
 
@@ -2398,7 +2402,7 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner .craft-base.craft-u.gray:hover:after {
-	content: "light_gray Wool";
+	content: "Gray Wool";
 }
 
 #banner .craft-base.craft-u.green:hover:after {
@@ -2434,7 +2438,7 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner .craft-base.craft-u.light_gray:hover:after {
-	content: "Light light_gray Wool";
+	content: "Light Gray Wool";
 }
 
 #banner .craft-base.craft-u.white:hover:after {
@@ -2450,95 +2454,95 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner .craft-u.bn {
-	background-position: -13px -0px;
+	background-position: -32px -0px;
 }
 
 #banner .craft-u.brick {
-	background-position: -26px -0px;
+	background-position: -64px -0px;
 }
 
 #banner .craft-u.creeper {
-	background-position: -39px -0px;
+	background-position: -96px -0px;
 }
 
 #banner .craft-u.black {
-	background-position: -0px -13px;
+	background-position: -0px -32px;
 }
 
 #banner .craft-u.blue {
-	background-position: -13px -13px;
+	background-position: -32px -32px;
 }
 
 #banner .craft-u.brown {
-	background-position: -26px -13px;
+	background-position: -64px -32px;
 }
 
 #banner .craft-u.cyan {
-	background-position: -39px -13px;
+	background-position: -96px -32px;
 }
 
 #banner .craft-u.gray {
-	background-position: -0px -26px;
+	background-position: -0px -64px;
 }
 
 #banner .craft-u.green {
-	background-position: -13px -26px;
+	background-position: -32px -64px;
 }
 
 #banner .craft-u.light_blue {
-	background-position: -26px -26px;
+	background-position: -64px -64px;
 }
 
 #banner .craft-u.lime {
-	background-position: -39px -26px;
+	background-position: -96px -64px;
 }
 
 #banner .craft-u.magenta {
-	background-position: -0px -39px;
+	background-position: -0px -96px;
 }
 
 #banner .craft-u.orange {
-	background-position: -13px -39px;
+	background-position: -32px -96px;
 }
 
 #banner .craft-u.pink {
-	background-position: -26px -39px;
+	background-position: -64px -96px;
 }
 
 #banner .craft-u.purple {
-	background-position: -39px -39px;
+	background-position: -96px -96px;
 }
 
 #banner .craft-u.red {
-	background-position: -0px -52px;
+	background-position: -0px -128px;
 }
 
 #banner .craft-u.light_gray {
-	background-position: -13px -52px;
+	background-position: -32px -128px;
 }
 
 #banner .craft-u.white {
-	background-position: -26px -52px;
+	background-position: -64px -128px;
 }
 
 #banner .craft-u.yellow {
-	background-position: -39px -52px;
+	background-position: -96px -128px;
 }
 
 #banner .craft-u.flower {
-	background-position: -0px -65px;
+	background-position: -0px -160px;
 }
 
 #banner .craft-u.stick {
-	background-position: -13px -65px;
+	background-position: -32px -160px;
 }
 
 #banner .craft-u.wither {
-	background-position: -26px -65px;
+	background-position: -64px -160px;
 }
 
 #banner .craft-u.vine {
-	background-position: -39px -65px;
+	background-position: -96px -160px;
 }
 
 #banner .craft-u.apple:hover:after,#banner .craft-u.bn:hover:after,#banner .craft-u.brick:hover:after,#banner .craft-u.creeper:hover:after,#banner .craft-u.black:hover:after,#banner .craft-u.blue:hover:after,#banner .craft-u.brown:hover:after,#banner .craft-u.cyan:hover:after,#banner .craft-u.gray:hover:after,#banner .craft-u.green:hover:after,#banner .craft-u.light_blue:hover:after,#banner .craft-u.lime:hover:after,#banner .craft-u.magenta:hover:after,#banner .craft-u.orange:hover:after,#banner .craft-u.pink:hover:after,#banner .craft-u.purple:hover:after,#banner .craft-u.red:hover:after,#banner .craft-u.light_gray:hover:after,#banner .craft-u.white:hover:after,#banner .craft-u.yellow:hover:after,#banner .craft-u.flower:hover:after,#banner .craft-u.stick:hover:after,#banner .craft-u.wither:hover:after,#banner .craft-u.vine:hover:after {
@@ -2547,7 +2551,8 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	position: absolute;
 	bottom: 8px;
 	left: 10px;
-	background: white;
+	background: rgba(0, 0, 0, 0.75);
+	color: white;
 	border: 1px solid #999;
 	box-shadow: 0 0 3px rgba(0,0,0,0.3);
 	cursor: default !important;
@@ -2575,15 +2580,15 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner .craft-u.black:hover:after {
-	content: "Ink Sac";
+	content: "Black Dye";
 }
 
 #banner .craft-u.blue:hover:after {
-	content: "Lapis Lazuli";
+	content: "Blue Dye";
 }
 
 #banner .craft-u.brown:hover:after {
-	content: "Cocoa Beans";
+	content: "Brown Dye";
 }
 
 #banner .craft-u.cyan:hover:after {
@@ -2591,11 +2596,11 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner .craft-u.gray:hover:after {
-	content: "light_gray Dye";
+	content: "Gray Dye";
 }
 
 #banner .craft-u.green:hover:after {
-	content: "Cactus Green";
+	content: "Green Dye";
 }
 
 #banner .craft-u.light_blue:hover:after {
@@ -2623,19 +2628,19 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner .craft-u.red:hover:after {
-	content: "Rose Red";
+	content: "Red Dye";
 }
 
 #banner .craft-u.light_gray:hover:after {
-	content: "Light light_gray Dye";
+	content: "Light Gray Dye";
 }
 
 #banner .craft-u.white:hover:after {
-	content: "Bone Meal";
+	content: "White Dye";
 }
 
 #banner .craft-u.yellow:hover:after {
-	content: "Dandelion Yellow";
+	content: "Yellow Dye";
 }
 
 #banner .craft-u.flower:hover:after {
