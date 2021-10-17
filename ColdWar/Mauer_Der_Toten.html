@@ -31,53 +31,7 @@ img.map {
 }
 </style>
 </head>
-<body>
-<div class="topnav" id="customTopnav">
-  <a id="logo" href="/Website/"><img class="logo" src="../Images/Global/Logo.webp" alt="SyndiShanX" width="200" height="37.5"></a>
-  <a class="spacer"></a>
-  <table><tbody class="nav-items"><tr>
-  <td><a class="nav-item" href="/Website/">Home</a></td>
-  <td><a class="nav-item minesweeper" href="../Minesweeper/Minesweeper.html">Minesweeper</a></td>
-  <td><a class="nav-item dokustashGenerator end" href="../Dokustash_Generator.html">Dokustash Generator</a></td>
-  <td><div class="dropdown">
-    <a href="javascript:void(0);" class="dropbtn">Cold War...<i class="fa fa-caret-down"></i></a>
-    <div class="dropdown-content coldwarDropdown" style="right: 18%;">
-      <a href="Die_Maschine.html">Die Maschine</a>
-			<a href="Firebase_Z.html">Firebase Z</a>
-			<a href="Mauer_Der_Toten.html">Mauer Der Toten</a>
-      <a href="Outbreak.html">Outbreak</a>
-      <a href="Gold_Weapons.html">Cold War Gold Weapons</a>
-    </div>
-  </div></td>
-  <td><div class="dropdown">
-    <a href="javascript:void(0);" class="dropbtn">Black Ops 4...<i class="fa fa-caret-down"></i></a>
-    <div class="dropdown-content bo4Dropdown" style="right: 10%;">
-      <a href="../BlackOps4/Voyage_of_Despair.html">Voyage of Despair</a>
-      <a href="../BlackOps4/Voyage_of_Despair_Tool.html">Voyage of Despair Tool</a>
-      <a href="../BlackOps4/IX.html">IX</a>
-      <a href="../BlackOps4/Blood_of_The_Dead.html">Blood of The Dead</a>
-      <a href="../BlackOps4/Classified.html">Classified</a>
-      <a href="../BlackOps4/Dead_of_The_Night.html">Dead of The Night</a>
-      <a href="../BlackOps4/Stake_Knife.html">Stake Knife</a>
-      <a href="../BlackOps4/Ancient_Evil.html">Ancient Evil</a>
-      <a href="../BlackOps4/Alpha_Omega.html">Alpha Omega</a>
-      <a href="../BlackOps4/Alpha_Omega_Tool.html">Alpha Omega Tool</a>
-      <a href="../BlackOps4/Tag_Der_Toten.html">Tag Der Toten</a>
-      <a href="../BlackOps4/Random_Map.html">Random Map</a>
-    </div>
-  </div></td>
-  <td><div class="dropdown">
-    <a href="javascript:void(0);" class="dropbtn">More...<i class="fa fa-caret-down"></i></a>
-    <div class="dropdown-content moreDropdown">
-      <a href="../MW_Gold_Weapons.html">MW Gold Weapons</a>
-      <a href="../Shadows_of_Evil.html">Shadows of Evil</a>
-      <a href="../The_Final_Riech.html">The Final Reich</a>
-      <a href="../DokucraftBannerEditor/Dokucraft_Banner_Editor.html">Dokucraft Banner Editor</a>
-      <a href="../Downloads/Downloads.html">Downloads</a>
-    </div>
-  </div></td>
-  </tr></tbody></table>
-</div>
+<body lang="../">
 <div class="MainWrapper" align="left">
 <!--Nav Template End-->
 	
@@ -209,89 +163,8 @@ for (i = 0; i < text.length; i++) {
   }
 }
 </script>
-<script>
-var screenSize
-function spacerSize(screenSize) {
-	if (screenSize == undefined) {var screenSize = 0}
-  var spacerWidth = window.outerWidth - (document.getElementsByClassName("logo")[0].offsetWidth + document.getElementsByClassName("nav-items")[0].offsetWidth) - screenSize
-  document.getElementsByClassName("spacer")[0].style = "margin-left: " + spacerWidth + "px;"
-	if (document.getElementById("customTopnav").className === "topnav responsive") {
-    document.getElementsByClassName("responsive")[0].style = "position: relative; max-height: 1000px; height: " + (document.getElementsByClassName("nav-items")[0].clientHeight + 98) + ";"
-	} else {
-		document.getElementsByClassName("topnav")[0].style = "position: fixed; top: 0; z-index: 10; width: 100%; max-width: 100%; padding: 4px 40px; background-color: #000; max-height: 64px; height: 64px;"
-	}
-}
-function navSwapper() {
-	if (document.getElementsByClassName("minesweeper")[0] != undefined) {
-		var minesweeperHTML = document.getElementsByClassName("minesweeper")[0].outerHTML
-		var dokustashGeneratorHTML = document.getElementsByClassName("dokustashGenerator")[0].outerHTML
-		var body = document.getElementsByTagName('body')[0]
-		var hiddenHTML = document.createElement('div')
-		hiddenHTML.className = 'hiddenHTML'
-		hiddenHTML.style = 'display: none;'
-		var minesweeperA = document.createElement('a')
-		var dokustashGeneratorA = document.createElement('a')
-		minesweeperA.className = 'minesweeperA'
-		dokustashGeneratorA.className = 'dokustashGeneratorA'
-		hiddenHTML.appendChild(minesweeperA)
-		hiddenHTML.appendChild(dokustashGeneratorA)
-		body.insertBefore(hiddenHTML, body.childNodes[3])
-		document.getElementsByClassName("minesweeperA")[0].outerHTML = minesweeperHTML
-		document.getElementsByClassName("dokustashGeneratorA")[0].outerHTML = dokustashGeneratorHTML
-	}
-	if (window.innerWidth >= 1000) {
-		var moreHTML = document.getElementsByClassName("moreDropdown")[0].outerHTML
-		if (document.getElementsByClassName('topnav')[0].children[2].children[0].children[0].children[1].innerHTML == '\n  ') {
-			if (moreHTML.split('<a href="../Minesweeper/Minesweeper.html">Minesweeper</a>      ').length > 1) {
-				var minesweeperSplit = moreHTML.split('<a href="../Minesweeper/Minesweeper.html">Minesweeper</a>      ')[0] + moreHTML.split('<a href="../Minesweeper/Minesweeper.html">Minesweeper</a>      ')[1]
-				var dokustashGeneratorSplit = minesweeperSplit.split('<a href="../Dokustash_Generator.html">Dokustash Generator</a>      ')[0] + minesweeperSplit.split('<a href="../Dokustash_Generator.html">Dokustash Generator</a>      ')[1]
-				document.getElementsByClassName("moreDropdown")[0].outerHTML = dokustashGeneratorSplit
-			}
-			minesweeperHTML = document.getElementsByClassName("minesweeper")[0].outerHTML
-			dokustashGeneratorHTML = document.getElementsByClassName("dokustashGenerator")[0].outerHTML
-			document.getElementsByClassName('topnav')[0].children[2].children[0].children[0].children[1].innerHTML = minesweeperHTML
-			document.getElementsByClassName('topnav')[0].children[2].children[0].children[0].children[2].innerHTML = dokustashGeneratorHTML
-			document.getElementsByClassName("hiddenHTML")[0].outerHTML = ""
-		} else if (document.getElementsByClassName('topnav')[0].children[2].children[0].children[0].children[1].innerHTML == '') {
-			if (moreHTML.split('<a href="../Minesweeper/Minesweeper.html">Minesweeper</a>      ').length > 1) {
-				var minesweeperSplit = moreHTML.split('<a href="../Minesweeper/Minesweeper.html">Minesweeper</a>      ')[0] + moreHTML.split('<a href="../Minesweeper/Minesweeper.html">Minesweeper</a>      ')[1]
-				var dokustashGeneratorSplit = minesweeperSplit.split('<a href="../Dokustash_Generator.html">Dokustash Generator</a>      ')[0] + minesweeperSplit.split('<a href="../Dokustash_Generator.html">Dokustash Generator</a>      ')[1]
-				document.getElementsByClassName("moreDropdown")[0].outerHTML = dokustashGeneratorSplit
-			}
-			minesweeperHTML = document.getElementsByClassName("minesweeper")[0].outerHTML
-			dokustashGeneratorHTML = document.getElementsByClassName("dokustashGenerator")[0].outerHTML
-			document.getElementsByClassName('topnav')[0].children[2].children[0].children[0].children[1].innerHTML = minesweeperHTML
-			document.getElementsByClassName('topnav')[0].children[2].children[0].children[0].children[2].innerHTML = dokustashGeneratorHTML
-			document.getElementsByClassName("hiddenHTML")[0].outerHTML = ""
-		} else {
-			document.getElementsByClassName("hiddenHTML")[0].outerHTML = ""
-		}
-		var screenSize = 0
-		spacerSize(screenSize)
-	} else {
-		if (document.getElementsByClassName("minesweeper")[0] != undefined) {
-			document.getElementsByClassName("minesweeper")[0].remove()
-			document.getElementsByClassName("dokustashGenerator")[0].remove()
-		}
-		var moreHTML1 = document.getElementsByClassName("moreDropdown")[0].outerHTML
-		if (moreHTML1.split('Minesweeper').length == 1) {
-			var moreHTML2 = moreHTML1.split('The Final Reich</a>\n')[0] + 'The Final Reich</a>\n      ' + dokustashGeneratorHTML + moreHTML1.split('The Final Reich</a>\n')[1]
-			var moreHTML3 = moreHTML2.split('Dokucraft Banner Editor</a>\n')[0] + 'Dokucraft Banner Editor</a>\n      <' + minesweeperHTML + moreHTML2.split('Dokucraft Banner Editor</a>\n')[1]
-			var moreHTML4 = moreHTML3.replaceAll('class="nav-item dokustashGenerator end" ', '').replaceAll('class="nav-item minesweeper" ', '').replaceAll('<<', '<')
-			document.getElementsByClassName("moreDropdown")[0].outerHTML = moreHTML4
-		}
-		var screenSize = 78
-		spacerSize(screenSize)
-	}
-}
-window.onresize = spacerSize(screenSize);
-window.onmousemove = spacerSize(screenSize);
-window.onscroll = spacerSize(screenSize);
-window.onresize = navSwapper;
-let resizeSpacer
-resizeSpacer = setInterval(spacerSize(screenSize), 1000);
-navSwapper()
-</script>
+<script src="../GlobalNavbar.js"></script>
+<script src="../Global.js"></script>
 </body>
 </html>
 <!--Nav Template End-->

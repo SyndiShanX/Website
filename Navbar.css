@@ -93,8 +93,15 @@ img.logo:hover {
   text-transform: uppercase;
   color: white;
 }
+
 .nav-item {
-	width; 100%;
+	background-color: transparent;
+}
+
+.nav-item:hover, .dropbtn:hover {
+	background-color: #222!important;
+	border-radius: 20px!important;
+	color: white!important;
 }
 
 .dropdown .dropbtn, .dropbtn a {  
@@ -152,10 +159,6 @@ img.logo:hover {
 
 .topnav .icon {
   display: none;
-}
-
-.topnav a:hover, .dropdown:hover .dropbtn {
-  color: #8a8a8a;
 }
 
 .dropdown-content a:hover {
