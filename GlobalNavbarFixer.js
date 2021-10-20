@@ -63,9 +63,9 @@ function navSwapper() {
 		}
 		var moreHTML1 = document.getElementsByClassName("moreDropdown")[0].outerHTML
 		if (moreHTML1.split('Minesweeper').length == 1) {
-			var moreHTML2 = moreHTML1.split('The Final Reich</a>\n')[0] + 'The Final Reich</a>\n      ' + dokustashGeneratorHTML + moreHTML1.split('The Final Reich</a>\n')[1]
-			var moreHTML3 = moreHTML2.split('Dokucraft Banner Editor</a>\n')[0] + 'Dokucraft Banner Editor</a>\n      <' + minesweeperHTML + moreHTML2.split('Dokucraft Banner Editor</a>\n')[1]
-			var moreHTML4 = moreHTML3.replaceAll('class="nav-item dokustashGenerator end" ', '').replaceAll('class="nav-item minesweeper" ', '').replaceAll('<<', '<')
+			var moreHTML2 = moreHTML1.split('The Final Reich</a>')[0] + 'The Final Reich</a>' + dokustashGeneratorHTML + moreHTML1.split('The Final Reich</a>')[1]
+			var moreHTML3 = moreHTML2.split('Dokucraft Banner Editor</a>')[0] + 'Dokucraft Banner Editor</a>' + minesweeperHTML + moreHTML2.split('Dokucraft Banner Editor</a>')[1]
+			var moreHTML4 = moreHTML3.replaceAll('class="nav-item dokustashGenerator end" ', '').replaceAll('class="nav-item minesweeper" ', '')
 			document.getElementsByClassName("moreDropdown")[0].outerHTML = moreHTML4
 		}
 		var screenSize = 78
