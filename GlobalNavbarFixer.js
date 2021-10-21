@@ -43,7 +43,15 @@ function navSwapper() {
 		} else {
 			document.getElementsByClassName("hiddenHTML")[0].outerHTML = ""
 		}
-		document.getElementsByClassName('minesweeper')[0].style = 'border: 1px solid white; border-radius: 20px!important;'
+		if (window.location.href.split('Minesweeper').length != 1) {
+			document.getElementsByClassName('minesweeper')[0].style = 'border: 1px solid white; border-radius: 20px!important;'
+		} else if (window.location.href == 'https://syndishanx.github.io/Website/') {
+			document.getElementsByClassName('home')[0].style = 'border: 1px solid white; border-radius: 20px!important;'
+		} else if (window.location.href == 'file:///C:/Users/SyndiShanX/Desktop/HTML/Website/index.html') {
+			document.getElementsByClassName('home')[0].style = 'border: 1px solid white; border-radius: 20px!important;'
+		} else if (window.location.href.split('Dokustash_Generator').length != 1) {
+			document.getElementsByClassName('dokustashGenerator')[0].style = 'border: 1px solid white; border-radius: 20px!important;'
+		}
 	} else {
 		if (document.getElementsByClassName("minesweeper")[0] != undefined) {
 			document.getElementsByClassName("minesweeper")[0].remove()

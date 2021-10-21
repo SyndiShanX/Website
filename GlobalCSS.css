@@ -51,12 +51,8 @@ img.logo:hover {
 	opacity: 0.6;
 }
 
-.spacer {
-	-webkit-box-flex: 0%;
-	-moz-box-flex: 0%;
-	-webkit-flex: 0%;
-	-ms-flex: 0%;
-	flex: 0%;
+.spacer, .spacerSmall {
+	flex: 1 1 auto;
 }
 
 .MainWrapper {
@@ -87,7 +83,7 @@ img.logo:hover {
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	flex-direction: row-reverse;
+	flex-direction: row;
 	position: fixed;
 	top: 0px;
 	z-index: 10;
@@ -106,7 +102,17 @@ img.logo:hover {
 }
 
 .topnav table {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row-reverse;
 	padding-right: 20px;
+	max-width: max-content;
+	width: max-content;
+	flex: 1 1 auto;
+	align-self: center;
 }
 
 .topnav a {
@@ -122,6 +128,11 @@ img.logo:hover {
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	color: white;
+}
+
+.nav-item {
+	max-width: max-content;
+	width: max-content;
 }
 
 .nav-item:hover, .dropbtn:hover {
@@ -195,7 +206,17 @@ img.logo:hover {
 	display: -webkit-flex;
 	display: flex;
 	flex-direction: column;
-	transform: translateX(-20%);
+	width: max-content;
+}
+
+.coldwarDropdown {
+	transform: translateX(-22.5%);
+}
+.bo4Dropdown{
+	transform: translateX(-17.5%);
+}
+.moreDropdown{
+	transform: translateX(-30%);
 }
 
 .dropdown-content a:hover {

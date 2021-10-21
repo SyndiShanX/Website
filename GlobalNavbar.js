@@ -16,17 +16,17 @@ var spacer = document.createElement('a')
 spacer.className = 'spacer'
 var spacerSmall = document.createElement('a')
 spacerSmall.className = 'spacerSmall'
+var spacerSmall2 = document.createElement('a')
+spacerSmall2.className = 'spacerSmall'
 var table = document.createElement('table')
 var tbody = document.createElement('tbody')
 tbody.className = 'nav-items'
 var tr = document.createElement('tr')
-topnav.appendChild(spacerSmall)
+topnav.appendChild(logo)
+topnav.appendChild(logoImg)
 topnav.appendChild(table)
 table.appendChild(tbody)
 tbody.appendChild(tr)
-topnav.appendChild(spacer)
-topnav.appendChild(logo)
-topnav.appendChild(logoImg)
 
 /* Home */
 
@@ -223,7 +223,16 @@ moreDropdownDiv1.appendChild(moreItem3)
 moreDropdownDiv1.appendChild(moreItem4)
 moreDropdownDiv1.appendChild(moreItem5)
 
+tr.appendChild(spacer)
+
+var spacerTD = document.createElement('td')
+spacerTD.appendChild(spacerSmall)
+tr.appendChild(spacerTD)
+var spacerTD2 = document.createElement('td')
+spacerTD2.appendChild(spacerSmall2)
+tr.appendChild(spacerTD2)
+
 topnav.innerHTML = topnav.innerHTML.split('href="/Website/"></a>')[0] + 'href="/Website/">' + topnav.innerHTML.split('href="/Website/"></a>')[1]
-topnav.innerHTML = topnav.innerHTML.split('alt="SyndiShanX">')[0] + 'alt="SyndiShanX">' + topnav.innerHTML.split('alt="SyndiShanX">')[1] + '</a>'
+topnav.innerHTML = topnav.innerHTML.split('alt="SyndiShanX">')[0] + 'alt="SyndiShanX"></a>' + topnav.innerHTML.split('alt="SyndiShanX">')[1]
 
 body.insertBefore(topnav, body.childNodes[0])
