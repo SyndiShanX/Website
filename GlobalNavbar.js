@@ -127,6 +127,7 @@ var coldWarItem2 = document.createElement('a')
 var coldWarItem3 = document.createElement('a')
 var coldWarItem4 = document.createElement('a')
 var coldWarItem5 = document.createElement('a')
+var coldWarItem6 = document.createElement('a')
 
 coldWarItem1.textContent = 'Die Maschine'
 coldWarItem1.href = prepend + 'ColdWar/Die_Maschine.html'
@@ -134,16 +135,19 @@ coldWarItem2.textContent = 'Firebase Z'
 coldWarItem2.href = prepend + 'ColdWar/Firebase_Z.html'
 coldWarItem3.textContent = 'Mauer Der Toten'
 coldWarItem3.href = prepend + 'ColdWar/Mauer_Der_Toten.html'
-coldWarItem4.textContent = 'Outbreak'
-coldWarItem4.href = prepend + 'ColdWar/Outbreak.html'
-coldWarItem5.textContent = 'Cold War Gold Weapons'
-coldWarItem5.href = prepend + 'ColdWar/Gold_Weapons.html'
+coldWarItem4.textContent = 'Forsaken'
+coldWarItem4.href = prepend + 'ColdWar/Forsaken.html'
+coldWarItem5.textContent = 'Outbreak'
+coldWarItem5.href = prepend + 'ColdWar/Outbreak.html'
+coldWarItem6.textContent = 'Cold War Gold Weapons'
+coldWarItem6.href = prepend + 'ColdWar/Gold_Weapons.html'
 
 coldwarDropdownDiv1.appendChild(coldWarItem1)
 coldwarDropdownDiv1.appendChild(coldWarItem2)
 coldwarDropdownDiv1.appendChild(coldWarItem3)
 coldwarDropdownDiv1.appendChild(coldWarItem4)
 coldwarDropdownDiv1.appendChild(coldWarItem5)
+coldwarDropdownDiv1.appendChild(coldWarItem6)
 
 /* Black Ops 4 Items */
 
