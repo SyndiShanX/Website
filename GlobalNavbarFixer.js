@@ -63,7 +63,15 @@ function navSwapper() {
 			var moreHTML3 = moreHTML2.split('Dokucraft Banner Editor</a>')[0] + 'Dokucraft Banner Editor</a>' + minesweeperHTML + moreHTML2.split('Dokucraft Banner Editor</a>')[1]
 			var moreHTML4 = moreHTML3.replaceAll('class="nav-item dokustashGenerator end" ', '').replaceAll('class="nav-item minesweeper" ', '')
 			document.getElementsByClassName("moreDropdown")[0].outerHTML = moreHTML4
+			if (window.location.href.split('Minesweeper').length != 1) {
 			document.getElementsByClassName('minesweeper')[0].style = ''
+		} else if (window.location.href == 'https://syndishanx.github.io/Website/') {
+			document.getElementsByClassName('home')[0].style = ''
+		} else if (window.location.href == 'file:///C:/Users/SyndiShanX/Desktop/HTML/Website/index.html') {
+			document.getElementsByClassName('home')[0].style = ''
+		} else if (window.location.href.split('Dokustash_Generator').length != 1) {
+			document.getElementsByClassName('dokustashGenerator')[0].style = ''
+		}
 		}
 	}
 }
