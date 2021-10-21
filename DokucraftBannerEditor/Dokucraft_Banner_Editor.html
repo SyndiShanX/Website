@@ -13,146 +13,146 @@
 <div class="MainWrapper" align="center">
 <!--Nav Template End-->
 
-  <div class="container">
-  <div id="content">
-  <div class="banner"></div>
-    <div id="banner" class="bg">
-    <div id="hidey" class="hidey"></div>
-    <div class="fix" id="main">
-      <div class="canvas-cont epic">
-        <div class="header"><div>Preview</div></div>
-        <div id="canvas-skew">
-          <div id="canvas-wave">
-            <div id="canvas">
-              <i ptn="base" id="base" clr="0"></i>
-            </div>
-            <div id="base-overlay"></div>
-            <div id="preview"></div>
-          </div>
-        </div>
-        <div class="canv-tool">
-          <div class="ban-btn" onmousedown="chaos()">Randomize!</div>
-          <div class="ban-btn" onmousedown="clearAll()">Clear All</div>
-        </div>
-      </div>
-      <div class="layers-cont" id="layers-cont">
-      <div class="header"><div>Layers</div></div>
-      <div id="layers">
-        <div class="layer vis">
-          <div class="layer-color white" title="white"></div>
-          <div class="layer-pattern">
-          <div class="layer-hover">
-            <div class="layer-color-container">
-              <div class="tb-color black" title="black"></div>
-              <div class="tb-color gray" title="gray"></div>
-              <div class="tb-color light_gray" title="light_gray"></div>
-              <div class="tb-color white" title="white"></div>
-              <div class="tb-color pink" title="pink"></div>
-              <div class="tb-color magenta" title="magenta"></div>
-              <div class="tb-color purple" title="purple"></div>
-              <div class="tb-color blue" title="blue"></div>
-              <div class="tb-color cyan" title="cyan"></div>
-              <div class="tb-color light_blue" title="light_blue"></div>
-              <div class="tb-color green" title="green"></div>
-              <div class="tb-color lime" title="lime"></div>
-              <div class="tb-color yellow" title="yellow"></div>
-              <div class="tb-color orange" title="orange"></div>
-              <div class="tb-color brown" title="brown"></div>
-              <div class="tb-color red" title="red"></div>
-            </div>
-          </div>
-          <i class="tb-ptn" clr="0" ptn="base"></i>
-          </div><div class="layer-craft"><div class="craft-t"><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base"></div><div class="craft-u craft-base stick"></div><div class="craft-u craft-base"></div></div></div>
-        </div>
-      </div>
-      <div id="total"><div><span>6</span><div class="white craft-u craft-base"></div></div><div><span>1</span><div class="stick craft-u"></div></div></div>
-      </div>
-      <div class="toolbar-cont">
-        <div class="header"><div>Layer Creation</div></div>
-        <div id="toolbar">
-          <div id="toolbar-colors" onmousedown="colorsHandler(event)">
-            <div class="tb-color black sel" title="black"></div>
-            <div class="tb-color gray" title="gray"></div>
-            <div class="tb-color light_gray" title="light_gray"></div>
-            <div class="tb-color white" style="border: 1px solid #999"></div>
-            <div class="tb-color pink" title="pink"></div>
-            <div class="tb-color magenta" title="magenta"></div>
-            <div class="tb-color purple" title="purple"></div>
-            <div class="tb-color blue" title="blue"></div>
-            <div class="tb-color cyan" title="cyan"></div>
-            <div class="tb-color light_blue" title="light_blue"></div>
-            <div class="tb-color green" title="green"></div>
-            <div class="tb-color lime" title="lime"></div>
-            <div class="tb-color yellow" title="yellow"></div>
-            <div class="tb-color orange" title="orange"></div>
-            <div class="tb-color brown" title="brown"></div>
-            <div class="tb-color red" title="red"></div>
-          </div>
-          <div id="toolbar-patterns" onmousedown="patternsHandler(event)" onmouseover="showPreview(event)" onmouseout="hidePreview(event)">
-            <div class="tbc"><i class="tb-ptn" ptn="gra" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="gru" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="bri" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="hh" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="hhb" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="vh" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="vhr" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="ts" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="bs" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="ls" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="rs" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="ld" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="rud" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="lud" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="rd" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="cr" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="dls" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="drs" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="sc" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="cs" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="ms" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="tl" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="bl" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="tr" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="br" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="tt" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="bt" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="mr" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="mc" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="bts" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="tts" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="ss" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="bo" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="cbo" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="flo" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="cre" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="sku" clr="15"></i></div>
-            <div class="tbc"><i class="tb-ptn" ptn="moj" clr="15"></i></div>
-          </div>
-        </div>
-        <div class="overtool">
-          <div class="header">
-            <div>Share Code</div>
-          </div>
-          <input type="text" id="url" onclick="this.select()">
-        </div>
-        <div class="header"><div>Generate Command</div></div>
-        <div class="generate">
-          <div class="ban-button" onclick="jsonOutput(0)">/give</div>
-          <div class="ban-button" onclick="jsonOutput(1)">/setblock</div>
-          <div class="ban-button" onclick="jsonOutput(2)">/replaceitem</div>
-          <span id="scrdl"><span></span></span>
-          <textarea id="code" onclick="this.select()"></textarea>
-        </div>
-      </div>
-    </div>
-    <div id="saved-gal-cont" class="hidden" style="display:none;">
-      <div id="saved-gal"></div>
-      <div class="saved-add" id="saved-add"></div><div class="saved-addall hidden" id="saved-addall"></div>
-    </div>
-    </div>
-  </div>
-  <script src="jquery.min.js"></script>
-  <script src="Banner.js"></script>
+	<div class="container">
+	<div id="content">
+	<div class="banner"></div>
+		<div id="banner" class="bg">
+		<div id="hidey" class="hidey"></div>
+		<div class="fix" id="main">
+			<div class="canvas-cont epic">
+				<div class="header"><div>Preview</div></div>
+				<div id="canvas-skew">
+					<div id="canvas-wave">
+						<div id="canvas">
+							<i ptn="base" id="base" clr="0"></i>
+						</div>
+						<div id="base-overlay"></div>
+						<div id="preview"></div>
+					</div>
+				</div>
+				<div class="canv-tool">
+					<div class="ban-btn" onmousedown="chaos()">Randomize!</div>
+					<div class="ban-btn" onmousedown="clearAll()">Clear All</div>
+				</div>
+			</div>
+			<div class="layers-cont" id="layers-cont">
+			<div class="header"><div>Layers</div></div>
+			<div id="layers">
+				<div class="layer vis">
+					<div class="layer-color white" title="white"></div>
+					<div class="layer-pattern">
+					<div class="layer-hover">
+						<div class="layer-color-container">
+							<div class="tb-color black" title="black"></div>
+							<div class="tb-color gray" title="gray"></div>
+							<div class="tb-color light_gray" title="light_gray"></div>
+							<div class="tb-color white" title="white"></div>
+							<div class="tb-color pink" title="pink"></div>
+							<div class="tb-color magenta" title="magenta"></div>
+							<div class="tb-color purple" title="purple"></div>
+							<div class="tb-color blue" title="blue"></div>
+							<div class="tb-color cyan" title="cyan"></div>
+							<div class="tb-color light_blue" title="light_blue"></div>
+							<div class="tb-color green" title="green"></div>
+							<div class="tb-color lime" title="lime"></div>
+							<div class="tb-color yellow" title="yellow"></div>
+							<div class="tb-color orange" title="orange"></div>
+							<div class="tb-color brown" title="brown"></div>
+							<div class="tb-color red" title="red"></div>
+						</div>
+					</div>
+					<i class="tb-ptn" clr="0" ptn="base"></i>
+					</div><div class="layer-craft"><div class="craft-t"><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base white"></div><div class="craft-u craft-base"></div><div class="craft-u craft-base stick"></div><div class="craft-u craft-base"></div></div></div>
+				</div>
+			</div>
+			<div id="total"><div><span>6</span><div class="white craft-u craft-base"></div></div><div><span>1</span><div class="stick craft-u"></div></div></div>
+			</div>
+			<div class="toolbar-cont">
+				<div class="header"><div>Layer Creation</div></div>
+				<div id="toolbar">
+					<div id="toolbar-colors" onmousedown="colorsHandler(event)">
+						<div class="tb-color black sel" title="black"></div>
+						<div class="tb-color gray" title="gray"></div>
+						<div class="tb-color light_gray" title="light_gray"></div>
+						<div class="tb-color white" style="border: 1px solid #999"></div>
+						<div class="tb-color pink" title="pink"></div>
+						<div class="tb-color magenta" title="magenta"></div>
+						<div class="tb-color purple" title="purple"></div>
+						<div class="tb-color blue" title="blue"></div>
+						<div class="tb-color cyan" title="cyan"></div>
+						<div class="tb-color light_blue" title="light_blue"></div>
+						<div class="tb-color green" title="green"></div>
+						<div class="tb-color lime" title="lime"></div>
+						<div class="tb-color yellow" title="yellow"></div>
+						<div class="tb-color orange" title="orange"></div>
+						<div class="tb-color brown" title="brown"></div>
+						<div class="tb-color red" title="red"></div>
+					</div>
+					<div id="toolbar-patterns" onmousedown="patternsHandler(event)" onmouseover="showPreview(event)" onmouseout="hidePreview(event)">
+						<div class="tbc"><i class="tb-ptn" ptn="gra" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="gru" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="bri" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="hh" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="hhb" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="vh" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="vhr" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="ts" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="bs" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="ls" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="rs" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="ld" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="rud" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="lud" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="rd" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="cr" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="dls" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="drs" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="sc" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="cs" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="ms" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="tl" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="bl" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="tr" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="br" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="tt" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="bt" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="mr" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="mc" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="bts" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="tts" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="ss" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="bo" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="cbo" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="flo" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="cre" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="sku" clr="15"></i></div>
+						<div class="tbc"><i class="tb-ptn" ptn="moj" clr="15"></i></div>
+					</div>
+				</div>
+				<div class="overtool">
+					<div class="header">
+						<div>Share Code</div>
+					</div>
+					<input type="text" id="url" onclick="this.select()">
+				</div>
+				<div class="header"><div>Generate Command</div></div>
+				<div class="generate">
+					<div class="ban-button" onclick="jsonOutput(0)">/give</div>
+					<div class="ban-button" onclick="jsonOutput(1)">/setblock</div>
+					<div class="ban-button" onclick="jsonOutput(2)">/replaceitem</div>
+					<span id="scrdl"><span></span></span>
+					<textarea id="code" onclick="this.select()"></textarea>
+				</div>
+			</div>
+		</div>
+		<div id="saved-gal-cont" class="hidden" style="display:none;">
+			<div id="saved-gal"></div>
+			<div class="saved-add" id="saved-add"></div><div class="saved-addall hidden" id="saved-addall"></div>
+		</div>
+		</div>
+	</div>
+	<script src="jquery.min.js"></script>
+	<script src="Banner.js"></script>
 
 <!--Nav Template Start-->
 </div>

@@ -5,7 +5,6 @@ var prepend = body.lang
 
 var topnav = document.createElement('div')
 topnav.className = 'topnav'
-topnav.id = 'customTopnav'
 var logo = document.createElement('a')
 logo.id = 'logo'
 logo.href = '/Website/'
@@ -13,20 +12,21 @@ var logoImg = document.createElement('img')
 logoImg.className = 'logo'
 logoImg.src = prepend + 'Images/Global/Icon.webp'
 logoImg.alt = 'SyndiShanX'
-logoImg.width = '64'
-logoImg.height = '64'
 var spacer = document.createElement('a')
 spacer.className = 'spacer'
+var spacerSmall = document.createElement('a')
+spacerSmall.className = 'spacerSmall'
 var table = document.createElement('table')
 var tbody = document.createElement('tbody')
 tbody.className = 'nav-items'
 var tr = document.createElement('tr')
-topnav.appendChild(logo)
-topnav.appendChild(logoImg)
-topnav.appendChild(spacer)
+topnav.appendChild(spacerSmall)
 topnav.appendChild(table)
 table.appendChild(tbody)
 tbody.appendChild(tr)
+topnav.appendChild(spacer)
+topnav.appendChild(logo)
+topnav.appendChild(logoImg)
 
 /* Home */
 
@@ -71,7 +71,6 @@ var coldwarDropdownI = document.createElement('i')
 coldwarDropdownI.className = 'fa fa-caret-down'
 var coldwarDropdownDiv1 = document.createElement('div')
 coldwarDropdownDiv1.className = 'dropdown-content coldwarDropdown'
-coldwarDropdownDiv1.style = 'right: 18%;'
 
 coldwarDropdownTD.appendChild(coldwarDropdownDiv)
 coldwarDropdownDiv.appendChild(coldwarDropdownA)
@@ -92,7 +91,6 @@ var bo4DropdownI = document.createElement('i')
 bo4DropdownI.className = 'fa fa-caret-down'
 var bo4DropdownDiv1 = document.createElement('div')
 bo4DropdownDiv1.className = 'dropdown-content bo4Dropdown'
-bo4DropdownDiv1.style = 'right: 10%;'
 
 bo4DropdownTD.appendChild(bo4DropdownDiv)
 bo4DropdownDiv.appendChild(bo4DropdownA)
@@ -226,6 +224,6 @@ moreDropdownDiv1.appendChild(moreItem4)
 moreDropdownDiv1.appendChild(moreItem5)
 
 topnav.innerHTML = topnav.innerHTML.split('href="/Website/"></a>')[0] + 'href="/Website/">' + topnav.innerHTML.split('href="/Website/"></a>')[1]
-topnav.innerHTML = topnav.innerHTML.split('<a class="spacer">')[0] + '</a><a class="spacer">' + topnav.innerHTML.split('<a class="spacer">')[1]
+topnav.innerHTML = topnav.innerHTML.split('alt="SyndiShanX">')[0] + 'alt="SyndiShanX">' + topnav.innerHTML.split('alt="SyndiShanX">')[1] + '</a>'
 
 body.insertBefore(topnav, body.childNodes[0])
