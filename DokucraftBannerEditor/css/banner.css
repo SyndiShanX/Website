@@ -103,11 +103,9 @@ input,textarea {
 	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
 	-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	width: 95%!important;
 }
 
-#url {
-	width: 98%!important;
-}
 
 input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
 	color: #474747;
@@ -703,6 +701,7 @@ input:focus,textarea:focus {
 	text-shadow: 0 -1px rgba(0,0,0,0.9);
 	border-radius: 4px;
 	position: relative;
+	width: 97%;
 }
 
 .ban-button:before,.ban-btn:before,.button-group li:before,.ui-slider-handle:before {
