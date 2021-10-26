@@ -5,6 +5,7 @@ var prepend = body.lang
 
 var topnav = document.createElement('div')
 topnav.className = 'topnav'
+topnav.id = 'customTopnav'
 var logo = document.createElement('a')
 logo.id = 'logo'
 logo.href = '/Website/'
