@@ -1,3 +1,12 @@
+function customNavList() {
+	var customTopnav = document.getElementById("customTopnav");
+	if (customTopnav.className === "topnav") {
+		customTopnav.className += " responsive";
+	} else {
+		customTopnav.className = "topnav";
+	}
+}
+
 function navSwapper() {
 	if (document.getElementsByClassName("minesweeper")[0] != undefined) {
 		var minesweeperHTML = document.getElementsByClassName("minesweeper")[0].outerHTML
@@ -77,3 +86,4 @@ function navSwapper() {
 }
 window.onresize = navSwapper;
 navSwapper()
+customNavList()
