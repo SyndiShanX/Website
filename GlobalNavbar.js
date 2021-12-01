@@ -210,6 +210,7 @@ var moreItem2 = document.createElement('a')
 var moreItem3 = document.createElement('a')
 var moreItem4 = document.createElement('a')
 var moreItem5 = document.createElement('a')
+var moreItem6 = document.createElement('a')
 
 moreItem1.textContent = 'MW Gold Weapons'
 moreItem1.href = prepend + 'MW_Gold_Weapons.html'
@@ -219,14 +220,17 @@ moreItem3.textContent = 'The Final Reich'
 moreItem3.href = prepend + 'The_Final_Riech.html'
 moreItem4.textContent = 'Dokucraft Banner Editor'
 moreItem4.href = prepend + 'DokucraftBannerEditor/Dokucraft_Banner_Editor.html'
-moreItem5.textContent = 'Downloads'
-moreItem5.href = prepend + 'Downloads/Downloads.html'
+moreItem5.textContent = 'Console Dokucraft'
+moreItem5.href = prepend + 'Downloads/Console_Dokucraft.html'
+moreItem6.textContent = 'Downloads'
+moreItem6.href = prepend + 'Downloads/Downloads.html'
 
 moreDropdownDiv1.appendChild(moreItem1)
 moreDropdownDiv1.appendChild(moreItem2)
 moreDropdownDiv1.appendChild(moreItem3)
 moreDropdownDiv1.appendChild(moreItem4)
 moreDropdownDiv1.appendChild(moreItem5)
+moreDropdownDiv1.appendChild(moreItem6)
 
 tr.appendChild(spacer)
 
