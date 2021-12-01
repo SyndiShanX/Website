@@ -1,18 +1,18 @@
 {
-  "format_version" : 2,
-  "header" : {
-    "version" : [ 1, 0, 5 ],
-  	"description" : "\u00A74Light and fluffy\n\u00A76By Dokucraft TSC",
-    "name": "Dokucraft Light",
-  	"uuid" : "4f3c134c-bf7f-49d3-abc3-28ffd6963768",
-    "min_engine_version": [1, 16, 0],
+	"format_version": 1,
+	"header": {
+		"name": "Dokucraft Light",
+		"description" : "\u00A74Light and fluffy\n\u00A76By Dokucraft TSC",
+		"uuid": "4f3c134c-bf7f-49d3-abc3-28ffd6963768",
+		"version": [1, 0, 6],
+		"min_engine_version": [1, 2, 6],
 		"pack_scope": "global"
-  },
-  "modules": [
-    {
-		  "version" : [ 1, 0, 5 ],
-      "type" : "resources",
-      "uuid" : "e6e25f76-b6ec-4c4e-8e3c-1e6223641b79"
-    }
-  ]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "e6e25f76-b6ec-4c4e-8e3c-1e6223641b79",
+			"version": [1, 0, 6]
+		}
+	]
 }
