@@ -18,6 +18,18 @@ font.text {
 	line-height: 1.15;
 	font-weight: bold;
 }
+font.WIP {
+	background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: WIP_animation 6s ease-in-out infinite;
+	background-size: 400% 100%;
+}
+@keyframes WIP_animation {
+	0%,100% { background-position: 0 0; }
+	50% { background-position: 100% 0; }
+}
 img.Shadows_of_Evil {
 	width: 320px;
 	height: 180px;
@@ -29,6 +41,8 @@ img.Shadows_of_Evil {
 <div class="MainWrapper" align="left">
 <!--Nav Template End-->
 
+	<font class="WIP" size="10">WIP</font><br><br>
+	
 	<font size="7" color="#8d2424">Easter Egg Songs</font><br><br>
 
 	<font color="#9555c2" size="5">Snakeskin Boots</font><br><br>
