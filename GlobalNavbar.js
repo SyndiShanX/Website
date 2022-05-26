@@ -99,6 +99,26 @@ bo4DropdownA.appendChild(bo4DropdownI)
 bo4DropdownDiv.appendChild(bo4DropdownDiv1)
 tr.appendChild(bo4DropdownTD)
 
+/* Black Ops 3 Dropdown Menu */
+
+var bo3DropdownTD = document.createElement('td')
+var bo3DropdownDiv = document.createElement('div')
+bo3DropdownDiv.className = 'dropdown'
+var bo3DropdownA = document.createElement('a')
+bo3DropdownA.href = 'javascript:void(0);'
+bo3DropdownA.className = 'dropbtn'
+bo3DropdownA.textContent = 'Black Ops 3...'
+var bo3DropdownI = document.createElement('i')
+bo3DropdownI.className = 'fa fa-caret-down'
+var bo3DropdownDiv1 = document.createElement('div')
+bo3DropdownDiv1.className = 'dropdown-content bo3Dropdown'
+
+bo3DropdownTD.appendChild(bo3DropdownDiv)
+bo3DropdownDiv.appendChild(bo3DropdownA)
+bo3DropdownA.appendChild(bo3DropdownI)
+bo3DropdownDiv.appendChild(bo3DropdownDiv1)
+tr.appendChild(bo3DropdownTD)
+
 /* More Dropdown Menu */
 
 var moreDropdownTD = document.createElement('td')
@@ -203,6 +223,39 @@ bo4DropdownDiv1.appendChild(bo4Item10)
 bo4DropdownDiv1.appendChild(bo4Item11)
 bo4DropdownDiv1.appendChild(bo4Item12)
 
+/* Black Ops 4 Items */
+
+var bo3Item1 = document.createElement('a')
+var bo3Item2 = document.createElement('a')
+var bo3Item3 = document.createElement('a')
+var bo3Item4 = document.createElement('a')
+var bo3Item5 = document.createElement('a')
+var bo3Item6 = document.createElement('a')
+var bo3Item7 = document.createElement('a')
+
+bo3Item1.textContent = 'Shadows of Evil'
+bo3Item1.href = prepend + 'BlackOps3/Shadows_of_Evil.html'
+bo3Item2.textContent = 'Shadows of Evil Tool'
+bo3Item2.href = prepend + 'BlackOps3/Shadows_of_Evil_Tool.html'
+bo3Item3.textContent = 'Der Eisendrache'
+bo3Item3.href = prepend + 'BlackOps3/Der_Eisendrache.html'
+bo3Item4.textContent = 'Zetsubou No Shima'
+bo3Item4.href = prepend + 'BlackOps3/Zetsubou_No_Shima.html'
+bo3Item5.textContent = 'Gorod Krovi'
+bo3Item5.href = prepend + 'BlackOps3/Gorod_Krovi.html'
+bo3Item6.textContent = 'Revelations'
+bo3Item6.href = prepend + 'BlackOps3/Revelations.html'
+bo3Item7.textContent = 'The_Giant'
+bo3Item7.href = prepend + 'BlackOps3/The_Giant.html'
+
+bo3DropdownDiv1.appendChild(bo3Item1)
+bo3DropdownDiv1.appendChild(bo3Item2)
+bo3DropdownDiv1.appendChild(bo3Item3)
+bo3DropdownDiv1.appendChild(bo3Item4)
+bo3DropdownDiv1.appendChild(bo3Item5)
+bo3DropdownDiv1.appendChild(bo3Item6)
+bo3DropdownDiv1.appendChild(bo3Item7)
+
 /* More Items */
 
 var moreItem1 = document.createElement('a')
@@ -211,22 +264,19 @@ var moreItem3 = document.createElement('a')
 var moreItem4 = document.createElement('a')
 var moreItem5 = document.createElement('a')
 var moreItem6 = document.createElement('a')
-var moreItem7 = document.createElement('a')
 
 moreItem1.textContent = 'MW Gold Weapons'
 moreItem1.href = prepend + 'MW_Gold_Weapons.html'
-moreItem2.textContent = 'Shadows of Evil'
-moreItem2.href = prepend + 'Shadows_of_Evil.html'
-moreItem3.textContent = 'The Final Reich'
-moreItem3.href = prepend + 'The_Final_Riech.html'
-moreItem4.textContent = 'Dokucraft Banner Editor'
-moreItem4.href = prepend + 'DokucraftBannerEditor/Dokucraft_Banner_Editor.html'
-moreItem5.textContent = 'R6 Extraction Score Calculator'
-moreItem5.href = prepend + 'R6E.html'
-moreItem6.textContent = 'Console Dokucraft'
-moreItem6.href = prepend + 'Downloads/Console_Dokucraft.html'
-moreItem7.textContent = 'Downloads'
-moreItem7.href = prepend + 'Downloads/Downloads.html'
+moreItem2.textContent = 'The Final Reich'
+moreItem2.href = prepend + 'The_Final_Riech.html'
+moreItem3.textContent = 'Dokucraft Banner Editor'
+moreItem3.href = prepend + 'DokucraftBannerEditor/Dokucraft_Banner_Editor.html'
+moreItem4.textContent = 'R6 Extraction Score Calculator'
+moreItem4.href = prepend + 'R6E.html'
+moreItem5.textContent = 'Console Dokucraft'
+moreItem5.href = prepend + 'Downloads/Console_Dokucraft.html'
+moreItem6.textContent = 'Downloads'
+moreItem6.href = prepend + 'Downloads/Downloads.html'
 
 moreDropdownDiv1.appendChild(moreItem1)
 moreDropdownDiv1.appendChild(moreItem2)
@@ -234,7 +284,6 @@ moreDropdownDiv1.appendChild(moreItem3)
 moreDropdownDiv1.appendChild(moreItem4)
 moreDropdownDiv1.appendChild(moreItem5)
 moreDropdownDiv1.appendChild(moreItem6)
-moreDropdownDiv1.appendChild(moreItem7)
 
 tr.appendChild(spacer)
 
