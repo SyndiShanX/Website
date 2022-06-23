@@ -59,6 +59,26 @@ dokustashGeneratorA.href = prepend + 'Dokustash_Generator.html'
 tr.appendChild(dokustashGeneratorTD)
 dokustashGeneratorTD.appendChild(dokustashGeneratorA)
 
+/* Vanguard Dropdown Menu */
+
+var vanguardDropdownTD = document.createElement('td')
+var vanguardDropdownDiv = document.createElement('div')
+vanguardDropdownDiv.className = 'dropdown'
+var vanguardDropdownA = document.createElement('a')
+vanguardDropdownA.href = 'javascript:void(0);'
+vanguardDropdownA.className = 'dropbtn'
+vanguardDropdownA.textContent = 'Vanguard...'
+var vanguardDropdownI = document.createElement('i')
+vanguardDropdownI.className = 'fa fa-caret-down'
+var vanguardDropdownDiv1 = document.createElement('div')
+vanguardDropdownDiv1.className = 'dropdown-content coldwarDropdown'
+
+vanguardDropdownTD.appendChild(vanguardDropdownDiv)
+vanguardDropdownDiv.appendChild(vanguardDropdownA)
+vanguardDropdownA.appendChild(vanguardDropdownI)
+vanguardDropdownDiv.appendChild(vanguardDropdownDiv1)
+tr.appendChild(vanguardDropdownTD)
+
 /* Cold War Dropdown Menu */
 
 var coldwarDropdownTD = document.createElement('td')
@@ -140,6 +160,23 @@ moreDropdownDiv.appendChild(moreDropdownDiv1)
 tr.appendChild(moreDropdownTD)
 
 /* Dropdown Items */
+
+/* Vanguard Items */
+
+var vanguardItem1 = document.createElement('a')
+var vanguardItem2 = document.createElement('a')
+var vanguardItem3 = document.createElement('a')
+
+vanguardItem1.textContent = 'Der Anfang'
+vanguardItem1.href = prepend + 'Vanguard/Der_Anfang.html'
+vanguardItem2.textContent = 'Terra Maledicta'
+vanguardItem2.href = prepend + 'Vanguard/Terra_Maledicta.html'
+vanguardItem3.textContent = 'Shi No Numa'
+vanguardItem3.href = prepend + 'Vanguard/Shi_No_Numa.html'
+
+vanguardDropdownDiv1.appendChild(vanguardItem1)
+vanguardDropdownDiv1.appendChild(vanguardItem2)
+vanguardDropdownDiv1.appendChild(vanguardItem3)
 
 /* Cold War Items */
 
@@ -245,7 +282,7 @@ bo3Item5.textContent = 'Gorod Krovi'
 bo3Item5.href = prepend + 'BlackOps3/Gorod_Krovi.html'
 bo3Item6.textContent = 'Revelations'
 bo3Item6.href = prepend + 'BlackOps3/Revelations.html'
-bo3Item7.textContent = 'The_Giant'
+bo3Item7.textContent = 'The Giant'
 bo3Item7.href = prepend + 'BlackOps3/The_Giant.html'
 
 bo3DropdownDiv1.appendChild(bo3Item1)
