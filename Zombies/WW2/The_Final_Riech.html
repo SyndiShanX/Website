@@ -1,0 +1,841 @@
+<!--Nav Template Start-->
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+<title>SyndiShanX - The Final Reich</title>
+<link rel="stylesheet" href="../../Fonts/Font_Awesome.min.css">
+<link rel="icon" href="../../Images/Global/Icon.webp">
+<link rel="stylesheet" href="../../GlobalCSS.css">
+<style type="text/css">
+input.symbol {
+	width: 100px;
+	height: 100px;
+}
+input:focus, textarea:focus, select:focus{
+	outline: none;
+}
+img.symbol {
+	width: 100px;
+	height: 100px;
+}
+</style>
+</head>
+<body lang="../../" onload="setVars()">
+<div class="MainWrapper" align="center">
+<!--Nav Template End-->
+
+	<div id="Dome" align="center">
+		<input type="image" class="symbol" id="1" onClick="chooseDome('Dome_I');selected(1)" src="../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_I.webp"></input>
+		<input type="image" class="symbol" id="2" onClick="chooseDome('Dome_II');selected(2)" src="../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_II.webp"></input>
+		<input type="image" class="symbol" id="3" onClick="chooseDome('Dome_III');selected(3)" src="../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_III.webp"></input>
+		<input type="image" class="symbol" id="4" onClick="chooseDome('Dome_IV');selected(4)" src="../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_IV.webp"></input>
+		<input type="image" class="symbol" id="5" onClick="chooseDome('Dome_V');selected(5)" src="../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_V.webp"></input>
+	</div>
+
+	<div id="Out" align="center">
+		<input type="image" class="symbol" id="6" onClick="chooseOut('Out_I');selected(6)" src="../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_I.webp"></input>
+		<input type="image" class="symbol" id="7" onClick="chooseOut('Out_II');selected(7)" src="../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_II.webp"></input>
+		<input type="image" class="symbol" id="8" onClick="chooseOut('Out_III');selected(8)" src="../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_III.webp"></input>
+		<input type="image" class="symbol" id="9" onClick="chooseOut('Out_IV');selected(9)" src="../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_IV.webp"></input>
+		<input type="image" class="symbol" id="10" onClick="chooseOut('Out_V');selected(10)" src="../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_V.webp"></input>
+	</div>
+
+	<div id="Crack" align="center"><br>
+		<input type="image" class="symbol" id="11" onClick="chooseCrack('Crack_I');selected(11)" src="../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_I.webp"></input>
+		<input type="image" class="symbol" id="12" onClick="chooseCrack('Crack_II');selected(12)" src="../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_II.webp"></input>
+		<input type="image" class="symbol" id="13" onClick="chooseCrack('Crack_III');selected(13)" src="../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_III.webp"></input>
+		<input type="image" class="symbol" id="14" onClick="chooseCrack('Crack_IV');selected(14)" src="../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_IV.webp"></input>
+		<input type="image" class="symbol" id="15" onClick="chooseCrack('Crack_V');selected(15)" src="../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_V.webp"></input>
+	</div>
+
+	<div id="Back" align="center"><br>
+		<input type="image" class="symbol" id="16" onClick="chooseBack('Back_I');selected(16)" src="../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_I.webp"></input>
+		<input type="image" class="symbol" id="17" onClick="chooseBack('Back_II');selected(17)" src="../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_II.webp"></input>
+		<input type="image" class="symbol" id="18" onClick="chooseBack('Back_III');selected(18)" src="../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_III.webp"></input>
+		<input type="image" class="symbol" id="19" onClick="chooseBack('Back_IV');selected(19)" src="../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_IV.webp"></input>
+		<input type="image" class="symbol" id="20" onClick="chooseBack('Back_V');selected(20)" src="../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_V.webp"></input>
+	</div>
+
+	<div id="Yellow" align="center"><br>
+		<input type="image" class="symbol" id="21" onClick="chooseYellow('Yellow_Top_1');selected(21)" src="../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp"></input>
+		<input type="image" class="symbol" id="22" onClick="chooseYellow('Yellow_Top_2');selected(22)" src="../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp"></input>
+		<input type="image" class="symbol" id="23" onClick="chooseYellow('Yellow_Top_3');selected(23)" src="../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp"></input>
+		<input type="image" class="symbol" id="24" onClick="chooseYellow('Yellow_Top_4');selected(24)" src="../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp"></input>
+		<input type="image" class="symbol" id="25" onClick="chooseYellow('Yellow_Top_5');selected(25)" src="../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp"></input>
+		<input type="image" class="symbol" id="26" onClick="chooseYellow('Yellow_Top_6');selected(26)" src="../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp"></input>
+		<input type="image" class="symbol" id="27" onClick="chooseYellow('Yellow_Top_7');selected(27)" src="../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp"></input>
+		<input type="image" class="symbol" id="28" onClick="chooseYellow('Yellow_Top_8');selected(28)" src="../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp"></input>
+		<input type="image" class="symbol" id="29" onClick="chooseYellow('Yellow_Top_9');selected(29)" src="../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp"></input>
+		<input type="image" class="symbol" id="30" onClick="chooseYellow('Yellow_Top_10');selected(30)" src="../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp"></input>
+		<input type="image" class="symbol" id="31" onClick="chooseYellow('Yellow_Top_11');selected(31)" src="../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp"></input>
+		<input type="image" class="symbol" id="32" onClick="chooseYellow('Yellow_Top_12');selected(32)" src="../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp"></input>
+	</div>
+
+	<div id="Red" align="center"><br>
+		<input type="image" class="symbol" id="33" onClick="chooseRed('Red_Top_1');selected(33)" src="../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_1.webp"></input>
+		<input type="image" class="symbol" id="34" onClick="chooseRed('Red_Top_2');selected(34)" src="../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_2.webp"></input>
+		<input type="image" class="symbol" id="35" onClick="chooseRed('Red_Top_3');selected(35)" src="../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_3.webp"></input>
+		<input type="image" class="symbol" id="36" onClick="chooseRed('Red_Top_4');selected(36)" src="../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_4.webp"></input>
+		<input type="image" class="symbol" id="37" onClick="chooseRed('Red_Top_5');selected(37)" src="../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_5.webp"></input>
+		<input type="image" class="symbol" id="38" onClick="chooseRed('Red_Top_6');selected(38)" src="../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6.webp"></input>
+		<input type="image" class="symbol" id="39" onClick="chooseRed('Red_Top_7');selected(39)" src="../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_7.webp"></input>
+		<input type="image" class="symbol" id="40" onClick="chooseRed('Red_Top_8');selected(40)" src="../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_8.webp"></input>
+		<input type="image" class="symbol" id="41" onClick="chooseRed('Red_Top_9');selected(41)" src="../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_9.webp"></input>
+		<input type="image" class="symbol" id="42" onClick="chooseRed('Red_Top_10');selected(42)" src="../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_10.webp"></input>
+		<input type="image" class="symbol" id="43" onClick="chooseRed('Red_Top_11');selected(43)" src="../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_11.webp"></input>
+		<input type="image" class="symbol" id="44" onClick="chooseRed('Red_Top_12');selected(44)" src="../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_12.webp"></input>
+	</div>
+
+	<div id="Green" align="center"><br>
+		<input type="image" class="symbol" id="45" onClick="chooseGreen('Green_Top_1');selected(45)" src="../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_1.webp"></input>
+		<input type="image" class="symbol" id="46" onClick="chooseGreen('Green_Top_2');selected(46)" src="../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_2.webp"></input>
+		<input type="image" class="symbol" id="47" onClick="chooseGreen('Green_Top_3');selected(47)" src="../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_3.webp"></input>
+		<input type="image" class="symbol" id="48" onClick="chooseGreen('Green_Top_4');selected(48)" src="../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_4.webp"></input>
+		<input type="image" class="symbol" id="49" onClick="chooseGreen('Green_Top_5');selected(49)" src="../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_5.webp"></input>
+		<input type="image" class="symbol" id="50" onClick="chooseGreen('Green_Top_6');selected(50)" src="../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6.webp"></input>
+		<input type="image" class="symbol" id="51" onClick="chooseGreen('Green_Top_7');selected(51)" src="../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_7.webp"></input>
+		<input type="image" class="symbol" id="52" onClick="chooseGreen('Green_Top_8');selected(52)" src="../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_8.webp"></input>
+		<input type="image" class="symbol" id="53" onClick="chooseGreen('Green_Top_9');selected(53)" src="../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_9.webp"></input>
+		<input type="image" class="symbol" id="54" onClick="chooseGreen('Green_Top_10');selected(54)" src="../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_10.webp"></input>
+		<input type="image" class="symbol" id="55" onClick="chooseGreen('Green_Top_11');selected(55)" src="../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_11.webp"></input>
+		<input type="image" class="symbol" id="56" onClick="chooseGreen('Green_Top_12');selected(56)" src="../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_12.webp"></input>
+	</div><br><br>
+
+	<div id="ResultButton" align="center">
+		<button class="goldButton" onClick="{ allResults() }">Show Results</button><br><br>
+		<img class="symbol" style="display: none" id="resultEndDome"></img>
+		<img class="symbol" style="display: none" id="resultEndOut"></img>
+		<img class="symbol" style="display: none" id="resultEndCrack"></img>
+		<img class="symbol" style="display: none" id="resultEndBack"></img><br>
+		<img class="symbol" style="display: none" id="resultEndYellow"></img>
+		<img class="symbol" style="display: none" id="resultEndRed"></img>
+		<img class="symbol" style="display: none" id="resultEndGreen"></img>
+	</div>
+
+<!--Nav Template Start-->
+</div>
+<script>
+function selected(id) {
+	if (id == '1') {
+		document.getElementById('1').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_I_Selected.webp'
+		document.getElementById('2').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_II.webp'
+		document.getElementById('3').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_III.webp'
+		document.getElementById('4').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_IV.webp'
+		document.getElementById('5').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_V.webp'
+	} else {}
+	if (id == '2') {
+		document.getElementById('1').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_I.webp'
+		document.getElementById('2').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_II_Selected.webp'
+		document.getElementById('3').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_III.webp'
+		document.getElementById('4').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_IV.webp'
+		document.getElementById('5').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_V.webp'
+	} else {}
+	if (id == '3') {
+		document.getElementById('1').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_I.webp'
+		document.getElementById('2').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_II.webp'
+		document.getElementById('3').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_III_Selected.webp'
+		document.getElementById('4').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_IV.webp'
+		document.getElementById('5').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_V.webp'
+	} else {}
+	if (id == '4') {
+		document.getElementById('1').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_I.webp'
+		document.getElementById('2').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_II.webp'
+		document.getElementById('3').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_III.webp'
+		document.getElementById('4').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_IV_Selected.webp'
+		document.getElementById('5').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_V.webp'
+	} else {}
+	if (id == '5') {
+		document.getElementById('1').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_I.webp'
+		document.getElementById('2').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_II.webp'
+		document.getElementById('3').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_III.webp'
+		document.getElementById('4').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_IV.webp'
+		document.getElementById('5').src = '../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_V_Selected.webp'
+	} else {}
+	if (id == '6') {
+		document.getElementById('6').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_I_Selected.webp'
+		document.getElementById('7').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_II.webp'
+		document.getElementById('8').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_III.webp'
+		document.getElementById('9').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_IV.webp'
+		document.getElementById('10').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_V.webp'
+	} else {}
+	if (id == '7') {
+		document.getElementById('6').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_I.webp'
+		document.getElementById('7').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_II_Selected.webp'
+		document.getElementById('8').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_III.webp'
+		document.getElementById('9').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_IV.webp'
+		document.getElementById('10').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_V.webp'
+		} else
+	if (id == '8') {
+		document.getElementById('6').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_I.webp'
+		document.getElementById('7').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_II.webp'
+		document.getElementById('8').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_III_Selected.webp'
+		document.getElementById('9').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_IV.webp'
+		document.getElementById('10').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_V.webp'
+	} else {}
+	if (id == '9') {
+		document.getElementById('6').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_I.webp'
+		document.getElementById('7').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_II.webp'
+		document.getElementById('8').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_III.webp'
+		document.getElementById('9').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_IV_Selected.webp'
+		document.getElementById('10').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_V.webp'
+	} else {}
+	if (id == '10') {
+		document.getElementById('6').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_I.webp'
+		document.getElementById('7').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_II.webp'
+		document.getElementById('8').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_III.webp'
+		document.getElementById('9').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_IV.webp'
+		document.getElementById('10').src = '../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_V_Selected.webp'
+	} else {}
+	if (id == '11') {
+		document.getElementById('11').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_I_Selected.webp'
+		document.getElementById('12').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_II.webp'
+		document.getElementById('13').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_III.webp'
+		document.getElementById('14').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_IV.webp'
+		document.getElementById('15').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_V.webp'
+	} else {}
+	if (id == '12') {
+		document.getElementById('11').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_I.webp'
+		document.getElementById('12').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_II_Selected.webp'
+		document.getElementById('13').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_III.webp'
+		document.getElementById('14').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_IV.webp'
+		document.getElementById('15').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_V.webp'
+	} else {}
+	if (id == '13') {
+		document.getElementById('11').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_I.webp'
+		document.getElementById('12').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_II.webp'
+		document.getElementById('13').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_III_Selected.webp'
+		document.getElementById('14').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_IV.webp'
+		document.getElementById('15').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_V.webp'
+	} else {}
+	if (id == '14') {
+		document.getElementById('11').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_I.webp'
+		document.getElementById('12').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_II.webp'
+		document.getElementById('13').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_III.webp'
+		document.getElementById('14').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_IV_Selected.webp'
+		document.getElementById('15').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_V.webp'
+	} else {}
+	if (id == '15') {
+		document.getElementById('11').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_I.webp'
+		document.getElementById('12').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_II.webp'
+		document.getElementById('13').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_III.webp'
+		document.getElementById('14').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_IV.webp'
+		document.getElementById('15').src = '../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_V_Selected.webp'
+	} else {}
+	if (id == '16') {
+		document.getElementById('16').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_I_Selected.webp'
+		document.getElementById('17').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_II.webp'
+		document.getElementById('18').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_III.webp'
+		document.getElementById('19').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_IV.webp'
+		document.getElementById('20').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_V.webp'
+	} else {}
+	if (id == '17') {
+		document.getElementById('16').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_I.webp'
+		document.getElementById('17').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_II_Selected.webp'
+		document.getElementById('18').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_III.webp'
+		document.getElementById('19').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_IV.webp'
+		document.getElementById('20').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_V.webp'
+	} else {}
+	if (id == '18') {
+		document.getElementById('16').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_I.webp'
+		document.getElementById('17').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_II.webp'
+		document.getElementById('18').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_III_Selected.webp'
+		document.getElementById('19').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_IV.webp'
+		document.getElementById('20').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_V.webp'
+	} else {}
+	if (id == '19') {
+		document.getElementById('16').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_I.webp'
+		document.getElementById('17').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_II.webp'
+		document.getElementById('18').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_III.webp'
+		document.getElementById('19').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_IV_Selected.webp'
+		document.getElementById('20').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_V.webp'
+	} else {}
+	if (id == '20') {
+		document.getElementById('16').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_I.webp'
+		document.getElementById('17').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_II.webp'
+		document.getElementById('18').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_III.webp'
+		document.getElementById('19').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_IV.webp'
+		document.getElementById('20').src = '../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_V_Selected.webp'
+	} else {}
+	if (id == '21') {
+		document.getElementById('21').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_1_Selected.webp';
+		document.getElementById('22').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
+		document.getElementById('23').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
+		document.getElementById('24').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
+		document.getElementById('25').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
+		document.getElementById('26').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
+		document.getElementById('27').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
+		document.getElementById('28').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
+		document.getElementById('29').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
+		document.getElementById('30').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
+		document.getElementById('31').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
+		document.getElementById('32').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
+	} else {}
+	if (id == '22') {
+		document.getElementById('21').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
+		document.getElementById('22').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_2_Selected.webp';
+		document.getElementById('23').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
+		document.getElementById('24').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
+		document.getElementById('25').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
+		document.getElementById('26').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
+		document.getElementById('27').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
+		document.getElementById('28').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
+		document.getElementById('29').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
+		document.getElementById('30').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
+		document.getElementById('31').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
+		document.getElementById('32').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
+	} else {}
+	if (id == '23') {
+		document.getElementById('21').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
+		document.getElementById('22').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
+		document.getElementById('23').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_3_Selected.webp';
+		document.getElementById('24').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
+		document.getElementById('25').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
+		document.getElementById('26').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
+		document.getElementById('27').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
+		document.getElementById('28').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
+		document.getElementById('29').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
+		document.getElementById('30').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
+		document.getElementById('31').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
+		document.getElementById('32').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
+	} else {}
+	if (id == '24') {
+		document.getElementById('21').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
+		document.getElementById('22').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
+		document.getElementById('23').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
+		document.getElementById('24').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_4_Selected.webp';
+		document.getElementById('25').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
+		document.getElementById('26').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
+		document.getElementById('27').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
+		document.getElementById('28').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
+		document.getElementById('29').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
+		document.getElementById('30').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
+		document.getElementById('31').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
+		document.getElementById('32').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
+	} else {}
+	if (id == '25') {
+		document.getElementById('21').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
+		document.getElementById('22').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
+		document.getElementById('23').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
+		document.getElementById('24').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
+		document.getElementById('25').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_5_Selected.webp';
+		document.getElementById('26').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
+		document.getElementById('27').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
+		document.getElementById('28').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
+		document.getElementById('29').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
+		document.getElementById('30').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
+		document.getElementById('31').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
+		document.getElementById('32').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
+	} else {}
+	if (id == '26') {
+		document.getElementById('21').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
+		document.getElementById('22').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
+		document.getElementById('23').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
+		document.getElementById('24').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
+		document.getElementById('25').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
+		document.getElementById('26').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6_Selected.webp';
+		document.getElementById('27').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
+		document.getElementById('28').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
+		document.getElementById('29').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
+		document.getElementById('30').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
+		document.getElementById('31').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
+		document.getElementById('32').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
+	} else {}
+	if (id == '27') {
+		document.getElementById('21').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
+		document.getElementById('22').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
+		document.getElementById('23').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
+		document.getElementById('24').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
+		document.getElementById('25').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
+		document.getElementById('26').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
+		document.getElementById('27').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_7_Selected.webp';
+		document.getElementById('28').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
+		document.getElementById('29').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
+		document.getElementById('30').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
+		document.getElementById('31').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
+		document.getElementById('32').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
+	} else {}
+	if (id == '28') {
+		document.getElementById('21').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
+		document.getElementById('22').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
+		document.getElementById('23').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
+		document.getElementById('24').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
+		document.getElementById('25').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
+		document.getElementById('26').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
+		document.getElementById('27').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
+		document.getElementById('28').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_8_Selected.webp';
+		document.getElementById('29').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
+		document.getElementById('30').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
+		document.getElementById('31').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
+		document.getElementById('32').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
+	} else {}
+	if (id == '29') {
+		document.getElementById('21').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
+		document.getElementById('22').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
+		document.getElementById('23').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
+		document.getElementById('24').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
+		document.getElementById('25').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
+		document.getElementById('26').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
+		document.getElementById('27').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
+		document.getElementById('28').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
+		document.getElementById('29').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_9_Selected.webp';
+		document.getElementById('30').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
+		document.getElementById('31').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
+		document.getElementById('32').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
+	} else {}
+	if (id == '30') {
+		document.getElementById('21').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
+		document.getElementById('22').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
+		document.getElementById('23').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
+		document.getElementById('24').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
+		document.getElementById('25').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
+		document.getElementById('26').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
+		document.getElementById('27').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
+		document.getElementById('28').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
+		document.getElementById('29').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
+		document.getElementById('30').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_10_Selected.webp';
+		document.getElementById('31').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
+		document.getElementById('32').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
+	} else {}
+	if (id == '31') {
+		document.getElementById('21').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
+		document.getElementById('22').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
+		document.getElementById('23').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
+		document.getElementById('24').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
+		document.getElementById('25').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
+		document.getElementById('26').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
+		document.getElementById('27').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
+		document.getElementById('28').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
+		document.getElementById('29').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
+		document.getElementById('30').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
+		document.getElementById('31').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_11_Selected.webp';
+		document.getElementById('32').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
+	} else {}
+	if (id == '32') {
+		document.getElementById('21').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
+		document.getElementById('22').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
+		document.getElementById('23').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
+		document.getElementById('24').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
+		document.getElementById('25').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
+		document.getElementById('26').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
+		document.getElementById('27').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
+		document.getElementById('28').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
+		document.getElementById('29').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
+		document.getElementById('30').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
+		document.getElementById('31').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
+		document.getElementById('32').src = '../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_12_Selected.webp';
+	} else {}
+	if (id == '33') {
+		document.getElementById('33').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_1_Selected.webp';
+		document.getElementById('34').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_2.webp';
+		document.getElementById('35').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_3.webp';
+		document.getElementById('36').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_4.webp';
+		document.getElementById('37').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_5.webp';
+		document.getElementById('38').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6.webp';
+		document.getElementById('39').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_7.webp';
+		document.getElementById('40').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_8.webp';
+		document.getElementById('41').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_9.webp';
+		document.getElementById('42').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_10.webp';
+		document.getElementById('43').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_11.webp';
+		document.getElementById('44').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_12.webp';
+	} else {}
+	if (id == '34') {
+		document.getElementById('33').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_1.webp';
+		document.getElementById('34').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_2_Selected.webp';
+		document.getElementById('35').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_3.webp';
+		document.getElementById('36').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_4.webp';
+		document.getElementById('37').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_5.webp';
+		document.getElementById('38').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6.webp';
+		document.getElementById('39').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_7.webp';
+		document.getElementById('40').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_8.webp';
+		document.getElementById('41').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_9.webp';
+		document.getElementById('42').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_10.webp';
+		document.getElementById('43').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_11.webp';
+		document.getElementById('44').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_12.webp';
+	} else {}
+	if (id == '35') {
+		document.getElementById('33').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_1.webp';
+		document.getElementById('34').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_2.webp';
+		document.getElementById('35').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_3_Selected.webp';
+		document.getElementById('36').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_4.webp';
+		document.getElementById('37').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_5.webp';
+		document.getElementById('38').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6.webp';
+		document.getElementById('39').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_7.webp';
+		document.getElementById('40').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_8.webp';
+		document.getElementById('41').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_9.webp';
+		document.getElementById('42').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_10.webp';
+		document.getElementById('43').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_11.webp';
+		document.getElementById('44').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_12.webp';
+	} else {}
+	if (id == '36') {
+		document.getElementById('33').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_1.webp';
+		document.getElementById('34').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_2.webp';
+		document.getElementById('35').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_3.webp';
+		document.getElementById('36').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_4_Selected.webp';
+		document.getElementById('37').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_5.webp';
+		document.getElementById('38').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6.webp';
+		document.getElementById('39').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_7.webp';
+		document.getElementById('40').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_8.webp';
+		document.getElementById('41').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_9.webp';
+		document.getElementById('42').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_10.webp';
+		document.getElementById('43').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_11.webp';
+		document.getElementById('44').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_12.webp';
+	} else {}
+	if (id == '37') {
+		document.getElementById('33').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_1.webp';
+		document.getElementById('34').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_2.webp';
+		document.getElementById('35').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_3.webp';
+		document.getElementById('36').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_4.webp';
+		document.getElementById('37').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_5_Selected.webp';
+		document.getElementById('38').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6.webp';
+		document.getElementById('39').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_7.webp';
+		document.getElementById('40').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_8.webp';
+		document.getElementById('41').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_9.webp';
+		document.getElementById('42').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_10.webp';
+		document.getElementById('43').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_11.webp';
+		document.getElementById('44').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_12.webp';
+	} else {}
+	if (id == '38') {
+		document.getElementById('33').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_1.webp';
+		document.getElementById('34').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_2.webp';
+		document.getElementById('35').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_3.webp';
+		document.getElementById('36').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_4.webp';
+		document.getElementById('37').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_5.webp';
+		document.getElementById('38').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6_Selected.webp';
+		document.getElementById('39').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_7.webp';
+		document.getElementById('40').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_8.webp';
+		document.getElementById('41').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_9.webp';
+		document.getElementById('42').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_10.webp';
+		document.getElementById('43').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_11.webp';
+		document.getElementById('44').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_12.webp';
+	} else {}
+	if (id == '39') {
+		document.getElementById('33').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_1.webp';
+		document.getElementById('34').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_2.webp';
+		document.getElementById('35').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_3.webp';
+		document.getElementById('36').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_4.webp';
+		document.getElementById('37').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_5.webp';
+		document.getElementById('38').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6.webp';
+		document.getElementById('39').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_7_Selected.webp';
+		document.getElementById('40').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_8.webp';
+		document.getElementById('41').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_9.webp';
+		document.getElementById('42').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_10.webp';
+		document.getElementById('43').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_11.webp';
+		document.getElementById('44').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_12.webp';
+	} else {}
+	if (id == '40') {
+		document.getElementById('33').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_1.webp';
+		document.getElementById('34').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_2.webp';
+		document.getElementById('35').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_3.webp';
+		document.getElementById('36').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_4.webp';
+		document.getElementById('37').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_5.webp';
+		document.getElementById('38').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6.webp';
+		document.getElementById('39').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_7.webp';
+		document.getElementById('40').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_8_Selected.webp';
+		document.getElementById('41').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_9.webp';
+		document.getElementById('42').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_10.webp';
+		document.getElementById('43').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_11.webp';
+		document.getElementById('44').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_12.webp';
+	} else {}
+	if (id == '41') {
+		document.getElementById('33').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_1.webp';
+		document.getElementById('34').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_2.webp';
+		document.getElementById('35').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_3.webp';
+		document.getElementById('36').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_4.webp';
+		document.getElementById('37').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_5.webp';
+		document.getElementById('38').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6.webp';
+		document.getElementById('39').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_7.webp';
+		document.getElementById('40').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_8.webp';
+		document.getElementById('41').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_9_Selected.webp';
+		document.getElementById('42').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_10.webp';
+		document.getElementById('43').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_11.webp';
+		document.getElementById('44').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_12.webp';
+	} else {}
+	if (id == '42') {
+		document.getElementById('33').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_1.webp';
+		document.getElementById('34').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_2.webp';
+		document.getElementById('35').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_3.webp';
+		document.getElementById('36').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_4.webp';
+		document.getElementById('37').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_5.webp';
+		document.getElementById('38').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6.webp';
+		document.getElementById('39').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_7.webp';
+		document.getElementById('40').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_8.webp';
+		document.getElementById('41').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_9.webp';
+		document.getElementById('42').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_10_Selected.webp';
+		document.getElementById('43').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_11.webp';
+		document.getElementById('44').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_12.webp';
+	} else {}
+	if (id == '43') {
+		document.getElementById('33').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_1.webp';
+		document.getElementById('34').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_2.webp';
+		document.getElementById('35').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_3.webp';
+		document.getElementById('36').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_4.webp';
+		document.getElementById('37').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_5.webp';
+		document.getElementById('38').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6.webp';
+		document.getElementById('39').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_7.webp';
+		document.getElementById('40').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_8.webp';
+		document.getElementById('41').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_9.webp';
+		document.getElementById('42').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_10.webp';
+		document.getElementById('43').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_11_Selected.webp';
+		document.getElementById('44').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_12.webp';
+	} else {}
+	if (id == '44') {
+		document.getElementById('33').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_1.webp';
+		document.getElementById('34').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_2.webp';
+		document.getElementById('35').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_3.webp';
+		document.getElementById('36').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_4.webp';
+		document.getElementById('37').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_5.webp';
+		document.getElementById('38').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6.webp';
+		document.getElementById('39').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_7.webp';
+		document.getElementById('40').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_8.webp';
+		document.getElementById('41').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_9.webp';
+		document.getElementById('42').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_10.webp';
+		document.getElementById('43').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_11.webp';
+		document.getElementById('44').src = '../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_12_Selected.webp';
+	} else {}
+	if (id == '45') {
+		document.getElementById('45').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_1_Selected.webp';
+		document.getElementById('46').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_2.webp';
+		document.getElementById('47').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_3.webp';
+		document.getElementById('48').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_4.webp';
+		document.getElementById('49').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_5.webp';
+		document.getElementById('50').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6.webp';
+		document.getElementById('51').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_7.webp';
+		document.getElementById('52').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_8.webp';
+		document.getElementById('53').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_9.webp';
+		document.getElementById('54').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_10.webp';
+		document.getElementById('55').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_11.webp';
+		document.getElementById('56').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_12.webp';
+	} else {}
+	if (id == '46') {
+		document.getElementById('45').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_1.webp';
+		document.getElementById('46').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_2_Selected.webp';
+		document.getElementById('47').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_3.webp';
+		document.getElementById('48').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_4.webp';
+		document.getElementById('49').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_5.webp';
+		document.getElementById('50').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6.webp';
+		document.getElementById('51').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_7.webp';
+		document.getElementById('52').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_8.webp';
+		document.getElementById('53').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_9.webp';
+		document.getElementById('54').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_10.webp';
+		document.getElementById('55').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_11.webp';
+		document.getElementById('56').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_12.webp';
+	} else {}
+	if (id == '47') {
+		document.getElementById('45').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_1.webp';
+		document.getElementById('46').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_2.webp';
+		document.getElementById('47').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_3_Selected.webp';
+		document.getElementById('48').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_4.webp';
+		document.getElementById('49').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_5.webp';
+		document.getElementById('50').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6.webp';
+		document.getElementById('51').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_7.webp';
+		document.getElementById('52').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_8.webp';
+		document.getElementById('53').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_9.webp';
+		document.getElementById('54').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_10.webp';
+		document.getElementById('55').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_11.webp';
+		document.getElementById('56').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_12.webp';
+	} else {}
+	if (id == '48') {
+		document.getElementById('45').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_1.webp';
+		document.getElementById('46').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_2.webp';
+		document.getElementById('47').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_3.webp';
+		document.getElementById('48').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_4_Selected.webp';
+		document.getElementById('49').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_5.webp';
+		document.getElementById('50').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6.webp';
+		document.getElementById('51').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_7.webp';
+		document.getElementById('52').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_8.webp';
+		document.getElementById('53').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_9.webp';
+		document.getElementById('54').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_10.webp';
+		document.getElementById('55').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_11.webp';
+		document.getElementById('56').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_12.webp';
+	} else {}
+	if (id == '49') {
+		document.getElementById('45').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_1.webp';
+		document.getElementById('46').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_2.webp';
+		document.getElementById('47').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_3.webp';
+		document.getElementById('48').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_4.webp';
+		document.getElementById('49').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_5_Selected.webp';
+		document.getElementById('50').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6.webp';
+		document.getElementById('51').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_7.webp';
+		document.getElementById('52').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_8.webp';
+		document.getElementById('53').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_9.webp';
+		document.getElementById('54').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_10.webp';
+		document.getElementById('55').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_11.webp';
+		document.getElementById('56').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_12.webp';
+	} else {}
+	if (id == '50') {
+		document.getElementById('45').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_1.webp';
+		document.getElementById('46').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_2.webp';
+		document.getElementById('47').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_3.webp';
+		document.getElementById('48').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_4.webp';
+		document.getElementById('49').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_5.webp';
+		document.getElementById('50').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6_Selected.webp';
+		document.getElementById('51').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_7.webp';
+		document.getElementById('52').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_8.webp';
+		document.getElementById('53').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_9.webp';
+		document.getElementById('54').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_10.webp';
+		document.getElementById('55').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_11.webp';
+		document.getElementById('56').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_12.webp';
+	} else {}
+	if (id == '51') {
+		document.getElementById('45').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_1.webp';
+		document.getElementById('46').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_2.webp';
+		document.getElementById('47').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_3.webp';
+		document.getElementById('48').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_4.webp';
+		document.getElementById('49').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_5.webp';
+		document.getElementById('50').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6.webp';
+		document.getElementById('51').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_7_Selected.webp';
+		document.getElementById('52').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_8.webp';
+		document.getElementById('53').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_9.webp';
+		document.getElementById('54').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_10.webp';
+		document.getElementById('55').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_11.webp';
+		document.getElementById('56').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_12.webp';
+	} else {}
+	if (id == '52') {
+		document.getElementById('45').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_1.webp';
+		document.getElementById('46').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_2.webp';
+		document.getElementById('47').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_3.webp';
+		document.getElementById('48').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_4.webp';
+		document.getElementById('49').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_5.webp';
+		document.getElementById('50').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6.webp';
+		document.getElementById('51').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_7.webp';
+		document.getElementById('52').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_8_Selected.webp';
+		document.getElementById('53').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_9.webp';
+		document.getElementById('54').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_10.webp';
+		document.getElementById('55').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_11.webp';
+		document.getElementById('56').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_12.webp';
+	} else {}
+	if (id == '53') {
+		document.getElementById('45').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_1.webp';
+		document.getElementById('46').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_2.webp';
+		document.getElementById('47').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_3.webp';
+		document.getElementById('48').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_4.webp';
+		document.getElementById('49').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_5.webp';
+		document.getElementById('50').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6.webp';
+		document.getElementById('51').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_7.webp';
+		document.getElementById('52').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_8.webp';
+		document.getElementById('53').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_9_Selected.webp';
+		document.getElementById('54').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_10.webp';
+		document.getElementById('55').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_11.webp';
+		document.getElementById('56').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_12.webp';
+	} else {}
+	if (id == '54') {
+		document.getElementById('45').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_1.webp';
+		document.getElementById('46').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_2.webp';
+		document.getElementById('47').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_3.webp';
+		document.getElementById('48').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_4.webp';
+		document.getElementById('49').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_5.webp';
+		document.getElementById('50').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6.webp';
+		document.getElementById('51').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_7.webp';
+		document.getElementById('52').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_8.webp';
+		document.getElementById('53').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_9.webp';
+		document.getElementById('54').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_10_Selected.webp';
+		document.getElementById('55').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_11.webp';
+		document.getElementById('56').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_12.webp';
+	} else {}
+	if (id == '55') {
+		document.getElementById('45').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_1.webp';
+		document.getElementById('46').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_2.webp';
+		document.getElementById('47').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_3.webp';
+		document.getElementById('48').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_4.webp';
+		document.getElementById('49').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_5.webp';
+		document.getElementById('50').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6.webp';
+		document.getElementById('51').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_7.webp';
+		document.getElementById('52').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_8.webp';
+		document.getElementById('53').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_9.webp';
+		document.getElementById('54').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_10.webp';
+		document.getElementById('55').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_11_Selected.webp';
+		document.getElementById('56').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_12.webp';
+	} else {}
+	if (id == '56') {
+		document.getElementById('45').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_1.webp';
+		document.getElementById('46').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_2.webp';
+		document.getElementById('47').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_3.webp';
+		document.getElementById('48').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_4.webp';
+		document.getElementById('49').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_5.webp';
+		document.getElementById('50').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6.webp';
+		document.getElementById('51').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_7.webp';
+		document.getElementById('52').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_8.webp';
+		document.getElementById('53').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_9.webp';
+		document.getElementById('54').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_10.webp';
+		document.getElementById('55').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_11.webp';
+		document.getElementById('56').src = '../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_12_Selected.webp';
+	} else {}
+}
+</script>
+<script>
+var Dome;
+function chooseDome(choiceDome){
+	Dome = "../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/" + choiceDome + "_Selected.webp";
+}
+</script>
+<script>
+var Out;
+function chooseOut(choiceOut){
+	Out = "../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/" + choiceOut + "_Selected.webp";
+}
+</script>
+<script>
+var Crack;
+function chooseCrack(choiceCrack){
+	Crack = "../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/" + choiceCrack + "_Selected.webp";
+}
+</script>
+<script>
+var Back;
+function chooseBack(choiceBack){
+	Back = "../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/" + choiceBack + "_Selected.webp";
+}
+</script>
+<script>
+var Yellow;
+function chooseYellow(choiceYellow){
+	Yellow = "../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/" + choiceYellow + "_Selected.webp";
+}
+</script>
+<script>
+var Red;
+function chooseRed(choiceRed){
+	Red = "../../Images/Zombies/WW2/The_Final_Reich/Red_Top/" + choiceRed + "_Selected.webp";
+}
+</script>
+<script>
+var Green;
+function chooseGreen(choiceGreen){
+	Green = "../../Images/Zombies/WW2/The_Final_Reich/Green_Top/" + choiceGreen + "_Selected.webp";
+}
+</script>
+<script>
+function allResults() {
+	document.getElementById("resultEndDome").src = Dome;
+	document.getElementById("resultEndOut").src = Out;
+	document.getElementById("resultEndCrack").src = Crack;
+	document.getElementById("resultEndBack").src = Back;
+	document.getElementById("resultEndYellow").src = Yellow;
+	document.getElementById("resultEndRed").src = Red;
+	document.getElementById("resultEndGreen").src = Green;
+	document.getElementById("resultEndDome").style = "display: inline-block";
+	document.getElementById("resultEndOut").style = "display: inline-block";
+	document.getElementById("resultEndCrack").style = "display: inline-block";
+	document.getElementById("resultEndBack").style = "display: inline-block";
+	document.getElementById("resultEndYellow").style = "display: inline-block";
+	document.getElementById("resultEndRed").style = "display: inline-block";
+	document.getElementById("resultEndGreen").style = "display: inline-block";
+}
+</script>
+<script>
+function setVars() {
+	Dome = "../../Images/Zombies/WW2/The_Final_Reich/Dome_Bird/Dome_I_Selected.webp"
+	Out = "../../Images/Zombies/WW2/The_Final_Reich/Out_Bird/Out_I_Selected.webp"
+	Crack = "../../Images/Zombies/WW2/The_Final_Reich/Crack_Bird/Crack_I_Selected.webp"
+	Back = "../../Images/Zombies/WW2/The_Final_Reich/Back_Bird/Back_I_Selected.webp"
+	Yellow = "../../Images/Zombies/WW2/The_Final_Reich/Yellow_Top/Yellow_Top_6_Selected.webp"
+	Red = "../../Images/Zombies/WW2/The_Final_Reich/Red_Top/Red_Top_6_Selected.webp"
+	Green = "../../Images/Zombies/WW2/The_Final_Reich/Green_Top/Green_Top_6_Selected.webp"
+}
+</script>
+<script src="../../GlobalNavbar.js"></script>
+<script src="../../GlobalNavbarFixer.js"></script>
+</body>
+</html>
+<!--Nav Template End-->
