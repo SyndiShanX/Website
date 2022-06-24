@@ -29,298 +29,87 @@ topnav.appendChild(table)
 table.appendChild(tbody)
 tbody.appendChild(tr)
 
-/* Home */
+/* Functions */
 
-var homeTD = document.createElement('td')
-var homeA = document.createElement('a')
-homeA.className = 'nav-item home'
-homeA.textContent = 'Home'
-homeA.href = '/Website/'
-tr.appendChild(homeTD)
-homeTD.appendChild(homeA)
+var tempTD = ''
+var tempA = ''
 
-/* Minesweeper */
+function createNavItem(classname, textContent, href) {
+	tempTD = document.createElement('td')
+	tempA = document.createElement('a')
+	tempA.className = 'nav-item ' + classname
+	tempA.textContent = textContent
+	tempA.href = href
+	tr.appendChild(tempTD)
+	tempTD.appendChild(tempA)
+}
 
-var minesweeperTD = document.createElement('td')
-var minesweeperA = document.createElement('a')
-minesweeperA.className = 'nav-item minesweeper'
-minesweeperA.textContent = 'Minesweeper'
-minesweeperA.href = prepend + 'Minesweeper/Minesweeper.html'
-tr.appendChild(minesweeperTD)
-minesweeperTD.appendChild(minesweeperA)
+var tempDropdownTD = ''
+var tempDropdownDiv = ''
+var tempDropdownA = ''
+var tempDropdownI = ''
+var tempDropdownDiv1 = ''
 
-/* Dokustash Generator */
+function createNavDropdown(classname, textContent) {
+	tempDropdownTD = document.createElement('td')
+	tempDropdownDiv = document.createElement('div')
+	tempDropdownDiv.className = 'dropdown'
+	tempDropdownA = document.createElement('a')
+	tempDropdownA.href = 'javascript:void(0);'
+	tempDropdownA.className = 'dropbtn'
+	tempDropdownA.textContent = textContent + '...'
+	tempDropdownI = document.createElement('i')
+	tempDropdownI.className = 'fa fa-caret-down'
+	tempDropdownDiv1 = document.createElement('div')
+	tempDropdownDiv1.className = 'dropdown-content ' + classname + 'Dropdown'
+	
+	tempDropdownTD.appendChild(tempDropdownDiv)
+	tempDropdownDiv.appendChild(tempDropdownA)
+	tempDropdownA.appendChild(tempDropdownI)
+	tempDropdownDiv.appendChild(tempDropdownDiv1)
+	tr.appendChild(tempDropdownTD)
+}
 
-var dokustashGeneratorTD = document.createElement('td')
-var dokustashGeneratorA = document.createElement('a')
-dokustashGeneratorA.className = 'nav-item dokustashGenerator end'
-dokustashGeneratorA.textContent = 'Dokustash Generator'
-dokustashGeneratorA.href = prepend + 'Dokustash_Generator.html'
-tr.appendChild(dokustashGeneratorTD)
-dokustashGeneratorTD.appendChild(dokustashGeneratorA)
+var tempItem = ''
+var tempDropdown = ''
 
-/* Vanguard Dropdown Menu */
+function createNavDropdownItems(itemNum, dropdownClassname, textContentArray, hrefArray) {
+	for (let i = 0; i < itemNum; i++) {
+		if (textContentArray[i] != undefined) {
+			tempItem = document.createElement('a')
+			tempItem.textContent = textContentArray[i]
+			tempItem.href = prepend + hrefArray[i]
+			tempDropdown = topnav.getElementsByClassName(dropdownClassname)[0]
+			tempDropdown.appendChild(tempItem)
+		} else {
+			console.log('Invalid Number of Items (' + itemNum + ') specified for ' + dropdownClassname + ':Text Content was Blank, skipping...')
+		}
+	}
+}
 
-var vanguardDropdownTD = document.createElement('td')
-var vanguardDropdownDiv = document.createElement('div')
-vanguardDropdownDiv.className = 'dropdown'
-var vanguardDropdownA = document.createElement('a')
-vanguardDropdownA.href = 'javascript:void(0);'
-vanguardDropdownA.className = 'dropbtn'
-vanguardDropdownA.textContent = 'Vanguard...'
-var vanguardDropdownI = document.createElement('i')
-vanguardDropdownI.className = 'fa fa-caret-down'
-var vanguardDropdownDiv1 = document.createElement('div')
-vanguardDropdownDiv1.className = 'dropdown-content coldwarDropdown'
+/* Nav Items */
 
-vanguardDropdownTD.appendChild(vanguardDropdownDiv)
-vanguardDropdownDiv.appendChild(vanguardDropdownA)
-vanguardDropdownA.appendChild(vanguardDropdownI)
-vanguardDropdownDiv.appendChild(vanguardDropdownDiv1)
-tr.appendChild(vanguardDropdownTD)
+createNavItem('home', 'Home', '/Website/')
+createNavItem('minesweeper', 'Minesweeper', prepend + 'Minesweeper/Minesweeper.html')
+createNavItem('dokustashGenerator end', 'Dokustash Generator', prepend + 'Dokustash_Generator.html')
 
-/* Cold War Dropdown Menu */
+/* Nav Dropdown Menus */
 
-var coldwarDropdownTD = document.createElement('td')
-var coldwarDropdownDiv = document.createElement('div')
-coldwarDropdownDiv.className = 'dropdown'
-var coldwarDropdownA = document.createElement('a')
-coldwarDropdownA.href = 'javascript:void(0);'
-coldwarDropdownA.className = 'dropbtn'
-coldwarDropdownA.textContent = 'Cold War...'
-var coldwarDropdownI = document.createElement('i')
-coldwarDropdownI.className = 'fa fa-caret-down'
-var coldwarDropdownDiv1 = document.createElement('div')
-coldwarDropdownDiv1.className = 'dropdown-content coldwarDropdown'
+createNavDropdown('vanguard', 'Vanguard')
+createNavDropdown('coldwar', 'Cold War')
+createNavDropdown('bo4', 'Black Ops 4')
+createNavDropdown('bo3', 'Black Ops 3')
+createNavDropdown('more', 'More')
 
-coldwarDropdownTD.appendChild(coldwarDropdownDiv)
-coldwarDropdownDiv.appendChild(coldwarDropdownA)
-coldwarDropdownA.appendChild(coldwarDropdownI)
-coldwarDropdownDiv.appendChild(coldwarDropdownDiv1)
-tr.appendChild(coldwarDropdownTD)
+/* Nav Dropdown Items */
 
-/* Black Ops 4 Dropdown Menu */
+createNavDropdownItems(3, 'vanguardDropdown', ['Der Anfang', 'Terra Maledicta', 'Shi No Numa'], ['Vanguard/Der_Anfang.html', 'Vanguard/Terra_Maledicta.html', 'Vanguard/Shi_No_Numa.html'])
+createNavDropdownItems(6, 'coldwarDropdown', ['Die Maschine', 'Firebase Z', 'Mauer Der Toten', 'Forsaken', 'Outbreak'], ['Cold_War/Die_Maschine.html', 'Cold_War/Firebase_Z.html', 'Cold_War/Mauer_Der_Toten.html', 'Cold_War/Forsaken.html', 'Cold_War/Outbreak.html'])
+createNavDropdownItems(12, 'bo4Dropdown', ['Voyage of Despair', 'Voyage of Despair Tool', 'IX', 'Blood of The Dead', 'Classified', 'Dead of The Night', 'Stake Knife', 'Ancient Evil', 'Alpha Omega', 'Alpha Omega Tool', 'Tag Der Toten', 'Random Map'], ['BlackOps4/Voyage_of_Despair.html', 'BlackOps4/Voyage_of_Despair_Tool.html', 'BlackOps4/IX.html', 'BlackOps4/Blood_of_The_Dead.html', 'BlackOps4/Classified.html', 'BlackOps4/Dead_of_The_Night.html', 'BlackOps4/Stake_Knife.html', 'BlackOps4/Ancient_Evil.html', 'BlackOps4/Alpha_Omega.html', 'BlackOps4/Alpha_Omega_Tool.html', 'BlackOps4/Tag_Der_Toten.html', 'BlackOps4/Random_Map.html'])
+createNavDropdownItems(7, 'bo3Dropdown', ['Shadows of Evil', 'Shadows of Evil Tool', 'The Giant', 'Der Eisendrache', 'Zetsubou No Shima', 'Gorod Krovi', 'Revelations'], ['BlackOps3/Shadows_of_Evil.html', 'BlackOps3/Shadows_of_Evil_Tool.html', 'BlackOps3/The_Giant.html', 'BlackOps3/Der_Eisendrache.html', 'BlackOps3/Zetsubou_No_Shima.html', 'BlackOps3/Gorod_Krovi.html', 'BlackOps3/Revelations.html'])
+createNavDropdownItems(5, 'moreDropdown', ['The Final Reich', 'Dokucraft Banner Editor', 'Console Dokucraft', 'Downloads'], ['The_Final_Riech.html', 'DokucraftBannerEditor/Dokucraft_Banner_Editor.html', 'Downloads/Console_Dokucraft.html', 'Downloads/Downloads.html'])
 
-var bo4DropdownTD = document.createElement('td')
-var bo4DropdownDiv = document.createElement('div')
-bo4DropdownDiv.className = 'dropdown'
-var bo4DropdownA = document.createElement('a')
-bo4DropdownA.href = 'javascript:void(0);'
-bo4DropdownA.className = 'dropbtn'
-bo4DropdownA.textContent = 'Black Ops 4...'
-var bo4DropdownI = document.createElement('i')
-bo4DropdownI.className = 'fa fa-caret-down'
-var bo4DropdownDiv1 = document.createElement('div')
-bo4DropdownDiv1.className = 'dropdown-content bo4Dropdown'
-
-bo4DropdownTD.appendChild(bo4DropdownDiv)
-bo4DropdownDiv.appendChild(bo4DropdownA)
-bo4DropdownA.appendChild(bo4DropdownI)
-bo4DropdownDiv.appendChild(bo4DropdownDiv1)
-tr.appendChild(bo4DropdownTD)
-
-/* Black Ops 3 Dropdown Menu */
-
-var bo3DropdownTD = document.createElement('td')
-var bo3DropdownDiv = document.createElement('div')
-bo3DropdownDiv.className = 'dropdown'
-var bo3DropdownA = document.createElement('a')
-bo3DropdownA.href = 'javascript:void(0);'
-bo3DropdownA.className = 'dropbtn'
-bo3DropdownA.textContent = 'Black Ops 3...'
-var bo3DropdownI = document.createElement('i')
-bo3DropdownI.className = 'fa fa-caret-down'
-var bo3DropdownDiv1 = document.createElement('div')
-bo3DropdownDiv1.className = 'dropdown-content bo3Dropdown'
-
-bo3DropdownTD.appendChild(bo3DropdownDiv)
-bo3DropdownDiv.appendChild(bo3DropdownA)
-bo3DropdownA.appendChild(bo3DropdownI)
-bo3DropdownDiv.appendChild(bo3DropdownDiv1)
-tr.appendChild(bo3DropdownTD)
-
-/* More Dropdown Menu */
-
-var moreDropdownTD = document.createElement('td')
-var moreDropdownDiv = document.createElement('div')
-moreDropdownDiv.className = 'dropdown'
-var moreDropdownA = document.createElement('a')
-moreDropdownA.href = 'javascript:void(0);'
-moreDropdownA.className = 'dropbtn'
-moreDropdownA.textContent = 'More...'
-var moreDropdownI = document.createElement('i')
-moreDropdownI.className = 'fa fa-caret-down'
-var moreDropdownDiv1 = document.createElement('div')
-moreDropdownDiv1.className = 'dropdown-content moreDropdown'
-
-moreDropdownTD.appendChild(moreDropdownDiv)
-moreDropdownDiv.appendChild(moreDropdownA)
-moreDropdownA.appendChild(moreDropdownI)
-moreDropdownDiv.appendChild(moreDropdownDiv1)
-tr.appendChild(moreDropdownTD)
-
-/* Dropdown Items */
-
-/* Vanguard Items */
-
-var vanguardItem1 = document.createElement('a')
-var vanguardItem2 = document.createElement('a')
-var vanguardItem3 = document.createElement('a')
-
-vanguardItem1.textContent = 'Der Anfang'
-vanguardItem1.href = prepend + 'Vanguard/Der_Anfang.html'
-vanguardItem2.textContent = 'Terra Maledicta'
-vanguardItem2.href = prepend + 'Vanguard/Terra_Maledicta.html'
-vanguardItem3.textContent = 'Shi No Numa'
-vanguardItem3.href = prepend + 'Vanguard/Shi_No_Numa.html'
-
-vanguardDropdownDiv1.appendChild(vanguardItem1)
-vanguardDropdownDiv1.appendChild(vanguardItem2)
-vanguardDropdownDiv1.appendChild(vanguardItem3)
-
-/* Cold War Items */
-
-var coldWarItem1 = document.createElement('a')
-var coldWarItem2 = document.createElement('a')
-var coldWarItem3 = document.createElement('a')
-var coldWarItem4 = document.createElement('a')
-var coldWarItem5 = document.createElement('a')
-var coldWarItem6 = document.createElement('a')
-
-coldWarItem1.textContent = 'Die Maschine'
-coldWarItem1.href = prepend + 'Cold_War/Die_Maschine.html'
-coldWarItem2.textContent = 'Firebase Z'
-coldWarItem2.href = prepend + 'Cold_War/Firebase_Z.html'
-coldWarItem3.textContent = 'Mauer Der Toten'
-coldWarItem3.href = prepend + 'Cold_War/Mauer_Der_Toten.html'
-coldWarItem4.textContent = 'Forsaken'
-coldWarItem4.href = prepend + 'Cold_War/Forsaken.html'
-coldWarItem5.textContent = 'Outbreak'
-coldWarItem5.href = prepend + 'Cold_War/Outbreak.html'
-coldWarItem6.textContent = 'Cold War Gold Weapons'
-coldWarItem6.href = prepend + 'Cold_War/Gold_Weapons.html'
-
-coldwarDropdownDiv1.appendChild(coldWarItem1)
-coldwarDropdownDiv1.appendChild(coldWarItem2)
-coldwarDropdownDiv1.appendChild(coldWarItem3)
-coldwarDropdownDiv1.appendChild(coldWarItem4)
-coldwarDropdownDiv1.appendChild(coldWarItem5)
-coldwarDropdownDiv1.appendChild(coldWarItem6)
-
-/* Black Ops 4 Items */
-
-var bo4Item1 = document.createElement('a')
-var bo4Item2 = document.createElement('a')
-var bo4Item3 = document.createElement('a')
-var bo4Item4 = document.createElement('a')
-var bo4Item5 = document.createElement('a')
-var bo4Item6 = document.createElement('a')
-var bo4Item7 = document.createElement('a')
-var bo4Item8 = document.createElement('a')
-var bo4Item9 = document.createElement('a')
-var bo4Item10 = document.createElement('a')
-var bo4Item11 = document.createElement('a')
-var bo4Item12 = document.createElement('a')
-
-bo4Item1.textContent = 'Voyage of Despair'
-bo4Item1.href = prepend + 'BlackOps4/Voyage_of_Despair.html'
-bo4Item2.textContent = 'Voyage of Despair Tool'
-bo4Item2.href = prepend + 'BlackOps4/Voyage_of_Despair_Tool.html'
-bo4Item3.textContent = 'IX'
-bo4Item3.href = prepend + 'BlackOps4/IX.html'
-bo4Item4.textContent = 'Blood of The Dead'
-bo4Item4.href = prepend + 'BlackOps4/Blood_of_The_Dead.html'
-bo4Item5.textContent = 'Classified'
-bo4Item5.href = prepend + 'BlackOps4/Classified.html'
-bo4Item6.textContent = 'Dead of The Night'
-bo4Item6.href = prepend + 'BlackOps4/Dead_of_The_Night.html'
-bo4Item7.textContent = 'Stake Knife'
-bo4Item7.href = prepend + 'BlackOps4/Stake_Knife.html'
-bo4Item8.textContent = 'Ancient Evil'
-bo4Item8.href = prepend + 'BlackOps4/Ancient_Evil.html'
-bo4Item9.textContent = 'Alpha Omega'
-bo4Item9.href = prepend + 'BlackOps4/Alpha_Omega.html'
-bo4Item10.textContent = 'Alpha Omega Tool'
-bo4Item10.href = prepend + 'BlackOps4/Alpha_Omega_Tool.html'
-bo4Item11.textContent = 'Tag Der Toten'
-bo4Item11.href = prepend + 'BlackOps4/Tag_Der_Toten.html'
-bo4Item12.textContent = 'Random Map'
-bo4Item12.href = prepend + 'BlackOps4/Random_Map.html'
-
-bo4DropdownDiv1.appendChild(bo4Item1)
-bo4DropdownDiv1.appendChild(bo4Item2)
-bo4DropdownDiv1.appendChild(bo4Item3)
-bo4DropdownDiv1.appendChild(bo4Item4)
-bo4DropdownDiv1.appendChild(bo4Item5)
-bo4DropdownDiv1.appendChild(bo4Item6)
-bo4DropdownDiv1.appendChild(bo4Item7)
-bo4DropdownDiv1.appendChild(bo4Item8)
-bo4DropdownDiv1.appendChild(bo4Item9)
-bo4DropdownDiv1.appendChild(bo4Item10)
-bo4DropdownDiv1.appendChild(bo4Item11)
-bo4DropdownDiv1.appendChild(bo4Item12)
-
-/* Black Ops 4 Items */
-
-var bo3Item1 = document.createElement('a')
-var bo3Item2 = document.createElement('a')
-var bo3Item3 = document.createElement('a')
-var bo3Item4 = document.createElement('a')
-var bo3Item5 = document.createElement('a')
-var bo3Item6 = document.createElement('a')
-var bo3Item7 = document.createElement('a')
-
-bo3Item1.textContent = 'Shadows of Evil'
-bo3Item1.href = prepend + 'BlackOps3/Shadows_of_Evil.html'
-bo3Item2.textContent = 'Shadows of Evil Tool'
-bo3Item2.href = prepend + 'BlackOps3/Shadows_of_Evil_Tool.html'
-bo3Item3.textContent = 'Der Eisendrache'
-bo3Item3.href = prepend + 'BlackOps3/Der_Eisendrache.html'
-bo3Item4.textContent = 'Zetsubou No Shima'
-bo3Item4.href = prepend + 'BlackOps3/Zetsubou_No_Shima.html'
-bo3Item5.textContent = 'Gorod Krovi'
-bo3Item5.href = prepend + 'BlackOps3/Gorod_Krovi.html'
-bo3Item6.textContent = 'Revelations'
-bo3Item6.href = prepend + 'BlackOps3/Revelations.html'
-bo3Item7.textContent = 'The Giant'
-bo3Item7.href = prepend + 'BlackOps3/The_Giant.html'
-
-bo3DropdownDiv1.appendChild(bo3Item1)
-bo3DropdownDiv1.appendChild(bo3Item2)
-bo3DropdownDiv1.appendChild(bo3Item3)
-bo3DropdownDiv1.appendChild(bo3Item4)
-bo3DropdownDiv1.appendChild(bo3Item5)
-bo3DropdownDiv1.appendChild(bo3Item6)
-bo3DropdownDiv1.appendChild(bo3Item7)
-
-/* More Items */
-
-var moreItem1 = document.createElement('a')
-var moreItem2 = document.createElement('a')
-var moreItem3 = document.createElement('a')
-var moreItem4 = document.createElement('a')
-var moreItem5 = document.createElement('a')
-var moreItem6 = document.createElement('a')
-
-moreItem1.textContent = 'MW Gold Weapons'
-moreItem1.href = prepend + 'MW_Gold_Weapons.html'
-moreItem2.textContent = 'The Final Reich'
-moreItem2.href = prepend + 'The_Final_Riech.html'
-moreItem3.textContent = 'Dokucraft Banner Editor'
-moreItem3.href = prepend + 'DokucraftBannerEditor/Dokucraft_Banner_Editor.html'
-moreItem4.textContent = 'R6 Extraction Score Calculator'
-moreItem4.href = prepend + 'R6E.html'
-moreItem5.textContent = 'Console Dokucraft'
-moreItem5.href = prepend + 'Downloads/Console_Dokucraft.html'
-moreItem6.textContent = 'Downloads'
-moreItem6.href = prepend + 'Downloads/Downloads.html'
-
-moreDropdownDiv1.appendChild(moreItem1)
-moreDropdownDiv1.appendChild(moreItem2)
-moreDropdownDiv1.appendChild(moreItem3)
-moreDropdownDiv1.appendChild(moreItem4)
-moreDropdownDiv1.appendChild(moreItem5)
-moreDropdownDiv1.appendChild(moreItem6)
+/* Nav Finalization */
 
 tr.appendChild(spacer)
 
