@@ -1,5 +1,4 @@
 <!--Nav Template Start-->
-<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=0.5">
@@ -120,7 +119,7 @@ function getJSON() {
 	StashID = document.getElementById("randomnumber").value;
 
 	async function getFileData() {
-	await fetch('https://dokucraft.co.uk/stash-files/files.json').then(res => res.json()).then(files => {
+	await fetch('https://gh.dokucraft.co.uk/stash-files/files.json').then(res => res.json()).then(files => {
 		async function StashFileData() {
 			await sleep(500);
 
@@ -207,9 +206,9 @@ function genStashFileData() {
 	StashFile1 = nameOf(StashID)
 
 	if (StashExtension1.length == "1") {
-		StashIMGLink = "https://dokucraft.co.uk/stash-files/files/";
+		StashIMGLink = "https://gh.dokucraft.co.uk/stash-files/files/";
 	} else if (StashExtension1.length == "2") {
-		StashIMGLink = "https://dokucraft.co.uk/stash-files/thumbnails/";
+		StashIMGLink = "https://gh.dokucraft.co.uk/stash-files/thumbnails/";
 		StashExtension1 = StashFile.split(".zip");
 		StashExtension2 = StashExtension1[0] + ".png";
 		StashFile1 = StashExtension2;
@@ -224,7 +223,7 @@ function genStashFileData() {
 	DokuIMGWidth = FileSize[0]
 	DokuIMGHeight = FileSize[1]
 	document.getElementById("DokuContributorElement").innerText = "Contributor: " + Contributor;
-	DokuLink = "https://dokucraft.co.uk/stash/?details=" + StashID;
+	DokuLink = "https://stash.dokucraft.co.uk/?details=" + StashID;
 	document.getElementById("DokuLinkElement").innerHTML = DokuLink;
 	document.getElementById("DokuLinkElement").href = DokuLink;
 	DokuIMGLink = StashIMGLink + StashFile1;
