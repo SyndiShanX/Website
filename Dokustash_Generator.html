@@ -95,7 +95,7 @@ a.syn {
 	<textarea readonly id="randomnumber" rows="1" cols="5" maxlength="5"></textarea><br><br>
 	<a class="syn" href="" target="_blank" alt="DokuStash" id="DokuLinkElement"></a><br><br>
 	<font color="#8d7824" size="6"><p id="DokuContributorElement"></p></font><br>
-	<img id="DokuIMGElement" src="Images/Global/Icon_Tab.webp" width="128" height="128"><br><br>
+	<img id="DokuIMGElement" style="image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges;" src="Images/Global/Icon_Tab.webp" width="256" height="256"><br><br>
 	<font color="Purple" size="6"><p id="DokuTagElement"></p></font>
 
 <!--Nav Template Start-->
@@ -164,6 +164,7 @@ function genStashFileData() {
 	"use strict";
 	var DokuIMGWidth = "",
 			DokuIMGHeight,
+			DokuIMGRatio,
 			DokuLink,
 			DokuIMGLink,
 			FileSize,
@@ -222,14 +223,15 @@ function genStashFileData() {
 	FileTags = (stashFiles[StashFile].T)
 	DokuIMGWidth = FileSize[0]
 	DokuIMGHeight = FileSize[1]
+	DokuIMGRatio = DokuIMGHeight / DokuIMGWidth
 	document.getElementById("DokuContributorElement").innerText = "Contributor: " + Contributor;
 	DokuLink = "https://stash.dokucraft.co.uk/?details=" + StashID;
 	document.getElementById("DokuLinkElement").innerHTML = DokuLink;
 	document.getElementById("DokuLinkElement").href = DokuLink;
 	DokuIMGLink = StashIMGLink + StashFile1;
 	document.getElementById("DokuIMGElement").src = DokuIMGLink;
-	document.getElementById("DokuIMGElement").width = DokuIMGWidth;
-	document.getElementById("DokuIMGElement").height = DokuIMGHeight;
+	document.getElementById("DokuIMGElement").width = 256;
+	document.getElementById("DokuIMGElement").height = DokuIMGRatio * 256;
 	if (FileTags == undefined) {
 	} else {
 		FileTags1 = FileTags.split(",")
