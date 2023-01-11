@@ -110,28 +110,25 @@ font.text_orion {
 
 <p style="color: white;">Sheets API Quickstart</p>
 
-<!--Add buttons to initiate auth sequence and sign out-->
-    <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
-    <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+<button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
 
-    <pre id="content" style="white-space: pre-wrap;"></pre>
+<pre id="content" style="white-space: pre-wrap; color: white;"></pre>
 
 <!--Nav Template Start-->
 </div>
-<script type="text/javascript">
+<script>
 /* exported gapiLoaded */
 /* exported gisLoaded */
 /* exported handleAuthClick */
 /* exported handleSignoutClick */
 const CLIENT_ID = '993686201970-g49j91ih05caggrinaghlarh9u22mq5t.apps.googleusercontent.com';
 const API_KEY = 'AIzaSyAGrbDnPJyDluMecFUoD98UsgbFB_-agj0';
+const ACCESS_TOKEN = ''
 const DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4';
 const SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly';
 let tokenClient;
 let gapiInited = false;
 let gisInited = false;
-// document.getElementById('authorize_button').style.visibility = 'hidden';
-// document.getElementById('signout_button').style.visibility = 'hidden';
 function gapiLoaded() {
   gapi.load('client', initializeGapiClient);
 }
@@ -141,7 +138,6 @@ async function initializeGapiClient() {
     discoveryDocs: [DISCOVERY_DOC],
   });
   gapiInited = true;
-  maybeEnableButtons();
 }
 function gisLoaded() {
   tokenClient = google.accounts.oauth2.initTokenClient({
@@ -150,47 +146,26 @@ function gisLoaded() {
     callback: '',
   });
   gisInited = true;
-  maybeEnableButtons();
-}
-function maybeEnableButtons() {
-  if (gapiInited && gisInited) {
-    document.getElementById('authorize_button').style.visibility = 'visible';
-  }
 }
 function handleAuthClick() {
   tokenClient.callback = async (resp) => {
     if (resp.error !== undefined) {
       throw (resp);
     }
-    document.getElementById('signout_button').style.visibility = 'visible';
     document.getElementById('authorize_button').innerText = 'Refresh';
-    await listMajors();
+    await fetchData();
   };
-
   if (gapi.client.getToken() === null) {
     tokenClient.requestAccessToken({prompt: 'consent'});
   } else {
     tokenClient.requestAccessToken({prompt: ''});
   }
 }
-function handleSignoutClick() {
-  const token = gapi.client.getToken();
-  if (token !== null) {
-    google.accounts.oauth2.revoke(token.access_token);
-    gapi.client.setToken('');
-    document.getElementById('content').innerText = '';
-    document.getElementById('authorize_button').innerText = 'Authorize';
-    document.getElementById('signout_button').style.visibility = 'hidden';
-  }
-}
-
-async function listMajors() {
-  let response;
+async function fetchData() {
   try {
-    // Fetch first 10 files
     response = await gapi.client.sheets.spreadsheets.values.get({
-      spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-      range: 'Class Data!A2:E',
+      spreadsheetId: '1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko',
+      range: 'MW2 Gold Weapons!A1:F1',
     });
   } catch (err) {
     document.getElementById('content').innerText = err.message;
@@ -201,9 +176,8 @@ async function listMajors() {
     document.getElementById('content').innerText = 'No values found.';
     return;
   }
-  // Flatten to string to display
   const output = range.values.reduce(
-      (str, row) => `${str}${row[0]}, ${row[4]}\n`,
+      (str, row) => `${str}${row[0]}, ${row[5]}\n`,
       'Name, Major:\n');
   document.getElementById('content').innerText = output;
 }
