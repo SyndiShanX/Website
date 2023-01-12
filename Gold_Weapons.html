@@ -111,68 +111,81 @@ font.text_orion {
 <div class="MainWrapper" align="center">
 </div>
 <script>
-fetch("https://opensheet.elk.sh/1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko/1").then((response) => response.json()).then((data) => {
-	json = data
-	mainWrapper = document.getElementsByClassName('MainWrapper')[0]
-	for (i = 0; i < json.length; i++) {
-		elementNum = json[i]['Element Num']
-		if (elementNum == 4) {
-			fontElement = document.createElement(json[i]['Element 1'])
-			fontElement.className = json[i]['Element 2']
-			fontElement.size = json[i]['Element 3']
-			fontElement.innerText = json[i]['Element 4']
-			mainWrapper.appendChild(fontElement)
-		} else if (elementNum == 5) {
-			fontElement = document.createElement(json[i]['Element 1'])
-			fontElement.className = json[i]['Element 2']
-			fontElement.size = json[i]['Element 3']
-			fontElement.innerText = json[i]['Element 4']
-			mainWrapper.appendChild(fontElement)
-			brElement = document.createElement(json[i]['Element 5'])
-			mainWrapper.appendChild(brElement)
-		} else if (elementNum == 8) {
-			imgElement1 = document.createElement(json[i]['Element 1'])
-			mainWrapper.appendChild(imgElement1)
-			imgElement1.setAttribute('img', json[i]['Element 2'] + '.webp')
-			imgElement2 = document.createElement(json[i]['Element 3'])
-			mainWrapper.appendChild(imgElement2)
-			imgElement2.setAttribute('img', json[i]['Element 4'] + '.webp')
-			imgElement3 = document.createElement(json[i]['Element 5'])
-			mainWrapper.appendChild(imgElement3)
-			imgElement3.setAttribute('img', json[i]['Element 6'] + '.webp')
-			brElement = document.createElement(json[i]['Element 13'])
-			mainWrapper.appendChild(brElement)
-			brElement = document.createElement(json[i]['Element 14'])
-			mainWrapper.appendChild(brElement)
-		} else if (elementNum == 12 || elementNum == 13 || elementNum == 14) {
-			divElement = document.createElement(json[i]['Element 1'])
-			divElement.className = json[i]['Element 2']
-			mainWrapper.appendChild(divElement)
-			imgElement1 = document.createElement(json[i]['Element 3'])
-			divElement.appendChild(imgElement1)
-			imgElement1.setAttribute('img', json[i]['Element 4'] + '/' + json[i]['Element 5'] + '.webp')
-			imgElement2 = document.createElement(json[i]['Element 6'])
-			divElement.appendChild(imgElement2)
-			imgElement2.setAttribute('img', json[i]['Element 7'] + '.webp')
-			imgElement3 = document.createElement(json[i]['Element 8'])
-			divElement.appendChild(imgElement3)
-			imgElement3.setAttribute('img', json[i]['Element 9'] + '.webp')
-			spanElement = document.createElement(json[i]['Element 10'])
-			spanElement.className = json[i]['Element 5'] + ' ' + json[i]['Element 11']
-			spanElement.innerHTML = json[i]['Element 12']
-			divElement.appendChild(spanElement) 
-			if (elementNum == 13) {
+function fetchData(spreadsheetID) {
+	fetch('https://opensheet.elk.sh/' + spreadsheetID + '/1').then((response) => response.json()).then((data) => {
+		json = data
+		mainWrapper = document.getElementsByClassName('MainWrapper')[0]
+		for (i = 0; i < json.length; i++) {
+			elementNum = json[i]['Element Num']
+			if (elementNum == 4) {
+				fontElement = document.createElement(json[i]['Element 1'])
+				fontElement.className = json[i]['Element 2']
+				fontElement.size = json[i]['Element 3']
+				fontElement.innerText = json[i]['Element 4']
+				mainWrapper.appendChild(fontElement)
+			} else if (elementNum == 5) {
+				fontElement = document.createElement(json[i]['Element 1'])
+				fontElement.className = json[i]['Element 2']
+				fontElement.size = json[i]['Element 3']
+				fontElement.innerText = json[i]['Element 4']
+				mainWrapper.appendChild(fontElement)
+				brElement = document.createElement(json[i]['Element 5'])
+				mainWrapper.appendChild(brElement)
+			} else if (elementNum == 8) {
+				imgElement1 = document.createElement(json[i]['Element 1'])
+				mainWrapper.appendChild(imgElement1)
+				imgElement1.setAttribute('img', json[i]['Element 2'] + '.webp')
+				imgElement2 = document.createElement(json[i]['Element 3'])
+				mainWrapper.appendChild(imgElement2)
+				imgElement2.setAttribute('img', json[i]['Element 4'] + '.webp')
+				imgElement3 = document.createElement(json[i]['Element 5'])
+				mainWrapper.appendChild(imgElement3)
+				imgElement3.setAttribute('img', json[i]['Element 6'] + '.webp')
 				brElement = document.createElement(json[i]['Element 13'])
 				mainWrapper.appendChild(brElement)
-			}
-			if (elementNum == 14) {
 				brElement = document.createElement(json[i]['Element 14'])
 				mainWrapper.appendChild(brElement)
+			} else if (elementNum == 12 || elementNum == 13 || elementNum == 14) {
+				divElement = document.createElement(json[i]['Element 1'])
+				divElement.className = json[i]['Element 2']
+				mainWrapper.appendChild(divElement)
+				imgElement1 = document.createElement(json[i]['Element 3'])
+				divElement.appendChild(imgElement1)
+				imgElement1.setAttribute('img', json[i]['Element 4'] + '/' + json[i]['Element 5'] + '.webp')
+				imgElement2 = document.createElement(json[i]['Element 6'])
+				divElement.appendChild(imgElement2)
+				imgElement2.setAttribute('img', json[i]['Element 7'] + '.webp')
+				imgElement3 = document.createElement(json[i]['Element 8'])
+				divElement.appendChild(imgElement3)
+				imgElement3.setAttribute('img', json[i]['Element 9'] + '.webp')
+				spanElement = document.createElement(json[i]['Element 10'])
+				spanElement.className = json[i]['Element 5'] + ' ' + json[i]['Element 11']
+				spanElement.innerHTML = json[i]['Element 12']
+				divElement.appendChild(spanElement) 
+				if (elementNum == 13) {
+					brElement = document.createElement(json[i]['Element 13'])
+					mainWrapper.appendChild(brElement)
+				}
+				if (elementNum == 14) {
+					brElement = document.createElement(json[i]['Element 14'])
+					mainWrapper.appendChild(brElement)
+				}
 			}
 		}
-	}
-	setPaths()
-});
+		setPaths()
+	});
+}
+fetchData('1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko')
+</script>
+<script>
+function clearMain() {
+	body = document.getElementsByTagName('body')[0]
+	document.getElementsByClassName('MainWrapper')[0].remove()
+	newMainWrapper = document.createElement('div')
+	newMainWrapper.className = 'MainWrapper'
+	newMainWrapper.align = 'center'
+	body.appendChild(newMainWrapper)
+}
 </script>
 <script>
 function setPaths() {
