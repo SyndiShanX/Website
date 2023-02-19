@@ -53,7 +53,7 @@
 }
 .box-body {
 	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(#762c2c, #ff0303);
+  background: linear-gradient(#4f4f4f, #ff0303);
 	border-bottom-right-radius: 5%;
 	border-bottom-left-radius: 5%;
   position: relative;
@@ -64,7 +64,7 @@
 	z-index: -1;
 }
 .box-body::after {
-	background: linear-gradient(#ffffff, #ffefa0);
+	background: linear-gradient(#ffffff, #fff7cc);
 	transform: translateX(-50%);
   position: absolute;
 	content: "";
@@ -76,7 +76,7 @@
 .box-lid {
 	box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.3);
 	transform: translateX(-50%);
-	background-color: #cc231e;
+	background-color: #ff0303;
   position: absolute;
 	border-radius: 5%;
 	height: 40px;
@@ -86,7 +86,7 @@
   left: 50%;
 }
 .box-lid::after {
-	background: linear-gradient(#ffefa0, #fff);
+	background: linear-gradient(#fff7cc, #ffffff);
 	transform: translateX(-50%);
 	position: absolute;
   content: "";
@@ -173,6 +173,50 @@
 
 <!--Nav Template Start-->
 </div>
+<script>
+if (window.location.hash != '') {
+	color = window.location.hash
+	boxLid = document.getElementsByClassName('box-lid')[0]
+	boxBody = document.getElementsByClassName('box-body')[0]
+	if (color == '#red') {
+		boxLid.style = 'background-color: #ff0303;'
+		boxBody.style = 'background: linear-gradient(#B20303, #ff0303);'
+	}
+	if (color == '#orange') {
+		boxLid.style = 'background-color: #C64800;'
+		boxBody.style = 'background: linear-gradient(#873100, #D44E00);'
+	}
+	if (color == '#yellow') {
+		boxLid.style = 'background-color: #E2B41B;'
+		boxBody.style = 'background: linear-gradient(#A38113, #F0C11C);'
+	}
+	if (color == '#green') {
+		boxLid.style = 'background-color: #5F7F2B;'
+		boxBody.style = 'background: linear-gradient(#2F3F15, #698E30);'
+	}
+	if (color == '#blue') {
+		boxLid.style = 'background-color: #0358AD;'
+		boxBody.style = 'background: linear-gradient(#02376D, #025DBC);'
+	}
+	if (color == '#pink') {
+		boxLid.style = 'background-color: #CC2260;'
+		boxBody.style = 'background: linear-gradient(#8E1841, #DC2564);'
+	}
+	if (color == '#purple') {
+		boxLid.style = 'background-color: #7843BC;'
+		boxBody.style = 'background: linear-gradient(#522D7F, #8549CD);'
+	}
+	else {
+		if (color.split('#').length == 4) {
+			boxLidColor = color.split('#')[1]
+			boxBodyColor1 = color.split('#')[2]
+			boxBodyColor2 = color.split('#')[3]
+			boxLid.style = 'background-color: #' + boxLidColor + ';'
+			boxBody.style = 'background: linear-gradient(#' + boxBodyColor1 + ', #' + boxBodyColor2 + ');'
+		}
+	}
+}
+</script>
 <script src="GlobalNavbar.js"></script>
 <script src="GlobalNavbarFixer.js"></script>
 </body>
