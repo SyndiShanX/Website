@@ -213,6 +213,12 @@ if (window.location.hash != '') {
 			boxBodyColor2 = color.split('#')[3]
 			boxLid.style = 'background-color: #' + boxLidColor + ';'
 			boxBody.style = 'background: linear-gradient(#' + boxBodyColor1 + ', #' + boxBodyColor2 + ');'
+		} else if (color.split('%23').length == 3) {
+			boxLidColor = color.split('%23')[0].split('#')[1]
+			boxBodyColor1 = color.split('%23')[1]
+			boxBodyColor2 = color.split('%23')[2]
+			boxLid.style = 'background-color: #' + boxLidColor + ';'
+			boxBody.style = 'background: linear-gradient(#' + boxBodyColor1 + ', #' + boxBodyColor2 + ');'
 		}
 	}
 }
