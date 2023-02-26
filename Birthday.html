@@ -8,6 +8,10 @@
 <link rel="icon" href="Images/Global/Icon_Tab.webp">
 <link rel="stylesheet" href="GlobalCSS.css">
 <style type="text/css">
+:root {
+	--stripeColor1: #FFFFFF;
+	--stripeColor2: #999999;
+}
 .box {
 	transform: translateY(100%);
   position: relative;
@@ -64,7 +68,7 @@
 	z-index: -1;
 }
 .box-body::after {
-	background: linear-gradient(#ffffff, #fff7cc);
+	background: linear-gradient(var(--stripeColor1), var(--stripeColor2));
 	transform: translateX(-50%);
   position: absolute;
 	content: "";
@@ -86,7 +90,7 @@
   left: 50%;
 }
 .box-lid::after {
-	background: linear-gradient(#fff7cc, #ffffff);
+	background: var(--stripeColor1);
 	transform: translateX(-50%);
 	position: absolute;
   content: "";
@@ -103,8 +107,8 @@
 	border-radius: 50% 50% 0 50%;
 	border: 16.5px solid white;
 	position: absolute;
-	height: 85px;
-	width: 85px;
+	height: 65px;
+	width: 65px;
   bottom: 99%;
 	content: "";
   z-index: -1;
@@ -205,6 +209,32 @@ if (window.location.hash != '') {
 	if (color == '#purple') {
 		boxLid.style = 'background-color: #7843BC;'
 		boxBody.style = 'background: linear-gradient(#522D7F, #8549CD);'
+	}
+	if (color == '#black') {
+		boxLid.style = 'background-color: #000000;'
+		boxLid.style.setProperty("--stripeColor1", "#FFFFFF");
+		boxBody.style = 'background: linear-gradient(#000000, #191919);'
+		boxBody.style.setProperty("--stripeColor1", "#FFFFFF");
+		boxBody.style.setProperty("--stripeColor2", "#999999");
+	}
+	if (color == '#white') {
+		boxLid.style = 'background-color: #FFFFFF;'
+		boxLid.style.setProperty("--stripeColor1", "#4f4f4f");
+		boxBody.style = 'background: linear-gradient(#FFFFFF, #CCCCCC);'
+		boxBody.style.setProperty("--stripeColor1", "#4f4f4f");
+		boxBody.style.setProperty("--stripeColor2", "#242424");
+	}
+	if (color == '#periwinkle') {
+		boxLid.style = 'background-color: #C4C4F2;'
+		boxBody.style = 'background: linear-gradient(#7D7D99, #CCCCFF);'
+	}
+	if (color == '#teal') {
+		boxLid.style = 'background-color: #007272;'
+		boxBody.style = 'background: linear-gradient(#005959, #008080);'
+	}
+	if (color == '#mint') {
+		boxLid.style = 'background-color: #87D1B9;'
+		boxBody.style = 'background: linear-gradient(#649987, #91E0C8);'
 	}
 	else {
 		if (color.split('#').length == 4) {
