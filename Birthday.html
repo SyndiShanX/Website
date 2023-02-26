@@ -249,12 +249,12 @@ if (window.location.hash != '') {
 			boxBody.style.setProperty("--stripeColor1", '#' + stripeColor1);
 			boxBody.style.setProperty("--stripeColor2", '#' + stripeColor2);
 		} else if (color.split('%23').length == 5) {
-			boxLidColor = color.split('%23')[1]
-			boxBodyColor1 = color.split('%23')[2]
-			boxBodyColor2 = color.split('%23')[3]
-			stripeColor1 = color.split('%23')[4]
-			stripeColor2 = color.split('%23')[5]
-			boxLid.style = 'background-color: #' + boxLidColor + ';'
+			boxLidColor = color.split('%23')[0]
+			boxBodyColor1 = color.split('%23')[1]
+			boxBodyColor2 = color.split('%23')[2]
+			stripeColor1 = color.split('%23')[3]
+			stripeColor2 = color.split('%23')[4]
+			boxLid.style = 'background-color: ' + boxLidColor + ';'
 			boxLid.style.setProperty("--stripeColor1", '#' + stripeColor1);
 			boxBody.style = 'background: linear-gradient(#' + boxBodyColor1 + ', #' + boxBodyColor2 + ');'
 			boxBody.style.setProperty("--stripeColor1", '#' + stripeColor1);
