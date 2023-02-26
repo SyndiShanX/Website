@@ -237,7 +237,29 @@ if (window.location.hash != '') {
 		boxBody.style = 'background: linear-gradient(#649987, #91E0C8);'
 	}
 	else {
-		if (color.split('#').length == 4) {
+		if (color.split('#').length == 6) {
+			boxLidColor = color.split('#')[1]
+			boxBodyColor1 = color.split('#')[2]
+			boxBodyColor2 = color.split('#')[3]
+			stripeColor1 = color.split('#')[4]
+			stripeColor2 = color.split('#')[5]
+			boxLid.style = 'background-color: #' + boxLidColor + ';'
+			boxLid.style.setProperty("--stripeColor1", '#' + stripeColor1);
+			boxBody.style = 'background: linear-gradient(#' + boxBodyColor1 + ', #' + boxBodyColor2 + ');'
+			boxBody.style.setProperty("--stripeColor1", '#' + stripeColor1);
+			boxBody.style.setProperty("--stripeColor2", '#' + stripeColor2);
+		} else if (color.split('%23').length == 5) {
+			boxLidColor = color.split('%23')[1]
+			boxBodyColor1 = color.split('%23')[2]
+			boxBodyColor2 = color.split('%23')[3]
+			stripeColor1 = color.split('%23')[4]
+			stripeColor2 = color.split('%23')[5]
+			boxLid.style = 'background-color: #' + boxLidColor + ';'
+			boxLid.style.setProperty("--stripeColor1", '#' + stripeColor1);
+			boxBody.style = 'background: linear-gradient(#' + boxBodyColor1 + ', #' + boxBodyColor2 + ');'
+			boxBody.style.setProperty("--stripeColor1", '#' + stripeColor1);
+			boxBody.style.setProperty("--stripeColor2", '#' + stripeColor2);
+		} else if (color.split('#').length == 4) {
 			boxLidColor = color.split('#')[1]
 			boxBodyColor1 = color.split('#')[2]
 			boxBodyColor2 = color.split('#')[3]
