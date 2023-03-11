@@ -175,6 +175,9 @@ template {
 		scrollbar-color: #666 #2f2f2f;
 		scrollbar-width: thin;
 	}
+	.topnav {
+		width: 94.8%!important;
+	}
 }
 
 
@@ -239,6 +242,8 @@ img.logo:hover {
 	margin-left: 20px;
 	margin-right: 20px;
 	padding: 1%;
+	-moz-transform:  scale(0.9);
+	-moz-transform-origin: top center;
 }
 
 ::-webkit-scrollbar {
