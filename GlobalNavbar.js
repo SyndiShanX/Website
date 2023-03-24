@@ -95,7 +95,7 @@ function createNavDropdownItems(itemNum, dropdownClassname, textContentArray, hr
 createNavItem('home', 'Home', '/Website/')
 createNavItem('minesweeper', 'Minesweeper', prepend + 'Minesweeper/Minesweeper.html')
 createNavItem('dokustashGenerator', 'Dokustash Generator', prepend + 'Dokustash_Generator.html')
-createNavItem('zombies end', 'COD Zombies Easter Eggs', prepend + 'Zombies/Selector.html')
+createNavItem('zombies end', 'Zombies Easter Eggs', prepend + 'Zombies/Selector.html')
 
 /* Nav Dropdown Menus */
 
