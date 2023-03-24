@@ -87,7 +87,7 @@ function select(elementNum) {
 function revealMaps(game) {
 	container = document.getElementsByClassName('revealed_game')[0]
 	prepend = document.getElementsByTagName('body')[0].lang
-	mapsLink = []
+	maps = []
 	mapsImg = []
 	
 	currentMaps = container.children.length
@@ -98,53 +98,42 @@ function revealMaps(game) {
 	}
 	
 	if (game == 'Black_Ops_1') {
-		mapsLink.push("Ascension", "Call_of_the_Dead", "Shangri_La", "Moon");
-		mapsImg.push("ascension", "call_of_the_dead", "shangri_la", "moon");
-		createMap(4, mapsLink, mapsImg)
+		maps.push("Ascension", "Call_of_the_Dead", "Shangri_La", "Moon");
+		createMap(4, maps)
 	} else if (game == 'Black_Ops_2') {
-		mapsLink.push("Tranzit", "Nuketown", "Die_Rise", "Buried", "Mob_of_The_Dead", "Origins");
-		mapsImg.push("tranzit", "nuketown", "die_rise", "buried", "mob_of_the_dead", "origins");
-		createMap(6, mapsLink, mapsImg)
+		maps.push("Tranzit", "Nuketown", "Die_Rise", "Buried", "Mob_of_The_Dead", "Origins");
+		createMap(6, maps)
 	} else if (game == 'Advanced_Warfare') {
-		mapsLink.push("Outbreak", "Infection", "Carrier", "Descent");
-		mapsImg.push("outbreak", "infection", "carrier", "descent");
-		createMap(4, mapsLink, mapsImg)
+		maps.push("Outbreak", "Infection", "Carrier", "Descent");
+		createMap(4, maps)
 	} else if (game == 'Black_Ops_3') {
-		mapsLink.push("Shadows_of_Evil", "The_Giant", "Der_Eisendrache", "Zetsubou_No_Shima", "Gorod_Krovi", "Revelations");
-		mapsImg.push("shadows_of_evil", "the_giant", "der_eisendrache", "zetsubou_no_shima", "gorod_krovi", "revelations");
-		createMap(6, mapsLink, mapsImg)
+		maps.push("Shadows_of_Evil", "The_Giant", "Der_Eisendrache", "Zetsubou_No_Shima", "Gorod_Krovi", "Revelations");
+		createMap(6, maps)
 	} else if (game == 'Infinite_Warfare') {
-		mapsLink.push("Zombies_in_Spaceland", "Rave_in_The_Redwoods", "Shaolin_Shuffle", "Attack_of_The_Radioactive_Thing", "The_Beast_from_Beyond");
-		mapsImg.push("zombies_in_spaceland", "rave_in_the_redwoods", "shaolin_shuffle", "attack_of_the_radioactive_thing", "the_beast_from_beyond");
-		createMap(5, mapsLink, mapsImg)
+		maps.push("Zombies_in_Spaceland", "Rave_in_The_Redwoods", "Shaolin_Shuffle", "Attack_of_The_Radioactive_Thing", "The_Beast_from_Beyond");
+		createMap(5, maps)
 	} else if (game == 'World_War_2') {
-		//mapsLink.push("The_Final_Reich", "Groesten_Haus", "The_Darkest_Shore", "The_Shadowed_Throne", "The_Frozen_Dawn", "The_Tortured_Path");
-		//mapsImg.push("the_final_reich", "groesten_haus", "the_darkest_shore", "the_shadowed_throne", "the_frozen_dawn", "the_tortured_path");
-		//createMap(6, mapsLink, mapsImg)
-		mapsLink.push("The_Final_Reich");
-		mapsImg.push("the_final_reich",);
-		createMap(1, mapsLink, mapsImg)
+		//maps.push("The_Final_Reich", "Groesten_Haus", "The_Darkest_Shore", "The_Shadowed_Throne", "The_Frozen_Dawn", "The_Tortured_Path");
+		//createMap(6, maps)
+		maps.push("The_Final_Reich");
+		createMap(1, maps)
 	} else if (game == 'Black_Ops_4') {
-		mapsLink.push("Voyage_of_Despair", "IX", "Blood_of_The_Dead", "Classified", "Dead_of_The_Night", "Ancient_Evil", "Alpha_Omega", "Tag_Der_Toten");
-		mapsImg.push("voyage_of_despair", "ix", "blood_of_the_dead", "classified", "dead_of_the_night", "ancient_evil", "alpha_omega", "tag_der_toten");
-		createMap(8, mapsLink, mapsImg)
+		maps.push("Voyage_of_Despair", "IX", "Blood_of_The_Dead", "Classified", "Dead_of_The_Night", "Ancient_Evil", "Alpha_Omega", "Tag_Der_Toten");
+		createMap(8, maps)
 	} else if (game == 'Cold_War') {
-		mapsLink.push("Die_Maschine", "Firebase_Z", "Mauer_Der_Toten", "Forsaken", "Outbreak");
-		mapsImg.push("die_maschine", "firebase_z", "mauer_der_toten", "forsaken", "outbreak");
-		createMap(5, mapsLink, mapsImg)
+		maps.push("Die_Maschine", "Firebase_Z", "Mauer_Der_Toten", "Forsaken", "Outbreak");
+		createMap(5, maps)
 	} else if (game == 'Vanguard') {
-		//mapsLink.push("Terra_Maledicta", "Shi_No_Numa");
-		//mapsImg.push("terra_maledicta", "shi_no_numa");
-		//createMap(2, mapsLink, mapsImg)
-		mapsLink.push("Shi_No_Numa");
-		mapsImg.push("shi_no_numa");
-		createMap(1, mapsLink, mapsImg)
+		//maps.push("Terra_Maledicta", "Shi_No_Numa");
+		//createMap(2, maps)
+		maps.push("Shi_No_Numa");
+		createMap(1, maps)
 	}
 	
-	function createMap(mapNum, mapLink, map) {
+	function createMap(mapNum, map) {
 		for (let num = 0; num < mapNum; num++) {
 			tempMap = document.createElement('a')
-			tempMap.href = game + '/' + mapLink[num] + '.html'
+			tempMap.href = game + '/' + map[num] + '.html'
 			
 			tempMapImg = document.createElement('img')
 			tempMapImg.setAttribute('loading', 'lazy')
