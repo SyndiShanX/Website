@@ -29,6 +29,11 @@ function navSwapper() {
 			document.getElementsByClassName('topnav')[0].children[2].children[0].children[0].children[1].innerHTML = minesweeperHTML
 			document.getElementsByClassName('topnav')[0].children[2].children[0].children[0].children[2].innerHTML = dokustashGeneratorHTML
 			document.getElementsByClassName("hiddenHTML")[0].outerHTML = ""
+			/* Removes Minesweeper and Dokustash Generator from More Dropdown */
+			moreHTML = document.getElementsByClassName("moreDropdown")[0].outerHTML
+			if (moreHTML.split('Minesweeper').length > 1) {
+				document.getElementsByClassName("moreDropdown")[0].outerHTML = moreHTML.split('Minesweeper/')[0] + 'DokucraftBannerEditor/' + moreHTML.split('DokucraftBannerEditor/')[1]
+			}
 		} else {
 			document.getElementsByClassName("hiddenHTML")[0].outerHTML = ""
 		}
@@ -52,11 +57,11 @@ function navSwapper() {
 		moreHTML = document.getElementsByClassName("moreDropdown")[0].outerHTML
 		if (moreHTML.split('Minesweeper').length == 1) {
 			/* Adds Minesweeper and Dokustash Generator to the More Dropdown */
-			moreHTML1 = moreHTML.split('Dokucraft Banner Editor</a>')[0] + 'Dokucraft Banner Editor</a>' + minesweeperHTML + moreHTML.split('Dokucraft Banner Editor</a>')[1]
+			moreHTML1 = moreHTML.split('moreDropdown">')[0] + 'moreDropdown">' + minesweeperHTML + dokustashGeneratorHTML + moreHTML.split('moreDropdown">')[1]
 			/* Removes the Navbar Classes from the Minesweeper and Dokustash Generator Elements */
 			moreHTML2 = moreHTML1.replaceAll('class="nav-item dokustashGenerator" ', '').replaceAll('class="nav-item minesweeper" ', '')
 			document.getElementsByClassName("moreDropdown")[0].outerHTML = moreHTML2
-			/* Removes the Selection Border from the Home, Minesweeper, and Dokustash Generator Elements */
+			/* Removes the Selection Border from the Minesweeper and Dokustash Generator Elements */
 			if (window.location.href.split('Minesweeper').length != 1) {
 				document.getElementsByClassName('minesweeper')[0].style = ''
 			} else if (window.location.href == 'https://syndishanx.github.io/Website/') {
