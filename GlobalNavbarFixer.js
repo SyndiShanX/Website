@@ -70,10 +70,6 @@ function navSwapper() {
 				document.getElementsByClassName('dokustashGenerator')[0].style = ''
 			}
 		}
-		/* Shortens Zombies Selection Page Name to Fix Mobile Navbar */
-		if (document.getElementsByClassName("zombies")[0].innerHTML == 'Zombies Easter Eggs') {
-			document.getElementsByClassName("zombies")[0].innerHTML = 'Zombies EEs'
-		}		
 	}
 	/* Checks for any Screen Size Changes and Runs navSwapper if any are found */
 	if (window.matchMedia("(orientation: portrait)").matches) {
