@@ -2,6 +2,17 @@
 previousScreenOrientation = ''
 currentScreenOrientation = ''
 
+/* Checks for any Screen Size Changes and Runs navSwapper if any are found */
+if (window.matchMedia("(orientation: portrait)").matches) {
+	previousScreenOrientation = currentScreenOrientation
+	currentScreenOrientation = 'Portrait'
+}
+if (window.matchMedia("(orientation: landscape)").matches) {
+	previousScreenOrientation = currentScreenOrientation
+	currentScreenOrientation = 'Landscape'
+}
+if (currentScreenOrientation != previousScreenOrientation) {navSwapper()}
+
 function navSwapper() {
 	/* Creates Minesweeper and Dokustash Generator A Elements */
 	if (document.getElementsByClassName("minesweeper")[0] != undefined) {
@@ -71,16 +82,6 @@ function navSwapper() {
 			}
 		}
 	}
-	/* Checks for any Screen Size Changes and Runs navSwapper if any are found */
-	if (window.matchMedia("(orientation: portrait)").matches) {
-		previousScreenOrientation = currentScreenOrientation
-		currentScreenOrientation = 'Portrait'
-	}
-	if (window.matchMedia("(orientation: landscape)").matches) {
-		previousScreenOrientation = currentScreenOrientation
-		currentScreenOrientation = 'Landscape'
-	}
-	if (currentScreenOrientation != previousScreenOrientation) {navSwapper()}
 }
 
 window.onresize = navSwapper;
