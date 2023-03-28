@@ -43,7 +43,7 @@ img.Zombies {
 
 	<a href="World_at_War.html"><img class="game unselected" onmouseover="hover(0)" onmouseout="hover(0)" src="../Images/Zombies/Selector/World_at_War.webp"></img></a>
 	<a onclick="revealMaps('Black_Ops_1'); select(1)"><img class="game unselected hidden" onmouseover="hover(1)" onmouseout="hover(1)" src="../Images/Zombies/Selector/Black_Ops_1.webp"></img></a>
-	<a onclick="revealMaps('Black_Ops_2'); select(2)"><img class="game unselected hidden" onmouseover="hover(2)" onmouseout="hover(2)" src="../Images/Zombies/Selector/Black_Ops_2.webp"></img></a>
+	<a onclick="revealMaps('Black_Ops_2'); select(2)"><img class="game unselected" onmouseover="hover(2)" onmouseout="hover(2)" src="../Images/Zombies/Selector/Black_Ops_2.webp"></img></a>
 	<a onclick="revealMaps('Advanced_Warfare'); select(3)"><img class="game unselected hidden" onmouseover="hover(3)" onmouseout="hover(3)" src="../Images/Zombies/Selector/Advanced_Warfare.webp"></img></a>
 	<a onclick="revealMaps('Black_Ops_3'); select(4)"><img class="game unselected" onmouseover="hover(4)" onmouseout="hover(4)" src="../Images/Zombies/Selector/Black_Ops_3.webp"></img></a>
 	<a onclick="revealMaps('Infinite_Warfare'); select(5)"><img class="game unselected hidden" onmouseover="hover(5)" onmouseout="hover(5)" src="../Images/Zombies/Selector/Infinite_Warfare.webp"></img></a>
@@ -101,14 +101,18 @@ function revealMaps(game) {
 		maps.push("Ascension", "Call_of_the_Dead", "Shangri_La", "Moon");
 		createMap(4, maps)
 	} else if (game == 'Black_Ops_2') {
-		maps.push("Tranzit", "Nuketown", "Die_Rise", "Buried", "Mob_of_The_Dead", "Origins");
-		createMap(6, maps)
+		//maps.push("Tranzit", "Nuketown", "Die_Rise", "Buried", "Mob_of_The_Dead", "Origins");
+		//createMap(6, maps)
+		maps.push("Origins");
+		createMap(1, maps)
 	} else if (game == 'Advanced_Warfare') {
 		maps.push("Outbreak", "Infection", "Carrier", "Descent");
 		createMap(4, maps)
 	} else if (game == 'Black_Ops_3') {
-		maps.push("Shadows_of_Evil", "The_Giant", "Der_Eisendrache", "Zetsubou_No_Shima", "Gorod_Krovi", "Revelations");
-		createMap(6, maps)
+		//maps.push("Shadows_of_Evil", "The_Giant", "Der_Eisendrache", "Zetsubou_No_Shima", "Gorod_Krovi", "Revelations");
+		//createMap(6, maps)
+		maps.push("Shadows_of_Evil", "The_Giant", "Der_Eisendrache");
+		createMap(3, maps)
 	} else if (game == 'Infinite_Warfare') {
 		maps.push("Zombies_in_Spaceland", "Rave_in_The_Redwoods", "Shaolin_Shuffle", "Attack_of_The_Radioactive_Thing", "The_Beast_from_Beyond");
 		createMap(5, maps)

@@ -13,6 +13,11 @@ if (window.matchMedia("(orientation: landscape)").matches) {
 }
 if (currentScreenOrientation != previousScreenOrientation) {navSwapper()}
 
+/* Add Selection Border to Selector Page in Navbar */
+if (window.location.href.split('Selector').length != 1) {
+	document.getElementsByClassName('zombies')[0].style = 'border: 1px solid white; border-radius: 20px!important;'
+}
+
 function navSwapper() {
 	/* Creates Minesweeper and Dokustash Generator A Elements */
 	if (document.getElementsByClassName("minesweeper")[0] != undefined) {
@@ -55,8 +60,6 @@ function navSwapper() {
 			document.getElementsByClassName('home')[0].style = 'border: 1px solid white; border-radius: 20px!important;'
 		} else if (window.location.href.split('Dokustash_Generator').length != 1) {
 			document.getElementsByClassName('dokustashGenerator')[0].style = 'border: 1px solid white; border-radius: 20px!important;'
-		} else if (window.location.href.split('Selector').length != 1) {
-			document.getElementsByClassName('zombies')[0].style = 'border: 1px solid white; border-radius: 20px!important;'
 		}
 	} else {
 		/* Removes Minesweeper and Dokustash Generator from the Navabar */
