@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../Fonts/Font_Awesome.min.css">
 <link rel="icon" href="../../Images/Global/Icon_Tab.webp">
 <link rel="stylesheet" href="../../GlobalCSS.css">
+<link rel="stylesheet" href="../ImageModal.css">
 <style type="text/css">
 font {
 	font-family: 'Montserrat', sans-serif;
@@ -18,10 +19,13 @@ font.text {
 	line-height: 1.15;
 	font-weight: bold;
 }
-img.Der_Eisendrache {
+img.Easter_Egg {
 	width: 320px;
 	height: 180px;
 	margin-left: 5%;
+}
+a:-webkit-any-link {
+	color: transparent!important;
 }
 </style>
 </head>
@@ -180,7 +184,7 @@ img.Der_Eisendrache {
 	<font class="text">Sacrifice 6 Crawlers to the Floating Heads around the Floating Urn</font><br>
 	<font class="text">Listen for the names of the items he lists (Shoot the Urn to Hear the Names again)</font><br>
 	<font class="text">Go to Power Room and Church Connector and look for the Knights with the Corresponding Picture</font><br>
-	<img loading=lazy class="Der_Eisendrache" src="../../Images/Zombies/BlackOps3/Der_Eisendrache/symbols.webp"></img><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Der_Eisendrache/symbols.webp"></img><br>
 	<font class="text">Interact with the 3 Knights, it will give you a Symbol</font><br>
 	<font class="text">Collect the Symbols by Killing Zombies and Collect the Power-ups</font><br>
 	<font class="text">Take the 3 new Symbols from the Knights and return to the Ritual Room</font><br>
@@ -221,29 +225,8 @@ img.Der_Eisendrache {
 
 <!--Nav Template Start-->
 </div>
-<script>
-var text = document.getElementsByClassName('text');
-for (i = 0; i < text.length; i++) {
-	var iRemainder = i % 8;
-	if (iRemainder == 0) {
-		text[i].color = '#8d5024'
-	} else if (iRemainder == 1) {
-		text[i].color = '#8d7824'
-	} else if (iRemainder == 2) {
-		text[i].color = '#508d24'
-	} else if (iRemainder == 3) {
-		text[i].color = '#248d6c'
-	} else if (iRemainder == 4) {
-		text[i].color = '#24678d'
-	} else if (iRemainder == 5) {
-		text[i].color = '#5040ae'
-	} else if (iRemainder == 6) {
-		text[i].color = '#8640ae'
-	} else if (iRemainder == 7) {
-		text[i].color = '#ae40a5'
-	}
-}
-</script>
+<script src="../ImageModal.js"></script>
+<script src="../ZombiesEEs.js"></script>
 <script src="../../GlobalNavbar.js"></script>
 <script src="../../GlobalNavbarFixer.js"></script>
 </body>

@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../Fonts/Font_Awesome.min.css">
 <link rel="icon" href="../../Images/Global/Icon_Tab.webp">
 <link rel="stylesheet" href="../../GlobalCSS.css">
+<link rel="stylesheet" href="../ImageModal.css">
 <style type="text/css">
 font {
 	font-family: 'Montserrat', sans-serif;
@@ -18,10 +19,13 @@ font.text {
 	line-height: 1.15;
 	font-weight: bold;
 }
-img.Gorod_Krovi {
+img.Easter_Egg {
 	width: 320px;
 	height: 180px;
 	margin-left: 5%;
+}
+a:-webkit-any-link {
+	color: transparent!important;
 }
 </style>
 </head>
@@ -29,37 +33,41 @@ img.Gorod_Krovi {
 <div class="MainWrapper" align="left">
 <!--Nav Template End-->
 
+	<div id="myModal" class="modal"></div>
+	<img class="modal-content" id="img01"></img>
+	<div id="caption"></div>
+
 	<font size="7" color="#8d2424">Easter Egg Songs</font><br><br>
 
 	<font color="#9555c2" size="5">Dead Ended</font><br><br>
 
 	<font class="text">Interact with 3 Vodka Bottles in the following locations:</font><br><br>
 
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Vodka_1.webp" location="Bottom Floor of the Department Store on the Couch"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Vodka_2.webp" location="Rubble outside of the Operations Bunker"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Vodka_3.webp" location="On a Shelf in Supply Depot"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Vodka_1.webp" alt="Bottom Floor of the Department Store on the Couch"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Vodka_2.webp" alt="Rubble outside of the Operations Bunker"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Vodka_3.webp" alt="On a Shelf in Supply Depot"></img><br><br>
 
 	
 	<font color="#9555c2" size="5">Ace of Spades</font><br><br>
 
 	<font class="text">Interact with 3 Ace of Spades Cards in the following locations:</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Card_1.webp" location="Bottom Left Corner of the Chalk Board in the Double Tap Room"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Card_2.webp" location="Room to the Right on the Top Floor in Dragon Command"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Card_3.webp" location="Bottom Floor of the Hatchery in a Bookshelf"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Card_1.webp" alt="Bottom Left Corner of the Chalk Board in the Double Tap Room"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Card_2.webp" alt="Room to the Right on the Top Floor in Dragon Command"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Card_3.webp" alt="Bottom Floor of the Hatchery in a Bookshelf"></img><br><br>
 	
 	<font size="7" color="#8d2424">Pack-a-Punch</font><br><br>
 	
 	<font class="text">Turn on the Power</font><br>
 	<font class="text">Obtain a Cylinder for the following Groph Modules, Call them in, Defend them and they will open to Reveal a Part</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Cylinder_1.webp" location="Dragon Control (Blue Cylinder)"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Cylinder_2.webp" location="Supply Depot (Yellow Cylinder)"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Cylinder_3.webp" location="Tank Station (Red Cylinder)"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Cylinder_1.webp" alt="Dragon Control (Blue Cylinder)"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Cylinder_2.webp" alt="Supply Depot (Yellow Cylinder)"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Cylinder_3.webp" alt="Tank Station (Red Cylinder)"></img><br><br>
 	
 	<font class="text">Take them to Operations Bunker and put them into the Machine</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Dragon_Controller.webp" location="Operations Bunker"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Dragon_Controller.webp" alt="Operations Bunker"></img><br><br>
 	
 	<font class="text">Ride the Dragon to the Hatchery</font><br><br>
 	
@@ -77,27 +85,27 @@ img.Gorod_Krovi {
 	<font class="text">Turn on the Power</font><br>
 	<font class="text">All Players must Activate the Terminal in the Hatchery, and Complete the Lockdown</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Dragon_Strikes.webp"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Dragon_Strikes.webp"></img><br><br>
 	
 	<font size="7" color="#8d2424">Dragon Shield</font><br><br>
 	
 	<font class="text">Obtain the First Part of the Dragon Shield near the Infirmary in the following locations:</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_1.webp"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_2.webp"></img>
-	<!--<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_3.webp"></img>--><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_1.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_2.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_3.webp"></img><br><br>
 	
 	<font class="text">Obtain the Second Part of the Dragon Shield near the Operations Bunker in the following locations:</font><br><br>
 	
-	<!--<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_4.webp"></img>-->
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_5.webp"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_6.webp"></img><br><br>
+	<!--<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_4.webp"></img>-->
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_5.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_6.webp"></img><br><br>
 	
 	<font class="text">Obtain the Third Part of the Dragon Shield near the Armory in the following locations:</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_7.webp"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_8.webp"></img>
-	<!--<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_9.webp"></img>--><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_7.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_8.webp"></img>
+	<!--<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Shield_9.webp"></img>--><br><br>
 	
 	<font color="#cc6600" size="5">Upgrade</font><br><br>
 	
@@ -112,11 +120,11 @@ img.Gorod_Krovi {
 	
 	<font class="text">Go to the Hatchery and Shoot the Dragon Egg above the Sewer System Exit</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Egg.webp"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Egg.webp"></img><br><br>
 	
 	<font class="text">Locate a Nest around the Map and Place the Egg</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Nest.webp"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Nest.webp"></img><br><br>
 	
 	<font class="text">Have a Dragon Breathe Fire on it and let it Cool for 1-2 rounds</font><br>
 	<font class="text">Complete 3 tasks for the Dragon Egg in Order</font><br>
@@ -125,7 +133,7 @@ img.Gorod_Krovi {
 	<font class="text">&nbsp; -Melee Kills</font><br>
 	<font class="text">Go to the Hatchery and Incubate your Egg in the Bunker by Placing them in the Incubator and Charge it by Killing Zombies Nearby</font><br><br>
 	
-	<!--<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Incubator.webp"></img><br><br>-->
+	<!--<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Incubator.webp"></img><br><br>-->
 	
 	<font class="text">Let the Egg Cool for 1-2 rounds, Pick it up and then go back to Spawn and get the Gauntlet from your Challenges Gravestone</font><br><br>
 	
@@ -139,7 +147,7 @@ img.Gorod_Krovi {
 	
 	<font class="text">Kill several Mangler's, then Equip it in Department Store</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Mangler_Helmet.webp"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Mangler_Helmet.webp"></img><br><br>
 	
 	
 	<font color="#cc6600" size="5">Valkyrie Helmet</font><br><br>
@@ -150,7 +158,7 @@ img.Gorod_Krovi {
 	
 	<font class="text">Shoot the Camera on several Valkyrie Drones</font><br><br>
 	
-	<!--<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Valkyrie_Helmet.webp"></img><br><br>-->
+	<!--<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Valkyrie_Helmet.webp"></img><br><br>-->
 	
 	<font color="#cc6600" size="5">Dragon Wings</font><br><br>
 	
@@ -160,7 +168,7 @@ img.Gorod_Krovi {
 	
 	<font class="text">Riding the Dragon at all 3 Platforms and Obtaining the Gauntlet of Siegfried</font><br><br>
 	
-	<!--<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Dragon_Wimgs.webp"></img><br><br>-->
+	<!--<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Dragon_Wimgs.webp"></img><br><br>-->
 	
 	
 	<font size="7" color="#8d2424">Main Quest</font><br><br>
@@ -169,7 +177,7 @@ img.Gorod_Krovi {
 	
 	<font class="text">Kill a Valkyrie Drone next to the Generator with a Green Tarp on it in the Hatchery to Activate it</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Generator.webp"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Generator.webp"></img><br><br>
 	
 	<font class="text">Identify the Location of the Green Valve and the Valve with the Cylinder, then you can find the Correct Combination using this Tool</font><br>
 	<font class="text">Green Light - The Starting Point</font><br>
@@ -178,39 +186,39 @@ img.Gorod_Krovi {
 
 	<font class="text">Once you get the Cylinder, Place it in the Slot next to Sophia and then Enter the Password "KRONOS" by Shooting the Cylinder, then Interact with Sophia</font><br><br>
 	
-	<!--<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Kronos.webp"></img><br><br>-->
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Kronos.webp"></img><br><br>
 
 	<font class="text">Obtain all 6 Trophies, you can Obtain these in any Order</font><br><br>
 	
 	<font class="text">&nbsp; -Shoot the Trophy in the Statue's Hand Straight out of Dragon Command</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_1.webp"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_2.webp"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_1.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_2.webp"></img><br><br>
 	
 	<font class="text">&nbsp; -Use the Gigant Laser Beam in Supply Depot to reveal a Trophy Hidden in a Safe under the Floor</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_3.webp"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_4.webp"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_3.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_4.webp"></img><br><br>
 	
 	<font class="text">&nbsp; -Shield Blast the Pipe Under the Double Tap Room, a Trophy will Appear next to Double Tap</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_5.webp"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_6.webp"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_5.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_6.webp"></img><br><br>
 	
 	<font class="text">&nbsp; -Use the Dragon Strike on the Puddle below the Speed Cola</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_7.webp"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_8.webp"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_7.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_8.webp"></img><br><br>
 	
 	<font class="text">&nbsp; -When Exiting the Hatchery through the Sewers, look up and Shoot the Red Light, the Trophy will Appear in the Toilet in the Hatchery</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_9.webp"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_10.webp"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_9.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_10.webp"></img><br><br>
 	
 	<font class="text">&nbsp; -Obtain the Gauntlet and open the Safe in the Operations Bunker by 115 Punching it</font><br><br>
 	
-	<!--<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_11.webp"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_12.webp"></img><br><br>-->
+	<!--<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_11.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Trophy_12.webp"></img><br><br>-->
 
 	<font color="#cc6600" size="5">Complete SOHPIA's Tasks, they are in a Random Order Every Game</font><br><br>
 	
@@ -218,12 +226,12 @@ img.Gorod_Krovi {
 
 	<font class="text">There are 6 Bombs on the Walls around the Map (Make Sure you Know where they are)</font><br><br>
 	
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Bomb_1.webp" location="Dragon Control"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Bomb_2.webp" location="Armory"></img>
-	<!--<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Bomb_3.webp" location="Supply Depot"></img>--><br><br>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Bomb_4.webp" location="Infirmary"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Bomb_5.webp" location="Tank Station"></img>
-	<img loading=lazy class="Gorod_Krovi" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Bomb_6.webp" location="Department Store"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Bomb_1.webp" alt="Dragon Control"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Bomb_2.webp" alt="Armory"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Bomb_3.webp" alt="Supply Depot"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Bomb_4.webp" alt="Infirmary"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Bomb_5.webp" alt="Tank Station"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/BlackOps3/Gorod_Krovi/Bomb_6.webp" alt="Department Store"></img><br><br>
 	
 	<font class="text">Each area will Flash in a Specific Order on the Screen,you have to Defuse the Bombs in Order within 1 Minute</font><br>
 	<font class="text">If any of the Bombs are Defused in the wrong Order or it is not Completed in Time all Players outside of the Following Safe Areas will be Downed</font><br><br>
@@ -269,33 +277,12 @@ img.Gorod_Krovi {
 	<font class="text">Once you Kill the Dragon, Nikolai will Turn on You, so start Shooting the Glowing Orange Vents on his Mech</font><br>
 	<font class="text">Nikolai will Attack you with Missiles, R.A.P.S, and Turrets</font><br><br>
 
-	<font class="text">Once you Defeat Nikolai the Ending Cutscene will Play, you will be Teleported to Spawn Afterwards</font><br><br>
-	
+	<font class="text">Once you Defeat Nikolai the Ending Cutscene will Play, you will be Teleported to Spawn Afterwards with all Perks</font><br><br>
+
 <!--Nav Template Start-->
 </div>
-<script>
-var text = document.getElementsByClassName('text');
-for (i = 0; i < text.length; i++) {
-	var iRemainder = i % 8;
-	if (iRemainder == 0) {
-		text[i].color = '#8d5024'
-	} else if (iRemainder == 1) {
-		text[i].color = '#8d7824'
-	} else if (iRemainder == 2) {
-		text[i].color = '#508d24'
-	} else if (iRemainder == 3) {
-		text[i].color = '#248d6c'
-	} else if (iRemainder == 4) {
-		text[i].color = '#24678d'
-	} else if (iRemainder == 5) {
-		text[i].color = '#5040ae'
-	} else if (iRemainder == 6) {
-		text[i].color = '#8640ae'
-	} else if (iRemainder == 7) {
-		text[i].color = '#ae40a5'
-	}
-}
-</script>
+<script src="../ImageModal.js"></script>
+<script src="../ZombiesEEs.js"></script>
 <script src="../../GlobalNavbar.js"></script>
 <script src="../../GlobalNavbarFixer.js"></script>
 </body>
