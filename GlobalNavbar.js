@@ -82,6 +82,7 @@ function createNavDropdownItems(itemNum, dropdownClassname, textContentArray, hr
 			tempItem = document.createElement('a')
 			tempItem.textContent = textContentArray[i]
 			tempItem.href = prepend + hrefArray[i]
+			tempItem.className = 'dropdown-item'
 			tempDropdown = topnav.getElementsByClassName(dropdownClassname)[0]
 			tempDropdown.appendChild(tempItem)
 		} else {
