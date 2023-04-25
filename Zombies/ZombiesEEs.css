@@ -16,7 +16,7 @@ img.Easter_Egg {
 	margin-left: 5%;
 }
 
-a:-webkit-any-link:not(.dropbtn):not(.nav-item):not(.dropdown-item) {
+a:-webkit-any-link:not(.dropbtn):not(.nav-item):not(.dropdown-item):not(.zombies-link) {
 	color: transparent!important;
 }
 
