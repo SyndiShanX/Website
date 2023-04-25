@@ -274,3 +274,14 @@
 	touch-action: auto;
 	height: auto;
 }
+
+/* Custom CSS */
+
+.imgTitle {
+	color: white;
+	position: relative;
+	top: 10px;
+}
+.animated .fadeInUp {
+	padding-top: 25px;
+}

@@ -172,6 +172,10 @@
 				: "";
 
 			var handleImgLightboxContainer = function handleImgLightboxContainer() {
+				/* Custom */
+				if (document.getElementsByClassName('imgTitle')[0] != undefined) {
+					document.getElementsByClassName('imgTitle')[0].style = 'color: transparent'
+				}
 				hideImgLightbox(onClosed);
 			};
 
@@ -216,6 +220,8 @@
 
 					img.onload = function() {
 						container.classList.add(isLoadedClass);
+						/* Custom */
+						container.align = "center"
 
 						if (onLoaded) {
 							callCallback(onLoaded, root);
@@ -261,9 +267,27 @@
 
 /* Custom Javascript */
 
-var imgClass = document.getElementsByClassName('Easter_Egg');
+/* Turn the Image Alt into a Title */
+
+function addTitle() {
+	console.log('Test')
+	var imgClass = document.getElementsByClassName('Easter_Egg')
+	img = document.getElementsByClassName('Easter_Egg')[0]
+	
+	customTitle = document.createElement('font')
+	customTitle.className = "imgTitle"
+	customTitle.size = 6
+	customTitle.textContent = img.alt
+	
+	lightBoxElem = document.getElementsByClassName("img-lightbox animated fadeIn is-loaded")[0]
+	lightBoxElem.appendChild(customTitle)
+}	
+
+/* Create A Class with Lightbox Classes */
+
+var imgClass = document.getElementsByClassName('Easter_Egg')
 for (i = 0; i < imgClass.length; i++) {
-	img = document.getElementsByClassName('Easter_Egg')[i];
+	img = document.getElementsByClassName('Easter_Egg')[i]
 	customA = document.createElement('a')
 	customA.className = 'img-lightbox-link'
 	customA.href = img.src
@@ -277,14 +301,10 @@ for (i = 0; i < imgClass.length; i++) {
 	"use strict";
 	if (root.imgLightbox) {
 		imgLightbox("img-lightbox-link", {
-			onCreated: function () {
-			},
-			onLoaded: function () {
-			},
-			onError: function () {
-			},
-			onClosed: function () {
-			},
+			onCreated: function () {},
+			onLoaded: function () {addTitle()},
+			onError: function () {},
+			onClosed: function () {},
 			rate: 500,
 			touch: false
 		});
