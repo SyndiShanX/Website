@@ -195,6 +195,8 @@
 		var arrange = function arrange(e) {
 			var hrefString =
 				e.getAttribute("href") || e.getAttribute("data-src") || "";
+			var altString =
+				e.getAttribute("type") || "";
 			var dataTouch = e.getAttribute("data-touch") || "";
 
 			if (!hrefString) {
@@ -221,7 +223,7 @@
 					img.onload = function() {
 						container.classList.add(isLoadedClass);
 						/* Custom */
-						container.align = "center"
+						container.align = 'center'
 
 						if (onLoaded) {
 							callCallback(onLoaded, root);
@@ -235,6 +237,7 @@
 					};
 
 					img.src = hrefString;
+					img.alt = altString;
 					setDisplayBlock(container);
 				};
 
@@ -270,16 +273,14 @@
 /* Turn the Image Alt into a Title */
 
 function addTitle() {
-	console.log('Test')
-	var imgClass = document.getElementsByClassName('Easter_Egg')
-	img = document.getElementsByClassName('Easter_Egg')[0]
+	img = document.getElementsByClassName('animated fadeInUp')[0]
 	
 	customTitle = document.createElement('font')
-	customTitle.className = "imgTitle"
+	customTitle.className = 'imgTitle'
 	customTitle.size = 6
 	customTitle.textContent = img.alt
 	
-	lightBoxElem = document.getElementsByClassName("img-lightbox animated fadeIn is-loaded")[0]
+	lightBoxElem = document.getElementsByClassName('img-lightbox animated fadeIn is-loaded')[0]
 	lightBoxElem.appendChild(customTitle)
 }	
 
@@ -291,6 +292,7 @@ for (i = 0; i < imgClass.length; i++) {
 	customA = document.createElement('a')
 	customA.className = 'img-lightbox-link'
 	customA.href = img.src
+	customA.type = img.alt
 	
 	imgHTML = img.outerHTML
 	customASplit = customA.outerHTML.split('</a>')
