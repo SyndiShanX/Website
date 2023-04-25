@@ -174,7 +174,7 @@
 			var handleImgLightboxContainer = function handleImgLightboxContainer() {
 				/* Custom */
 				if (document.getElementsByClassName('imgTitle')[0] != undefined) {
-					document.getElementsByClassName('imgTitle')[0].style = 'color: transparent'
+					document.getElementsByClassName('imgTitle')[0].remove()
 				}
 				hideImgLightbox(onClosed);
 			};
