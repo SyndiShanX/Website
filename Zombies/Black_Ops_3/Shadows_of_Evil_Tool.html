@@ -8,17 +8,17 @@
 <link rel="icon" href="../../Images/Global/Icon_Tab.webp">
 <link rel="stylesheet" href="../../GlobalCSS.css">
 <style type="text/css">
-.show{
+.show {
 	display:block;
 }
-.hide{
+.hide {
 	display:none;
 }
 input.symbol {
 	width: 100px;
 	height: 100px;
 }
-input:focus, textarea:focus, select:focus{
+input:focus, textarea:focus, select:focus {
 	outline: none;
 }
 </style>
@@ -28,505 +28,80 @@ input:focus, textarea:focus, select:focus{
 <!--Nav Template End-->
 
 	<div id="Symbol1" align="center"><br>
-		<input type="image" class="symbol" id="1" onClick="chooseSymbol1('Cross');selected(1)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp"></input>
-		<input type="image" class="symbol" id="2" onClick="chooseSymbol1('Double');selected(2)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp"></input>
-		<input type="image" class="symbol" id="3" onClick="chooseSymbol1('Double Double');selected(3)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp"></input>
-		<input type="image" class="symbol" id="4" onClick="chooseSymbol1('Single Single');selected(4)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp"></input>
-		<input type="image" class="symbol" id="5" onClick="chooseSymbol1('Double Single Double');selected(5)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp"></input>
-		<input type="image" class="symbol" id="6" onClick="chooseSymbol1('Single');selected(6)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp"></input>
-		<input type="image" class="symbol" id="7" onClick="chooseSymbol1('Single Double');selected(7)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp"></input>
-		<input type="image" class="symbol" id="8" onClick="chooseSymbol1('Single Double Single');selected(8)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp"></input>
-		<input type="image" class="symbol" id="9" onClick="chooseSymbol1('Single Single Single');selected(9)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp"></input><br>
+		<input type="image" class="symbol" id="1" onClick="chooseSymbol1('cross');selected(1, 1, 'cross')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/cross.webp"></input>
+		<input type="image" class="symbol" id="2" onClick="chooseSymbol1('double');selected(1, 2, 'double')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/double.webp"></input>
+		<input type="image" class="symbol" id="3" onClick="chooseSymbol1('doubledouble');selected(1, 3, 'doubledouble')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/doubledouble.webp"></input>
+		<input type="image" class="symbol" id="4" onClick="chooseSymbol1('singlesingle');selected(1, 4, 'singlesingle')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/singlesingle.webp"></input>
+		<input type="image" class="symbol" id="5" onClick="chooseSymbol1('doublesingledouble');selected(1, 5, 'doublesingledouble')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/doublesingledouble.webp"></input>
+		<input type="image" class="symbol" id="6" onClick="chooseSymbol1('single');selected(1, 6, 'single')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/single.webp"></input>
+		<input type="image" class="symbol" id="7" onClick="chooseSymbol1('singledouble');selected(1, 7, 'singledouble')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/singledouble.webp"></input>
+		<input type="image" class="symbol" id="8" onClick="chooseSymbol1('singledoublesingle');selected(1, 8, 'singledoublesingle')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/singledoublesingle.webp"></input>
+		<input type="image" class="symbol" id="9" onClick="chooseSymbol1('singlesinglesingle');selected(1, 9, 'singlesinglesingle')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/singlesinglesingle.webp"></input><br>
 	</div>
 
 	<div id="Symbol2" align="center"><br>
-		<input type="image" class="symbol" id="10" onClick="chooseSymbol2('Cross');selected(10)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp"></input>
-		<input type="image" class="symbol" id="11" onClick="chooseSymbol2('Double');selected(11)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp"></input>
-		<input type="image" class="symbol" id="12" onClick="chooseSymbol2('Double Double');selected(12)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp"></input>
-		<input type="image" class="symbol" id="13" onClick="chooseSymbol2('Single Single');selected(13)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp"></input>
-		<input type="image" class="symbol" id="14" onClick="chooseSymbol2('Double Single Double');selected(14)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp"></input>
-		<input type="image" class="symbol" id="15" onClick="chooseSymbol2('Single');selected(15)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp"></input>
-		<input type="image" class="symbol" id="16" onClick="chooseSymbol2('Single Double');selected(16)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp"></input>
-		<input type="image" class="symbol" id="17" onClick="chooseSymbol2('Single Double Single');selected(17)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp"></input>
-		<input type="image" class="symbol" id="18" onClick="chooseSymbol2('Single Single Single');selected(18)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp"></input><br>
+		<input type="image" class="symbol" id="10" onClick="chooseSymbol2('cross');selected(10, 10, 'cross')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/cross.webp"></input>
+		<input type="image" class="symbol" id="11" onClick="chooseSymbol2('double');selected(10, 11, 'double')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/double.webp"></input>
+		<input type="image" class="symbol" id="12" onClick="chooseSymbol2('doubledouble');selected(10, 12, 'doubledouble')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/doubledouble.webp"></input>
+		<input type="image" class="symbol" id="13" onClick="chooseSymbol2('singlesingle');selected(10, 13, 'singlesingle')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/singlesingle.webp"></input>
+		<input type="image" class="symbol" id="14" onClick="chooseSymbol2('doublesingledouble');selected(10, 14, 'doublesingledouble')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/doublesingledouble.webp"></input>
+		<input type="image" class="symbol" id="15" onClick="chooseSymbol2('single');selected(10, 15, 'single')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/single.webp"></input>
+		<input type="image" class="symbol" id="16" onClick="chooseSymbol2('singledouble');selected(10, 16, 'singledouble')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/singledouble.webp"></input>
+		<input type="image" class="symbol" id="17" onClick="chooseSymbol2('singledoublesingle');selected(10, 17, 'singledoublesingle')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/singledoublesingle.webp"></input>
+		<input type="image" class="symbol" id="18" onClick="chooseSymbol2('singlesinglesingle');selected(10, 18, 'singlesinglesingle')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/singlesinglesingle.webp"></input><br>
 	</div>
 
 	<div id="Symbol3" align="center"><br>
-		<input type="image" class="symbol" id="19" onClick="chooseSymbol3('Cross');selected(19)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp"></input>
-		<input type="image" class="symbol" id="20" onClick="chooseSymbol3('Double');selected(20)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp"></input>
-		<input type="image" class="symbol" id="21" onClick="chooseSymbol3('Double Double');selected(21)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp"></input>
-		<input type="image" class="symbol" id="22" onClick="chooseSymbol3('Single Single');selected(22)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp"></input>
-		<input type="image" class="symbol" id="23" onClick="chooseSymbol3('Double Single Double');selected(23)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp"></input>
-		<input type="image" class="symbol" id="24" onClick="chooseSymbol3('Single');selected(24)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp"></input>
-		<input type="image" class="symbol" id="25" onClick="chooseSymbol3('Single Double');selected(25)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp"></input>
-		<input type="image" class="symbol" id="26" onClick="chooseSymbol3('Single Double Single');selected(26)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp"></input>
-		<input type="image" class="symbol" id="27" onClick="chooseSymbol3('Single Single Single');selected(27)" src="../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp"></input><br>
+		<input type="image" class="symbol" id="19" onClick="chooseSymbol3('cross');selected(19, 19, 'cross')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/cross.webp"></input>
+		<input type="image" class="symbol" id="20" onClick="chooseSymbol3('double');selected(19, 20, 'double')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/double.webp"></input>
+		<input type="image" class="symbol" id="21" onClick="chooseSymbol3('doubledouble');selected(19, 21, 'doubledouble')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/doubledouble.webp"></input>
+		<input type="image" class="symbol" id="22" onClick="chooseSymbol3('singlesingle');selected(19, 22, 'singlesingle')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/singlesingle.webp"></input>
+		<input type="image" class="symbol" id="23" onClick="chooseSymbol3('doublesingledouble');selected(19, 23, 'doublesingledouble')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/doublesingledouble.webp"></input>
+		<input type="image" class="symbol" id="24" onClick="chooseSymbol3('single');selected(19, 24, 'single')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/single.webp"></input>
+		<input type="image" class="symbol" id="25" onClick="chooseSymbol3('singledouble');selected(19, 25, 'singledouble')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/singledouble.webp"></input>
+		<input type="image" class="symbol" id="26" onClick="chooseSymbol3('singledoublesingle');selected(19, 26, 'singledoublesingle')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/singledoublesingle.webp"></input>
+		<input type="image" class="symbol" id="27" onClick="chooseSymbol3('singlesinglesingle');selected(19, 27, 'singlesinglesingle')" src="../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/singlesinglesingle.webp"></input><br>
 	</div>
 
 	<div id="ResultButton" align="center">
-		<button class="goldButton" id="0" onClick="{ createDiv(); showSymbols(); resetSymbols(); resultsToImg(); createDiv(); showSymbols(); }">Show Results</button>
+		<button class="goldButton" id="0" onClick="{ createDiv(); showSymbols(); removeDiv(); createDiv(); showSymbols(); }">Show Results</button>
 	</div>
 
 <!--Nav Template Start-->
 </div>
 <script>
-function selected(id) {
-	if (id == "0") {
-		document.getElementById("0").style.background = "linear-gradient(to bottom, #A67C00 5%, #1a1a1a 100%)";
-		document.getElementById('1').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('2').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('3').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('4').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('5').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('6').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('7').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('8').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('9').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-		document.getElementById('10').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('11').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('12').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('13').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('14').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('15').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('16').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('17').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('18').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-		document.getElementById('19').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('20').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('21').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('22').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('23').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('24').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('25').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('26').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('27').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "1") {
-		document.getElementById('1').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross_selected.webp'
-		document.getElementById('2').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('3').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('4').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('5').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('6').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('7').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('8').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('9').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "2") {
-		document.getElementById('1').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('2').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double_selected.webp'
-		document.getElementById('3').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('4').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('5').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('6').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('7').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('8').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('9').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "3") {
-		document.getElementById('1').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('2').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('3').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble_selected.webp'
-		document.getElementById('4').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('5').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('6').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('7').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('8').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('9').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "4") {
-		document.getElementById('1').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('2').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('3').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('4').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle_selected.webp'
-		document.getElementById('5').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('6').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('7').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('8').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('9').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "5") {
-		document.getElementById('1').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('2').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('3').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('4').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('5').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble_selected.webp'
-		document.getElementById('6').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('7').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('8').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('9').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "6") {
-		document.getElementById('1').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('2').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('3').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('4').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('5').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('6').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single_selected.webp'
-		document.getElementById('7').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('8').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('9').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "7") {
-		document.getElementById('1').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('2').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('3').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('4').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('5').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('6').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('7').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble_selected.webp'
-		document.getElementById('8').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('9').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "8") {
-		document.getElementById('1').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('2').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('3').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('4').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('5').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('6').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('7').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('8').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle_selected.webp'
-		document.getElementById('9').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "9") {
-		document.getElementById('1').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('2').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('3').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('4').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('5').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('6').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('7').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('8').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('9').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle_selected.webp'
-	} else {}
-	if (id == "10") {
-		document.getElementById('10').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross_selected.webp'
-		document.getElementById('11').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('12').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('13').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('14').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('15').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('16').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('17').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('18').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "11") {
-		document.getElementById('10').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('11').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double_selected.webp'
-		document.getElementById('12').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('13').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('14').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('15').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('16').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('17').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('18').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "12") {
-		document.getElementById('10').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('11').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('12').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble_selected.webp'
-		document.getElementById('13').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('14').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('15').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('16').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('17').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('18').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "13") {
-		document.getElementById('10').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('11').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('12').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('13').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle_selected.webp'
-		document.getElementById('14').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('15').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('16').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('17').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('18').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "14") {
-		document.getElementById('10').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('11').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('12').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('13').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('14').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble_selected.webp'
-		document.getElementById('15').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('16').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('17').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('18').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "15") {
-		document.getElementById('10').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('11').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('12').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('13').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('14').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('15').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single_selected.webp'
-		document.getElementById('16').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('17').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('18').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "16") {
-		document.getElementById('10').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('11').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('12').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('13').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('14').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('15').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('16').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble_selected.webp'
-		document.getElementById('17').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('18').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "17") {
-		document.getElementById('10').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('11').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('12').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('13').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('14').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('15').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('16').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('17').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle_selected.webp'
-		document.getElementById('18').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "18") {
-		document.getElementById('10').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('11').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('12').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('13').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('14').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('15').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('16').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('17').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('18').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle_selected.webp'
-	} else {}
-	if (id == "19") {
-		document.getElementById('19').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross_selected.webp'
-		document.getElementById('20').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('21').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('22').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('23').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('24').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('25').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('26').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('27').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "20") {
-		document.getElementById('19').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('20').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double_selected.webp'
-		document.getElementById('21').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('22').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('23').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('24').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('25').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('26').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('27').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "21") {
-		document.getElementById('19').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('20').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('21').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble_selected.webp'
-		document.getElementById('22').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('23').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('24').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('25').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('26').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('27').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "22") {
-		document.getElementById('19').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('20').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('21').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('22').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle_selected.webp'
-		document.getElementById('23').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('24').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('25').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('26').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('27').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "23") {
-		document.getElementById('19').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('20').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('21').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('22').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('23').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble_selected.webp'
-		document.getElementById('24').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('25').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('26').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('27').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "24") {
-		document.getElementById('19').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('20').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('21').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('22').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('23').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('24').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single_selected.webp'
-		document.getElementById('25').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('26').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('27').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "25") {
-		document.getElementById('19').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('20').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('21').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('22').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('23').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('24').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('25').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble_selected.webp'
-		document.getElementById('26').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('27').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "26") {
-		document.getElementById('19').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('20').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('21').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('22').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('23').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('24').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('25').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('26').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle_selected.webp'
-		document.getElementById('27').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle.webp'
-	} else {}
-	if (id == "27") {
-		document.getElementById('19').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/cross.webp'
-		document.getElementById('20').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/double.webp'
-		document.getElementById('21').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doubledouble.webp'
-		document.getElementById('22').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesingle.webp'
-		document.getElementById('23').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/doublesingledouble.webp'
-		document.getElementById('24').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/single.webp'
-		document.getElementById('25').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledouble.webp'
-		document.getElementById('26').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singledoublesingle.webp'
-		document.getElementById('27').src = '../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/singlesinglesingle_selected.webp'
-	} else {}
-}
-</script>
-<script>
-var SOE1;
-function chooseSymbol1(choiceSOE1){
-	SOE1 = choiceSOE1;
-}
-</script>
-<script>
-var SOE2;
-function chooseSymbol2(choiceSOE2){
-	SOE2 = choiceSOE2;
-}
-</script>
-<script>
-var SOE3;
-function chooseSymbol3(choiceSOE3){
-	SOE3 = choiceSOE3;
-}
-</script>
-<script>
-var SymbolImg1 = 'cross';
-var SymbolImg2 = 'cross';
-var SymbolImg3 = 'cross';
-function resultsToImg(){
-	if (SOE1 == "Cross") {
-		SymbolImg1 = 'cross';
-	}
-	if (SOE1 == "Single") {
-		SymbolImg1 = 'single';
-	}
-	if (SOE1 == "Double") {
-		SymbolImg1 = 'double';
-	}
-	if (SOE1 == "Single Double") {
-		SymbolImg1 = 'singledouble';
-	}
-	if (SOE1 == "Double Double") {
-		SymbolImg1 = 'doubledouble';
-	}
-	if (SOE1 == "Double Single Double") {
-		SymbolImg1 = 'doublesingledouble';
-	}
-	if (SOE1 == "Single Single") {
-		SymbolImg1 = 'singlesingle';
-	}
-	if (SOE1 == "Single Single Single") {
-		SymbolImg1 = 'singlesinglesingle';
-	}
-	if (SOE1 == "Single Double Single") {
-		SymbolImg1 = 'singledoublesingle';
-	}
-	if (SOE2 == "Cross") {
-		SymbolImg2 = 'cross';
-	}
-	if (SOE2 == "Single") {
-		SymbolImg2 = 'single';
-	}
-	if (SOE2 == "Double") {
-		SymbolImg2 = 'double';
-	}
-	if (SOE2 == "Single Double") {
-		SymbolImg2 = 'singledouble';
-	}
-	if (SOE2 == "Double Double") {
-		SymbolImg2 = 'doubledouble';
-	}
-	if (SOE2 == "Double Single Double") {
-		SymbolImg2 = 'doublesingledouble';
-	}
-	if (SOE2 == "Single Single") {
-		SymbolImg2 = 'singlesingle';
-	}
-	if (SOE2 == "Single Single Single") {
-		SymbolImg2 = 'singlesinglesingle';
-	}
-	if (SOE2 == "Single Double Single") {
-		SymbolImg2 = 'singledoublesingle';
-	}
-	if (SOE3 == "Cross") {
-		SymbolImg3 = 'cross';
-	}
-	if (SOE3 == "Single") {
-		SymbolImg3 = 'single';
-	}
-	if (SOE3 == "Double") {
-		SymbolImg3 = 'double';
-	}
-	if (SOE3 == "Single Double") {
-		SymbolImg3 = 'singledouble';
-	}
-	if (SOE3 == "Double Double") {
-		SymbolImg3 = 'doubledouble';
-	}
-	if (SOE3 == "Double Single Double") {
-		SymbolImg3 = 'doublesingledouble';
-	}
-	if (SOE3 == "Single Single") {
-		SymbolImg3 = 'singlesingle';
-	}
-	if (SOE3 == "Single Single Single") {
-		SymbolImg3 = 'singlesinglesingle';
-	}
-	if (SOE3 == "Single Double Single") {
-		SymbolImg3 = 'singledoublesingle';
+function selected(startID, selectedID, symbolName) {
+	symbolNames = ['', 'cross', 'double', 'doubledouble', 'singlesingle', 'doublesingledouble', 'single', 'singledouble', 'singledoublesingle', 'singlesinglesingle']
+	for (let i = 1; i < 10; i++) {
+		if (startID + i - 1 == selectedID) {
+			document.getElementById(startID + i - 1).src = '../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/' + symbolNames[i] + '_selected.webp'
+		} else {
+			document.getElementById(startID + i - 1).src = '../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/' + symbolNames[i] + '.webp'
+		}
 	}
 }
+
+var SOE1 = SOE2 = SOE3 = 'cross'
+function chooseSymbol1(choiceSOE1) {
+	SOE1 = choiceSOE1
+}
+function chooseSymbol2(choiceSOE2) {
+	SOE2 = choiceSOE2
+}
+function chooseSymbol3(choiceSOE3) {
+	SOE3 = choiceSOE3
+}
+
 function showSymbols() {
-	show_image1('../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/' + SymbolImg1 + '.webp');
-	show_image2('../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/' + SymbolImg2 + '.webp');
-	show_image3('../../Images/Zombies/BlackOps3/Shadows_of_Evil/Symbols/' + SymbolImg3 + '.webp');
+	show_image('../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/' + SOE1 + '.webp', 1);
+	show_image('../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/' + SOE2 + '.webp', 2);
+	show_image('../../Images/Zombies/Black_Ops_3/Shadows_of_Evil/Symbols/' + SOE3 + '.webp', 3);
 }
-function show_image1(SymbolImg1) {
-	var img1 = document.createElement("img");
-	img1.src = SymbolImg1;
-	img1.id = "Image1";
-	document.getElementById('Symbols').appendChild(img1);
-}
-function show_image2(SymbolImg2) {
-	var img2 = document.createElement("img");
-	img2.src = SymbolImg2;
-	img2.id = "Image2";
-	document.getElementById('Symbols').appendChild(img2);
-}
-function show_image3(SymbolImg3) {
-	var img3 = document.createElement("img");
-	img3.src = SymbolImg3;
-	img3.id = "Image3";
-	document.getElementById('Symbols').appendChild(img3);
+function show_image(symbolNum, imgNum) {
+	var img = document.createElement("img");
+	img.src = symbolNum;
+	img.id = "Image" + imgNum;
+	document.getElementById('Symbols').appendChild(img);
 }
 function createDiv() {
 	var div = document.createElement("div");
@@ -534,12 +109,9 @@ function createDiv() {
 	div.align = "center";
 	document.getElementById("ResultButton").appendChild(div);
 }
-</script>
-<script>
-function resetSymbols() {
+function removeDiv() {
 	var reset = document.getElementById("Symbols");
 	reset.remove(reset);
-	selected(0);
 }
 </script>
 <script src="../../GlobalNavbar.js"></script>
