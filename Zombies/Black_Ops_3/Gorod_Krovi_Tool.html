@@ -1,0 +1,137 @@
+<!--Nav Template Start-->
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+<title>SyndiShanX - Gorod Krovi Tool</title>
+<link rel="stylesheet" href="../../Fonts/Font_Awesome.min.css">
+<link rel="icon" href="../../Images/Global/Icon_Tab.webp">
+<link rel="stylesheet" href="../../GlobalCSS.css">
+<style type="text/css">
+.show {
+	display:block;
+}
+.hide {
+	display:none;
+}
+</style>
+</head>
+<body lang="../../">
+<div class="MainWrapper" align="center">
+<!--Nav Template End-->
+
+	<div id="Symbol1" align="center"><br>
+		<input type="image" class="symbol" id="1" onClick="chooseSymbol1('Cross');selected(1)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/cross.webp"></input>
+		<input type="image" class="symbol" id="2" onClick="chooseSymbol1('Double');selected(2)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/double.webp"></input>
+		<input type="image" class="symbol" id="3" onClick="chooseSymbol1('Double Double');selected(3)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/doubledouble.webp"></input>
+		<input type="image" class="symbol" id="4" onClick="chooseSymbol1('Single Single');selected(4)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/singlesingle.webp"></input>
+		<input type="image" class="symbol" id="5" onClick="chooseSymbol1('Double Single Double');selected(5)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/doublesingledouble.webp"></input>
+		<input type="image" class="symbol" id="6" onClick="chooseSymbol1('Single');selected(6)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/single.webp"></input>
+		<input type="image" class="symbol" id="7" onClick="chooseSymbol1('Single Double');selected(7)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/singledouble.webp"></input>
+		<input type="image" class="symbol" id="8" onClick="chooseSymbol1('Single Double Single');selected(8)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/singledoublesingle.webp"></input>
+		<input type="image" class="symbol" id="9" onClick="chooseSymbol1('Single Single Single');selected(9)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/singlesinglesingle.webp"></input><br>
+	</div>
+
+	<div id="ResultButton" align="center">
+		<button class="goldButton" id="0" onClick="{ createDiv(); showSymbols(); resetSymbols(); resultsToImg(); createDiv(); showSymbols(); }">Show Results</button>
+	</div>
+
+<!--Nav Template Start-->
+</div>
+<script>
+function selected(id) {
+	if (id == "0") {
+		
+	} else {}
+}
+
+var SOE1, SOE2, SOE3
+function chooseSymbol1(choiceSOE1){
+	SOE1 = choiceSOE1;
+}
+function chooseSymbol2(choiceSOE2){
+	SOE2 = choiceSOE2;
+}
+function chooseSymbol3(choiceSOE3){
+	SOE3 = choiceSOE3;
+}
+
+var SymbolImg1 = SymbolImg2 = SymbolImg3 = 'cross';
+function resultsToImg(){
+	if (SOE1 == "Cross") {
+		SymbolImg1 = 'cross';
+	}
+	if (SOE1 == "Single") {
+		SymbolImg1 = 'single';
+	}
+	if (SOE1 == "Double") {
+		SymbolImg1 = 'double';
+	}
+	if (SOE1 == "Single Double") {
+		SymbolImg1 = 'singledouble';
+	}
+	if (SOE1 == "Double Double") {
+		SymbolImg1 = 'doubledouble';
+	}
+	if (SOE1 == "Double Single Double") {
+		SymbolImg1 = 'doublesingledouble';
+	}
+	if (SOE1 == "Single Single") {
+		SymbolImg1 = 'singlesingle';
+	}
+	if (SOE1 == "Single Single Single") {
+		SymbolImg1 = 'singlesinglesingle';
+	}
+	if (SOE1 == "Single Double Single") {
+		SymbolImg1 = 'singledoublesingle';
+	}
+}
+
+locationNum1 = ('../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/1.webp');
+locationNum2 = ('../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/2.webp');
+locationNum3 = ('../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/3.webp');
+locationNum4 = ('../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/4.webp');
+locationNum5 = ('../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/5.webp');
+locationNum6 = ('../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/6.webp');
+
+function showLocationNumbers() {
+	
+}
+
+function show_image1(SymbolImg1) {
+	var img1 = document.createElement("img");
+	img1.src = SymbolImg1;
+	img1.id = "Image1";
+	document.getElementById('Symbols').appendChild(img1);
+}
+function show_image2(SymbolImg2) {
+	var img2 = document.createElement("img");
+	img2.src = SymbolImg2;
+	img2.id = "Image2";
+	document.getElementById('Symbols').appendChild(img2);
+}
+function show_image3(SymbolImg3) {
+	var img3 = document.createElement("img");
+	img3.src = SymbolImg3;
+	img3.id = "Image3";
+	document.getElementById('Symbols').appendChild(img3);
+}
+function createDiv() {
+	var div = document.createElement("div");
+	div.id = "Symbols";
+	div.align = "center";
+	document.getElementById("ResultButton").appendChild(div);
+}
+</script>
+<script>
+function resetSymbols() {
+	var reset = document.getElementById("Symbols");
+	reset.remove(reset);
+	selected(0);
+}
+</script>
+<script src="../../GlobalNavbar.js"></script>
+<script src="../../GlobalNavbarFixer.js"></script>
+</body>
+</html>
+<!--Nav Template End-->
