@@ -8,126 +8,94 @@
 <link rel="icon" href="../../Images/Global/Icon_Tab.webp">
 <link rel="stylesheet" href="../../GlobalCSS.css">
 <style type="text/css">
-.show {
-	display:block;
+.map {
+	position: relative;
+	width: 65%;
+	height: 65%;
 }
-.hide {
-	display:none;
+.float {
+	position: relative;
+}
+.container {
+	width: min-content;
+	height: min-content;
+}
+.number {
+	width: 50px;
+	height: 50px;
+}
+.button {
+	background: transparent;
+	border: 0px;
 }
 </style>
 </head>
 <body lang="../../">
 <div class="MainWrapper" align="center">
 <!--Nav Template End-->
-
-	<div id="Symbol1" align="center"><br>
-		<input type="image" class="symbol" id="1" onClick="chooseSymbol1('Cross');selected(1)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/cross.webp"></input>
-		<input type="image" class="symbol" id="2" onClick="chooseSymbol1('Double');selected(2)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/double.webp"></input>
-		<input type="image" class="symbol" id="3" onClick="chooseSymbol1('Double Double');selected(3)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/doubledouble.webp"></input>
-		<input type="image" class="symbol" id="4" onClick="chooseSymbol1('Single Single');selected(4)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/singlesingle.webp"></input>
-		<input type="image" class="symbol" id="5" onClick="chooseSymbol1('Double Single Double');selected(5)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/doublesingledouble.webp"></input>
-		<input type="image" class="symbol" id="6" onClick="chooseSymbol1('Single');selected(6)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/single.webp"></input>
-		<input type="image" class="symbol" id="7" onClick="chooseSymbol1('Single Double');selected(7)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/singledouble.webp"></input>
-		<input type="image" class="symbol" id="8" onClick="chooseSymbol1('Single Double Single');selected(8)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/singledoublesingle.webp"></input>
-		<input type="image" class="symbol" id="9" onClick="chooseSymbol1('Single Single Single');selected(9)" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/singlesinglesingle.webp"></input><br>
+	<img class="map" style="margin-bottom: -606px;" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/Blank_Map.webp"></img>
+	<img class="map dragon-command" style="top: -20px; margin-bottom: -606px;"  src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/None.webp"></img>
+	<img class="map tank-factory" style="top: -37px; margin-bottom: -606px;" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/None.webp"></img>
+	<img class="map infirmary" style="top: -56px; margin-bottom: -606px;" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/None.webp"></img>
+	<img class="map armory" style="top: -74px; margin-bottom: -606px;" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/None.webp"></img>
+	<img class="map supply-depot" style="top: -92px; margin-bottom: -606px;" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/None.webp"></img>
+	<img class="map department-store" style="top: -110px; margin-bottom: -606px;" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/None.webp"></img>
+	<br>
+	<div class="float container" style="top: -53px; left: 9px; margin-bottom: -53px;">
+		<button class="float button" onclick="{ select('Dragon_Command', 'dragon-command'); }" style="width: 226px; height: 95px;"></button>
+		<img class="float number dragon-command" style="top: -123px; left: -3px;" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/0.webp"></img>
+	</div>
+	<div class="float container" style="top: -86px; left: -319px; margin-bottom: -86px;">
+		<button class="float button" onclick="{ select('Tank_Factory', 'tank-factory'); }" style="width: 263px; height: 243px;"></button>
+		<img class="float number tank-factory" style="top: -270px;" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/0.webp"></img>
+	</div>
+	<div class="float container" style="top: -250px; left: -74px; margin-bottom: -250px;">
+		<button class="float button" onclick="{ select('Infirmary', 'infirmary'); }" style="width: 149px; height: 106px;"></button>
+		<img class="float number infirmary" style="top: -129px;" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/0.webp"></img>
+	</div>
+	<div class="float container" style="top: -157px; left: 85px; margin-bottom: -157px;">
+		<button class="float button" onclick="{ select('Armory', 'armory'); }" style="width: 143px; height: 100px;"></button>
+		<img class="float number armory" style="top: -125px;" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/0.webp"></img>
+	</div>
+	<div class="float container" style="top: -185px; left: 313px; margin-bottom: -185px;">
+		<button class="float button" onclick="{ select('Supply_Depot', 'supply-depot'); }" style="width: 248px; height: 168px;"></button>
+		<img class="float number supply-depot" style="top: -196px;" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/0.webp"></img>
+	</div>
+	<div class="float container" style="top: -77px; left: 5px; margin-bottom: -77px;">
+		<button class="float button" onclick="{ select('Department_Store', 'department-store'); }" style="width: 318px; height: 153px;"></button>
+		<img class="float number department-store" style="top: -140px;" src="../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/0.webp"></img>
 	</div>
 
-	<div id="ResultButton" align="center">
-		<button class="goldButton" id="0" onClick="{ createDiv(); showSymbols(); resetSymbols(); resultsToImg(); createDiv(); showSymbols(); }">Show Results</button>
+	<div class="float" align="center" style="top: 100px;"><br>
+		<div id="ResultButton" align="center">
+			<button class="goldButton" id="0" onClick="{ resetSelections(); }">Reset</button>
+		</div>
 	</div>
 
 <!--Nav Template Start-->
 </div>
 <script>
-function selected(id) {
-	if (id == "0") {
-		
-	} else {}
-}
-
-var SOE1, SOE2, SOE3
-function chooseSymbol1(choiceSOE1){
-	SOE1 = choiceSOE1;
-}
-function chooseSymbol2(choiceSOE2){
-	SOE2 = choiceSOE2;
-}
-function chooseSymbol3(choiceSOE3){
-	SOE3 = choiceSOE3;
-}
-
-var SymbolImg1 = SymbolImg2 = SymbolImg3 = 'cross';
-function resultsToImg(){
-	if (SOE1 == "Cross") {
-		SymbolImg1 = 'cross';
-	}
-	if (SOE1 == "Single") {
-		SymbolImg1 = 'single';
-	}
-	if (SOE1 == "Double") {
-		SymbolImg1 = 'double';
-	}
-	if (SOE1 == "Single Double") {
-		SymbolImg1 = 'singledouble';
-	}
-	if (SOE1 == "Double Double") {
-		SymbolImg1 = 'doubledouble';
-	}
-	if (SOE1 == "Double Single Double") {
-		SymbolImg1 = 'doublesingledouble';
-	}
-	if (SOE1 == "Single Single") {
-		SymbolImg1 = 'singlesingle';
-	}
-	if (SOE1 == "Single Single Single") {
-		SymbolImg1 = 'singlesinglesingle';
-	}
-	if (SOE1 == "Single Double Single") {
-		SymbolImg1 = 'singledoublesingle';
+var currentNum = 1
+function select(locationName, locationClassName) {
+	if (currentNum < 7) {
+		if (document.getElementsByClassName(locationClassName)[1].src.split('Bomb_Step/')[1] == "0.webp") {
+			document.getElementsByClassName(locationClassName)[0].src = "../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/" + locationName + ".webp"
+			document.getElementsByClassName(locationClassName)[1].src = "../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/" + currentNum + ".webp"
+			currentNum++
+		}
 	}
 }
-
-locationNum1 = ('../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/1.webp');
-locationNum2 = ('../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/2.webp');
-locationNum3 = ('../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/3.webp');
-locationNum4 = ('../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/4.webp');
-locationNum5 = ('../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/5.webp');
-locationNum6 = ('../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/6.webp');
-
-function showLocationNumbers() {
-	
-}
-
-function show_image1(SymbolImg1) {
-	var img1 = document.createElement("img");
-	img1.src = SymbolImg1;
-	img1.id = "Image1";
-	document.getElementById('Symbols').appendChild(img1);
-}
-function show_image2(SymbolImg2) {
-	var img2 = document.createElement("img");
-	img2.src = SymbolImg2;
-	img2.id = "Image2";
-	document.getElementById('Symbols').appendChild(img2);
-}
-function show_image3(SymbolImg3) {
-	var img3 = document.createElement("img");
-	img3.src = SymbolImg3;
-	img3.id = "Image3";
-	document.getElementById('Symbols').appendChild(img3);
-}
-function createDiv() {
-	var div = document.createElement("div");
-	div.id = "Symbols";
-	div.align = "center";
-	document.getElementById("ResultButton").appendChild(div);
-}
-</script>
-<script>
-function resetSymbols() {
-	var reset = document.getElementById("Symbols");
-	reset.remove(reset);
-	selected(0);
+function resetSelections() {
+	currentNum = 1
+	document.getElementsByClassName('dragon-command')[1].src = "../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/0.webp"
+	document.getElementsByClassName('tank-factory')[1].src = "../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/0.webp"
+	document.getElementsByClassName('infirmary')[1].src = "../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/0.webp"
+	document.getElementsByClassName('armory')[1].src = "../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/0.webp"
+	document.getElementsByClassName('supply-depot')[1].src = "../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/0.webp"
+	document.getElementsByClassName('department-store')[1].src = "../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/0.webp"
+	for (let i = 1; i < 7; i++) {
+		document.getElementsByClassName('map')[i].src = "../../Images/Zombies/Black_Ops_3/Gorod_Krovi/Bomb_Step/None.webp"
+	}
 }
 </script>
 <script src="../../GlobalNavbar.js"></script>
