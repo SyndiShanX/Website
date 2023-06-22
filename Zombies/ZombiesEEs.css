@@ -20,6 +20,14 @@ a:-webkit-any-link:not(.dropbtn):not(.nav-item):not(.dropdown-item):not(.zombies
 	color: transparent!important;
 }
 
+.zombies-link {
+	color: #ff8c00;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0.15em;
+	line-height: 1.15;
+	font-weight: bold;
+}
+
 font.WIP {
 	background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
 	-webkit-background-clip: text;
