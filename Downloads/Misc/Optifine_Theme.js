@@ -4,7 +4,7 @@
 // @namespace      https://greasyfork.org/users/390290
 // @author         SyndiShanX
 // @include        https://optifine.net/*
-// @version        1.21
+// @version        1.22
 // @run-at         document-body
 // ==/UserScript==
 if (document.getElementById('Download') != null) {
@@ -60,6 +60,10 @@ A:hover, .headerNav A:hover, .footerText A:hover, .headerTitle A:hover {
   padding-right: 1em;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
+}
+
+.downloadLine>TD>A {
+  border-radius: 4px;
 }
 
 tr.downloadLine.downloadLineMore .colDownload  A, tr.downloadLine.downloadLineMore .colMirror A, tr.downloadLine.downloadLineMore .colChangelog A, tr.downloadLine.downloadLineMore .downloadButton A{
