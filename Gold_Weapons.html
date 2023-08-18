@@ -112,8 +112,8 @@ font.text_orion {
 <div class="MainWrapper" align="center">
 </div>
 <script>
-function fetchData(spreadsheetID) {
-	fetch('https://opensheet.elk.sh/' + spreadsheetID + '/1').then((response) => response.json()).then((data) => {
+function fetchData(spreadsheetID, pageNum) {
+	fetch('https://opensheet.elk.sh/' + spreadsheetID + '/' + pageNum).then((response) => response.json()).then((data) => {
 		json = data
 		mainWrapper = document.getElementsByClassName('MainWrapper')[0]
 		for (i = 0; i < json.length; i++) {
@@ -176,7 +176,7 @@ function fetchData(spreadsheetID) {
 		setPaths()
 	});
 }
-fetchData('1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko')
+fetchData('1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko', 1)
 </script>
 <script>
 function clearMain() {
