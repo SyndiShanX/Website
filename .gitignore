@@ -1,2 +1,13 @@
 *.pdn
 *.bat
+*.py
+Images/MW2_Gold_Weapons/Assault_Rifles/*
+Images/MW2_Gold_Weapons/Battle_Rifles/*
+Images/MW2_Gold_Weapons/Sub_Machine_Guns/*
+Images/MW2_Gold_Weapons/Shotguns/*
+Images/MW2_Gold_Weapons/Light_Machine_Guns/*
+Images/MW2_Gold_Weapons/Marksman_Rifles/*
+Images/MW2_Gold_Weapons/Sniper_Rifles/*
+Images/MW2_Gold_Weapons/Pistols/*
+Images/MW2_Gold_Weapons/Launchers/*
+Images/MW2_Gold_Weapons/Melee/*
