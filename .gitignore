@@ -1,10 +1,2 @@
 *.pdn
-R6S_Stats.js
-R6S_Stats.html
-Bedrock_UI.html
-Blank.html
-Images/Source_Images/*
-Bedrock_UI/*
-Images/Marvel_Order.png
-Marvel.html
-Images/Convert_Images.bat
+*.bat
