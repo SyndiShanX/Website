@@ -76,12 +76,12 @@ font.text_orion {
 	from { -webkit-mask-position: 150%; }
 	to { -webkit-mask-position: -50%; }
 }
-.challenges {
+.weapon {
 	position: relative;
 	display: inline-block;
 	padding-right: 5px;
 }
-.challengestext {
+.challenges {
 	visibility: hidden;
 	width: fit-content;
 	color: #fff;
@@ -103,7 +103,7 @@ font.text_orion {
 	background-position: left top!important;
 	border: 1px solid #c0c0c0;
 }
-.challenges:hover .challengestext {
+.weapon:hover .challenges {
 	visibility: visible;
 }
 </style>
@@ -135,13 +135,13 @@ function fetchData(spreadsheetID) {
 			} else if (elementNum == 8) {
 				imgElement1 = document.createElement(json[i]['Element 1'])
 				mainWrapper.appendChild(imgElement1)
-				imgElement1.setAttribute('img', json[i]['Element 2'] + '.webp')
+				imgElement1.setAttribute('src', json[i]['Element 2'] + '.webp')
 				imgElement2 = document.createElement(json[i]['Element 3'])
 				mainWrapper.appendChild(imgElement2)
-				imgElement2.setAttribute('img', json[i]['Element 4'] + '.webp')
+				imgElement2.setAttribute('src', json[i]['Element 4'] + '.webp')
 				imgElement3 = document.createElement(json[i]['Element 5'])
 				mainWrapper.appendChild(imgElement3)
-				imgElement3.setAttribute('img', json[i]['Element 6'] + '.webp')
+				imgElement3.setAttribute('src', json[i]['Element 6'] + '.webp')
 				brElement = document.createElement(json[i]['Element 13'])
 				mainWrapper.appendChild(brElement)
 				brElement = document.createElement(json[i]['Element 14'])
@@ -152,13 +152,13 @@ function fetchData(spreadsheetID) {
 				mainWrapper.appendChild(divElement)
 				imgElement1 = document.createElement(json[i]['Element 3'])
 				divElement.appendChild(imgElement1)
-				imgElement1.setAttribute('img', json[i]['Element 4'] + '/' + json[i]['Element 5'] + '.webp')
+				imgElement1.setAttribute('src', 'data:image/webp;base64, ' + json[i]['Element 4'])
 				imgElement2 = document.createElement(json[i]['Element 6'])
 				divElement.appendChild(imgElement2)
-				imgElement2.setAttribute('img', json[i]['Element 7'] + '.webp')
+				imgElement2.setAttribute('src', json[i]['Element 7'] + '.webp')
 				imgElement3 = document.createElement(json[i]['Element 8'])
 				divElement.appendChild(imgElement3)
-				imgElement3.setAttribute('img', json[i]['Element 9'] + '.webp')
+				imgElement3.setAttribute('src', json[i]['Element 9'] + '.webp')
 				spanElement = document.createElement(json[i]['Element 10'])
 				spanElement.className = json[i]['Element 5'] + ' ' + json[i]['Element 11']
 				spanElement.innerHTML = json[i]['Element 12']
@@ -194,13 +194,16 @@ function setPaths() {
 	mw2Path = 'Images/MW2_Gold_Weapons/'
 	
 	for (i = 1; i < img.length; i++) {
-		imgSrc = img[i].outerHTML.split('img="')[1].split('.webp"')[0]
-		if (imgSrc == '1') {
+		imgSrc = img[i].outerHTML.split('src="')[1].split('.webp"')[0]
+		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Gold" || imgSrc == "Platinum" || imgSrc == "Polyatomic" || imgSrc == "Orion" || imgSrc == "Progressing_Gold" || imgSrc == "Progressing_Platinum" || imgSrc == "Progressing_Polyatomic" || imgSrc == "Progressing_Orion") {
+			img[i].src = mw2Path + imgSrc + '.webp'
+		} else if (imgSrc == '1') {
 			imgSrc = imgSrc + '_Star'
+			img[i].src = mw2Path + imgSrc + '.webp'
 		} else if (imgSrc == '0' || imgSrc == '2' || imgSrc == '3' || imgSrc == '4'){
 			imgSrc = imgSrc + '_Stars'
+			img[i].src = mw2Path + imgSrc + '.webp'
 		}
-		img[i].src = mw2Path + imgSrc + '.webp'
 	}
 }
 </script>
