@@ -936,7 +936,7 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	position: absolute;
 	top: 0;
 	right: 0;
-	background: url("../images/banners/black.webp"),url("../images/small_banners/black.webp"),url("../images/banners/dark_gray.webp"),url("../images/small_banners/dark_gray.webp"),url("../images/banners/gray.webp"),url("../images/small_banners/gray.webp"),url("../images/banners/white.webp"),url("../images/small_banners/white.webp"),url("../images/banners/pink.webp"),url("../images/small_banners/pink.webp"),url("../images/banners/magenta.webp"),url("../images/small_banners/magenta.webp"),url("../images/banners/purple.webp"),url("../images/small_banners/purple.webp"),url("../images/banners/blue.webp"),url("../images/small_banners/blue.webp"),url("../images/banners/cyan.webp"),url("../images/small_banners/cyan.webp"),url("../images/banners/light_blue.webp"),url("../images/small_banners/light_blue.webp"),url("../images/banners/green.webp"),url("../images/small_banners/green.webp"),url("../images/banners/lime.webp"),url("../images/small_banners/lime.webp"),url("../images/banners/yellow.webp"),url("../images/small_banners/yellow.webp"),url("../images/banners/orange.webp"),url("../images/small_banners/orange.webp"),url("../images/banners/brown.webp"),url("../images/small_banners/brown.webp"),url("../images/banners/red.webp"),url("../images/small_banners/red.webp");
+	background: url("../images/banners/black.webp"),url("../images/small_banners/black.webp"),url("../images/banners/gray.webp"),url("../images/small_banners/gray.webp"),url("../images/banners/light_gray.webp"),url("../images/small_banners/light_gray.webp"),url("../images/banners/white.webp"),url("../images/small_banners/white.webp"),url("../images/banners/pink.webp"),url("../images/small_banners/pink.webp"),url("../images/banners/magenta.webp"),url("../images/small_banners/magenta.webp"),url("../images/banners/purple.webp"),url("../images/small_banners/purple.webp"),url("../images/banners/blue.webp"),url("../images/small_banners/blue.webp"),url("../images/banners/cyan.webp"),url("../images/small_banners/cyan.webp"),url("../images/banners/light_blue.webp"),url("../images/small_banners/light_blue.webp"),url("../images/banners/green.webp"),url("../images/small_banners/green.webp"),url("../images/banners/lime.webp"),url("../images/small_banners/lime.webp"),url("../images/banners/yellow.webp"),url("../images/small_banners/yellow.webp"),url("../images/banners/orange.webp"),url("../images/small_banners/orange.webp"),url("../images/banners/brown.webp"),url("../images/small_banners/brown.webp"),url("../images/banners/red.webp"),url("../images/small_banners/red.webp");
 }
 
 #banner #main>div {
@@ -1767,35 +1767,35 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner i[clr="0"] {
-	background: url("../images/banners/white.webp");
+	background: url("../images/banners/black.webp");
 }
 
 #banner i[clr="1"] {
-	background: url("../images/banners/orange.webp");
+	background: url("../images/banners/red.webp");
 }
 
 #banner i[clr="2"] {
-	background: url("../images/banners/magenta.webp");
+	background: url("../images/banners/green.webp");
 }
 
 #banner i[clr="3"] {
-	background: url("../images/banners/light_blue.webp");
+	background: url("../images/banners/brown.webp");
 }
 
 #banner i[clr="4"] {
-	background: url("../images/banners/yellow.webp");
+	background: url("../images/banners/blue.webp");
 }
 
 #banner i[clr="5"] {
-	background: url("../images/banners/lime.webp");
+	background: url("../images/banners/purple.webp");
 }
 
 #banner i[clr="6"] {
-	background: url("../images/banners/pink.webp");
+	background: url("../images/banners/cyan.webp");
 }
 
 #banner i[clr="7"] {
-	background: url("../images/banners/dark_gray.webp");
+	background: url("../images/banners/light_gray.webp");
 }
 
 #banner i[clr="8"] {
@@ -1803,31 +1803,31 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner i[clr="9"] {
-	background: url("../images/banners/cyan.webp");
+	background: url("../images/banners/pink.webp");
 }
 
 #banner i[clr="10"] {
-	background: url("../images/banners/purple.webp");
+	background: url("../images/banners/lime.webp");
 }
 
 #banner i[clr="11"] {
-	background: url("../images/banners/blue.webp");
+	background: url("../images/banners/yellow.webp");
 }
 
 #banner i[clr="12"] {
-	background: url("../images/banners/brown.webp");
+	background: url("../images/banners/light_blue.webp");
 }
 
 #banner i[clr="13"] {
-	background: url("../images/banners/green.webp");
+	background: url("../images/banners/magenta.webp");
 }
 
 #banner i[clr="14"] {
-	background: url("../images/banners/red.webp");
+	background: url("../images/banners/orange.webp");
 }
 
 #banner i[clr="15"] {
-	background: url("../images/banners/black.webp");
+	background: url("../images/banners/white.webp");
 }
 
 #banner .tb-ptn[ptn="base"]:after {
@@ -2077,35 +2077,35 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner i.tb-ptn[clr="0"] {
-	background: url("../images/small_banners/white.webp");
+	background: url("../images/small_banners/black.webp");
 }
 
 #banner i.tb-ptn[clr="1"] {
-	background: url("../images/small_banners/orange.webp");
+	background: url("../images/small_banners/red.webp");
 }
 
 #banner i.tb-ptn[clr="2"] {
-	background: url("../images/small_banners/magenta.webp");
+	background: url("../images/small_banners/green.webp");
 }
 
 #banner i.tb-ptn[clr="3"] {
-	background: url("../images/small_banners/light_blue.webp");
+	background: url("../images/small_banners/brown.webp");
 }
 
 #banner i.tb-ptn[clr="4"] {
-	background: url("../images/small_banners/yellow.webp");
+	background: url("../images/small_banners/blue.webp");
 }
 
 #banner i.tb-ptn[clr="5"] {
-	background: url("../images/small_banners/lime.webp");
+	background: url("../images/small_banners/purple.webp");
 }
 
 #banner i.tb-ptn[clr="6"] {
-	background: url("../images/small_banners/pink.webp");
+	background: url("../images/small_banners/cyan.webp");
 }
 
 #banner i.tb-ptn[clr="7"] {
-	background: url("../images/small_banners/dark_gray.webp");
+	background: url("../images/small_banners/light_gray.webp");
 }
 
 #banner i.tb-ptn[clr="8"] {
@@ -2113,31 +2113,31 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner i.tb-ptn[clr="9"] {
-	background: url("../images/small_banners/cyan.webp");
+	background: url("../images/small_banners/pink.webp");
 }
 
 #banner i.tb-ptn[clr="10"] {
-	background: url("../images/small_banners/purple.webp");
+	background: url("../images/small_banners/lime.webp");
 }
 
 #banner i.tb-ptn[clr="11"] {
-	background: url("../images/small_banners/blue.webp");
+	background: url("../images/small_banners/yellow.webp");
 }
 
 #banner i.tb-ptn[clr="12"] {
-	background: url("../images/small_banners/brown.webp");
+	background: url("../images/small_banners/light_blue.webp");
 }
 
 #banner i.tb-ptn[clr="13"] {
-	background: url("../images/small_banners/green.webp");
+	background: url("../images/small_banners/magenta.webp");
 }
 
 #banner i.tb-ptn[clr="14"] {
-	background: url("../images/small_banners/red.webp");
+	background: url("../images/small_banners/orange.webp");
 }
 
 #banner i.tb-ptn[clr="15"] {
-	background: url("../images/small_banners/black.webp");
+	background: url("../images/small_banners/white.webp");
 }
 
 #banner i.tb-ptn[ptn=base] {
