@@ -173,7 +173,7 @@ function layerMoveRedraw() {
 }
 function getNBT() {
   var a = {};
-	SynColorFinal = "black"
+	SynColorFinal = "white"
 	var SynColor = _canvas.children[0].getAttribute("clr")
 	if (SynColor == 0) {
 		SynColorFinal = "black"
@@ -223,7 +223,7 @@ function getNBT() {
 	else if (SynColor == 15) {
 		SynColorFinal = "white"
 	}
-	a.Base = SynColorFinal,
+	a.Base = SynColor,
 	a.Patterns = [];
 	for (var b = 1; b < _canvas.children.length; b++)
 		_canvas.children[b].classList.contains("hidden") || a.Patterns.push({
@@ -305,9 +305,9 @@ function updateOutput() {
 		for (a = 0; a < c.Patterns.length; a++)
 			b += encPair(c.Patterns[a].Color, c.Patterns[a].Pattern);
 		_url.value = b,
-		window.history.pushState && window.history.pushState("Minecraft Banner Generator", "Minecraft Banner Generator", window.location.pathname + "?=" + b)
+		window.history.pushState && window.history.pushState("Dokucraft Banner Generator", "Dokucraft Banner Generator", window.location.pathname + "?=" + b)
 	} else
-		_url.value = "", b = "", window.history.pushState && window.history.pushState("Minecraft Banner Generator", "Minecraft Banner Generator", window.location.pathname)
+		_url.value = "", b = "", window.history.pushState && window.history.pushState("Dokucraft Banner Generator", "Dokucraft Banner Generator", window.location.pathname)
 }
 function readUrl() {
 	var a,
@@ -384,7 +384,6 @@ function craftPattern(a, b) {
 }
 function screenshot() {
 	var a = document.getElementById("layers-cont");
-	console.log(a),
 	html2canvas(a, {
 		onrendered: function (a) {
 			window.open(a.toDataURL("image/png"))
