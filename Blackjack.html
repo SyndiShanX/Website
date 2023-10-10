@@ -1,0 +1,132 @@
+<!--Nav Template Start-->
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+<title>SyndiShanX - Blackjack (21)</title>
+<link rel="stylesheet" href="Fonts/Font_Awesome.min.css">
+<link rel="icon" href="Images/Global/Icon_Tab.webp">
+<link rel="stylesheet" href="GlobalCSS.css">
+<style type="text/css">
+button {
+	border: none;
+	background: none;
+}
+#Hit img, #Stand img, #Play_Again img, #New_Game img {
+	width: 74px;
+	height: 116px;
+	padding: 10px;
+}
+.card {
+	width: 128px;
+	height: 197px;
+	background-color: transparent;
+}
+textarea {
+	font-size: 25px;
+	color: #fff;
+	border: none;
+	resize:none;
+	text-align: center;
+	background-image: var(--bgImageLight)!important;
+	background-clip: border-box!important;
+	background-origin: padding-box!important;
+	background-attachment: scroll!important;
+	background-repeat: repeat!important;
+	background-size: auto!important;
+	background-position: left top!important;
+}
+.MainWrapper {
+	margin-bottom: 0px!important;
+}
+</style>
+</head>
+<body lang="">
+<div class="MainWrapper" align="center">
+<!--Nav Template End-->
+
+<textarea rows="1" cols="65" disabled>Rules: Ace = 1, Dealer Stands at 18, Payouts: 1:1, Blackjack Payout 2:1</textarea>
+<textarea id='Status' rows="1" cols="30" disabled>Status: Waiting on Input...</textarea><br>
+<textarea rows="1" cols="5" disabled>Total</textarea>
+<textarea id='PlayerTotal' rows="1" cols="4" disabled>0</textarea>
+<textarea rows="1" cols="5" disabled>Coins</textarea>
+<textarea id='Coins' rows="1" cols="5" disabled>100</textarea>
+<button id='-' onclick='{ decreaseBet() }' style='padding-right: 0px; position: relative; left: 5px;'><img src='Images/Cards/Back_Button.png'></img></button>
+<textarea rows="1" cols="14" disabled>Bet Adjustment</textarea>
+<button id='+' onclick='{ increaseBet() }' style='padding-left: 0px; position: relative; right: 5px;'><img src='Images/Cards/Forward_Button.png'></img></button>
+<textarea id='Bet' rows="1" cols="15" disabled>Current Bet: 10</textarea><br>
+
+<img id='Card1' class='card'></img>
+<img id='Card2' class='card'></img>
+<img id='Card3' class='card'></img>
+<img id='Card4' class='card'></img>
+<img id='Card5' class='card'></img>
+<img id='Card6' class='card'></img>
+<img id='Card7' class='card'></img><br>
+
+<textarea rows="1" cols="5" disabled>Total</textarea>
+<textarea id='DealerTotal' rows="1" cols="4" disabled>0</textarea><br>
+<img id='DealerCard1' class='card'></img>
+<img id='DealerCard2' class='card'></img>
+<img id='DealerCard3' class='card'></img>
+<img id='DealerCard4' class='card'></img>
+<img id='DealerCard5' class='card'></img>
+<img id='DealerCard6' class='card'></img>
+<img id='DealerCard7' class='card'></img><br>
+<button id='Hit' onclick='{ playerHit() }'><img src='Images/Cards/Hit_Button.png'></img></button>
+<button id='Stand' onclick='{ playerStand() }'><img src='Images/Cards/Stand_Button.png'></img></button>
+<button id='Play_Again' onclick='{ playAgain() }' disabled=true><img src='Images/Cards/Play_Again_Button.png'></img></button>
+<button id='New_Game' onclick='{ newGame() }'><img src='Images/Cards/New_Game_Button.png'></img></button>
+
+<!--Nav Template Start-->
+</div>
+<script>
+function checkButtonStatus() {
+	if (document.getElementById("Hit").disabled == true) {
+		document.getElementById("Hit").children[0].src = 'Images/Cards/Hit_Button_Disabled.png'
+	} else {
+		document.getElementById("Hit").children[0].src = 'Images/Cards/Hit_Button.png'
+	}
+	if (document.getElementById("Stand").disabled == true) {
+		document.getElementById("Stand").children[0].src = 'Images/Cards/Stand_Button_Disabled.png'
+	} else {
+		document.getElementById("Stand").children[0].src = 'Images/Cards/Stand_Button.png'
+	}
+	if (document.getElementById("Play_Again").disabled == true) {
+		document.getElementById("Play_Again").children[0].src = 'Images/Cards/Play_Again_Button_Disabled.png'
+	} else {
+		document.getElementById("Play_Again").children[0].src = 'Images/Cards/Play_Again_Button.png'
+	}
+	if (document.getElementById("New_Game").disabled == true) {
+		document.getElementById("New_Game").children[0].src = 'Images/Cards/New_Game_Button_Disabled.png'
+	} else {
+		document.getElementById("New_Game").children[0].src = 'Images/Cards/New_Game_Button.png'
+	}
+	if (document.getElementById("-").disabled == true) {
+		document.getElementById("-").children[0].src = 'Images/Cards/Back_Button_Disabled.png'
+	} else {
+		document.getElementById("-").children[0].src = 'Images/Cards/Back_Button.png'
+	}
+	if (document.getElementById("+").disabled == true) {
+		document.getElementById("+").children[0].src = 'Images/Cards/Forward_Button_Disabled.png'
+	} else {
+		document.getElementById("+").children[0].src = 'Images/Cards/Forward_Button.png'
+	}
+	if (coins <= 0) {
+		document.getElementById('Status').value = 'Status: No Coins Remaining...'
+		document.getElementById("Hit").disabled = true;
+		document.getElementById("Stand").disabled = true;
+		document.getElementById("Play_Again").disabled = true;
+		document.getElementById("New_Game").disabled = false;
+		document.getElementById("-").disabled = true;
+		document.getElementById("+").disabled = true;
+	}
+}
+const interval = setInterval(function() { checkButtonStatus() }, 500);
+</script>
+<script src="Blackjack.js"></script>
+<script src="GlobalNavbar.js"></script>
+<script src="GlobalNavbarFixer.js"></script>
+</body>
+</html>
+<!--Nav Template End-->

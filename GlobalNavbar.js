@@ -95,6 +95,7 @@ function createNavDropdownItems(itemNum, dropdownClassname, textContentArray, hr
 
 createNavItem('home', 'Home', '/Website/')
 createNavItem('minesweeper', 'Minesweeper', prepend + 'Minesweeper/Minesweeper.html')
+createNavItem('blackjack', 'Blackjack', prepend + 'Blackjack.html')
 createNavItem('dokustashGenerator', 'Dokustash Generator', prepend + 'Dokustash_Generator.html')
 createNavItem('zombies end', 'Zombies Easter Eggs', prepend + 'Zombies/Selector.html')
 
@@ -104,7 +105,7 @@ createNavDropdown('more', 'More')
 
 /* Nav Dropdown Items */
 
-createNavDropdownItems(5, 'moreDropdown', ['Dokucraft Banner Editor', 'Console Dokucraft', 'Downloads', 'Gold Weapons', 'Birthday'], ['DokucraftBannerEditor/Dokucraft_Banner_Editor.html', 'Downloads/Console_Dokucraft.html', 'Downloads/Downloads.html', 'Gold_Weapons.html', 'Birthday.html'])
+createNavDropdownItems(5, 'moreDropdown', ['Dokucraft Banner Editor', 'Console Dokucraft', 'Downloads', 'MW2 Gold Weapons', 'Birthday'], ['DokucraftBannerEditor/Dokucraft_Banner_Editor.html', 'Downloads/Console_Dokucraft.html', 'Downloads/Downloads.html', 'MW2_Gold_Weapons.html', 'Birthday.html'])
 
 /* Nav Finalization */
 
