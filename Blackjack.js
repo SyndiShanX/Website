@@ -60,7 +60,7 @@ var cards_dict = [
 	"Blank"
 ]
 
-var cards_reset = [
+cards_reset = [
 	"Clubs-A",
 	"Clubs-2",
 	"Clubs-3",
@@ -175,7 +175,7 @@ function resetVars() {
 }
 
 function resetDeck() {
-	cards = cards_reset;
+	cards = structuredClone(cards_reset);
 	cards.splice(52, 2);
 	//console.log(cards)
 }
@@ -335,7 +335,7 @@ function playerStand() {
 		document.getElementById("Play_Again").disabled = false;
 		coins = coins - bet
 		document.getElementById('Coins').value = 'Coins: ' + String(coins)
-	} else if (dealerTotal == 17 && inRange(cardTotal, 18, 22)) {
+	} else if (dealerTotal <= 17 && inRange(cardTotal, 18, 22)) {
 		document.getElementById('Status').value = 'Status: Player Wins!'
 		document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
 		document.getElementById('DealerCard2').src = cards_reset[parseInt(dealersCard2)]
@@ -358,7 +358,7 @@ function playerStand() {
 		coins = parseInt(coins)
 		document.getElementById('Coins').value = 'Coins: ' + String(coins)
 	} else {
-		document.getElementById('Status').value = 'Status: Dealer Wins!'
+		document.getElementById('Status').value = 'Status: Egg Wins!'
 		document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
 		document.getElementById("Play_Again").disabled = false;
 		coins = coins - bet
