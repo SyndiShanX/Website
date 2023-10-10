@@ -293,7 +293,7 @@ function playerStand() {
 	document.getElementById('Status').value = 'Status: Waiting on Dealer...'
 	document.getElementById('DealerCard2').src = cardImg(finalCard)
 	addcards()
-	while (dealerTotal <= cardTotal && dealerTotal < 18) {
+	while (dealerTotal <= cardTotal && dealerTotal < 17) {
 		generateNewCard()
 		dealerCard = dealerCard + 1
 			document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
@@ -317,7 +317,7 @@ function playerStand() {
 		}
 		document.getElementById('DealerCard' + String(dealerCard)).src = cardImg(finalCard)
 	}
-	if (dealerTotal == 18 && cardTotal == 18 || dealerTotal == cardTotal) {
+	if (dealerTotal == 17 && cardTotal == 17 || dealerTotal == cardTotal) {
 		document.getElementById('Status').value = 'Status: Draw!'
 		document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
 		document.getElementById("Play_Again").disabled = false;
@@ -335,7 +335,7 @@ function playerStand() {
 		document.getElementById("Play_Again").disabled = false;
 		coins = coins - bet
 		document.getElementById('Coins').value = 'Coins: ' + String(coins)
-	} else if (dealerTotal == 18 && inRange(cardTotal, 19, 22)) {
+	} else if (dealerTotal == 17 && inRange(cardTotal, 18, 22)) {
 		document.getElementById('Status').value = 'Status: Player Wins!'
 		document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
 		document.getElementById('DealerCard2').src = cards_reset[parseInt(dealersCard2)]
