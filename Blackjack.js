@@ -3,7 +3,7 @@ var cardfinal = 'A'
 var suitfinal = 'Clubs-'
 console.log('Card Images: http://acbl.mybigcommerce.com/52-playing-cards/')
 
-var cards_dict = [
+var cards = [
 	"Clubs-A",
 	"Clubs-2",
 	"Clubs-3",
@@ -117,8 +117,6 @@ cards_reset = [
 	"Blank"
 ]
 
-cards = {}
-
 function cardImg(cardName) {
 	//console.log('Card Name: ' + cardName)
 	cardImgSrc = 'Images/Cards/' + cardName.replaceAll('-', '/') + '.png';
@@ -150,7 +148,7 @@ function resetVars() {
 	dealer6 = 0
 	dealer7 = 0
 	dealerTotal = 0
-	dealersCard2 = 0
+	dealersCard2 = 'Back'
 	document.getElementById('DealerCard1').src = cardImg('Back')
 	document.getElementById('DealerCard2').src = cardImg('Back')
 	document.getElementById('DealerCard3').src = cardImg('Blank')
@@ -197,8 +195,12 @@ function generateNewCard() {
 	} else if (finalCardNum == 'A') {
 	  finalCardNum = '1'
 	}
-	//console.log(parseInt(cardGen))
-	cards.splice(cards.indexOf(parseInt(cardGen)), 1)
+	//console.log('Card Gen: ' + parseInt(cardGen))
+	//console.log('Card in Index: ' + cards[parseInt(cardGen)])
+	var index = cards.indexOf(cards[parseInt(cardGen)]);
+	if (index !== -1) {
+		cards.splice(index, 1);
+	}
 	//del cards[parseInt(cardGen)]
 }
 
@@ -296,8 +298,9 @@ function playerStand() {
 	while (dealerTotal <= cardTotal && dealerTotal < 17) {
 		generateNewCard()
 		dealerCard = dealerCard + 1
-			document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
+		document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
 		if (dealerCard == 8) {
+			console.log('Dealer Tried to draw 8 Cards, Breaking!')
 			break
 		} else if (dealerCard == 3) {
 			dealer3 = finalCardNum
@@ -317,6 +320,8 @@ function playerStand() {
 		}
 		document.getElementById('DealerCard' + String(dealerCard)).src = cardImg(finalCard)
 	}
+	document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
+	document.getElementById('DealerCard2').src = cardImg(dealersCard2)
 	if (dealerTotal == 17 && cardTotal == 17 || dealerTotal == cardTotal) {
 		document.getElementById('Status').value = 'Status: Draw!'
 		document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
@@ -335,13 +340,6 @@ function playerStand() {
 		document.getElementById("Play_Again").disabled = false;
 		coins = coins - bet
 		document.getElementById('Coins').value = 'Coins: ' + String(coins)
-	} else if (dealerTotal <= 17 && inRange(cardTotal, 18, 22)) {
-		document.getElementById('Status').value = 'Status: Player Wins!'
-		document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
-		document.getElementById('DealerCard2').src = cards_reset[parseInt(dealersCard2)]
-		document.getElementById("Play_Again").disabled = false;
-		coins = coins + bet
-		document.getElementById('Coins').value = 'Coins: ' + String(coins)
 	} else if (cardTotal > 21) {
 		document.getElementById('Status').value = 'Status: Player Busted!'
 		document.getElementById("Hit").disabled = true;
@@ -355,14 +353,22 @@ function playerStand() {
 		document.getElementById("Stand").disabled = true;
 		document.getElementById("Play_Again").disabled = false;
 		coins = coins + bet + bet
-		coins = parseInt(coins)
 		document.getElementById('Coins').value = 'Coins: ' + String(coins)
-	} else {
-		document.getElementById('Status').value = 'Status: Egg Wins!'
+	} else if (cardTotal > dealerTotal && inRange(cardTotal, 1, 21)) {
+		document.getElementById('Status').value = 'Status: Player Wins!'
+		document.getElementById("Hit").disabled = true;
+		document.getElementById("Stand").disabled = true;
+		document.getElementById("Play_Again").disabled = false;
+		coins = coins + bet
+		document.getElementById('Coins').value = 'Coins: ' + String(coins)
+	} else if (dealerTotal > cardTotal && inRange(dealerTotal, 1, 21)) {
+		document.getElementById('Status').value = 'Status: Dealer Wins!'
 		document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
 		document.getElementById("Play_Again").disabled = false;
 		coins = coins - bet
 		document.getElementById('Coins').value = 'Coins: ' + String(coins)
+	} else {
+		document.getElementById('Status').value = 'Status: Error, Pushing!'
 	}
 }
 
@@ -383,7 +389,7 @@ function playAgain() {
 	document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
 	generateNewCard()
 	dealer2 = finalCardNum
-	dealersCard2 = finalCardNum
+	dealersCard2 = finalCard
 }
 
 function newGame() {
@@ -406,7 +412,7 @@ function newGame() {
 	document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
 	generateNewCard()
 	dealer2 = finalCardNum
-	dealersCard2 = finalCardNum
+	dealersCard2 = finalCard
 }
 
 resetVars()
@@ -432,7 +438,7 @@ document.getElementById('PlayerTotal').value = 'Total: ' + String(cardTotal)
 document.getElementById('DealerTotal').value = 'Total: ' + String(dealerTotal)
 generateNewCard()
 dealer2 = finalCardNum
-dealersCard2 = finalCardNum
+dealersCard2 = finalCard
 
 document.getElementById('Status').value = 'Status: Waiting on Player...'
 document.getElementById('Coins').value = 'Coins: ' + String(coins)
