@@ -34,6 +34,11 @@
 	background-color: rgba(255, 255, 255, 0.15);
 	border: 1px solid #c0c0c0;
 }
+.fileInputVisible:disabled, .outputButton:disabled {
+	background-color: rgba(255, 255, 255, 0.05);
+	border: 1px solid #1a1a1a;
+	cursor: not-allowed;
+}
 .fileInput {
 	display: none;
 }
@@ -48,7 +53,22 @@
 	border: 1px solid #5c5c5c;
 	border-radius: 8px;
 	width: 50%;
-	height: 292px;
+	height: 604px;
+}
+#themeTextArea {
+	background-image: var(--bgImage)!important;
+	background-clip: border-box!important;
+	background-origin: padding-box!important;
+	background-attachment: scroll!important;
+	background-repeat: repeat!important;
+	background-size: auto!important;
+	background-position: left top!important;
+	border: 1px solid #5c5c5c;
+	border-radius: 8px;
+	width: 80%;
+	height: 200px;
+	color: #fff;
+	resize: none;
 }
 </style>
 </head>
@@ -57,11 +77,14 @@
 <!--Nav Template End-->
 
 	<br><br><br>
-	<div class='container'><br><br><br><br><br>
-		<label for="theme-file" class="fileInputVisible" role="button">Upload Theme File</label>
-		<input id="theme-file" type='file' class='fileInput' onchange='loadThemeFile(0)'style="color: #fff;"><br><br><br>
-		<button class="outputButton" onClick="{ updateClasses('file') }">Download Updated Theme</button>
-		<button class="outputButton" onClick="{ updateClasses('clipboard') }">Copy to Clipboard</button>
+	<div class='container'><br><br>
+		<h3 style='color: #fff;'>Either Upload your Theme File or Paste it into the Textarea</h3><br><br><br>
+		<label for='theme-file' class='fileInputVisible' role='button'>Upload Theme File</label>
+		<input id='theme-file' type='file' class='fileInput' onchange='loadThemeFile(0)'style='color: #fff;'><br><br><br><br>
+		<font style='color: #fff; font: 25px Arial; font-weight: bold;' id='textAreaStatus'></font><br><br>
+		<textarea id='themeTextArea' nmousemove='updateClasses("textarea")' onchange='updateClasses("textarea")'></textarea><br><br>
+		<button class='outputButton' onClick='updateClasses("file")'>Download Updated Theme</button>
+		<button class='outputButton' onClick='updateClasses("clipboard")'>Copy to Clipboard</button>
 		<font style='display: none;' id='rawText'></font>
 	</div>
 
@@ -69,10 +92,10 @@
 </div>
 <script>
 async function loadChangesFile() {
-	const url = "https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt"
+	const url = 'https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt'
 	let rawFile = await fetch(url);
 	let rawText = await rawFile.text();
-	document.getElementById("rawText").innerHTML = rawText;
+	document.getElementById('rawText').innerHTML = rawText;
 }
 loadChangesFile()
 
@@ -80,16 +103,14 @@ function loadThemeFile(inputNum) {
 	var input, file, fr;
 	
 	if (typeof window.FileReader !== 'function') {
-		alert("The file API isn't supported on this browser yet.");
+		alert("The file API isn't supported on this browser yet");
 		return;
 	}
 	input = document.getElementsByClassName('fileInput')[inputNum];
 	if (!input) {
-		alert("Unable to find the fileInput element.");
+		alert('Unable to find the fileInput element');
 	} else if (!input.files) {
-		alert("This browser doesn't seem to support the `files` property of file inputs.");
-	} else if (!input.files[0]) {
-		alert("Please select a file before clicking 'Load'");
+		alert("This browser doesn't seem to support the `files` property of file inputs");
 	} else {
 		file = input.files[0];
 		fr = new FileReader();
@@ -97,6 +118,12 @@ function loadThemeFile(inputNum) {
 		fr.readAsText(file);
 		outputName = file.name
 		themeFile = fr
+		document.getElementsByClassName('container')[0].style = 'height: 394px;'
+		document.getElementById('textAreaStatus').style = 'display: none;'
+		document.getElementById('themeTextArea').style = 'display: none;'
+		document.getElementsByTagName('br')[12].remove()
+		document.getElementsByTagName('br')[12].remove()
+		document.getElementsByTagName('br')[12].remove()
 	}
 
 	async function receivedText(e) {
@@ -106,11 +133,18 @@ function loadThemeFile(inputNum) {
 
 function updateClasses(outputMethod) {
 	var i = 0
-	rawText = document.getElementById("rawText").innerHTML
+	rawText = document.getElementById('rawText').innerHTML
 	//console.log(rawText)
 	classNum = rawText.split('\n').length - 1
 	changesText = rawText.split('\n')
-	themeText = themeFile.result
+	if (outputMethod == 'textarea') {
+		document.getElementsByClassName('outputButton')[0].disabled = true;
+		document.getElementsByClassName('outputButton')[1].disabled = true;
+		document.getElementsByClassName('fileInputVisible')[0].style = 'background-color: rgba(255, 255, 255, 0.05); border: 1px solid #1a1a1a; cursor: not-allowed;';
+		themeText = document.getElementById('themeTextArea').value
+	} else {
+		themeText = themeFile.result
+	}
 	
 	while (i < classNum) {
 		class1 = changesText[i]
@@ -121,9 +155,12 @@ function updateClasses(outputMethod) {
 		i = i + 2
 	}
 	
-	if (outputMethod == 'file') {
+	if (outputMethod == 'textarea') {
+		document.getElementById('textAreaStatus').innerHTML = 'Updated!'
+		document.getElementById('themeTextArea').value = themeText
+	} else if (outputMethod == 'file') {
 		var synOutput = document.createElement('a');
-		const blob = new Blob([themeText], { type: "text/plain" });
+		const blob = new Blob([themeText], { type: 'text/plain' });
 		url = URL.createObjectURL(blob);
 		synOutput.download = outputName;
 		synOutput.href = url;
