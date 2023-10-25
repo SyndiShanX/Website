@@ -1,0 +1,140 @@
+<!--Nav Template Start-->
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+<title>SyndiShanX - Class Updater</title>
+<link rel="stylesheet" href="Fonts/Font_Awesome.min.css">
+<link rel="icon" href="Images/Global/Icon_Tab.webp">
+<link rel="stylesheet" href="GlobalCSS.css">
+<style type="text/css">
+.fileInputVisible, .outputButton {
+	background-color: rgba(255, 255, 255, 0.25);
+	padding: 28px;
+	color: #fff;
+	font: 28px Arial;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid #5c5c5c;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.outputButton {
+	padding: 18px;
+	margin: 10px;
+	color: #fff;
+	font: 18px Arial;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid #5c5c5c;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.fileInputVisible:hover, .outputButton:hover {
+	background-color: rgba(255, 255, 255, 0.15);
+	border: 1px solid #c0c0c0;
+}
+.fileInput {
+	display: none;
+}
+.container {
+	background-image: var(--bgImageDark)!important;
+	background-clip: border-box!important;
+	background-origin: padding-box!important;
+	background-attachment: scroll!important;
+	background-repeat: repeat!important;
+	background-size: auto!important;
+	background-position: left top!important;
+	border: 1px solid #5c5c5c;
+	border-radius: 8px;
+	width: 50%;
+	height: 292px;
+}
+</style>
+</head>
+<body lang="">
+<div class="MainWrapper" align="center">
+<!--Nav Template End-->
+
+	<br><br><br>
+	<div class='container'><br><br><br><br><br>
+		<label for="theme-file" class="fileInputVisible" role="button">Upload Theme File</label>
+		<input id="theme-file" type='file' class='fileInput' onchange='loadThemeFile(0)'style="color: #fff;"><br><br><br>
+		<button class="outputButton" onClick="{ updateClasses('file') }">Download Updated Theme</button>
+		<button class="outputButton" onClick="{ updateClasses('clipboard') }">Copy to Clipboard</button>
+		<font style='display: none;' id='rawText'></font>
+	</div>
+
+<!--Nav Template Start-->
+</div>
+<script>
+async function loadChangesFile() {
+	const url = "https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt"
+	let rawFile = await fetch(url);
+	let rawText = await rawFile.text();
+	document.getElementById("rawText").innerHTML = rawText;
+}
+loadChangesFile()
+
+function loadThemeFile(inputNum) {
+	var input, file, fr;
+	
+	if (typeof window.FileReader !== 'function') {
+		alert("The file API isn't supported on this browser yet.");
+		return;
+	}
+	input = document.getElementsByClassName('fileInput')[inputNum];
+	if (!input) {
+		alert("Unable to find the fileInput element.");
+	} else if (!input.files) {
+		alert("This browser doesn't seem to support the `files` property of file inputs.");
+	} else if (!input.files[0]) {
+		alert("Please select a file before clicking 'Load'");
+	} else {
+		file = input.files[0];
+		fr = new FileReader();
+		fr.onload = receivedText;
+		fr.readAsText(file);
+		outputName = file.name
+		themeFile = fr
+	}
+
+	async function receivedText(e) {
+		let lines = e.target.result;
+	}
+}
+
+function updateClasses(outputMethod) {
+	var i = 0
+	rawText = document.getElementById("rawText").innerHTML
+	//console.log(rawText)
+	classNum = rawText.split('\n').length - 1
+	changesText = rawText.split('\n')
+	themeText = themeFile.result
+	
+	while (i < classNum) {
+		class1 = changesText[i]
+		class2 = changesText[i + 1]
+	
+		themeText = themeText.replaceAll(class1, class2)
+	
+		i = i + 2
+	}
+	
+	if (outputMethod == 'file') {
+		var synOutput = document.createElement('a');
+		const blob = new Blob([themeText], { type: "text/plain" });
+		url = URL.createObjectURL(blob);
+		synOutput.download = outputName;
+		synOutput.href = url;
+		synOutput.click();
+	} else if (outputMethod == 'clipboard') {
+		navigator.clipboard.writeText(themeText);
+	}
+}
+</script>
+<script src="GlobalNavbar.js"></script>
+<script src="GlobalNavbarFixer.js"></script>
+</body>
+</html>
+<!--Nav Template End-->
