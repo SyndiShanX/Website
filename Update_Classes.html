@@ -81,7 +81,7 @@
 		<h3 style='color: #fff;'>Either Upload your Theme File or Paste it into the Textarea</h3><br><br><br>
 		<label for='theme-file' class='fileInputVisible' role='button'>Upload Theme File</label>
 		<input id='theme-file' type='file' class='fileInput' onchange='loadThemeFile(0)'style='color: #fff;'><br><br><br><br>
-		<font style='color: #fff; font: 25px Arial; font-weight: bold;' id='textAreaStatus'></font><br><br>
+		<font style='color: #fff; font: 18px Arial; font-weight: bold;' id='textAreaStatus'>If you use the Textarea, you have to Click off after you Paste your Theme for it to Update</font><br><br>
 		<textarea id='themeTextArea' nmousemove='updateClasses("textarea")' onchange='updateClasses("textarea")'></textarea><br><br>
 		<button class='outputButton' onClick='updateClasses("file")'>Download Updated Theme</button>
 		<button class='outputButton' onClick='updateClasses("clipboard")'>Copy to Clipboard</button>
@@ -140,7 +140,11 @@ function updateClasses(outputMethod) {
 	if (outputMethod == 'textarea') {
 		themeText = document.getElementById('themeTextArea').value
 	} else {
-		themeText = themeFile.result
+		if (document.getElementById('themeTextArea').value != '') {
+			themeText = document.getElementById('themeTextArea').value
+		} else {
+			themeText = themeFile.result
+		}
 	}
 	
 	while (i < classNum) {
@@ -157,13 +161,24 @@ function updateClasses(outputMethod) {
 		document.getElementById('themeTextArea').value = themeText
 	} else if (outputMethod == 'file') {
 		var synOutput = document.createElement('a');
+		if (document.getElementById('themeTextArea').value != '') {
+			document.getElementById('textAreaStatus').innerHTML = 'Updated!'
+			document.getElementById('themeTextArea').value = themeText
+			outputName = 'Output.theme.css'
+		}
 		const blob = new Blob([themeText], { type: 'text/plain' });
 		url = URL.createObjectURL(blob);
 		synOutput.download = outputName;
 		synOutput.href = url;
 		synOutput.click();
 	} else if (outputMethod == 'clipboard') {
-		navigator.clipboard.writeText(themeText);
+		if (document.getElementById('themeTextArea').value != '') {
+			document.getElementById('textAreaStatus').innerHTML = 'Updated!'
+			document.getElementById('themeTextArea').value = themeText
+			navigator.clipboard.writeText(document.getElementById('themeTextArea').value);
+		} else {
+			navigator.clipboard.writeText(themeText);
+		}
 	}
 }
 </script>
