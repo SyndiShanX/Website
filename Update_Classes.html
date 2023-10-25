@@ -138,9 +138,6 @@ function updateClasses(outputMethod) {
 	classNum = rawText.split('\n').length - 1
 	changesText = rawText.split('\n')
 	if (outputMethod == 'textarea') {
-		document.getElementsByClassName('outputButton')[0].disabled = true;
-		document.getElementsByClassName('outputButton')[1].disabled = true;
-		document.getElementsByClassName('fileInputVisible')[0].style = 'background-color: rgba(255, 255, 255, 0.05); border: 1px solid #1a1a1a; cursor: not-allowed;';
 		themeText = document.getElementById('themeTextArea').value
 	} else {
 		themeText = themeFile.result
