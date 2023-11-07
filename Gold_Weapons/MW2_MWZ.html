@@ -1,0 +1,217 @@
+<!--Nav Template Start-->
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+<title>SyndiShanX - MW2 MWZ Gold Weapons</title>
+<link rel="stylesheet" href="../Fonts/Font_Awesome.min.css">
+<link rel="icon" href="../Images/Global/Icon_Tab.webp">
+<link rel="stylesheet" href="../GlobalCSS.css">
+<style type="text/css">
+font {
+	font-family: 'Montserrat', sans-serif;
+	-webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+	-webkit-mask-size: 200%;
+	mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+	mask-size: 200%;
+	animation: shine 2s linear infinite;
+	font-weight: bold;
+}
+font.text_none {
+	color: white;
+}
+font.text_progressing {
+	color: #35afea;
+}
+font.text_rainbow {
+	background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+	-webkit-background-clip: text;
+	color: transparent;
+	animation: rainbow_animation 6s ease-in-out infinite;
+	background-size: 400% 100%;
+	-webkit-text-stroke: 0.5px #7F7F7F;
+}
+@keyframes rainbow_animation {
+	0%,100% { background-position: 0 0; }
+	50% { background-position: 100% 0; }
+}
+font.text_golden_ivory {
+	background-image: url('../Images/Gold_Weapons/MW3/MWZ/Golden_Ivory_Text.webp');
+	background-size: 100% 100%;
+	color: transparent;
+	-webkit-background-clip: text;
+	display: inline-block;
+	display: none;
+	position: relative;
+	-webkit-text-stroke: 0.5px #7F7F7F;
+}
+font.text_spinel_husk {
+	background-image: url('../Images/Gold_Weapons/MW3/MWZ/Spinel_Husk_Text.webp');
+	background-size: 100% 100%;
+	color: transparent;
+	-webkit-background-clip: text;
+	display: inline-block;
+	display: none;
+	position: relative;
+	-webkit-text-stroke: 0.5px #7F7F7F;
+}
+font.text_arachnida {
+	background-image: url('../Images/Gold_Weapons/MW3/MWZ/Arachnida_Text.webp');
+	background-size: 100% 100%;
+	color: transparent;
+	-webkit-background-clip: text;
+	display: inline-block;
+	display: none;
+	position: relative;
+	-webkit-text-stroke: 0.5px #7F7F7F;
+}
+font.text_bioluminescent {
+	background-image: url('../Images/Gold_Weapons/MW3/MWZ/Bioluminescent_Text.webp');
+	background-size: 100% 100%;
+	color: transparent;
+	-webkit-background-clip: text;
+	display: inline-block;
+	display: none;
+	position: relative;
+	-webkit-text-stroke: 0.5px #7F7F7F;
+}
+@keyframes shine {
+	from { -webkit-mask-position: 150%; }
+	to { -webkit-mask-position: -50%; }
+}
+.weapon {
+	position: relative;
+	display: inline-block;
+	padding-right: 5px;
+}
+.challenges {
+	visibility: hidden;
+	width: fit-content;
+	color: #fff;
+	text-align: center;
+	padding: 10px 20px;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+	top: 100%;
+	left: 22%;
+	margin-left: -60px;
+	pointer-events: none;
+	background-image: var(--bgImageDark)!important;
+	background-clip: border-box!important;
+	background-origin: padding-box!important;
+	background-attachment: scroll!important;
+	background-repeat: repeat!important;
+	background-size: auto!important;
+	background-position: left top!important;
+	border: 1px solid #c0c0c0;
+}
+.weapon:hover .challenges {
+	visibility: visible;
+}
+</style>
+</head>
+<body lang="../">
+<div class="MainWrapper" align="center">
+</div>
+<script>
+function fetchData(spreadsheetID, pageNum) {
+	fetch('https://opensheet.elk.sh/' + spreadsheetID + '/' + pageNum).then((response) => response.json()).then((data) => {
+		json = data
+		mainWrapper = document.getElementsByClassName('MainWrapper')[0]
+		for (i = 0; i < json.length; i++) {
+			elementNum = json[i]['Element Num']
+			if (elementNum == 4) {
+				fontElement = document.createElement(json[i]['Element 1'])
+				fontElement.className = json[i]['Element 2']
+				fontElement.size = json[i]['Element 3']
+				fontElement.innerText = json[i]['Element 4']
+				mainWrapper.appendChild(fontElement)
+			} else if (elementNum == 5) {
+				fontElement = document.createElement(json[i]['Element 1'])
+				fontElement.className = json[i]['Element 2']
+				fontElement.size = json[i]['Element 3']
+				fontElement.innerText = json[i]['Element 4']
+				mainWrapper.appendChild(fontElement)
+				brElement = document.createElement(json[i]['Element 5'])
+				mainWrapper.appendChild(brElement)
+			} else if (elementNum == 8) {
+				imgElement1 = document.createElement(json[i]['Element 1'])
+				mainWrapper.appendChild(imgElement1)
+				imgElement1.setAttribute('src', json[i]['Element 2'] + '.webp')
+				imgElement2 = document.createElement(json[i]['Element 3'])
+				mainWrapper.appendChild(imgElement2)
+				imgElement2.setAttribute('src', json[i]['Element 4'] + '.webp')
+				imgElement3 = document.createElement(json[i]['Element 5'])
+				mainWrapper.appendChild(imgElement3)
+				imgElement3.setAttribute('src', json[i]['Element 6'] + '.webp')
+				brElement = document.createElement(json[i]['Element 13'])
+				mainWrapper.appendChild(brElement)
+				brElement = document.createElement(json[i]['Element 14'])
+				mainWrapper.appendChild(brElement)
+			} else if (elementNum == 12 || elementNum == 13 || elementNum == 14) {
+				divElement = document.createElement(json[i]['Element 1'])
+				divElement.className = json[i]['Element 2']
+				mainWrapper.appendChild(divElement)
+				imgElement1 = document.createElement(json[i]['Element 3'])
+				divElement.appendChild(imgElement1)
+				imgElement1.setAttribute('src', 'data:image/webp;base64, ' + json[i]['Element 4'])
+				imgElement2 = document.createElement(json[i]['Element 6'])
+				divElement.appendChild(imgElement2)
+				imgElement2.setAttribute('src', json[i]['Element 7'] + '.webp')
+				imgElement3 = document.createElement(json[i]['Element 8'])
+				divElement.appendChild(imgElement3)
+				imgElement3.setAttribute('src', json[i]['Element 9'] + '.webp')
+				spanElement = document.createElement(json[i]['Element 10'])
+				spanElement.className = json[i]['Element 5'] + ' ' + json[i]['Element 11']
+				spanElement.innerHTML = json[i]['Element 12']
+				divElement.appendChild(spanElement) 
+				if (elementNum == 13) {
+					brElement = document.createElement(json[i]['Element 13'])
+					mainWrapper.appendChild(brElement)
+				}
+				if (elementNum == 14) {
+					brElement = document.createElement(json[i]['Element 14'])
+					mainWrapper.appendChild(brElement)
+				}
+			}
+		}
+		setPaths()
+	});
+}
+fetchData('1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko', 3)
+</script>
+<script>
+function clearMain() {
+	body = document.getElementsByTagName('body')[0]
+	document.getElementsByClassName('MainWrapper')[0].remove()
+	newMainWrapper = document.createElement('div')
+	newMainWrapper.className = 'MainWrapper'
+	newMainWrapper.align = 'center'
+	body.appendChild(newMainWrapper)
+}
+</script>
+<script>
+function setPaths() {
+	img = document.getElementsByTagName('img');
+	mwzPath = '../Images/Gold_Weapons/MW3/MWZ/'
+	
+	for (i = 1; i < img.length; i++) {
+		imgSrc = img[i].outerHTML.split('src="')[1].split('.webp"')[0]
+		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Golden_Ivory" || imgSrc == "Spinel_Husk" || imgSrc == "Arachnida" || imgSrc == "Bioluminescent" || imgSrc == "Progressing_Golden_Ivory" || imgSrc == "Progressing_Spinel_Husk" || imgSrc == "Progressing_Arachnida" || imgSrc == "Progressing_Bioluminescent") {
+			img[i].src = mwzPath + imgSrc + '.webp'
+		} else if (imgSrc == '1') {
+			imgSrc = imgSrc + '_MW2_Star'
+			img[i].src = mwzPath + imgSrc + '.webp'
+		} else if (imgSrc == '0' || imgSrc == '2' || imgSrc == '3' || imgSrc == '4'){
+			imgSrc = imgSrc + '_MW2_Stars'
+			img[i].src = mwzPath + imgSrc + '.webp'
+		}
+	}
+}
+</script>
+<script src="../GlobalNavbar.js"></script>
+<script src="../GlobalNavbarFixer.js"></script>
+</body>
+</html>
+<!--Nav Template End-->

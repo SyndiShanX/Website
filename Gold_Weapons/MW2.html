@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=0.5">
-<title>SyndiShanX - MW3 Gold Weapons</title>
-<link rel="stylesheet" href="Fonts/Font_Awesome.min.css">
-<link rel="icon" href="Images/Global/Icon_Tab.webp">
-<link rel="stylesheet" href="GlobalCSS.css">
+<title>SyndiShanX - MW2 Gold Weapons</title>
+<link rel="stylesheet" href="../Fonts/Font_Awesome.min.css">
+<link rel="icon" href="../Images/Global/Icon_Tab.webp">
+<link rel="stylesheet" href="../GlobalCSS.css">
 <style type="text/css">
 font {
 	font-family: 'Montserrat', sans-serif;
@@ -36,37 +36,34 @@ font.text_rainbow {
 	50% { background-position: 100% 0; }
 }
 font.text_gold {
-	background-image: url('Images/MW2_Gold_Weapons/Gold_Text.webp');
+	background-image: url('../Images/Gold_Weapons/MW2/Gold_Text.webp');
 	background-size: 100% 100%;
 	color: transparent;
 	-webkit-background-clip: text;
 	display: inline-block;
-	display: none;
 	position: relative;
 	-webkit-text-stroke: 0.5px #7F7F7F;
 }
 font.text_platinum {
-	background-image: url('Images/MW2_Gold_Weapons/Platinum_Text.webp');
+	background-image: url('../Images/Gold_Weapons/MW2/Platinum_Text.webp');
 	background-size: 100% 100%;
 	color: transparent;
 	-webkit-background-clip: text;
 	display: inline-block;
-	display: none;
 	position: relative;
 	-webkit-text-stroke: 0.5px #7F7F7F;
 }
 font.text_polyatomic {
-	background-image: url('Images/MW2_Gold_Weapons/Polyatomic_Text.webp');
+	background-image: url('../Images/Gold_Weapons/MW2/Polyatomic_Text.webp');
 	background-size: 100% 100%;
 	color: transparent;
 	-webkit-background-clip: text;
 	display: inline-block;
-	display: none;
 	position: relative;
 	-webkit-text-stroke: 0.5px #7F7F7F;
 }
 font.text_orion {
-	background-image: url('Images/MW2_Gold_Weapons/Orion_Text.webp');
+	background-image: url('../Images/Gold_Weapons/MW2/Orion_Text.webp');
 	background-size: 100% 100%;
 	color: transparent;
 	-webkit-background-clip: text;
@@ -111,7 +108,7 @@ font.text_orion {
 }
 </style>
 </head>
-<body lang="">
+<body lang="../">
 <div class="MainWrapper" align="center">
 </div>
 <script>
@@ -179,7 +176,7 @@ function fetchData(spreadsheetID, pageNum) {
 		setPaths()
 	});
 }
-fetchData('1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko', 2)
+fetchData('1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko', 1)
 </script>
 <script>
 function clearMain() {
@@ -194,7 +191,7 @@ function clearMain() {
 <script>
 function setPaths() {
 	img = document.getElementsByTagName('img');
-	mw2Path = 'Images/MW3_Gold_Weapons/'
+	mw2Path = '../Images/Gold_Weapons/MW2/'
 	
 	for (i = 1; i < img.length; i++) {
 		imgSrc = img[i].outerHTML.split('src="')[1].split('.webp"')[0]
@@ -210,8 +207,8 @@ function setPaths() {
 	}
 }
 </script>
-<script src="GlobalNavbar.js"></script>
-<script src="GlobalNavbarFixer.js"></script>
+<script src="../GlobalNavbar.js"></script>
+<script src="../GlobalNavbarFixer.js"></script>
 </body>
 </html>
 <!--Nav Template End-->

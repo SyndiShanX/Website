@@ -1,0 +1,54 @@
+<!--Nav Template Start-->
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+<title>SyndiShanX - Gold Weapons Selector</title>
+<link rel="stylesheet" href="../Fonts/Font_Awesome.min.css">
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+<link rel="icon" href="../Images/Global/Icon_Tab.webp">
+<link rel="stylesheet" href="../GlobalCSS.css">
+<style type="text/css">
+.MainWrapper {
+	zoom: 70%;
+	-ms-zoom: 0.7;
+	-webkit-zoom: 0.7;
+	padding-top: 100px;
+}
+.game {
+	border: 1px solid transparent;
+	border-radius: 20px;
+	width: 450px;
+	height: 450px;
+}
+.unselected {
+	filter: grayscale(100%);
+}
+</style>
+</head>
+<body lang="../">
+<div class="MainWrapper" align="center">
+<!--Nav Template End-->
+
+	<a href="MW2.html"><img class="game unselected" onmouseover="hover(0)" onmouseout="hover(0)" src="../Images/Gold_Weapons/MW2.webp"></img></a>
+	<a href="MW3.html"><img class="game unselected" onmouseover="hover(1)" onmouseout="hover(1)" src="../Images/Gold_Weapons/MW3.webp"></img></a>
+	<a href="MW2_MWZ.html"><img class="game unselected" onmouseover="hover(2)" onmouseout="hover(2)" src="../Images/Gold_Weapons/MW2_MWZ.webp"></img></a>
+	<a href="MW3_MWZ.html"><img class="game unselected" onmouseover="hover(3)" onmouseout="hover(3)" src="../Images/Gold_Weapons/MW3_MWZ.webp"></img></a>
+	
+<!--Nav Template Start-->
+</div>
+<script>
+function hover(elementNum) {
+	currentElement = document.getElementsByClassName('game')[elementNum].className
+	if (currentElement == 'game unselected') {
+		document.getElementsByClassName('game')[elementNum].className = 'game hovered'
+	} else if (currentElement == 'game hovered') {
+		document.getElementsByClassName('game')[elementNum].className = 'game unselected'
+	}
+}
+</script>
+<script src="../GlobalNavbar.js"></script>
+<script src="../GlobalNavbarFixer.js"></script>
+</body>
+</html>
+<!--Nav Template End-->

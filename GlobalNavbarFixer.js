@@ -14,7 +14,7 @@ if (window.matchMedia("(orientation: landscape)").matches) {
 if (currentScreenOrientation != previousScreenOrientation) {navSwapper()}
 
 /* Add Selection Border to Selector Page in Navbar */
-if (window.location.href.split('Selector').length != 1) {
+if (window.location.href.split('Zombies/Selector').length != 1) {
 	document.getElementsByClassName('zombies')[0].style = 'border: 1px solid white; border-radius: 20px!important;'
 }
 
