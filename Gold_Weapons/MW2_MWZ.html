@@ -198,7 +198,7 @@ function setPaths() {
 	
 	for (i = 1; i < img.length; i++) {
 		imgSrc = img[i].outerHTML.split('src="')[1].split('.webp"')[0]
-		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Golden_Ivory" || imgSrc == "Spinel_Husk" || imgSrc == "Arachnida" || imgSrc == "Bioluminescent" || imgSrc == "Progressing_Golden_Ivory" || imgSrc == "Progressing_Spinel_Husk" || imgSrc == "Progressing_Arachnida" || imgSrc == "Progressing_Bioluminescent") {
+		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Golden_Ivory" || imgSrc == "Spinel_Husk" || imgSrc == "Arachnida" || imgSrc == "Bioluminescent" || imgSrc == "Progressing Golden Ivory" || imgSrc == "Progressing Spinel Husk" || imgSrc == "Progressing Arachnida") {
 			img[i].src = mwzPath + imgSrc + '.webp'
 		} else if (imgSrc == '1') {
 			imgSrc = imgSrc + '_MW2_Star'

@@ -195,7 +195,7 @@ function setPaths() {
 	
 	for (i = 1; i < img.length; i++) {
 		imgSrc = img[i].outerHTML.split('src="')[1].split('.webp"')[0]
-		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Gold" || imgSrc == "Platinum" || imgSrc == "Polyatomic" || imgSrc == "Orion" || imgSrc == "Progressing_Gold" || imgSrc == "Progressing_Platinum" || imgSrc == "Progressing_Polyatomic" || imgSrc == "Progressing_Orion") {
+		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Gold" || imgSrc == "Platinum" || imgSrc == "Polyatomic" || imgSrc == "Orion" || imgSrc == "Progressing Gold" || imgSrc == "Progressing Platinum" || imgSrc == "Progressing Polyatomic") {
 			img[i].src = mw2Path + imgSrc + '.webp'
 		} else if (imgSrc == '1') {
 			imgSrc = imgSrc + '_Star'

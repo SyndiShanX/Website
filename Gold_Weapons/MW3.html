@@ -198,7 +198,7 @@ function setPaths() {
 	
 	for (i = 1; i < img.length; i++) {
 		imgSrc = img[i].outerHTML.split('src="')[1].split('.webp"')[0]
-		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Gilded" || imgSrc == "Forged" || imgSrc == "Priceless" || imgSrc == "Interstellar" || imgSrc == "Progressing_Gilded" || imgSrc == "Progressing_Forged" || imgSrc == "Progressing_Priceless" || imgSrc == "Progressing_Interstellar") {
+		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Gilded" || imgSrc == "Forged" || imgSrc == "Priceless" || imgSrc == "Interstellar" || imgSrc == "Progressing Gilded" || imgSrc == "Progressing Forged" || imgSrc == "Progressing Priceless") {
 			img[i].src = mw3Path + imgSrc + '.webp'
 		} else if (imgSrc == '1') {
 			imgSrc = imgSrc + '_Star'

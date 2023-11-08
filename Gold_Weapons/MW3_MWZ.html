@@ -198,7 +198,7 @@ function setPaths() {
 	
 	for (i = 1; i < img.length; i++) {
 		imgSrc = img[i].outerHTML.split('src="')[1].split('.webp"')[0]
-		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Golden_Enigma" || imgSrc == "Zircon_Scale" || imgSrc == "Serpentinite" || imgSrc == "Borealis" || imgSrc == "Progressing_Golden_Enigma" || imgSrc == "Progressing_Zircon_Scale" || imgSrc == "Progressing_Serpentinite" || imgSrc == "Progressing_Borealis") {
+		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Golden_Enigma" || imgSrc == "Zircon_Scale" || imgSrc == "Serpentinite" || imgSrc == "Borealis" || imgSrc == "Progressing Golden Enigma" || imgSrc == "Progressing Zircon Scale" || imgSrc == "Progressing Serpentinite") {
 			img[i].src = mwzPath + imgSrc + '.webp'
 		} else if (imgSrc == '1') {
 			imgSrc = imgSrc + '_MW3_Star'
