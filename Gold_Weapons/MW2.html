@@ -68,7 +68,6 @@ font.text_orion {
 	color: transparent;
 	-webkit-background-clip: text;
 	display: inline-block;
-	display: none;
 	position: relative;
 	-webkit-text-stroke: 0.5px #7F7F7F;
 }
@@ -106,12 +105,58 @@ font.text_orion {
 .weapon:hover .challenges {
 	visibility: visible;
 }
+.hidden {
+	display: none!important;
+}
+#customTextArea {
+	background-image: var(--bgImageDark)!important;
+	background-clip: border-box!important;
+	background-origin: padding-box!important;
+	background-attachment: scroll!important;
+	background-repeat: repeat!important;
+	background-size: auto!important;
+	background-position: left top!important;
+	border: 1px solid #5c5c5c;
+	border-radius: 8px;
+	text-align: center;
+	width: 30%;
+	height: 25px;
+	color: #fff;
+}
+.MainWrapper {
+	margin-top: 0px!important;
+}
+.customButton {
+	background-color: rgba(255, 255, 255, 0.25);
+	padding: 15px;
+	color: #fff;
+	font: 18px Arial;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid #5c5c5c;
+	border-radius: 8px;
+	cursor: pointer;
+}
 </style>
 </head>
 <body lang="../">
+<div align="center" style='margin-top: 100px;'>
+	<h3 style='color: #fff;'>1. Make a Copy of the Template Spreadsheet, Set the Sharing Setting to `Anyone with the Link`</h3>
+	<h3 style='color: #fff;'>2. Get the ID of your Spreadsheet and Paste it into the Textarea and Click Load Spreadsheet</h3>
+	<a href='https://docs.google.com/spreadsheets/d/1Gn1wGkzQqX6PA1SmWMcmX2WwqRanltXY6JnoCN42lfE/edit#gid=0'><font color='#00ffff'>Template Spreadsheet Link</font></a><br><br>
+	<input type="text" id='customTextArea' placeholder='1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko'></input><br><br>
+	<button class='customButton' onClick="resetPage(); fetchData(document.getElementById('customTextArea').value, 1)">Load Spreadsheet</button>
+</div>
 <div class="MainWrapper" align="center">
 </div>
 <script>
+function resetPage() {
+	document.getElementsByClassName('MainWrapper')[0].remove()
+	mainWrapperDiv = document.createElement('div')
+	mainWrapperDiv.className = 'MainWrapper'
+	mainWrapperDiv.align = 'center'
+	document.getElementsByTagName('body')[0].appendChild(mainWrapperDiv)
+}
 function fetchData(spreadsheetID, pageNum) {
 	fetch('https://opensheet.elk.sh/' + spreadsheetID + '/' + pageNum).then((response) => response.json()).then((data) => {
 		json = data
