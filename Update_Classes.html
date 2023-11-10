@@ -82,7 +82,7 @@
 		<label for='theme-file' class='fileInputVisible' role='button'>Upload Theme File</label>
 		<input id='theme-file' type='file' class='fileInput' onchange='loadThemeFile(0)'style='color: #fff;'><br><br><br><br>
 		<font style='color: #fff; font: 18px Arial; font-weight: bold;' id='textAreaStatus'>If you use the Textarea, you have to Click off after you Paste your Theme for it to Update</font><br><br>
-		<textarea id='themeTextArea' nmousemove='updateClasses("textarea")' onchange='updateClasses("textarea")'></textarea><br><br>
+		<textarea id='themeTextArea' onmousemove='updateClasses("textarea")' onchange='updateClasses("textarea")'></textarea><br><br>
 		<button class='outputButton' onClick='updateClasses("file")'>Download Updated Theme</button>
 		<button class='outputButton' onClick='updateClasses("clipboard")'>Copy to Clipboard</button>
 		<font style='display: none;' id='rawText'></font>
