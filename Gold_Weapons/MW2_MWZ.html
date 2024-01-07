@@ -198,6 +198,7 @@ function fetchData(spreadsheetID, pageNum) {
 				imgElement1 = document.createElement(json[i]['Element 3'])
 				divElement.appendChild(imgElement1)
 				imgElement1.setAttribute('src', 'data:image/webp;base64, ' + json[i]['Element 4'])
+				imgElement1.setAttribute("onclick", 'pinChallenges("' + json[i]['Element 5'] + ' challenges")');
 				imgElement2 = document.createElement(json[i]['Element 6'])
 				divElement.appendChild(imgElement2)
 				imgElement2.setAttribute('src', json[i]['Element 7'] + '.webp')
@@ -206,7 +207,7 @@ function fetchData(spreadsheetID, pageNum) {
 				imgElement3.setAttribute('src', json[i]['Element 9'] + '.webp')
 				spanElement = document.createElement(json[i]['Element 10'])
 				spanElement.className = json[i]['Element 5'] + ' ' + json[i]['Element 11']
-				spanElement.innerHTML = json[i]['Element 12']
+				spanElement.innerHTML = '<font size=4><strong>' + json[i]['Element 5'] + '</strong></font><br><br>' + json[i]['Element 12']
 				divElement.appendChild(spanElement) 
 				if (elementNum == 13) {
 					brElement = document.createElement(json[i]['Element 13'])
@@ -256,6 +257,17 @@ function setPaths() {
 			imgSrc = imgSrc + '_MW2_Stars'
 			img[i].src = mwzPath + imgSrc + '.webp'
 		}
+	}
+}
+</script>
+<script>
+function pinChallenges(elemClasses) {
+	if (document.getElementsByClassName(elemClasses)[0].style.visibility == 'hidden' && document.getElementsByClassName(elemClasses)[0].style.accentColor == 'rgb(0, 0, 0)') {
+		document.getElementsByClassName(elemClasses)[0].style = 'visibility: visible; accent-color: rgb(255, 255, 255);'
+	} if (document.getElementsByClassName(elemClasses)[0].style.visibility == 'visible' && document.getElementsByClassName(elemClasses)[0].style.accentColor == 'rgb(255, 255, 255)') {
+		document.getElementsByClassName(elemClasses)[0].style = 'accent-color: rgb(0, 0, 0);'
+	} else {
+		document.getElementsByClassName(elemClasses)[0].style = 'visibility: visible; accent-color: rgb(255, 255, 255);'
 	}
 }
 </script>
