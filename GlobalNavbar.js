@@ -1,21 +1,23 @@
 /* Google Analytics */
 var head = document.getElementsByTagName('head')[0]
 
+var analyticsScript = document.createElement('script')
+analyticsScript.type = 'text/javascript'
+analyticsScript.text = `
+	window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PFSPNKGTLN');`
+head.prepend(analyticsScript);
+
 var gtagScript = document.createElement('script')
 gtagScript.async = true
 gtagScript.type = 'text/javascript'
 gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-PFSPNKGTLN'
-head.appendChild(gtagScript);
+head.prepend(gtagScript);
 
-var analyticsScript = document.createElement('script')
-analyticsScript.type = 'text/javascript'
-analyticsScript.text = `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PFSPNKGTLN');`;
-head.appendChild(analyticsScript);
+/* Main Navbar */
 
 var body = document.getElementsByTagName('body')[0]
 var prepend = body.lang
