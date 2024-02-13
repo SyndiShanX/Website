@@ -35,6 +35,11 @@ img.Zombies {
 	width: 468px;
 	height: 263px;
 }
+img.IW {
+	border-radius: 10px;
+	width: 420px;
+	height: 599px;
+}
 </style>
 </head>
 <body lang="../">
@@ -46,7 +51,7 @@ img.Zombies {
 	<a onclick="revealMaps('Black_Ops_2'); select(2)"><img class="game unselected" onmouseover="hover(2)" onmouseout="hover(2)" src="../Images/Zombies/Selector/Black_Ops_2.webp"></img></a>
 	<a onclick="revealMaps('Advanced_Warfare'); select(3)"><img class="game unselected hidden" onmouseover="hover(3)" onmouseout="hover(3)" src="../Images/Zombies/Selector/Advanced_Warfare.webp"></img></a>
 	<a onclick="revealMaps('Black_Ops_3'); select(4)"><img class="game unselected" onmouseover="hover(4)" onmouseout="hover(4)" src="../Images/Zombies/Selector/Black_Ops_3.webp"></img></a>
-	<a onclick="revealMaps('Infinite_Warfare'); select(5)"><img class="game unselected hidden" onmouseover="hover(5)" onmouseout="hover(5)" src="../Images/Zombies/Selector/Infinite_Warfare.webp"></img></a>
+	<a onclick="revealMaps('Infinite_Warfare'); select(5)"><img class="game unselected" onmouseover="hover(5)" onmouseout="hover(5)" src="../Images/Zombies/Selector/Infinite_Warfare.webp"></img></a>
 	<a onclick="revealMaps('World_War_2'); select(6)"><img class="game unselected" onmouseover="hover(6)" onmouseout="hover(6)" src="../Images/Zombies/Selector/World_War_2.webp"></img></a>
 	<a onclick="revealMaps('Black_Ops_4'); select(7)"><img class="game unselected" onmouseover="hover(7)" onmouseout="hover(7)" src="../Images/Zombies/Selector/Black_Ops_4.webp"></img></a>
 	<a onclick="revealMaps('Cold_War'); select(8)"><img class="game unselected" onmouseover="hover(8)" onmouseout="hover(8)" src="../Images/Zombies/Selector/Cold_War.webp"></img></a>
@@ -74,8 +79,6 @@ function select(elementNum) {
 		if (i == 1) {
 			document.getElementsByClassName('game')[i].className = 'game unselected hidden'
 		} else if (i == 3) {
-			document.getElementsByClassName('game')[i].className = 'game unselected hidden'
-		} else if (i == 5) {
 			document.getElementsByClassName('game')[i].className = 'game unselected hidden'
 		}
 	}
@@ -137,7 +140,11 @@ function revealMaps(game) {
 			
 			tempMapImg = document.createElement('img')
 			tempMapImg.setAttribute('loading', 'lazy')
-			tempMapImg.className = 'Zombies'
+			if (map[num] == "Zombies_in_Spaceland" || map[num] == "Rave_in_The_Redwoods" || map[num] == "Shaolin_Shuffle" || map[num] == "Attack_of_The_Radioactive_Thing" || map[num] == "The_Beast_from_Beyond") {
+				tempMapImg.className = 'Zombies IW'
+			} else {
+				tempMapImg.className = 'Zombies'
+			}
 			tempMapImg.src = prepend + 'Images/Zombies/Selector/Maps/' + game + '/' + map[num] + '.webp'
 			
 			tempMap.appendChild(tempMapImg)
