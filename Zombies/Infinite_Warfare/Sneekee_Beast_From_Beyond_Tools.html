@@ -1,0 +1,666 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>IW: Beast From Beyond EE Tools</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="https://use.fontawesome.com/09094fc9b8.js"></script>
+    <script src="https://cdn.rawgit.com/jwarby/jquery-awesome-cursor/master/dist/jquery.awesome-cursor.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/south-street/jquery-ui.css" />
+    <style>
+        .ui-tabs-vertical {
+            width: 55em;
+        }
+
+            .ui-tabs-vertical .ui-tabs-nav {
+                padding: .2em .1em .2em .2em;
+                float: left;
+                width: 12em;
+            }
+
+                .ui-tabs-vertical .ui-tabs-nav li {
+                    clear: left;
+                    width: 100%;
+                    border-bottom-width: 1px !important;
+                    border-right-width: 0 !important;
+                    margin: 0 -1px .2em 0;
+                }
+
+                    .ui-tabs-vertical .ui-tabs-nav li a {
+                        display: block;
+                    }
+
+                    .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+                        padding-bottom: 0;
+                        padding-right: .1em;
+                        border-right-width: 1px;
+                    }
+
+            .ui-tabs-vertical .ui-tabs-panel {
+                padding: 1em;
+                float: right;
+                width: 40em;
+            }
+
+
+        #mazeGrid {
+            width: 396px;
+            height: 396px;
+            background-color: #24BE60;
+        }
+
+            #mazeGrid tr td {
+                height: 64px;
+                width: 64px;
+                text-align: center;
+            }
+    </style>
+    <script>
+        $(function () {
+            $("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+             $("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+        });
+
+        var vmButtonStep = function () {
+            var self = this;
+            self.numberOfButtons = ko.observable(4);
+            self.availableColours = ko.observableArray(['red', 'green', 'blue', 'black', 'yellow', 'white'])
+            self.buttons = ko.observableArray([]);
+
+            self.buttonList = ko.pureComputed(function () {
+                self.buttons.removeAll();
+                for (var i = 0; i < self.numberOfButtons(); i++) {
+                    self.buttons.push(new vmBtn());
+                }
+                
+                return self.buttons();
+            })
+
+            self.solution = ko.pureComputed(function () {
+                
+                var btns = parseInt(self.buttons().length);
+                switch (btns) {
+                    case 3:
+                        /* 
+                            c1 = (!b!) ? B3 : c2
+                            c2 = (BL = g) ? B1 : c3
+                            c3 = (sum(r) > 1 ) ? BL(r) : c4
+                            c4 = B2
+                        */
+
+                        // c1 = (!b!) ? B3 : c2
+                        if (!self.hasColour('black'))
+                            return '3'
+
+                        // c2 = (BL = g) ? B1 : c3
+                        if (self.buttons()[self.buttons().length - 1].colour() == "green")
+                            return '1';
+
+                        // c3 = (sum(r) > 1) ? BL(r) : c4
+                        if (self.getSumOfColour('red') > 1)
+                            return self.getLowestIndexForColour('red'); // '3'
+
+
+                        return '2';
+                        break;
+                    case 4:
+                        /* 
+                            c1 = (sum(y) > 1) && S >= 2 ? BL(y) : c2
+                            c2 = (BL(w) && sum(b) = 0) ? B1 : c3
+                            c3 = (sum(b!) > 1 ) ? BL : c4
+                            c4 = B3
+                        */
+
+                        //c1 = (sum(y) > 1) && S >= 2 ? BL(y) : c2
+                        if (self.getSumOfColour('yellow') > 1 && self.getRepeatedColourCount() >= 2)
+                            return self.getLowestIndexForColour('yellow');
+
+                        // c2 = (BL(w) && sum(b) = 0) ? B1 : c3
+                        if (self.buttons()[self.buttons().length - 1].colour() == "green" && self.getSumOfColour('black') == 0)
+                            return 1;
+
+                        // c3 = (sum(b!) > 1) ? BL : c4
+                        if (self.getSumOfColour('black') > 1)
+                            return 4;
+
+                        return '3';
+                        break;
+                    case 5:
+                        /* 
+                            c1 = (W <= 3) ? B1 :  c2
+                            c2 = (sum(w) = 1 && sum(b) > 1) ? B2 : c3
+                            c3 = (sum(r) = 0 && W % 2 = 0 && S < 4) ? BL : c4
+                            c4 = B1
+                        */
+
+                        // c1 = (W <= 3) ? B1 :  c2
+                        if (self.getRepeatedColourCount() <= 3)
+                            return '1';
+
+                        // c2 = (sum(w) = 1 && sum(b) > 1) ? B2 : c3
+                        if (self.getSumOfColour('white') == 1 && self.getSumOfColour('black') > 1)
+                            return 2
+
+                        // c3 = (sum(r) = 0 && W % 2 = 0 && S < 4) ? BL : c4
+                        if (self.getSumOfColour('red') == 0 && self.getRepeatedColourCount() % 2 == 0 && self.getRepeatedColourCount() < 4)
+                            return 5
+
+                        return '1';
+                        break;
+                    case 6:
+                        /*
+                            c1 = (sum(y) != 0) ? B3 : c2
+                            c2 = (sum(b!) = 1 && sum(w) > 1) ? B4 : c3
+                            c3 = (S >= 1) && sum(r) > 1 ? B5 : c4
+                            c4 = BL
+                        */
+
+                        // c1 = (sum(y) != 0) ? B3 : c2
+                        if (self.getSumOfColour('yellow') != 0)
+                            return 3;
+
+                        // c2 = (sum(b!) = 1 && sum(w) > 1) ? B4 : c3
+                        if (self.getSumOfColour('black') == 1 && self.getSumOfColour('white') > 1)
+                            return 4;
+
+                        // c3 = (S >= 1) && sum(r) > 1 ? B5 : c4
+                        if (self.getRepeatedColourCount() >= 1 && self.getSumOfColour('red') > 1)
+                            return 5;
+
+                        return 6;
+                        break;
+                }
+
+                return 'unknown'
+            })
+
+            self.getSumOfColour = function(colour) {
+                var count = 0;
+                $.each(self.buttons(), function (index, val) {
+                    if (val.colour() == colour) {
+                        count++;
+                    }
+
+                });
+
+                return count;
+            }
+
+            self.hasColour = function (colour) {
+                var ret = false;
+                $.each(self.buttons(), function (index, val) {
+                    if (val.colour() == colour) {
+                        ret = true;
+                        return false;
+                    }
+
+                });
+
+                return ret;
+            }
+
+            self.getLowestIndexForColour = function(colour) {
+                var idx = 0;
+                $.each(self.buttons(), function (index, val) {
+                    if (val.colour() == colour) {
+                        idx = index;
+                    }
+
+                });
+
+                return idx + 1;
+            }
+
+            self.getRepeatedColourCount = function () {
+                var data = {
+                    'red': 0,
+                    'green': 0,
+                    'blue': 0,
+                    'black': 0,
+                    'yellow': 0, 
+                    'white': 0
+                }
+
+                $.each(self.buttons(), function (index, val) {
+                    data[val.colour()]++;
+                });
+
+                var ret = 0;
+                for(var i in data){
+                    if (data[i] > ret)
+                        ret = data[i]
+                }
+
+                return ret;
+            }
+        }
+        
+        var vmBtn = function () {
+            var self = this;
+            self.colour = ko.observable();
+        }
+
+        var vmMazeStep = function () {
+            var self = this;
+
+            self.dummy = ko.observable();
+
+            self.placing = ko.observable(undefined);
+            self.startIcon = $('<i class="fa fa-stop" aria-hidden="true" style="font-size: 40px; color: #ECF044"></i>');
+            self.endIcon = $('<i class="fa fa-diamond" aria-hidden="true" style="font-size: 40px; color: #04E1F4"></i>');
+            self.startPosition = ko.observable(undefined);
+            self.endPosition = ko.observable(undefined);
+            self.hasSolution = ko.observable(false);
+
+            self.placeIcon = function (elem) {
+                if (!self.placing()) {
+                    alert('select what location you are setting');
+                    return;
+                }
+
+                var pos = self.parsePosition($(elem).attr('data-xy'));
+                var icon = (self.placing() == 'start' ? self.startIcon : self.endIcon);
+
+                if (self.placing() == 'start') {
+                    self.startPosition(pos);
+                } else {
+                    self.endPosition(pos);
+                }
+
+
+                icon.appendTo(elem);
+
+                self.dummy.notifySubscribers();  
+
+                self.placing(undefined);
+
+                $('#mazeGrid').css('cursor', '');  
+            }
+
+            self.solution = ko.pureComputed(function () {
+                self.dummy();
+
+                if (self.startPosition() && self.endPosition()) {
+                    var sol = undefined;
+                    var imgLoc = undefined;
+
+                    $.each(self.solutions, function (index, value) {
+                        if (
+                            (value.start.x == self.startPosition().x && value.start.y == self.startPosition().y)
+                            &&
+                            (value.end.x == self.endPosition().x && value.end.y == self.endPosition().y)
+                        ) {
+                            sol = value.solution;
+                            imgLoc = value.imageLocation;
+                            return false;
+                        }
+                    })
+
+                    if (sol) {
+                        self.hasSolution(true);
+                        $('#solutionImage').css('background-position-x', imgLoc.x + 'px').css('background-position-y', imgLoc.y + 'px')
+                        return '<span style="font-weight: bold">Your Solution:</span> ' + sol;
+                    } else {
+                        self.hasSolution(false);
+                        return 'No Solution';
+                    }
+                } else {
+                    self.hasSolution(false);
+                    return 'place start and end points';
+                }
+            });
+
+            self.parsePosition = function (xy) {
+                var d = xy.split(',');
+                return {
+                    x: parseInt(d[0]),
+                    y: parseInt(d[1])
+                }
+            }
+
+            self.solutions = [
+                {
+                    start: { x: 2, y: 2 },
+                    end: { x: 4, y: 5 },
+                    solution: 'D1, R1, D1, L1, D1, R1, D1, R3, U1, L2',
+                    imageLocation: { x: 0, y: 0 }
+                },
+                {
+                    start: { x: 2, y: 4 },
+                    end: { x: 5, y: 1 },
+                    solution: 'U2, R1, D1, R1, U1, R1, D1, R1, U2, L1',
+                    imageLocation: { x: -239, y: 0 }
+                },
+                {
+                    start: { x: 5, y: 1 },
+                    end: { x: 3, y: 5 },
+                    solution: 'R1, D1, L2, U1, L3, D5, R2, U1',
+                    imageLocation: { x: -478, y: 0 }
+                },
+                {
+                    start: { x: 6, y: 1 },
+                    end: { x: 5, y: 4 },
+                    solution: 'L1, D1, R1, D4, L4, U1, R2, U1, R1',
+                    imageLocation: { x: -717, y: 0 }
+                },
+                {
+                    start: { x: 3, y: 2 },
+                    end: { x: 4, y: 6 },
+                    solution: 'R1, U1, L1, U1, L1, U1, R1, u1, R2, U1, L3, D1',
+                    imageLocation: { x: -956, y: 0 }
+                },
+                {
+                    start: { x: 3, y: 2 },
+                    end: { x: 5, y: 5 },
+                    solution: 'L2, U1, R4, D1, R1, D3, L1',
+                    imageLocation: { x: -1195, y: 0 }
+                },
+                {
+                    start: { x: 3, y: 4 },
+                    end: { x: 2, y: 5 },
+                    solution: 'R1, U1, L2, U1, R1, U1, L2, D4, R1',
+                    imageLocation: { x: -1434, y: 0 }
+                },
+                {
+                    start: { x: 5, y: 5 },
+                    end: { x: 3, y: 3 },
+                    solution: 'L1, D1, L3, U3, R2',
+                    imageLocation: { x: -1673, y: 0 }
+                },
+
+
+
+
+
+
+
+                {
+                    start: { x: 5, y: 2 },
+                    end: { x: 1, y: 6 },
+                    solution: 'R1, U1, L5, D1, R2, D3, R1, U2, R1, D3',
+                    imageLocation: { x: 0, y: -239 }
+                },
+                {
+                    start: { x: 6, y: 5 },
+                    end: { x: 4, y: 4 },
+                    solution: 'U3, R1, D1, R2, D1, L1',
+                    imageLocation: { x: -239, y: -239 }
+                },
+                {
+                    start: { x: 1, y: 3 },
+                    end: { x: 4, y: 3 },
+                    solution: 'U2, R5, D2, L1, U1, R2, D2, L1, U1',
+                    imageLocation: { x: -478, y: -239 }
+                },
+                {
+                    start: { x: 6, y: 1 },
+                    end: { x: 1, y: 5 },
+                    solution: 'L1, D1, L2, U1, L1, D2, R2, D2, R3',
+                    imageLocation: { x: -717, y: -239 }
+                },
+                {
+                    start: { x: 2, y: 1 },
+                    end: { x: 4, y: 6 },
+                    solution: 'U3, L1, D1, L1, U2, L1, U1, R1',
+                    imageLocation: { x: -956, y: -239 }
+                },
+                { 
+                    start: { x: 1, y: 3 },
+                    end: { x: 4, y: 3 },
+                    solution: 'U2, R5, D1, L1, U1, L2, D2, R1, U1',
+                    imageLocation: { x: -1195, y: -239 }
+                },
+                { 
+                    start: { x: 2, y: 4 },
+                    end: { x: 3, y: 2 },
+                    solution: 'D1, R1, D1, R1, U1, R1, U1, R1, U1, L2, D1, L1, U1, L1, U1, R1',
+                    imageLocation: { x: -1434, y: -239 }
+                },
+                {
+                    start: { x: 5, y: 4 },
+                    end: { x: 2, y: 3 },
+                    solution: 'R1, D2, L4, U1, R1, U2, L1',
+                    imageLocation: { x: -1673, y: -239 }
+                }
+            ];
+
+
+            self.dummy.notifySubscribers(); 
+        }
+    </script>
+</head>
+<body>
+    <h3>Infinite Warfare - DLC4 - Tools</h3>
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Button Step</a></li>
+            <li><a href="#tabs-2">Maze Step</a></li>
+            <li><a href="#tabs-3">Morse Code</a></li>
+        </ul>
+        <div id="tabs-1">
+            <h2>Button Step</h2>
+            <ol>
+                <li>Run a phantom cryptid through the electric trap</li>
+                <li>Go to main room and the panel will be open</li>
+                <li>Use the tool below to figure out which button to press</li>
+            </ol>
+            <div>
+                <fieldset>
+                    <label for="btnNum">Number of buttons:</label>
+                    <input data-bind="value: numberOfButtons" type="range" min="3" max="6" id="btnNum"/>
+                    <span data-bind="text: numberOfButtons"></span>
+                </fieldset>                
+                <!-- ko foreach: $root.buttonList() -->
+                <fieldset data-bind="style: { backgroundColor: colour}">
+                    <label data-bind="text: 'Button ' + ($index() + 1)"></label>
+                    <select data-bind="options: $root.availableColours(), value: colour">
+                    </select>
+                </fieldset>
+                <!-- /ko -->
+                <h4 data-bind="text: 'Press button #' + solution()"></h4>
+            </div>
+        </div>
+        <div id="tabs-2">
+            <h2>Maze step</h2>
+            <ol>
+                <li>Trap a zombie.</li>
+                <li>Run to the control room and press the center of the 3 consoles.</li>
+                <li>
+                    Use the interface below to find your way through the maze.
+                    <ul>
+                        <li>Click desired icon above grid</li>
+                        <li>Click desired position in grid to place icon</li>
+                    </ul>
+                </li>
+            </ol>
+            <div>
+                <style>
+                </style>
+                <div>
+                    <span onclick="viewMaze.placing('start'); $('#mazeGrid').awesomeCursor('stop', { size: 40, color: '#ECF044' });" >Start <i class="fa fa-stop" aria-hidden="true" style="font-size: 40px; color: #ECF044"></i></span>
+                    <span onclick="viewMaze.placing('end'); $('#mazeGrid').awesomeCursor('diamond', { size: 40, color: '#04E1F4' });">End <i class="fa fa-diamond" aria-hidden="true" style="font-size: 40px; color: #04E1F4"></i></span>
+                </div>
+                <table id="mazeGrid" cellpadding="0" cellspacing="0" border="1" style="display: inline-block">
+                    <tr>
+                        <td data-xy="1,1" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="2,1" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="3,1" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="4,1" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="5,1" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="6,1" onclick="viewMaze.placeIcon($(this))"></td>
+                    </tr>
+                    <tr>
+                        <td data-xy="1,2" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="2,2" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="3,2" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="4,2" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="5,2" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="6,2" onclick="viewMaze.placeIcon($(this))"></td>
+                    </tr>
+                    <tr>
+                        <td data-xy="1,3" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="2,3" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="3,3" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="4,3" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="5,3" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="6,3" onclick="viewMaze.placeIcon($(this))"></td>
+                    </tr>
+                    <tr>
+                        <td data-xy="1,4" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="2,4" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="3,4" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="4,4" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="5,4" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="6,4" onclick="viewMaze.placeIcon($(this))"></td>
+                    </tr>
+                    <tr>
+                        <td data-xy="1,5" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="2,5" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="3,5" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="4,5" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="5,5" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="6,5" onclick="viewMaze.placeIcon($(this))"></td>
+                    </tr>
+                    <tr>
+                        <td data-xy="1,6" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="2,6" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="3,6" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="4,6" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="5,6" onclick="viewMaze.placeIcon($(this))"></td>
+                        <td data-xy="6,6" onclick="viewMaze.placeIcon($(this))"></td>
+                    </tr>
+                </table>
+                <div id="solutionImage" data-bind="visible: hasSolution" style="background-image: url('https://i.redd.it/e5jvms7pgtlz.png'); display: inline-block; height: 245px; width: 246px; float: right;"></div>
+                <span data-bind="html: solution" style="display: block;" data-bind="visible: hasSolution"></span>
+            </div>
+        </div>
+        <div id="tabs-3">
+            <h2>Morse Code</h2>
+            <p>This step is pretty straight forward but here are some shortcuts to avoid having to translate and decypher the beeps</p>
+            <ol>
+                <li>
+                    Activate the computer on the upper level and listen to the first beep
+                    <ul>
+                        <li>first beep is short, your key is Archer</li>
+                        <li>first beep is long, your key is Cross</li>
+                    </ul>
+                </li>
+                <li>
+                    Activate the lower computer
+                    <ul>
+                        <li>
+                            If your key was Archer your message will always start with 
+                            <pre>-.- --.. -. ... ... -- . ..</pre>
+                            Follow along to the beeps and listen for the first 2 letters that follow it will be one of the following
+                            <ul>
+                                <li>
+                                    <pre>.... .--.</pre>
+                                    Fifteen
+                                    <ul>
+                                        <li>
+                                            Go up to the terminal and enter fifteen
+                                            <pre>..-. .. ..-. - . . -. .-.-..</pre>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <pre>...- -..</pre>
+                                    Twenty or TwentyFive
+                                    <ul>
+                                        <li>
+                                            Your number is either 20 or 25 go to the terminal and enter 20
+                                            <pre>- .-- . -. - -.--</pre>
+                                            If you dont get the activation sound enter 5
+                                            <pre>..-. .. ...- .</pre>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <pre>...- ---</pre>
+                                    Thrity
+                                    <ul>
+                                        <li>
+                                            Go up to the terminal and enter thirty
+                                            <pre>- .... .. .-. - -.--</pre>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <pre>--. .--.</pre>
+                                    Eighteen
+                                    <ul>
+                                        <li>
+                                            Go up to the terminal and enter eighteen
+                                            <pre>. .. --. .... - . . -.</pre>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            If your key was Cross your message will always start with
+                            <pre>-- --.. --.. -.. --. -..- ...- ..-.</pre>
+                            Follow along to the beeps and listen for the first 2 letters that follow it will be one of the following
+                            <ul>
+                                <li>
+                                    <pre>-..- .-</pre>
+                                    Fifteen
+                                    <ul>
+                                        <li>
+                                            Go up to the terminal and enter fifteen
+                                            <pre>..-. .. ..-. - . . -. .-.-..</pre>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <pre>.-.. ---</pre>
+                                    Twenty or TwentyFive
+                                    <ul>
+                                        <li>
+                                            Your number is either 20 or 25 go to the terminal and enter 20
+                                            <pre>- .-- . -. - -.--</pre>
+                                            If you dont get the activation sound enter 5
+                                            <pre>..-. .. ...- .</pre>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <pre>.-.. --..</pre>
+                                    Thrity
+                                    <ul>
+                                        <li>
+                                            Go up to the terminal and enter thirty
+                                            <pre>- .... .. .-. - -.--</pre>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <pre>.-- .-</pre>
+                                    Eighteen
+                                    <ul>
+                                        <li>
+                                            Go up to the terminal and enter eighteen
+                                            <pre>. .. --. .... - . . -.</pre>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        var viewButton = new vmButtonStep();
+        ko.applyBindings(viewButton, document.getElementById('tabs-1'));
+
+        var viewMaze = new vmMazeStep();
+        ko.applyBindings(viewMaze, document.getElementById('tabs-2'));
+
+    </script>
+</body>
+</html>
