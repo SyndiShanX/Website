@@ -10,17 +10,445 @@
 <link rel="stylesheet" href="../ImageModal.css">
 <link rel="stylesheet" href="../ZombiesEEs.css">
 <style type="text/css">
-
+.hidden {
+	display: none;
+}
+#words.shown {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#words.shown div, .flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.word {
+	width: 20%;
+}
 </style>
 </head>
 <body lang="../../">
 <div class="MainWrapper" align="left">
 <!--Nav Template End-->
 
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Template.webp" alt="Template Img"></img>
+	<font size="7" color="#8d2424">Mahjong Tiles</font><br><br>
+	
+	<font class="text">Find 3 of the same Tiles and place them on their respective Tables to get the Traps</font><br><br>
+	
+	<font size="5" color="#cc6600">Toy Robot</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/1.webp" alt="Next to the Bus outside the Dojo"></img><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/2.webp" alt="On top of the back of the Bus"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/3.webp" alt="In the middle of the Stairs from the Spawn Subway to the Dojo next to Trash on the Ground"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/4.webp" alt="To the left of Tuff 'Nuff in a Crate"></img><br><br>
+
+	
+	<font size="5" color="#cc6600">Boom Box</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/5.webp" alt="Behind the Door near Racin' Stripes"></img><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/6.webp" alt="Up the Ramp near the Dojo next to Concrete Bricks"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/7.webp" alt="Up the Ramp near the Dojo on a Spool of Wire"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/8.webp" alt="On the Ground in the Staircase next to Racin' Stripes"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/8.webp" alt="On a Paint Bucket near the Garbage Chute on the Roof"></img><br><br>
+	
+	<font size="5" color="#cc6600">Zom-B-Gone</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/10.webp" alt="Near Bombstoppers"></img><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/11.webp" alt="Across from the Portal Door near Mule Munchies to the left"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/12.webp" alt="On a Burning Pallet near Mule Munchies"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/13.webp" alt="On a White Table in the Private Room of the Disco"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/14.webp" alt="On a Red Table in the Bar next to a Hookah"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/15.webp" alt="To the right of the Buildable Table in front of the Fence"></img><br><br>
+	
+	<font size="5" color="#cc6600">Lava Lamp</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/16.webp" alt="Near the Mystery Box by Deadeye Dewdrops"></img><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/17.webp" alt="On a White Table outside the Disco next to the R-VN Wallbuy"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/18.webp" alt="Up the Stairs near the R-VN Wallbuy on a Sheet"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/19.webp" alt="Across from the Volk Wallbuy on the Ground"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/20.webp" alt="In the Top of the Alleyway to the Right of the Mystery Box"></img><br><br>
+	
+	<font size="5" color="#cc6600">Sentry Turret</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/21.webp" alt="Across from Blue Bolts"></img><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/22.webp" alt="In the Entrance to the Subway near the Disco"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/23.webp" alt="Next to the White Van in front of The Pink Cat"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/24.webp" alt="Next to the Mystery Box outside of the Disco"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/25.webp" alt="On the Counter of the Blue Office in the Disco"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/26.webp" alt="2nd Floor of the Disco on a Counter"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Tiles/27.webp" alt="On a Wooden Box next to the Stairs near Tuff 'Nuff"></img><br><br>
+	
+	<font size="7" color="#8d2424">Chi's and Upgrades</font><br><br>
+	
+	<div class="flex">
+		<div>
+			<font size="5" color="#cc6600">Crane</font><br><br>
+			
+			<font class="text">&nbsp; -Go to the Dojo and drink from the Crane Gourd</font><br>
+			<font class="text">&nbsp; -Melee kill 15 Zombies using the Crane Style</font><br>
+			<font class="text">&nbsp; -Kill 25 Zombies using the Shuriken</font><br>
+			<font class="text">&nbsp; -Kill 50 Zombies using the Chi Power</font><br><br>
+		</div>
+		
+		<div>
+			<font size="5" color="#cc6600">Dragon</font><br><br>
+			
+			<font class="text">&nbsp; -Go to the Dojo and drink from the Dragon Gourd</font><br>
+			<font class="text">&nbsp; -Melee kill 15 Zombies using the Dragon Style</font><br>
+			<font class="text">&nbsp; -Kill 25 Zombies using the Shuriken</font><br>
+			<font class="text">&nbsp; -Kill 50 Zombies using the Chi Power</font><br><br>
+		</div>
+	</div>
+	
+	<div class="flex">
+		<div>
+			<font size="5" color="#cc6600">Snake</font><br><br>
+			
+			<font class="text">&nbsp; -Go to the Dojo and drink from the Snake Gourd</font><br>
+			<font class="text">&nbsp; -Melee kill 15 Zombies using the Snake Style</font><br>
+			<font class="text">&nbsp; -Kill 25 Zombies using the Shuriken</font><br>
+			<font class="text">&nbsp; -Kill 50 Zombies using the Chi Power</font><br><br>
+		</div>
+		
+		<div>
+			<font size="5" color="#cc6600">Tiger</font><br><br>
+			
+			<font class="text">&nbsp; -Go to the Dojo and drink from the Tiger Gourd</font><br>
+			<font class="text">&nbsp; -Melee kill 15 Zombies using the Tiger Style</font><br>
+			<font class="text">&nbsp; -Kill 25 Zombies using the Shuriken</font><br>
+			<font class="text">&nbsp; -Kill 50 Zombies using the Chi Power</font><br><br>
+		</div>
+	</div>
+	
+	<font size="7" color="#8d2424">Pack-A-Punch</font><br><br>
+	
+	<font class="text">Obtain the Pink Cat Flyer</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/1.webp" alt="On the Sidewalk, outside the Pink Cat Club"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/2.webp" alt="Left of the Dojo Doors, in the Garbage"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/3.webp" alt="On the Rooftop, to the right of the Erad Wallbuy"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/4.webp" alt="On a Stool to the left when going upstairs to the Rooftop"></img><br><br>
+	
+	<font class="text">Obtain the Token</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/5.webp" alt="Under the Tuff 'Nuff Machine"></img><br><br>
+	
+	<font class="text">Obtain the Film</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/6.webp" alt="Up the Stairs to the right of Tuff 'Nuff"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/7.webp" alt="In a Locker in the Bang Bangs Subway"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/8.webp" alt="In a Sewer Pipe in the Rat King’s Lair"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/9.webp" alt="On a Chair, inside the Pink Cat Club"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/10.webp" alt="On a Couch on the Disco Rooftop"></img><br><br>
+	
+	<font size="5" color="#cc6600">Double Pack a Punch</font><br><br>
+	
+	<font class="text">Melee 2 Doors with your Chi Ability</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/11.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/12.webp" alt="Template"></img><br><br>
+
+	<font class="text">Open Pack-a-Punch, then interact with the Button on the Wall, exit and run to the Door by Blue Bolts</font>
+	<font class="text">You'll exit at the other Door, turn to the Right and pick up the Fuses</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/13.webp" alt="On the Wall in the PaP Room"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/14.webp" alt="In a Box on the Wall through the Fast Travel Door"></img><br><br>
+	
+	<font class="text">Go to the Subway by the Pink Cat, and place the Fuses on the Track where the Electricity is, after the Train passes, pick them up</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/15.webp"></img><br><br>
+	
+	<font class="text">Go to PaP Machine and install the Fuses</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/PaP/16.webp"></img><br><br>
+	
+	<font size="7" color="#8d2424">Katana Melee Weapon</font><br><br>
+	
+	<font class="text">Complete the Main Easter Egg</font><br>
+	<font class="text">Go to the Dojo</font><br>
+	<font class="text">The Katana will be on the Wall</font><br><br>
+	
+	<font size="7" color="#8d2424">Nunchucks Melee Weapon</font><br><br>
+	
+	<font class="text">You cannot do this Easter Egg as Pam Grier</font><br>
+	<font class="text">Open the whole map, along with all of the Fast Travel Doors</font><br>
+	<font class="text">Activate the clock in the Disco at the Reception Desk</font><br>
+	<font class="text">Find 2 Items and Melee them while the Time Effect is active</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Nunchucks/1.webp" alt="In the Disco at the Reception Desk"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Nunchucks/2.webp" alt="On a Pallet near the Theater Fast Travel Door"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Nunchucks/3.webp" alt="On a Pile of Wood Sheathing through the Theater Fast Travel Door to the Left"></img><br><br>
+	
+	<font class="text">Activate the clock in the Bang Bangs Subway</font><br>
+	<font class="text">Find 2 Items and Melee them while the Time Effect is active</font><br>
+	<font class="text">Go through the Fast Travel Door to the Left of the Clock for the First item</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Nunchucks/4.webp" alt="On Garbage in the Bang Bangs Subway"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Nunchucks/5.webp" alt="On the Dumpster by Bombstoppers"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Nunchucks/6.webp" alt="On the Ground next to Bang Bangs"></img><br><br>
+	
+	<font class="text">Activate the clock on a Pallet on the Disco Roof</font><br>
+	<font class="text">Find 2 Items and Melee them while the Time Effect is active</font><br>
+	<font class="text">Drop into the Disco using the Skylight for thr First Item</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Nunchucks/7.webp" alt="On a Pallet on the Disco Roof"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Nunchucks/8.webp" alt="On a Stripper Pole Platform"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Nunchucks/9.webp" alt="On the Edge of the Rooftop"></img><br><br>
+	
+	<font class="text">Interact with the TV your Character's TV until their Picture shows up</font><br><br>
+	
+	<div class="flex">
+		<div>
+			<font size="5" color="#cc6600">Andre</font><br><br>
+			
+			<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Nunchucks/10.webp" alt="In the Bar"></img><br><br>
+		</div>
+		
+		<div>
+			<font size="5" color="#cc6600">Sally</font><br><br>
+			
+			<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Nunchucks/11.webp" alt="In the Spawn Subway"></img><br><br>
+		</div>
+	</div>
+	
+	<div class="flex">
+		<div>
+			<font size="5" color="#cc6600">Poindexter</font><br><br>
+			
+			<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Nunchucks/12.webp" alt="On Roof above Racin' Stripes"></img><br><br>
+		</div>
+		
+		<div>
+			<font size="5" color="#cc6600">A.J.</font><br><br>
+			
+			<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Nunchucks/13.webp" alt="Left of Blue Bolts"></img><br><br>
+		</div>
+	</div>
+	
+	<font class="text">Kill the Ninja's and Complete the Round, the Repeat this Step</font><br>
+	<font class="text">Punch all 3 Clocks as fast as possible</font><br>
+	<font class="text">You will get a Fire Sale that is guaranteed to give you the Nunchucks</font><br><br>
+	
+	<font size="7" color="#8d2424">Ghost and Skulls</font><br><br>
+	
+	<font class="text">Obtain the Disinfectant and a Rag</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/1.webp" alt="On the Floor to the left of the Stage in the Bar"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/2.webp" alt="In the Disco on a Stripper Pole Platform"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/3.webp" alt="Near the Locker with the Chinese Symbol on it"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/4.webp" alt="On the Wooden Scaffolding above Mule Munchies"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/5.webp" alt="On a Pallet on the Disco Roof"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/6.webp" alt="To the left of the Rat King's Throne on some Pizza boxes"></img><br><br>
+	
+	<font class="text">Clean the Blood off of the Skull Buster Machine in the Disco</font><br>
+	<font class="text">Go to the Disco Roof and find the Missing Mahjong Tiles</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/7.webp"  alt="On the Disco Roof in the back left Corner on the Red Table"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/8.webp"  alt="In the Sewers across from Tuff' 'Nuff in the Corner on the Ground"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/9.webp"  alt="In the Bar Hallway on the Red Container"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/10.webp" alt="In the Disco on the Counter with the Pizza Box"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/11.webp" alt="In the Disco on one of the Silver Columns"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/12.webp" alt="In the VIP Room near Skull Busters on a Table"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/13.webp" alt="On the Counter in the Bar"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/14.webp" alt="On the next to the Dojo, across from the Fast Travel Door on a Red Box"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/15.webp" alt="On the Pallets near Blue Bolts"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/16.webp" alt="On a Bench in the Bang Bangs Subway"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/17.webp" alt="Outside the Disco on a Table"></img><br><br>
+	
+	<font class="text">Input your hand into this Tool: http://mahjong.onevis.net/</font><br>
+	<font class="text">Keep replacing one of the Tiles until you get a Winning Combination</font><br><br>
+	
+	<font class="text">Spell 1972 by shooting at 4 Windows as fast as possible (One try per Round)</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/18.webp" alt="Second Sotry outside the Disco"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/19.webp" alt="On the Roof across from the Dojo on a Building to the left"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/20.webp" alt="In the Disco to the lkeft of Trailblazers"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/21.webp" alt="Left of the Dojo Entrance in the Alleyway"></img><br><br>
+	
+	<font class="text">Open the Chi Door by Racin' Stripes, Jump on the White Circles until you get the Skull (One try per Round)</font><br><br>
+	
+	<font class="text">Grab the Skull by Jumping into the front of the Train in the Bang Bangs Subway (Actually Kills you btw)</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/22.webp" alt="On the front of the Train in the Bang Bangs Subway"></img><br><br>
+	
+	<font class="text">Call 555-0152 on a Payphone in Spawn</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Skull/23.webp" alt="Payphone Area in Spawn"></img><br><br>
+	
+	<font class="text">Interact with the Machine to Start Playing</font><br>
+	<font class="text">Each Round will have Colored Skulls and Mystery Boxes, you have to try to Guess what color each Box is, you are trying to get A Small L Shape, or a Straight Line of 3</font><br>
+	<font class="text">If you Fail 3 times, you Lose (Apparently it's bugged and you can't retry in the same game)</font><br>
+	<font class="text">When you Complete it, you will get Perkaholic and the Mystery Box will give Single PaP'd Weapons</font><br><br>
+	
+	<font size="7" color="#8d2424">Main Quest</font><br><br>
+	
+	<font class="text">Find the Cage with the Rat inside, throw a Shuriken to make it move, follow it and make it keep moving until a Yellow Circle appears</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Rat/1.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Rat/2.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Rat/3.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Rat/4.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Rat/5.webp" alt="Template"></img><br><br>
+	
+	<font class="text">Kill Zombies inside the Circle until Ninja Zombies Spawn, kill them and pick up the Key from the Circle (Talk to Pam if Key isn't there)</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Key.webp"></img><br><br>
+	
+	<font class="text">Go to the Lockers in the Bang Bangs Subway, and open the Locker with a Chinese Symbol on it</font><br><br>
+
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Locker.webp" alt="In the Bang Bangs Subway"></img><br><br>
+
+	<font class="text">Shoot 4 Symbols around the Map</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Chinese_1.webp" alt="The Left Symbol on the Streets outside the Spawn Subway, right of the Dojo"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Chinese_2.webp" alt="Second Symbol in a Bathroom Stall in the Disco"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Chinese_3.webp" alt="First Symbol near the Lion Statue by Deadeye Dewdrops"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Chinese_4.webp" alt="Second Symbol near the Lion Statue by Deadeye Dewdrops"></img><br><br>
+	
+	<font class="text">Go back to the Dojo, interact with the Rat King Symbol, defeat the Rat King, then pick up his Eye</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Rat_King/1.webp" alt="On the Ground near the Dojo"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Rat_King/2.webp"></img><br><br>
+	
+	<font class="text">Use the Eye to Reveal Symbols, shoot 6 around the Map</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/1.webp" alt="In the Corner to the left of the Stairs in the Bang Bangs Subway, between the Stairs and the Subway Car"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/2.webp" alt="Above the Door of the Dojo"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/3.webp" alt="In the Barber's Window the Left the Dojo in the Alley"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/4.webp" alt="In Spawn, on a Wall above the Train Car"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/5.webp" alt="On the Back of a Speaker in the Bar"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/6.webp" alt="On the Water Tower on the Roof of the Disco"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/7.webp" alt="In a Window on the Rooftop across from the Dojo, to the right of the Bloodstain and Picture Frame"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/8.webp" alt="On a Large Sheet hanging from a Clothesline in the Alley near Deadeye Dewdrops"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/9.webp" alt="On top of a Duct through the Skylight on the Roof of the Disco"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/10.webp" alt="To the right of the Ripper Wallbuy at the building with a and Blue Cloth hanging from the Balcony"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/11.webp" alt="In the left corner of the Blue Office near Trailblazers, jump to see it"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/12.webp" alt="Behind Bombstoppers, on a Police Car"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/13.webp" alt="On the side of the Disco Sign, across from the Theater"></img><br><br>
+	
+	<font class="text">Check the Phones in the Spawn, and by Bang Bangs for a Ringing Phone</font><br>
+	<font class="text">Answer it and take Note of the Morse Code (Should Translate into 3 Numbers)</font><br>
+	<font class="text">0 = -----  1 = .-----  2 = ..---  3 = ...--  4 = ....-  5 = ......  6 = -.....  7 = --...  8 = ---..  9 = ----.</font><br>
+	<font class="text">Find the Nightmare Summer Poster that has your Numbers and pick it up</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Poster/1.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Poster/2.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Poster/3.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Poster/4.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Poster/5.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Poster/6.webp" alt="Template"></img><br><br>
+	
+	<font class="text">Place the Poster on the Spotlight on the Roof of the Disco</font><br>
+	<font class="text">Use an Explosive Weapon to destroy the Window with an X on it, then kill the Ninja's that spawn</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Poster/7.webp" alt="The Spotlight on the Roof of the Disco"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Poster/8.webp" alt="Template"></img><br><br>
+	
+	<font class="text">6 Symbols will Spawn, spell a Word on the Stairway Wall with them by shooting them</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/14.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/15.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/16.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/17.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/18.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/19.webp" alt="Template"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/20.webp" alt="On the Wall by the Stairs"></img><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/Alphabet.webp"></img><br><br>
+	
+	<font size="5" color="#cc6600">Confirmed Words</font><br><br>
+	
+	<button class="goldButton" onClick="{ toggleWords() }">Show Words</button><br><br>
+	
+	<div id="words" class="hidden">
+		<div><font class="text word">ACTORS</font> <font class="text word">AFTERLIFE</font> <font class="text word">ANCESTOR</font> <font class="text word">ARCADE</font></div><br>
+		<div><font class="text word">ARTHUR</font> <font class="text word">AUDITION</font> <font class="text word">BASEMENT</font> <font class="text word">BEVERLYHILLS</font></div><br>
+		<div><font class="text word">BLACKCAT</font> <font class="text word">BOAT</font> <font class="text word">BREEDER</font> <font class="text word">BROADWAY</font></div><br>
+		<div><font class="text word">BRUTE</font> <font class="text word">BUMPERCARS</font> <font class="text word">CHARMS</font> <font class="text word">COMICBOOKS</font></div><br>
+		<div><font class="text word">CRANE</font> <font class="text word">CRYPTID</font> <font class="text word">DANCE</font> <font class="text word">DAVIDARCHER</font></div><br>
+		<div><font class="text word">DEATH</font> <font class="text word">DIRECTOR</font> <font class="text word">DISCO</font> <font class="text word">DRAGON</font></div><br>
+		<div><font class="text word">DRCROSS</font> <font class="text word">FAIRIES</font> <font class="text word">FORGEFREEZE</font> <font class="text word">GEYSER</font></div><br>
+		<div><font class="text word">GHETTO</font> <font class="text word">HARPOON</font> <font class="text word">HIVES</font> <font class="text word">INFERNO</font></div><br>
+		<div><font class="text word">KATANA</font> <font class="text word">KEVINSMITH</font> <font class="text word">KRAKEN</font> <font class="text word">KUNGFU</font></div><br>
+		<div><font class="text word">LOSANGELES</font> <font class="text word">MCINTOSH</font> <font class="text word">MEMORIES</font> <font class="text word">MEPHISTOPHELES</font></div><br>
+		<div><font class="text word">NEWYORK</font> <font class="text word">NIGHTFALL</font> <font class="text word">NUNCHUCKS</font> <font class="text word">OBELISK</font></div><br>
+		<div><font class="text word">OCTONIAN</font> <font class="text word">PAMGRIER</font> <font class="text word">PINKCAT</font> <font class="text word">PUNKS</font></div><br>
+		<div><font class="text word">RATKING</font> <font class="text word">REALITYTV</font> <font class="text word">REDWOODS</font> <font class="text word">ROLLERCOASTER</font></div><br>
+		<div><font class="text word">ROLLERSKATES</font> <font class="text word">SAMANTHA</font> <font class="text word">SHAOLIN</font> <font class="text word">SHIELD</font></div><br>
+		<div><font class="text word">SHUFFLE</font> <font class="text word">SLASHER</font> <font class="text word">SLIDE</font> <font class="text word">SNAKE</font></div><br>
+		<div><font class="text word">SPACELAND</font> <font class="text word">STAFF</font> <font class="text word">SUBWAY</font> <font class="text word">TIGER</font></div><br>
+		<div><font class="text word">TREES</font> <font class="text word">WEREWOLFPOETS</font> <font class="text word">WINONAWYLER</font> <font class="text word">YETIEYES</font></div>
+		<div><font class="text word">ZAPPER</font></div><br><br>
+	</div>
+	
+	<font class="text">Go to the Rooftop near Deadeye Dewdrops, interact with the Rat King Symbol, defeat the Rat King, then pick up his Brain</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Rat_King/3.webp" alt="On the Rooftop near Deadeye Dewdrops"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Rat_King/4.webp"></img><br><br>
+	
+	<font class="text">Talk to Pam, then wait 3 Rounds, you'll get teleported into the Dojo in a Lockdown, complete the Lockdown and pick up the Turnstile on the Sidewalk</font><br>
+	<font class="text">Place the Turnstile in the Broken Gate in Spawn</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Turnstile_1.webp" alt="On the Sidewalk in front of the Dojo"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Turnstile_2.webp" alt="The Broken Gate in Spawn"></img><br><br>
+	
+	<font class="text">Go to the Alley near Mule Munchies, climb up the Ladder and shoot the Rat King Symbol in the Window at the end of the Scaffolding</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Rat_King/5.webp" alt="In the Window at the end of the Scaffolding by Mule Munchies"></img><br><br>
+	
+	<font class="text">Yellow Circles will spawn around the Map, stand in them and kill Zombies inside of them until a Gong Sound plays</font><br>
+	<font class="text">Go to the Disco, and interact with the DJ Booth and a Disco Ball will spawn, kill the Zombies with the Disco Ball Powerup with Headshots until it goes away</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Disco.webp"></img><br><br>
+	
+	<font class="text">Go to the Street outside of the Theater, interact with the Rat King Symbol, defeat the Rat King, then pick up his Heart</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Rat_King/6.webp" alt="On the Street outside of the Theater"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Rat_King/7.webp"></img><br><br>
+	
+	<font color="#9555c2" size="5">**PREPARE FOR THE BOSS FIGHT**</font><br><br>
+	
+	<font class="text">Talk to Pam</font><br>
+	<font class="text">To start the Boss Fight, go to the Rat King’s Lair and Complete the Round</font><br>
+	<font class="text">(Use Chi to break the Crates to buy Perks)</font><br>
+	<font class="text">Shoot the Rat King until he Retreats, then start a Phase, Complete it and Repeat 3 Times</font><br>
+	
+	<font size="5" color="#cc6600">Eye Phase</font><br><br>
+	
+	<font class="text">Use the Eye to reveal Symbols on the Ceiling, shoot the Symbols as fast as you can until a Gong Sound plays</font><br><br>
+	
+	<font size="5" color="#cc6600">Brain Phase</font><br><br>
+	<font class="text">Don't kill the Zombie with Blue Eyes, lead the into the Brain, and let them attack ituntil they kill it</font><br><br>
+	
+	<font size="5" color="#cc6600">Heart Phase</font><br><br>
+	
+	<font class="text">Acid wilk fill the Outskirts of the Room, kill Zombies with the Acid to crear it</font><br><br>
+	
+	<font class="text">Pick up the Soul Key, and the Ending Cutscene will Play</font><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Zombies_in_Spaceland/Soul_Key.webp"></img><br><br>
+	
+	<font class="text">You can Play as Pam by Entering a Code using the D-Pad in the Lobby Quickly</font><br>
+	<font class="text">Up, Up, Right, Left, Down, Left</font><br><br>
 
 <!--Nav Template Start-->
 </div>
+<script>
+function toggleWords() {
+	words = document.getElementById('words')
+	if (words.className == 'hidden') {
+		words.className = 'shown'
+	} else {
+		words.className = 'hidden'
+	}
+}
+</script>
 <script src="../ImageModal.js"></script>
 <script src="../ZombiesEEs.js"></script>
 <script src="../../GlobalNavbar.js"></script>

@@ -10,17 +10,371 @@
 <link rel="stylesheet" href="../ImageModal.css">
 <link rel="stylesheet" href="../ZombiesEEs.css">
 <style type="text/css">
-
+.flex_1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.flex_2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.Chemical {
+	width: 160px!important;
+	height: 90px!important;
+}
+.hidden {
+	display: none;
+}
 </style>
 </head>
 <body lang="../../">
 <div class="MainWrapper" align="left">
 <!--Nav Template End-->
 
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Template.webp" alt="Template Img"></img>
+	<font size="7" color="#8d2424">Buildables</font><br><br>
+
+	<font size="5" color="#cc6600">Seismic Wave Generator</font><br><br>
+
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/1.webp" alt="Inside the Ice Cream Shop"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/2.webp" alt="Left of Back Door to Ice Cream Shop"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/3.webp" alt="On a Yellow Bench Outside of the Ice Cream Shop"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/4.webp" alt="Outside Corner of Ice Cream Shop"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/5.webp" alt="Right of Portapotties on the Playground"></img><br><br>
+	
+	<font size="5" color="#cc6600">Violet Ray Device</font><br><br>
+
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/6.webp" alt="TableLocation"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/7.webp" alt="On a Yellow Bench outside of Power Station"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/8.webp" alt="Upstairs in a Corner with 3 Yellow Barrels"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/9.webp" alt="Part2"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/10.webp" alt="Part3"></img><br><br>
+	
+	<font size="5" color="#cc6600">Hypnosis Device</font><br><br>
+
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/11.webp" alt="TableLocation"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/12.webp" alt="BlueprintLocation"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/13.webp" alt="Part1"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/14.webp" alt="Part2"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/15.webp" alt="Part3"></img><br><br>
+	
+	<font size="5" color="#cc6600">Mind Control Device</font><br><br>
+
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/16.webp" alt="TableLocation"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/17.webp" alt="BlueprintLocation"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/18.webp" alt="Part1"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/19.webp" alt="Part2"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Buildables/20.webp" alt="Part3"></img><br><br>
+	
+	<font size="7" color="#8d2424">Chemicals</font><br><br>
+	
+	<button class="goldButton" onClick="{ toggleChemicals() }">Show Chemicals</button><br><br>
+	
+	<div id="chemicals" class="flex_1 hidden">
+		<div class="flex_2">
+			<font class="text">Insect Repellent</font><br>
+			<font class="text">Racing Fuel</font><br>
+			<font class="text">Vodka</font><br>
+			<font class="text">Baking Soda</font><br>
+			<font class="text">Detergent</font><br>
+			<font class="text">Food Coloring</font><br>
+			<font class="text">Nail Polish Remover</font><br>
+			<font class="text">Plant Food</font><br>
+			<font class="text">Table Salt</font><br>
+			<font class="text">Quarters</font><br>
+			<font class="text">Pennies</font><br>
+			<font class="text">Ice</font><br>
+			<font class="text">Fat</font><br>
+			<font class="text">Motor Oil</font><br>
+			<font class="text">Detergent</font><br>
+			<font class="text">Drain Opener</font><br>
+			<font class="text">Wheel Cleaner</font><br>
+			<font class="text">Paint</font><br>
+			<font class="text">Vinegar</font><br>
+			<font class="text">Powdered Milk</font><br>
+			<font class="text">Chlorine</font><br>
+			<font class="text">Bleach	</font><br>
+		</div>
+		
+		<div class="flex_2">
+			<font class="text">To the right of Up 'N Atoms on Stacks of Wood</font><br>
+			<font class="text">In front of the Gas Station</font><br>
+			<font class="text">In the Market on the Alcohol Shelf</font><br>
+			<font class="text">On a Shelf in the Market</font><br>
+			<font class="text">On a Shelf in the Market</font><br>
+			<font class="text">On a Shelf in the Market</font><br>
+			<font class="text">In the Motel Office</font><br>
+			<font class="text">Outside the Snack Shack</font><br>
+			<font class="text">In the Freezer in the Market</font><br>
+			<font class="text">Crowbar Melee the Payphones in the town</font><br>
+			<font class="text">Crowbar Melee the Cash Registers in the Market</font><br>
+			<font class="text">Crowbar Melee the Ice Machine in the Market</font><br>
+			<font class="text">Cleaver Melee the Meat hanging in the Freezer in the Market</font><br>
+			<font class="text">In the Gas Station</font><br>
+			<font class="text">On a Shelf in the Market</font><br>
+			<font class="text">On a Toilet in the Bathrooms in the RV Park</font><br>
+			<font class="text">On a Shelf in the Market</font><br>
+			<font class="text">Behind the Shack near Racin' Stripes</font><br>
+			<font class="text">On a Table in the back of the Market</font><br>
+			<font class="text">On a Shelf in the Market</font><br>
+			<font class="text">Side of the Motel Swimming Pool</font><br>
+			<font class="text">In Spawn</font><br>
+		</div>
+		
+		<div class="flex_2">
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/1.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/2.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/3.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/4.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/5.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/6.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/7.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/8.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/9.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/10.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/11.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/12.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/13.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/14.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/15.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/16.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/17.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/18.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/19.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/20.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/21.webp"></img><br>
+			<img loading=lazy class="Easter_Egg Chemical" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chemicals/22.webp"></img><br>
+		</div>
+	</div><br><br>
+	
+	<font size="7" color="#8d2424">Traps</font><br><br>
+	
+	<font class="text">Grab the Part on a Box near the Gas Station and Fix the Freezer Trap</font><br><br>
+
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Trap/1.webp" alt="On a Box near the Gas Station"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Trap/2.webp" alt="Market Freezer Room"></img><br><br>
+	
+	<font class="text">Grab the Part on a White Truck near  Elvira's Studio and Fix the Pool Trap</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Trap/3.webp" alt="On a White Truck near Elvira's Studio"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Trap/4.webp" alt="Motel by the Pool"></img><br><br>
+	
+	<font class="text">Grab the Part from the Trash Can near Power Station and Fix the Power Trap</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Trap/5.webp" alt="On a Trash Can near Power Station"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Trap/6.webp" alt="Power Station"></img><br><br>
+
+	<font size="7" color="#8d2424">Power</font><br><br>
+
+	<font class="text">Grab the Power Swirch on the Beach next to the OSA in a Zombies Hand sticking out of the Ground, then Place it at the power Plant</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Power.webp" alt="On the Beach next to the OSA"></img><br><br>
+	
+	<font size="7" color="#8d2424">M.A.D. Upgrade</font><br><br>
+	
+	<font class="text">Obtain the Crowbar near the Buildable Table at the Motel</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Crowbar.webp" alt="Outside of the Restroom in the RV Park"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/MAD_1.webp" alt="Outside of the Restroom in the RV Park"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/MAD_2.webp" alt="Behind the Gas Station"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/MAD_3.webp" alt="Outside of the TV Station"></img><br><br>
+	
+	<font size="7" color="#8d2424">Pack-A-Punch</font><br><br>
+	
+	<font class="text">Go to the Ice Cream Shop near Spawn and get the Book from the Safe next to the Skullhop Machine</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/PaP/1.webp" alt="Template Img"></img><br><br>
+	
+	<font class="text">Talk to Elvira and give her the Book, and she will give you a Vial</font><br>
+	<font class="text">Kill Zombies with the Cleaver to fill the Vial, once it's full take it to Elvira and she will follow you</font><br>
+	<font class="text">Take her to the Blue Circle outside the Studio next to the Mystery Box and she will open a Portal to PaP</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/PaP/2.webp" alt="Outside the Studio next to the Mystery Box"></img><br><br>
+	
+	<font class="text">The PaP Portal will move around the Map, Look in the Sky to see where the Portal is</font><br><br>
+	
+	<font size="5" color="#cc6600">Double Pack a Punch</font><br><br>
+	
+	<font class="text">Obtain the Crowbar, got to PaP, press the Button on the Wall to teleport into the RV</font><br>
+	<font class="text">Melee the Cabinet with the Crowbar an pick up the Alien Fuses</font><br>
+	<font class="text">Fill up Elvira's Vial by getting Cleaver kills</font><br>
+	<font class="text">Go to the Power Station, and place the Alien Fuses on the Ground near the Electric Trap and activate it, once it's done you can pick up them up</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/PaP/3.webp" alt="Electric Trap in Power Station"></img><br><br>
+	
+	<font class="text">Go to PaP Machine and install the Fuses</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/PaP/4.webp"></img><br><br>
+	
+	<font size="7" color="#8d2424">Ghost and Skulls</font><br><br>
+		
+	<font class="text">Shoot 5 Skulls around the Map</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/1.webp" alt="Behind Dumpster near Power Plant"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/2.webp" alt="Couch inside Window at Power Plant"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/3.webp" alt="Mason's Sign near Tuff Nuff"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/4.webp" alt="Top of Rock in the Ocean"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/5.webp" alt="Under Bus on Bridge"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/6.webp" alt="Top right Balcony of Motel"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/7.webp" alt="Barrier in TV Station"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/8.webp" alt="Bathroom behind Snack Shack"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/9.webp" alt="Under-side of Shelf in back of Market"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/10.webp" alt="Back left of building to right of Fishing Shop"></img><br><br>
+	
+	<font class="text">Go to the Gas Station and grab the Yellow Pump on the Ground</font><br>
+	<font class="text">Go to the Puddle of Toxic Waste near the Ice Cream Shop, place the Pump in and wait for it to fill completely, then pick it up</font><br><br>
+	
+	<font class="text">Go to the Motel Pool and place the Pump in the Water, obtain the Gas and kill exactly 16 Zombies with the Generator Trap</font><br>
+	<font class="text">Go to the Ice Cream Shop and take note the word written on the Wall</font><br>
+	<font class="text">Go to the Playground, 4 Letters will spawn at the Swings</font><br>
+	<font class="text">Interacting with the Letters at the Swings will change which letters appear on the Drive-In Screen, spell out your word from the Wall</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Shaolin_Shuffle/Symbol/Alphabet.webp"></img><br><br>
+	
+	<font class="text">Go to the RV Park and interact with the Paper on the Table</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/11.webp" alt="At the RV Park"></img><br><br>
+	
+	<font class="text">Obtain the Pump from the Pool, go to each of the 4 Willard Wyler Portraits around the map, activate them and place the Pump on the Ground in front of them, then Melee the Pump to release the Demons</font><br>
+	<font class="text">Shoot the Demons until the Shield disappears, repeat this for each of the 4 Portraits</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/12.webp" alt="On a Dumpster behind the Gas Station"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/13.webp" alt="In the Office at Motel"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/14.webp" alt="In the Ice Cream Shop"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Skull/15.webp" alt="In the Office in the Market"></img><br><br>
+	
+	<font class="text">Obtain the M.A.D. and equip the Plunger to it, go to the Skullhop Machine in the Ice Cream Shop and shoot a charged shot at it (If you lose the Game, repeat this)</font><br>
+	<font class="text">Interact with the Machine to Play</font><br>
+	<font class="text">Stand on the Platform matching the Color on the sides of the Skulls</font><br>
+	<font class="text">Entangle the Blocks floating in the air and shoot the Block at the Skulls until all the Skulls are gone</font><br>
+	<font class="text">When you Complete it, you will get Perkaholic</font><br><br>
+	
+	<font size="7" color="#8d2424">Main Quest</font><br><br>
+	
+	<font class="text">Build the Zombie Body in Spawn</font><br><br>
+	<font class="text">Go to PaP, activate the Button on the Wall, you will be teleported to the RV, pick up the Head on the Dashboard</font><br>
+	<font class="text">Obtain the Crowbar, repair and activate the Deep Freeze Trap, melee the Pig in front of the Torso, it will explode, grab the Torso that was behind it</font><br>
+	<font class="text">Grab the Left Arm from the Firepit in the RV Park</font><br>
+	<font class="text">Build the Seismic Wave Generator, go to the Beach and place it near the Arm in the Ground that had the Power Switch, then pick up the Right Arm</font><br>
+	<font class="text">Obtain the Cleaver, Kill a Radioactive Zombie with it, then pick up the Left Leg</font><br>
+	<font class="text">Go to the back of the TV Station, and grab the Right Leg hanging in a Tree by throwing a Cooked Grenade at it, then pick it up</font><br>
+	<font class="text">Go to the Bathroom in the RV Park, melee the Mirror with a Crowbar to Break it and pick up the Glass Shard</font><br>
+	<font class="text">Obtain the Crowbar, go to the White Car in front of the Gas Station, melee the Passenger Mirror and pick it up</font><br>
+	<font class="text">Summon Elvira, while she is away from her seat the Hand Mirror and steal the Hand Mirror from her Couch</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Zombie/1.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Zombie/2.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Zombie/3.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Zombie/4.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Zombie/5.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Zombie/6.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Zombie/7.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Zombie/8.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Zombie/9.webp"></img><br><br>
+	
+	<font class="text">Obtain the Scantron from Desk in the Ice Cream Shop, place it in the Machine in Spawn, 9 Numbers will Flash quickly, using Trial and Error, activate every Combination until you succeed</font><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Code_1.webp" alt="On the Desk in the Ice Cream Shop"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Code_2.webp" alt="Under the Red Car between the Motel and the Studio"></img><br><br>
+	
+	<font class="text">(The only Numbers used in the code are 3, 4, 5, 6, and 8)</font><br>
+	<font class="text">Input the Number again, but backwards to activate the Death Ray killing the Zombie and dropping a Key, pick it up</font><br><br>
+	
+	<font class="text">Obtain the Nuke Parts</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Nuke_1.webp" alt="Under the Red Car between the Motel and the Studio"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Nuke_2.webp" alt="At the end of the Stream below the Bridge"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Nuke_3.webp" alt="Behind the Gate outside of Elvira's Studio"></img><br><br>
+	
+	<font class="text">Obtain a Crowbar and look under the Desk in the back of the Market to see 4 Numbers, set 4 Pressure Gauges around the map using the Crowbar</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Gauge_1.webp" alt="Behind the Gas Station"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Gauge_2.webp" alt="On the right side of the Snack Shack"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Gauge_3.webp" alt="Behind the Shack at the Power Station"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Gauge_4.webp" alt="In the Motel Room where you picked up the Crowbar"></img><br><br>
+	
+	<font class="text">Once you have set them, the Safe in the back of the Market will open, pick up the Nuclear Codes</font><br>
+	<font class="text">Tank note of the Code, as you wont be able to check your Inventory during the Input process</font><br>
+	<font class="text">Go to the Gas Station and open the right Garage Door, find and place the Chemistry Lab Pieces in the Garage</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Lab_1.webp" alt="On a Picnic Table between the Beach and RV Park"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Lab_2.webp" alt="On a Picnic Table in the RV Park"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Lab_3.webp" alt="On a Couch in the back of the Market"></img><br><br>
+	
+	<font class="text">Find your M Symbol's Number above the Radio in the Motel Offices</font><br>
+	<font class="text">Find your O Symbol's Number is by doing the following</font><br>
+	<font class="text">&nbsp; -The Symbols will have an Equals Sign when in Normal Colors</font><br>
+	<font class="text">&nbsp; -Change the Color by going to Elvira's Studio and interacting with the Machines</font><br>
+	<font class="text">&nbsp; -Go to the Symbols around the Map and see which ones have a Not Equals Sign after the Colors</font><br>
+	<font class="text">&nbsp; -The Symbol that doesn't have a Not Equals Sign in any Mode is your Numbers</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Symbol_1.webp" alt="On the Door of the Gas Station"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Symbol_2.webp" alt="In the back of the Market next to the Fridge"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Symbol_3.webp" alt="In the RV on the Fridge"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Symbol_4.webp" alt="Under the Bridge"></img><br><br>
+	
+	<font class="text">Multiply what your O is by what your M is and check Elvira's TV, change the Color to what the TV says</font><br>
+	<font class="text">Example: Your Equation was 11 x 10, so your Number is 110, Elvira's TV shows that the Color is Green</font><br>
+	<font class="text">(Stay on this Color Mode until you have created the Final Chemical)</font><br>
+	<font class="text">Obtain Batteries from Zombies and place them in Radios at the Power Station and in the Motel Office</font><br>
+	<font class="text">Listen to both Radios. One of them will explain what Chemicals work with the Nuke</font><br>
+	<font class="text">You will be told which one he knows will be able to destroy the Radioactive Thing</font><br>
+	
+	<font class="text">Place down the Ingredients, and input their Number found by adding the top and left Number of each Ingredient's Chemical Diamond and subtracting your O Symbol</font><br>
+	
+	<font class="text">Example: Combine Quarters and Racing Fuel to make Formaldehyde</font><br>
+	<font class="text">&nbsp; -Look around the Map for the Chalk Boards containing Quarters and Racing Fuel</font><br>
+	<font class="text">&nbsp; -Quarters has 6 and 2 as the top and left Numbers, and Racing Fuel has 3 and 4</font><br>
+	<font class="text">&nbsp; -Add them together to get 15 and subtract your O Symbol's Number which in this case is 4</font><br>
+	<font class="text">&nbsp; -Input 11 into the Machine to complete the Chemical Reaction</font><br>
+		
+	<font class="text">The Diamond Numbers will change in the different Color Settings and are random every game</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chalk_Board/1.webp" alt="Spawn next to the Insect Repellent"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chalk_Board/2.webp" alt="Outside the Studio next to Bang Bangs"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chalk_Board/3.webp" alt="On the Beach next to the Water"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chalk_Board/4.webp" alt="In the RV Park"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chalk_Board/5.webp" alt="Inside the Gas Station"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Radioactive_Thing/Chalk_Board/6.webp" alt="Behind the Market"></img><br><br>
+	
+	<font class="text">Once you have you Final Chemical, put the Parts onto the Nuke, then add the Chemical to the Nuke</font><br><br>
+	
+	<font color="#9555c2" size="5">**PREPARE FOR THE BOSS FIGHT**</font><br><br>
+	
+	<font class="text">Wait for it to Charge up and have All Players interact with it again</font><br>
+	<font class="text">You will be teleported into the Boss Fight, push the Nuke down from the top of the Stream to the Beach</font><br>
+	<font class="text">The Radioactive Thing will be launching Crogs and Fireballs at you</font><br>
+	<font class="text">Once the Nuke is at the Beach it will go into the Radioactive Thing</font><br>
+	<font class="text">Survive and use the Death Lasers to destroy the Core on the Radioactive Thing's chest while he's attacking</font><br>
+	<font class="text">Once you damage it, it will be opened indefinitely so keep firing the Lasers at it</font><br>
+	<font class="text">Once you do enough damage to the Radioactive Thing he will stop attacking you</font><br>
+	<font class="text">Have All Players interact with the Nuke Launcher on the Beach and Radiation will crawl up the beach and the Radioactive Thing will launch Crogs at you</font><br>
+	<font class="text">Have All Players make their way up the Beach until you reach the Bridge, survive against Zombies and Crogs until the Radiation makes it's way up to you</font><br>
+	<font class="text">After a certain amount of time the Radioactive Thing will launch a Laser Beam and create an Obstacle Course</font><br>
+	<font class="text">Go through the Obstacle Course until you reach the Nuke launcher at the Beach and have All Players interact with it as fast as possible</font><br>
+	<font class="text">When all Players have interacted with the Nuke you will be brought into the belly of the Radioactive Thing</font><br>
+	<font class="text">All Players must input the Code that you got from the Sheet in the Safe (Take your Time)</font><br>
+	<font class="text">Each Player gets 3 Attempts to input the Code (If you fail, redo the Obstacle Course)</font><br>
+	<font class="text">Pick up the Soul Key, and the Ending Cutscene will Play</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Infinite_Warfare/Rave_in_The_Redwoods/Soul_Key.webp"></img><br><br>
+	
+	<font class="text">You can Play as Elvira by Entering a Code using the D-Pad in the Lobby Quickly</font><br>
+	<font class="text">Down, Right, Down, Left, Up, Right</font><br><br>
 
 <!--Nav Template Start-->
 </div>
+<script>
+function toggleChemicals() {
+	chemicals = document.getElementById('chemicals')
+	if (chemicals.className == 'flex_1 hidden') {
+		chemicals.className = 'flex_1 shown'
+	} else {
+		chemicals.className = 'flex_1 hidden'
+	}
+}
+</script>
 <script src="../ImageModal.js"></script>
 <script src="../ZombiesEEs.js"></script>
 <script src="../../GlobalNavbar.js"></script>
