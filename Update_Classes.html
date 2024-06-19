@@ -76,6 +76,12 @@
 	color: #35afea;
 	font-weight: bold;
 }
+.theme {
+	background-color: #35afea!important;
+}
+.theme:hover {
+	background-color: #1e7dcb!important;
+}
 </style>
 </head>
 <body lang="">
@@ -86,7 +92,7 @@
 	<div class='container'><br><br>
 		<h3 style='color: #fff;'>Either Upload your Theme File or Paste it into the Textarea</h3>
 		<h4 style='color: #fff;'>(Optional) Either Upload a Custom Diff File or Use the <a class="link" target=”_blank” href="https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt">Included One</a></h3><br><br><br>
-		<label for='theme-file' class='fileInputVisible' role='button'>Upload Theme File</label><label for='diff-file' class='fileInputVisible' role='button' style="margin-left: 5%;">Upload Diff File</label>
+		<label for='theme-file' class='fileInputVisible theme' role='button'>Upload Theme File</label><label for='diff-file' class='fileInputVisible' role='button' style="margin-left: 5%;">Upload Diff File</label>
 		<input id='theme-file' type='file' class='fileInput' onchange='loadThemeFile()'style='color: #fff;'><br>
 		<input id='diff-file' type='file' class='fileInput' onchange='loadChangesFile()'style='color: #fff;'><br><br><br>
 		<font style='color: #fff; font: 18px Arial; font-weight: bold;' id='textAreaStatus'>If you use the Textarea, you have to Click off after you Paste your Theme for it to Update</font><br><br>
