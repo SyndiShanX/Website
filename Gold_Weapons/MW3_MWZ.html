@@ -145,7 +145,7 @@ font.text_borealis {
 	<h3 style='color: #fff;'>2. Get the ID of your Spreadsheet and Paste it into the Textarea and Click Load Spreadsheet</h3>
 	<a href='https://docs.google.com/spreadsheets/d/1Gn1wGkzQqX6PA1SmWMcmX2WwqRanltXY6JnoCN42lfE/edit#gid=0'><font color='#00ffff'>Template Spreadsheet Link</font></a><br><br>
 	<input type="text" id='customTextArea' placeholder='1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko'></input><br><br>
-	<button class='customButton' onClick="resetPage(); fetchData(document.getElementById('customTextArea').value, 4)">Load Spreadsheet</button>
+	<button class='customButton' onClick="resetPage(); fetchData(document.getElementById('customTextArea').value, 3)">Load Spreadsheet</button>
 </div>
 <div class="MainWrapper" align="center">
 </div>
@@ -222,7 +222,7 @@ function fetchData(spreadsheetID, pageNum) {
 		setPaths()
 	});
 }
-fetchData('1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko', 4)
+fetchData('1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko', 3)
 </script>
 <script>
 function clearMain() {
