@@ -36,7 +36,7 @@ table {
 }
 
 body {
-	background: repeat-x url("../images/bg-top-tile.webp") center top,repeat url("../images/bg-tile.webp") center bottom;
+	background: repeat-x url("images/bg-top-tile.webp") center top,repeat url("images/bg-tile.webp") center bottom;
 	font-family: 'Lato', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
@@ -151,7 +151,7 @@ input:focus,textarea:focus {
 	overflow: hidden;
 	margin: auto;
 	background-color: rgba(0,0,0,0.06);
-	background: repeat url("../images/bgdiags.webp") center bottom;
+	background: repeat url("images/bgdiags.webp") center bottom;
 }
 
 .col-left {
@@ -217,7 +217,7 @@ input:focus,textarea:focus {
 	margin-bottom: 14px;
 	overflow: hidden;
 	padding: 14px;
-	background: repeat url("../images/striped_lens.webp") center top;
+	background: repeat url("images/striped_lens.webp") center top;
 }
 
 .description h1,.description h2 {
@@ -381,7 +381,7 @@ input:focus,textarea:focus {
 
 	.nav .navbar .bottomitems .pages li {
 		width: 100%;
-		background: transparent url("../images/flourish.webp") repeat 0 -11px;
+		background: transparent url("images/flourish.webp") repeat 0 -11px;
 		text-align: left;
 		padding-left: 10px;
 	}
@@ -512,7 +512,7 @@ input:focus,textarea:focus {
 }
 
 .skin-item .cover:hover {
-	background: #fff url("../images/graphy.webp") repeat left top;
+	background: #fff url("images/graphy.webp") repeat left top;
 	z-index: 999;
 	border: 1px solid #cacaca;
 }
@@ -526,7 +526,7 @@ input:focus,textarea:focus {
 	border-top: none;
 	display: block;
 	position: absolute;
-	background: #fff url("../images/graphy.webp") repeat left center;
+	background: #fff url("images/graphy.webp") repeat left center;
 	height: auto;
 	left: 0;
 	width: 100%;
@@ -537,7 +537,7 @@ input:focus,textarea:focus {
 .skin-item .vote,.skin-item .plus {
 	width: 35px;
 	height: 35px;
-	background: url("../images/heart.webp") top center;
+	background: url("images/heart.webp") top center;
 	position: absolute;
 	z-index: 999;
 	left: 50%;
@@ -556,7 +556,7 @@ input:focus,textarea:focus {
 }
 
 .skin-item .plus {
-	background: url("../images/plus.webp") top center;
+	background: url("images/plus.webp") top center;
 	right: 3px;
 	top: 3px;
 	width: 18px;
@@ -623,7 +623,7 @@ input:focus,textarea:focus {
 }
 
 #skin-add-bar .skins {
-	background: #fff url("../images/grid.webp") repeat;
+	background: #fff url("images/grid.webp") repeat;
 	box-shadow: inset -4px 44px 39px -48px rgba(0,0,0,0.2);
 	border-top: 1px solid #d1d4d6;
 	padding: 12px;
@@ -649,7 +649,7 @@ input:focus,textarea:focus {
 }
 
 #skin-add-bar .skin:hover {
-	background: transparent url("../images/x.webp") center center no-repeat;
+	background: transparent url("images/x.webp") center center no-repeat;
 	background-size: contain;
 }
 
@@ -936,7 +936,7 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	position: absolute;
 	top: 0;
 	right: 0;
-	background: url("../images/banners/black.webp"),url("../images/small_banners/black.webp"),url("../images/banners/gray.webp"),url("../images/small_banners/gray.webp"),url("../images/banners/light_gray.webp"),url("../images/small_banners/light_gray.webp"),url("../images/banners/white.webp"),url("../images/small_banners/white.webp"),url("../images/banners/pink.webp"),url("../images/small_banners/pink.webp"),url("../images/banners/magenta.webp"),url("../images/small_banners/magenta.webp"),url("../images/banners/purple.webp"),url("../images/small_banners/purple.webp"),url("../images/banners/blue.webp"),url("../images/small_banners/blue.webp"),url("../images/banners/cyan.webp"),url("../images/small_banners/cyan.webp"),url("../images/banners/light_blue.webp"),url("../images/small_banners/light_blue.webp"),url("../images/banners/green.webp"),url("../images/small_banners/green.webp"),url("../images/banners/lime.webp"),url("../images/small_banners/lime.webp"),url("../images/banners/yellow.webp"),url("../images/small_banners/yellow.webp"),url("../images/banners/orange.webp"),url("../images/small_banners/orange.webp"),url("../images/banners/brown.webp"),url("../images/small_banners/brown.webp"),url("../images/banners/red.webp"),url("../images/small_banners/red.webp");
+	background: url("images/banners/black.webp"),url("images/small_banners/black.webp"),url("images/banners/gray.webp"),url("images/small_banners/gray.webp"),url("images/banners/light_gray.webp"),url("images/small_banners/light_gray.webp"),url("images/banners/white.webp"),url("images/small_banners/white.webp"),url("images/banners/pink.webp"),url("images/small_banners/pink.webp"),url("images/banners/magenta.webp"),url("images/small_banners/magenta.webp"),url("images/banners/purple.webp"),url("images/small_banners/purple.webp"),url("images/banners/blue.webp"),url("images/small_banners/blue.webp"),url("images/banners/cyan.webp"),url("images/small_banners/cyan.webp"),url("images/banners/light_blue.webp"),url("images/small_banners/light_blue.webp"),url("images/banners/green.webp"),url("images/small_banners/green.webp"),url("images/banners/lime.webp"),url("images/small_banners/lime.webp"),url("images/banners/yellow.webp"),url("images/small_banners/yellow.webp"),url("images/banners/orange.webp"),url("images/small_banners/orange.webp"),url("images/banners/brown.webp"),url("images/small_banners/brown.webp"),url("images/banners/red.webp"),url("images/small_banners/red.webp");
 }
 
 #banner #main>div {
@@ -1082,7 +1082,7 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	height: 320px;
 	width: 160px;
 	z-index: 3;
-	background: url("../images/banners/bg_base.webp") no-repeat;
+	background: url("images/banners/bg_base.webp") no-repeat;
 }
 
 #banner #preview {
@@ -1157,7 +1157,7 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner .tbc {
-	background: url("../images/bg.webp");
+	background: url("images/bg.webp");
 	margin: 0 3px;
 	display: inline-block;
 	height: 80px;
@@ -1166,7 +1166,7 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner #toolbar .tbc {
-	background: url("../images/bg.webp") 50% 50% repeat-y;
+	background: url("images/bg.webp") 50% 50% repeat-y;
 	margin: 5px;
 	display: inline-block;
 	height: 80px;
@@ -1293,13 +1293,13 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 #banner .layer-vis {
 	width: 16px;
 	height: 16px;
-	background: url("../images/eye-c.webp");
+	background: url("images/eye-c.webp");
 	vertical-align: middle !important;
 	margin-right: 6px;
 }
 
 #banner .layer-vis.sel {
-	background: url("../images/eye.webp");
+	background: url("images/eye.webp");
 }
 
 #banner .dgbl {
@@ -1331,7 +1331,7 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	width: 40px;
 	height: 80px;
 	position: relative;
-	background: url("../images/bg.webp");
+	background: url("images/bg.webp");
 	vertical-align: middle !important;
 }
 
@@ -1421,7 +1421,7 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	height: 128px;
 	line-height: 0;
 	font-size: 0px;
-	background-image: url("../images/crafting_table.png");
+	background-image: url("images/crafting_table.png");
 }
 
 #banner .craft-u {
@@ -1445,14 +1445,15 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	float: right;
 	cursor: initial !important;
 	position: relative;
+	margin-top: -65px;
 }
 
 #banner .layer-del {
 	width: 16px;
 	height: 16px;
 	float: right;
-	background: url("../images/cross-script.webp");
-	margin-top: 32px;
+	background: url("images/cross-script.webp");
+	margin-top: 30px;
 	cursor: pointer;
 }
 
@@ -1466,13 +1467,13 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 #banner .layer-up {
 	position: absolute;
 	top: 0px;
-	background: url("../images/arrow-up.webp");
+	background: url("images/arrow-up.webp");
 }
 
 #banner .layer-down {
 	position: absolute;
 	bottom: 0px;
-	background: url("../images/arrow-dn.webp");
+	background: url("images/arrow-dn.webp");
 }
 
 #banner #total {
@@ -1618,7 +1619,7 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner .epic .bgp {
-	background: url("../images/banners/bgp.webp");
+	background: url("images/banners/bgp.webp");
 	width: 1055px;
 	height: 706px;
 	position: absolute;
@@ -1767,67 +1768,67 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner i[clr="0"] {
-	background: url("../images/banners/black.webp");
+	background: url("images/banners/black.webp");
 }
 
 #banner i[clr="1"] {
-	background: url("../images/banners/red.webp");
+	background: url("images/banners/red.webp");
 }
 
 #banner i[clr="2"] {
-	background: url("../images/banners/green.webp");
+	background: url("images/banners/green.webp");
 }
 
 #banner i[clr="3"] {
-	background: url("../images/banners/brown.webp");
+	background: url("images/banners/brown.webp");
 }
 
 #banner i[clr="4"] {
-	background: url("../images/banners/blue.webp");
+	background: url("images/banners/blue.webp");
 }
 
 #banner i[clr="5"] {
-	background: url("../images/banners/purple.webp");
+	background: url("images/banners/purple.webp");
 }
 
 #banner i[clr="6"] {
-	background: url("../images/banners/cyan.webp");
+	background: url("images/banners/cyan.webp");
 }
 
 #banner i[clr="7"] {
-	background: url("../images/banners/light_gray.webp");
+	background: url("images/banners/light_gray.webp");
 }
 
 #banner i[clr="8"] {
-	background: url("../images/banners/gray.webp");
+	background: url("images/banners/gray.webp");
 }
 
 #banner i[clr="9"] {
-	background: url("../images/banners/pink.webp");
+	background: url("images/banners/pink.webp");
 }
 
 #banner i[clr="10"] {
-	background: url("../images/banners/lime.webp");
+	background: url("images/banners/lime.webp");
 }
 
 #banner i[clr="11"] {
-	background: url("../images/banners/yellow.webp");
+	background: url("images/banners/yellow.webp");
 }
 
 #banner i[clr="12"] {
-	background: url("../images/banners/light_blue.webp");
+	background: url("images/banners/light_blue.webp");
 }
 
 #banner i[clr="13"] {
-	background: url("../images/banners/magenta.webp");
+	background: url("images/banners/magenta.webp");
 }
 
 #banner i[clr="14"] {
-	background: url("../images/banners/orange.webp");
+	background: url("images/banners/orange.webp");
 }
 
 #banner i[clr="15"] {
-	background: url("../images/banners/white.webp");
+	background: url("images/banners/white.webp");
 }
 
 #banner .tb-ptn[ptn="base"]:after {
@@ -1836,7 +1837,7 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	background: url("../images/small_banners/bg_base_sm.webp") repeat scroll 0% 0% transparent;
+	background: url("images/small_banners/bg_base_sm.webp") repeat scroll 0% 0% transparent;
 	width: 40px;
 	height: 80px;
 	z-index: 25;
@@ -2077,67 +2078,67 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner i.tb-ptn[clr="0"] {
-	background: url("../images/small_banners/black.webp");
+	background: url("images/small_banners/black.webp");
 }
 
 #banner i.tb-ptn[clr="1"] {
-	background: url("../images/small_banners/red.webp");
+	background: url("images/small_banners/red.webp");
 }
 
 #banner i.tb-ptn[clr="2"] {
-	background: url("../images/small_banners/green.webp");
+	background: url("images/small_banners/green.webp");
 }
 
 #banner i.tb-ptn[clr="3"] {
-	background: url("../images/small_banners/brown.webp");
+	background: url("images/small_banners/brown.webp");
 }
 
 #banner i.tb-ptn[clr="4"] {
-	background: url("../images/small_banners/blue.webp");
+	background: url("images/small_banners/blue.webp");
 }
 
 #banner i.tb-ptn[clr="5"] {
-	background: url("../images/small_banners/purple.webp");
+	background: url("images/small_banners/purple.webp");
 }
 
 #banner i.tb-ptn[clr="6"] {
-	background: url("../images/small_banners/cyan.webp");
+	background: url("images/small_banners/cyan.webp");
 }
 
 #banner i.tb-ptn[clr="7"] {
-	background: url("../images/small_banners/light_gray.webp");
+	background: url("images/small_banners/light_gray.webp");
 }
 
 #banner i.tb-ptn[clr="8"] {
-	background: url("../images/small_banners/gray.webp");
+	background: url("images/small_banners/gray.webp");
 }
 
 #banner i.tb-ptn[clr="9"] {
-	background: url("../images/small_banners/pink.webp");
+	background: url("images/small_banners/pink.webp");
 }
 
 #banner i.tb-ptn[clr="10"] {
-	background: url("../images/small_banners/lime.webp");
+	background: url("images/small_banners/lime.webp");
 }
 
 #banner i.tb-ptn[clr="11"] {
-	background: url("../images/small_banners/yellow.webp");
+	background: url("images/small_banners/yellow.webp");
 }
 
 #banner i.tb-ptn[clr="12"] {
-	background: url("../images/small_banners/light_blue.webp");
+	background: url("images/small_banners/light_blue.webp");
 }
 
 #banner i.tb-ptn[clr="13"] {
-	background: url("../images/small_banners/magenta.webp");
+	background: url("images/small_banners/magenta.webp");
 }
 
 #banner i.tb-ptn[clr="14"] {
-	background: url("../images/small_banners/orange.webp");
+	background: url("images/small_banners/orange.webp");
 }
 
 #banner i.tb-ptn[clr="15"] {
-	background: url("../images/small_banners/white.webp");
+	background: url("images/small_banners/white.webp");
 }
 
 #banner i.tb-ptn[ptn=base] {
@@ -2375,12 +2376,12 @@ ul.button-group.top-heavy li:active,ul.button-group.top-heavy li.active {
 }
 
 #banner .craft-u.apple,#banner .craft-u.bn,#banner .craft-u.brick,#banner .craft-u.creeper,#banner .craft-u.black,#banner .craft-u.blue,#banner .craft-u.brown,#banner .craft-u.cyan,#banner .craft-u.gray,#banner .craft-u.green,#banner .craft-u.light_blue,#banner .craft-u.lime,#banner .craft-u.magenta,#banner .craft-u.orange,#banner .craft-u.pink,#banner .craft-u.purple,#banner .craft-u.red,#banner .craft-u.light_gray,#banner .craft-u.white,#banner .craft-u.yellow,#banner .craft-u.flower,#banner .craft-u.stick,#banner .craft-u.wither,#banner .craft-u.vine {
-	background-image: url("../images/craft.png") !important;
+	background-image: url("images/craft.png") !important;
 	background-repeat: no-repeat;
 }
 
 #banner .craft-base.craft-u.apple,#banner .craft-base.craft-u.bn,#banner .craft-base.craft-u.brick,#banner .craft-base.craft-u.creeper,#banner .craft-base.craft-u.black,#banner .craft-base.craft-u.blue,#banner .craft-base.craft-u.brown,#banner .craft-base.craft-u.cyan,#banner .craft-base.craft-u.gray,#banner .craft-base.craft-u.green,#banner .craft-base.craft-u.light_blue,#banner .craft-base.craft-u.lime,#banner .craft-base.craft-u.magenta,#banner .craft-base.craft-u.orange,#banner .craft-base.craft-u.pink,#banner .craft-base.craft-u.purple,#banner .craft-base.craft-u.red,#banner .craft-base.craft-u.light_gray,#banner .craft-base.craft-u.white,#banner .craft-base.craft-u.yellow,#banner .craft-base.craft-u.flower,#banner .craft-base.craft-u.stick,#banner .craft-base.craft-u.wither,#banner .craft-base.craft-u.vine {
-	background-image: url("../images/craft_b.png") !important;
+	background-image: url("images/craft_b.png") !important;
 	background-repeat: no-repeat;
 }
 
