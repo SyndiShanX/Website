@@ -11,13 +11,13 @@ function fetchData(spreadsheetID, pageNum) {
 		mainWrapper = document.getElementsByClassName('MainWrapper')[0]
 		for (i = 0; i < json.length; i++) {
 			elementNum = json[i]['Element Num']
-			if (elementNum == 4) {
+			if (elementNum == 4) { // Font Element without a Line Break
 				fontElement = document.createElement(json[i]['Element 1'])
 				fontElement.className = json[i]['Element 2']
 				fontElement.size = json[i]['Element 3']
 				fontElement.innerText = json[i]['Element 4']
 				mainWrapper.appendChild(fontElement)
-			} else if (elementNum == 5) {
+			} else if (elementNum == 5) { // Font Element with a Line Break
 				fontElement = document.createElement(json[i]['Element 1'])
 				fontElement.className = json[i]['Element 2']
 				fontElement.size = json[i]['Element 3']
@@ -25,7 +25,7 @@ function fetchData(spreadsheetID, pageNum) {
 				mainWrapper.appendChild(fontElement)
 				brElement = document.createElement(json[i]['Element 5'])
 				mainWrapper.appendChild(brElement)
-			} else if (elementNum == 6 || elementNum == 8) {
+			} else if (elementNum == 6 || elementNum == 8) { // Empty Weapon Image Element
 				imgElement1 = document.createElement(json[i]['Element 1'])
 				mainWrapper.appendChild(imgElement1)
 				imgElement1.setAttribute('src', json[i]['Element 2'] + '.webp')
@@ -59,6 +59,7 @@ function fetchData(spreadsheetID, pageNum) {
 				imgElement3.setAttribute('src', json[i]['Element 9'] + '.webp')
 				spanElement = document.createElement(json[i]['Element 10'])
 				spanElement.className = json[i]['Element 5'] + ' ' + json[i]['Element 11']
+				
 				if (json[i]['Element 12'] != '') {element12String = json[i]['Element 12'] + '<br>'} else {element12String = ''}
 				if (json[i]['Element 13'] != '') {element13String = json[i]['Element 13'] + '<br>'} else {element13String = ''}
 				if (json[i]['Element 14'] != '') {element14String = json[i]['Element 14'] + '<br>'} else {element14String = ''}
@@ -66,6 +67,7 @@ function fetchData(spreadsheetID, pageNum) {
 				if (json[i]['Element 16'] != '') {element16String = json[i]['Element 16'] + '<br>'} else {element16String = ''}
 				if (json[i]['Element 17'] != '') {element17String = json[i]['Element 17'] + '<br>'} else {element17String = ''}
 				if (json[i]['Element 18'] != '') {element18String = json[i]['Element 18']} else {element18String = ''}
+				
 				spanElement.innerHTML = '<font size=4><strong>' + json[i]['Element 5'] + '</strong></font><br><br>' + element12String + // Challenge 1
 																																																							element13String + // Challenge 2
 																																																							element14String + // Challenge 3
