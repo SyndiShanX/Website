@@ -147,25 +147,25 @@ fetchData('1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko', 6)
 <script>
 function setPaths() {
 	img = document.getElementsByTagName('img');
-	mwzPath = '../Images/Gold_Weapons/MW3/MWZ/'
+	imgPath = '../Images/Gold_Weapons/MW3/MWZ/'
 	
 	for (i = 1; i < img.length; i++) {
 		imgSrc = img[i].outerHTML.split('src="')[1].split('.webp"')[0]
 		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Golden Ivory" || imgSrc == "Spinel Husk" || imgSrc == "Arachnida" || imgSrc == "Bioluminescent" || imgSrc == "Progressing Golden Ivory" || imgSrc == "Progressing Spinel Husk" || imgSrc == "Progressing Arachnida") {
 			if (imgSrc == "Empty" || imgSrc == "None") {
-				img[i].src = mwzPath + 'MW2_' + imgSrc + '.webp'
+				img[i].src = imgPath + 'MW2_' + imgSrc + '.webp'
 			} else if (imgSrc == "Golden Ivory" || imgSrc == "Spinel Husk") {
 				imgSrc = imgSrc.replaceAll(' ', '_')
-				img[i].src = mwzPath + imgSrc + '.webp'
+				img[i].src = imgPath + imgSrc + '.webp'
 			} else {
-				img[i].src = mwzPath + imgSrc + '.webp'
+				img[i].src = imgPath + imgSrc + '.webp'
 			}
 		} else if (imgSrc == '1') {
 			imgSrc = imgSrc + '_MW2_Star'
-			img[i].src = mwzPath + imgSrc + '.webp'
+			img[i].src = imgPath + imgSrc + '.webp'
 		} else if (imgSrc == '0' || imgSrc == '2' || imgSrc == '3' || imgSrc == '4') {
 			imgSrc = imgSrc + '_MW2_Stars'
-			img[i].src = mwzPath + imgSrc + '.webp'
+			img[i].src = imgPath + imgSrc + '.webp'
 		}
 	}
 }
