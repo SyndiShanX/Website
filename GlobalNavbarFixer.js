@@ -48,7 +48,7 @@ function navSwapper() {
 		document.getElementsByClassName("zombiesA")[0].outerHTML = zombiesHTML
 	}
 	if (window.innerWidth >= 1000) {
-		/* Check if the Minesweeper Navbar Item HTMl is Empty and Refills it if the Screen is larger than 1000px */
+		/* Check if the Minesweeper Navbar Item HTML is Empty and Refills it if the Screen is larger than 1000px */
 		if (document.getElementsByClassName('topnav')[0].children[2].children[0].children[0].children[1].innerHTML == '') {
 			minesweeperHTML = document.getElementsByClassName("minesweeper")[0].outerHTML
 			blackjackHTML = document.getElementsByClassName("blackjack")[0].outerHTML
@@ -62,7 +62,7 @@ function navSwapper() {
 			/* Removes Pages from More Dropdown */
 			moreHTML = document.getElementsByClassName("moreDropdown")[0].outerHTML
 			if (moreHTML.split('Minesweeper').length > 1) {
-				document.getElementsByClassName("moreDropdown")[0].outerHTML = moreHTML.split('Minesweeper/')[0] + 'DokucraftBannerEditor/' + moreHTML.split('DokucraftBannerEditor/')[1]
+				document.getElementsByClassName("moreDropdown")[0].outerHTML = moreHTML.split('Minesweeper/')[0] + 'Dokucraft/Banner_Editor' + moreHTML.split('Dokucraft/Banner_Editor')[1]
 			}
 		} else {
 			document.getElementsByClassName("hiddenHTML")[0].outerHTML = ""
@@ -93,7 +93,7 @@ function navSwapper() {
 			/* Adds Pages to the More Dropdown */
 			moreHTML1 = moreHTML.split('moreDropdown">')[0] + 'moreDropdown">' + minesweeperHTML + blackjackHTML + dokustashGeneratorHTML + zombiesHTML + moreHTML.split('moreDropdown">')[1]
 			/* Removes the Navbar Classes from the Pages Elements */
-			moreHTML2 = moreHTML1.replaceAll('class="nav-item dokustashGenerator" ', '').replaceAll('class="nav-item minesweeper" ', '').replaceAll('class="nav-item blackjack" ', '').replaceAll('class="nav-item zombies end" ', '')
+			moreHTML2 = moreHTML1.replaceAll('class="nav-item dokustashGenerator" ', 'class="dropdown-item"').replaceAll('class="nav-item minesweeper" ', 'class="dropdown-item"').replaceAll('class="nav-item blackjack" ', 'class="dropdown-item"').replaceAll('class="nav-item zombies end" ', 'class="dropdown-item"')
 			document.getElementsByClassName("moreDropdown")[0].outerHTML = moreHTML2
 			/* Removes the Selection Border from the Pages Elements */
 			if (window.location.href == 'https://syndishanx.github.io/Website/') {
