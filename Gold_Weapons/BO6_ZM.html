@@ -1,0 +1,200 @@
+<!--Nav Template Start-->
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+<title>SyndiShanX - BO6 ZM Gold Weapons</title>
+<link rel="stylesheet" href="../Fonts/Font_Awesome.min.css">
+<link rel="icon" href="../Images/Global/Icon_Tab.webp">
+<link rel="stylesheet" href="../GlobalCSS.css">
+<style type="text/css">
+font {
+	font-family: 'Montserrat', sans-serif;
+	-webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+	-webkit-mask-size: 200%;
+	mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+	mask-size: 200%;
+	animation: shine 2s linear infinite;
+	font-weight: bold;
+}
+font.text_none {
+	color: white;
+}
+font.text_progressing {
+	color: #35afea;
+}
+font.text_rainbow {
+	background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+	-webkit-background-clip: text;
+	color: transparent;
+	animation: rainbow_animation 6s ease-in-out infinite;
+	background-size: 400% 100%;
+	-webkit-text-stroke: 0.5px #7F7F7F;
+}
+@keyframes rainbow_animation {
+	0%,100% { background-position: 0 0; }
+	50% { background-position: 100% 0; }
+}
+font.text_mystic_gold {
+	background-image: url('../Images/Gold_Weapons/BO6/ZM/Mystic_Gold_Text.webp');
+	background-size: 100% 100%;
+	color: transparent;
+	-webkit-background-clip: text;
+	display: inline-block;
+	position: relative;
+	-webkit-text-stroke: 0.5px #7F7F7F;
+}
+font.text_opal {
+	background-image: url('../Images/Gold_Weapons/BO6/ZM/Opal_Text.webp');
+	background-size: 100% 100%;
+	color: transparent;
+	-webkit-background-clip: text;
+	display: inline-block;
+	position: relative;
+	-webkit-text-stroke: 0.5px #7F7F7F;
+}
+font.text_afterlife {
+	background-image: url('../Images/Gold_Weapons/BO6/ZM/Afterlife_Text.webp');
+	background-size: 100% 100%;
+	color: transparent;
+	-webkit-background-clip: text;
+	display: inline-block;
+	position: relative;
+	-webkit-text-stroke: 0.5px #7F7F7F;
+}
+font.text_nebula, font.text_mastery {
+	background-image: url('../Images/Gold_Weapons/BO6/ZM/Nebula_Text.webp');
+	background-size: 100% 100%;
+	color: transparent;
+	-webkit-background-clip: text;
+	display: inline-block;
+	position: relative;
+	-webkit-text-stroke: 0.5px #7F7F7F;
+}
+@keyframes shine {
+	from { -webkit-mask-position: 150%; }
+	to { -webkit-mask-position: -50%; }
+}
+.weapon {
+	position: relative;
+	display: inline-block;
+	padding-right: 5px;
+}
+.challenges {
+	visibility: hidden;
+	width: fit-content;
+	color: #fff;
+	text-align: center;
+	padding: 10px 20px;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 2;
+	top: 100%;
+	left: 22%;
+	margin-left: -60px;
+	pointer-events: none;
+	background-image: var(--bgImageDark)!important;
+	background-clip: border-box!important;
+	background-origin: padding-box!important;
+	background-attachment: scroll!important;
+	background-repeat: repeat!important;
+	background-size: auto!important;
+	background-position: left top!important;
+	border: 1px solid #c0c0c0;
+}
+.weapon:hover .challenges {
+	visibility: visible;
+}
+.hidden {
+	display: none!important;
+}
+#customTextArea {
+	background-image: var(--bgImageDark)!important;
+	background-clip: border-box!important;
+	background-origin: padding-box!important;
+	background-attachment: scroll!important;
+	background-repeat: repeat!important;
+	background-size: auto!important;
+	background-position: left top!important;
+	border: 1px solid #5c5c5c;
+	border-radius: 8px;
+	text-align: center;
+	width: 30%;
+	height: 25px;
+	color: #fff;
+}
+.MainWrapper {
+	margin-top: 0px!important;
+}
+.customButton {
+	background-color: rgba(255, 255, 255, 0.25);
+	padding: 15px;
+	color: #fff;
+	font: 18px Arial;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid #5c5c5c;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.weapon_background {
+	position: relative;
+	z-index: -1;
+	left: -77.97%
+}
+.weapon_name {
+	position: relative;
+	z-index: 1;
+	top: -47px;
+	left: -236px;
+	width: 100%;
+	height: 32px;
+	font-size: 28px;
+	background-color:	transparent;
+	border-color:	transparent;
+	resize: none;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	color: white;
+	pointer-events: none;
+}
+</style>
+</head>
+<body lang="../">
+<div align="center" style='margin-top: 100px;'>
+	<h3 style='color: #fff;'>1. Make a Copy of the Template Spreadsheet, Set the Sharing Setting to `Anyone with the Link`</h3>
+	<h3 style='color: #fff;'>2. Get the ID of your Spreadsheet and Paste it into the Textarea and Click Load Spreadsheet</h3>
+	<a href='https://docs.google.com/spreadsheets/d/1Gn1wGkzQqX6PA1SmWMcmX2WwqRanltXY6JnoCN42lfE/edit#gid=0'><font color='#00ffff'>Template Spreadsheet Link</font></a><br><br>
+	<input type="text" id='customTextArea' placeholder='1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko'></input><br><br>
+	<button class='customButton' onClick="resetPage(); fetchData(document.getElementById('customTextArea').value, 1)">Load Spreadsheet</button>
+</div>
+<div class="MainWrapper" align="center">
+</div>
+<script src="ProceduralChallengeUtils.js"></script>
+<script>
+fetchData('1FaiFyLwUUuiBx6K0gBPooN8boRq6TahZcWuhK3UiPko', 1)
+</script>
+<script>
+function setPaths() {
+	img = document.getElementsByTagName('img');
+	imgPath = '../Images/Gold_Weapons/BO6/ZM/'
+	
+	for (i = 1; i < img.length; i++) {
+		imgSrc = img[i].outerHTML.split('src="')[1].split('.webp"')[0]
+		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Mystic Gold" || imgSrc == "Opal" || imgSrc == "Afterlife" || imgSrc == "Nebula" || imgSrc == "Progressing Mystic Gold" || imgSrc == "Progressing Opal" || imgSrc == "Progressing Afterlife") {
+			img[i].src = imgPath + imgSrc + '.webp'
+		} else if (imgSrc == '1') {
+			imgSrc = imgSrc + '_Star'
+			img[i].src = imgPath + imgSrc + '.webp'
+		} else if (imgSrc == '0' || imgSrc == '2' || imgSrc == '3' || imgSrc == '4'){
+			imgSrc = imgSrc + '_Stars'
+			img[i].src = imgPath + imgSrc + '.webp'
+		}
+	}
+}
+</script>
+<script src="../GlobalNavbar.js"></script>
+<script src="../GlobalNavbarFixer.js"></script>
+</body>
+</html>
+<!--Nav Template End-->

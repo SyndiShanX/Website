@@ -1,6 +1,7 @@
 *.pdn
 *.bat
 *.py
+
 Images/Gold_Weapons/MW2/Assault_Rifles/*
 Images/Gold_Weapons/MW2/Battle_Rifles/*
 Images/Gold_Weapons/MW2/Sub_Machine_Guns/*
@@ -11,6 +12,7 @@ Images/Gold_Weapons/MW2/Sniper_Rifles/*
 Images/Gold_Weapons/MW2/Pistols/*
 Images/Gold_Weapons/MW2/Launchers/*
 Images/Gold_Weapons/MW2/Melee/*
+
 Images/Gold_Weapons/MW3/Assault_Rifles/*
 Images/Gold_Weapons/MW3/Battle_Rifles/*
 Images/Gold_Weapons/MW3/Sub_Machine_Guns/*
@@ -22,3 +24,19 @@ Images/Gold_Weapons/MW3/Pistols/*
 Images/Gold_Weapons/MW3/Launchers/*
 Images/Gold_Weapons/MW3/Melee/*
 Images/Gold_Weapons/MW3/Placeholder.webp
+
+Images/Gold_Weapons/BO6/Assault_Rifles/*
+Images/Gold_Weapons/BO6/Battle_Rifles/*
+Images/Gold_Weapons/BO6/Sub_Machine_Guns/*
+Images/Gold_Weapons/BO6/Shotguns/*
+Images/Gold_Weapons/BO6/Light_Machine_Guns/*
+Images/Gold_Weapons/BO6/Marksman_Rifles/*
+Images/Gold_Weapons/BO6/Sniper_Rifles/*
+Images/Gold_Weapons/BO6/Pistols/*
+Images/Gold_Weapons/BO6/Launchers/*
+Images/Gold_Weapons/BO6/Melee/*
+Images/Gold_Weapons/BO6/ZM/*
+Images/Gold_Weapons/BO6/MP/*
+Images/Gold_Weapons/BO6/WZ/*
+Images/Gold_Weapons/BO6/TEMP/*
+Images/Gold_Weapons/BO6/Placeholder.webp
