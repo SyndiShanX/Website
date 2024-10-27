@@ -181,13 +181,7 @@ function setPaths() {
 	
 	for (i = 1; i < img.length; i++) {
 		imgSrc = img[i].outerHTML.split('src="')[1].split('.webp"')[0]
-		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Gold Tiger" || imgSrc == "King's Ransom" || imgSrc == "Catalyst" || imgSrc == "Abyss" || imgSrc == "Progressing Gold Tiger" || imgSrc == "Progressing King's Ransom" || imgSrc == "Progressing Catalyst") {
-			img[i].src = imgPath + imgSrc + '.webp'
-		} else if (imgSrc == '1') {
-			imgSrc = imgSrc + '_Star'
-			img[i].src = imgPath + imgSrc + '.webp'
-		} else if (imgSrc == '0' || imgSrc == '2' || imgSrc == '3' || imgSrc == '4'){
-			imgSrc = imgSrc + '_Stars'
+		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Gold Tiger" || imgSrc == "King's Ransom" || imgSrc == "Catalyst" || imgSrc == "Abyss" || imgSrc == "Progressing Gold Tiger" || imgSrc == "Progressing King's Ransom" || imgSrc == "Progressing Catalyst" || imgSrc == "Progressing Abyss") {
 			img[i].src = imgPath + imgSrc + '.webp'
 		}
 	}

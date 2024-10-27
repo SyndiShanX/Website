@@ -1,29 +1,3 @@
-async function sendData(data) {
-	const formData = new FormData(form);
-	//data = Object.fromEntries(formData)
-	//console.log(Object.fromEntries(formData));
-	//test = new URLSearchParams(data)
-	//console.log(test.toString())
-	//console.log(data)
-	try {
-		const response = await fetch("https://script.google.com/macros/s/AKfycby9Oqjw8V3uCGAmEybSuGbl92exwZ_pWPr0_ytvC839XUMnnfviMy3D0Uj5rr1CmQd5hw/exec", {
-			method: "POST",
-			body: new URLSearchParams(data)
-		});
-		const responseText = await response.text();
-		console.log(responseText);
-	}
-	catch (error) {
-		alert(error);
-	}
-}
-
-//for (const pair of temp1.entries()) {
-//  console.log(pair[0], pair[1]);
-//}
-
-//sendData()
-
 function resetPage() {
 	document.getElementsByClassName('MainWrapper')[0].remove()
 	mainWrapperDiv = document.createElement('div')
@@ -58,23 +32,33 @@ function fetchData(spreadsheetID, pageNum) {
 				mainForm.appendChild(fontElement)
 				brElement = document.createElement(json[i]['Element 5'])
 				mainForm.appendChild(brElement)
-			} else if (elementNum == 6 || elementNum == 8) { // Empty Weapon Image Element
+			} else if (elementNum == 7 || elementNum == 9) { // Empty Weapon Image Element
 				// Create Main Weapon Div
 				divElement = document.createElement('div')
 				divElement.className = 'weapon'
 				mainForm.appendChild(divElement)
-				// Create Empty Weapon Element
-				imgElement1 = document.createElement(json[i]['Element 1'])
+				// Create Background Container
+				backgroundDivElement1 = document.createElement('div')
+				backgroundDivElement1.style = 'position: relative; width: 0; height: 0'
+				// Create Background Element Container
+				backgroundDivElement2 = document.createElement('div')
+				backgroundDivElement2.style = 'position: absolute; pointer-events: none;'
+				// Append Elements
+				backgroundDivElement1.appendChild(backgroundDivElement2)
+				divElement.appendChild(backgroundDivElement1)
+				// Create Background Image
+				backgroundImage = document.createElement('img')
+				backgroundDivElement2.appendChild(backgroundImage)
+				backgroundImage.outerHTML = '<img src="Empty.webp" class="weapon_background">'
+				// Create Main Weapon Element
+				imgElement1 = document.createElement('img')
 				divElement.appendChild(imgElement1)
-				imgElement1.setAttribute('src', json[i]['Element 2'] + '.webp')
+				imgElement1.setAttribute('src', '../Images/Gold_Weapons/BO6/NO_GUN.webp')
 				// Create Weapon Camo Element
 				imgElement2 = document.createElement(json[i]['Element 3'])
 				divElement.appendChild(imgElement2)
 				imgElement2.setAttribute('src', json[i]['Element 4'] + '.webp')
-				// Create Weapon Mastery Element
-				imgElement3 = document.createElement(json[i]['Element 5'])
-				divElement.appendChild(imgElement3)
-				imgElement3.setAttribute('src', json[i]['Element 6'] + '.webp')
+				imgElement2.style = 'position: relative; left: -19px;'
 				// Create BR Element(s)
 				if (json[i]['Element 23'] == 'br') {
 					brElement = document.createElement(json[i]['Element 23'])
@@ -84,8 +68,8 @@ function fetchData(spreadsheetID, pageNum) {
 					brElement = document.createElement(json[i]['Element 24'])
 					mainForm.appendChild(brElement)
 				}
-			} else if (elementNum == 12 || elementNum == 13 || elementNum == 14 || elementNum == 15 || elementNum == 16 || elementNum == 17 || elementNum == 18 || elementNum == 19 || elementNum == 20) {
-				if (i == 5) {
+			} else if (elementNum == 12 || elementNum == 13 || elementNum == 14 || elementNum == 15 || elementNum == 16 || elementNum == 17 || elementNum == 18 || elementNum == 19 || elementNum == 20 || elementNum == 21 || elementNum == 22 || elementNum == 23) {
+				if (i == 4) {
 					// Camo Images
 					//camoImgElement1 = document.createElement('img')
 					//camoImgElement1 = camoImgElement2 = camoImgElement3 = camoImgElement4 = camoImgElement5 = camoImgElement6 = camoImgElement7 = camoImgElement8 = camoImgElement9 = camoImgElement10 = camoImgElement11 = camoImgElement12 = camoImgElement13 = camoImgElement14 = camoImgElement15 = document.createElement('img')
@@ -156,22 +140,7 @@ function fetchData(spreadsheetID, pageNum) {
 					imgElement2 = document.createElement(json[i]['Element 6'])
 					divElement.appendChild(imgElement2)
 					imgElement2.setAttribute('src', json[i]['Element 7'] + '.webp')
-					// Create Weapon Mastery Element
-					imgElement3 = document.createElement(json[i]['Element 8'])
-					divElement.appendChild(imgElement3)
-					imgElement3.setAttribute('src', json[i]['Element 9'] + '.webp')
-					imgElement3.setAttribute("onclick", 'incrementMastery("' + json[i]['Element 5'] + ' weapon")')
-					// Create Spreadsheet Update Elements
-					formElement1 = document.createElement('input')
-					formElement1.className = 'hidden'
-					formElement1.name = 'Element_Notation'
-					formElement1.setAttribute("value", 'J' + (parseInt(i + 2)))
-					divElement.appendChild(formElement1)
-					formElement2 = document.createElement('input')
-					formElement2.className = 'hidden'
-					formElement2.name = 'Element_Value'
-					formElement2.value = ''
-					divElement.appendChild(formElement2)
+					imgElement2.style = 'position: relative; left: -19px;'
 					// Create Weapon Challenges Element
 					spanElement = document.createElement(json[i]['Element 10'])
 					spanElement.className = json[i]['Element 5'] + ' ' + json[i]['Element 11']
@@ -216,37 +185,4 @@ function pinChallenges(elemClasses) {
 	} else {
 		document.getElementsByClassName(elemClasses)[0].style = 'visibility: visible; accent-color: rgb(255, 255, 255);'
 	}
-}
-function incrementMastery(elemClasses) {
-	currentElement = document.getElementsByClassName(elemClasses)[0]
-	//console.log(elemClasses)
-	//console.log(currentElement)
-	split1 = currentElement.children[3].src
-	if (split1.split('ZM/').length != 1) {
-		split2 = split1.split('ZM/')
-		splitString = 'ZM/'
-		sheetName = 'BO6 ZM'
-	} else if (split1.split('MP/').length != 1) {
-		split2 = split1.split('MP/')
-		splitString = 'MP/'
-		sheetName = 'BO6 MP'
-	} else if (split1.split('WZ/').length != 1) {
-		split2 = split1.split('WZ/')
-		splitString = 'WZ/'
-		sheetName = 'BO6 WZ'
-	}
-	starNum = split2[1].split('_Star')[0]
-	if (starNum < 4) {
-		if (parseInt(starNum) + 1 != 1) {
-			currentElement.children[3].src = split2[0] + splitString + (parseInt(starNum) + 1) + '_Stars.webp'
-			currentElement.children[5].value = (parseInt(starNum) + 1)
-		} else {
-			currentElement.children[3].src = split2[0] + splitString + (parseInt(starNum) + 1) + '_Star.webp'
-			currentElement.children[5].value = (parseInt(starNum) + 1)
-		}
-	} else {
-		currentElement.children[3].src = split2[0] + splitString + '0_Stars.webp'
-		currentElement.children[5].value = 0
-	}
-	sendData("Element_Notation=" + currentElement.children[4].value + "&Element_Value=" + currentElement.children[5].value + "&Sheet_Name=" + sheetName)
 }
