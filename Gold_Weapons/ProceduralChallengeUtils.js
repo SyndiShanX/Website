@@ -18,13 +18,13 @@ function fetchData(spreadsheetID, pageNum) {
 		mainForm = document.getElementById('form')
 		for (i = 0; i < json.length; i++) {
 			elementNum = json[i]['Element Num']
-			if (elementNum == 4) { // Font Element without a Line Break
+			if (elementNum == 5) { // Font Element without a Line Break
 				fontElement = document.createElement(json[i]['Element 1'])
 				fontElement.className = json[i]['Element 2']
 				fontElement.size = json[i]['Element 3']
 				fontElement.innerText = json[i]['Element 4']
 				mainForm.appendChild(fontElement)
-			} else if (elementNum == 5) { // Font Element with a Line Break
+			} else if (elementNum == 6) { // Font Element with a Line Break
 				fontElement = document.createElement(json[i]['Element 1'])
 				fontElement.className = json[i]['Element 2']
 				fontElement.size = json[i]['Element 3']
