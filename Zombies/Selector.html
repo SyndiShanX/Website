@@ -32,11 +32,13 @@
 }
 img.Zombies {
 	border-radius: 20px;
+	margin: 10px;
 	width: 468px;
 	height: 263px;
 }
 img.IW {
 	border-radius: 10px;
+	margin: 10px;
 	width: 420px;
 	height: 599px;
 }
@@ -56,6 +58,7 @@ img.IW {
 	<a onclick="revealMaps('Black_Ops_4'); select(7)"><img class="game unselected" onmouseover="hover(7)" onmouseout="hover(7)" src="../Images/Zombies/Selector/Black_Ops_4.webp"></img></a>
 	<a onclick="revealMaps('Cold_War'); select(8)"><img class="game unselected" onmouseover="hover(8)" onmouseout="hover(8)" src="../Images/Zombies/Selector/Cold_War.webp"></img></a>
 	<a onclick="revealMaps('Vanguard'); select(9)"><img class="game unselected" onmouseover="hover(9)" onmouseout="hover(9)" src="../Images/Zombies/Selector/Vanguard.webp"></img></a>
+	<a onclick="revealMaps('Black_Ops_6'); select(10)"><img class="game unselected" onmouseover="hover(10)" onmouseout="hover(10)" src="../Images/Zombies/Selector/Black_Ops_6.webp"></img></a>
 	
 	<br><br><br><br><br>
 	
@@ -131,7 +134,10 @@ function revealMaps(game) {
 		//createMap(2, maps)
 		maps.push("Shi_No_Numa");
 		createMap(1, maps)
-	}
+	} else if (game == 'Black_Ops_6') {
+		maps.push("Liberty_Falls", "Terminus");
+		createMap(2, maps)
+	} 
 	
 	function createMap(mapNum, map) {
 		for (let num = 0; num < mapNum; num++) {
