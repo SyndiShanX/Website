@@ -7,7 +7,32 @@
 <link rel="stylesheet" href="../../Fonts/Font_Awesome.min.css">
 <link rel="icon" href="../../Images/Global/Icon_Tab.webp">
 <link rel="stylesheet" href="../../GlobalCSS.css">
+<link rel="stylesheet" href="../ImageModal.css">
 <link rel="stylesheet" href="../ZombiesEEs.css">
+<style type="text/css">
+input.algebra {
+	width: 100px;
+	height: 100px;
+	border: 2px transparent solid;
+	user-drag: none;
+	user-select: none;
+  -webkit-user-drag: none;
+	-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+input.selected {
+	background-color: white;
+	border-radius: 12px;
+}
+textarea {
+	font-size: 25px;
+	color: #248d6c;
+	background-color: #383838;
+	border: none;
+	resize: none;
+}
+</style>
 </head>
 <body lang="../../">
 <div class="MainWrapper" align="left">
@@ -17,58 +42,108 @@
 
 	<font size="7" color="#8d2424">Easter Egg Song</font><br><br>
 
-	<font class="text">Interact with 3 Bunny Headphones:</font><br>
-	<font class="text">&nbsp; -On a Table outside of the Juggernog Room</font><br>
-	<font class="text">&nbsp; -In the Mines</font><br>
-	<font class="text">&nbsp; -Somewhere Else</font><br><br>
+	<font class="text">Interact with 3 Bunny Headphones:</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Headphones_1.webp" alt="On a Table outside of the Juggernog Room"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Headphones_2.webp" alt="In the Mines"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Headphones_3.webp" alt="Somewhere Else"></img><br><br>
 
 	<font size="7" color="#8d2424">Free Perk Easter Eggs</font><br><br>
 	
 	<font class="text">Open all Underwater Loot Chests around the Map</font><br><br>
-	<font class="text">Shoot all Zombies in the Cages in the Lab</font><br><br>
+	<font class="text">Shoot all Zombies in the Cages in the Lab and Wait a Round</font><br><br>
 	
 	<font size="7" color="#8d2424">Cursed Pirate Treasure Easter Egg</font><br><br>
 	
-	<font class="text">Look at the Map in the Sea Caves and Grab the Watch at the Location</font><br>
-	<font class="text">Break the Stalagmites using Melee Macchiato, then Place the Watch</font><br>
-	<font class="text">Light all the Skeletons on Fire with a Molotov at the 3 Locations, Kill the HVT that Spawns, and Pick Up the Coins</font><br>
-	<font class="text">&nbsp; -</font><br>
-	<font class="text">&nbsp; -</font><br>
-	<font class="text">&nbsp; -</font><br><br>
+	<font class="text">Look at the Map in the Sea Caves and Grab the Watch at the Location Marked on the Map</font><br>
+	<font class="text">Break the Stalagmites using Melee Macchiato, then Give the Watch to the Captain</font><br>
+	<font class="text">Light all the Skeletons on Fire with a Molotov at the 3 Locations, Kill the HVT that Spawns, Pick Up the Coins and take them Back to the Captain</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Treasure_1.webp" alt="On the Back Side of Castle Rock Island"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Treasure_2.webp" alt="By the Mast on the Shipwreck"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Treasure_3.webp" alt="In front of the Temple on Temple Island"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Treasure_4.webp"></img><br><br>
+	
+	<font class="text">Survive 3 Rounds on Crab Island, then Grab the Amulet</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Treasure_5.webp" alt="The Back Path on Crab Island"></img><br><br>
 	
 	<font size="7" color="#8d2424">Free Powerups</font><br><br>
 	
 	<font class="text">Shoot Powerup Items around the Map</font><br>
-	<font class="text">&nbsp; -Max Ammo - </font><br>
-	<font class="text">&nbsp; -Bonus Points - </font><br>
-	<font class="text">&nbsp; -Instakill - </font><br>
-	<font class="text">&nbsp; -Nuke - </font><br>
-	<font class="text">&nbsp; -Double Points - Office Desk in the Labs</font><br>
-	<font class="text">&nbsp; -Max Armor - </font><br>
-	<font class="text">&nbsp; -Full Power - On the Second Sea Tower</font><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Powerups/Max_Ammo.webp" alt="Max Ammo - "></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Powerups/Bonus_Points.webp" alt="Bonus Points - In the Window on the Shipwreck"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Powerups/Instakill.webp" alt="Instakill - On the Temple on Temple Island"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Powerups/Nuke.webp" alt="Nuke - "></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Powerups/Double_Points.webp" alt="Double Points - Office Desk in the Labs"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Powerups/Max_Armor.webp" alt="Max Armor - "></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Powerups/Full_Power.webp" alt="Full Power - On the Second Sea Tower"></img><br><br>
 	
 	<font size="7" color="#8d2424">Free Beamsmasher</font><br><br>
 
 	<font class="text">Turn on Power and Lift the Pack-A-Punch</font><br>
-	<font class="text">Activate three laptops around the map</font><br>
-	<font class="text">&nbsp; -Outside Stamin-Up Room in the Corner</font><br>
-	<font class="text">&nbsp; -Outside Quick Revive Room in the Corner</font><br>
-	<font class="text">&nbsp; -On the Platform down by the Docks</font><br>
 	<font class="text">Obtain Dead Wire on your Gun, ride the elevator that has the PaP machine on it</font><br>
 	<font class="text">Shoot the Fuse Box inside the Window around halfway up, Electricity will travel to the next Fuse Box, Keep Shooting them until you get to the Green Door that Opens</font><br>
-	<font class="text">Shoot the zombie inside the Room and it will drop a Fob</font><br>
-	<font class="text">Go to the Sea Tower and open the Briefcase and retrieve the Multiphasic Resonator</font><br>
-	<font class="text">Go back to the Research Lab and put the Resonator into the Computer</font><br>
+	<font class="text">Shoot the Zombie inside the Room and it will drop a Fob</font><br>
+	<font class="text">Go to the Sea Tower and open the Briefcase and retrieve the Multiphasic Resonator</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Fob.webp" alt="Inside the Research Lab"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Briefcase.webp" alt="On the Table in the Sea Tower"></img><br><br>
+	
+	<font class="text">Go back to the Research Lab and put the Resonator into the Computer</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Computer.webp" alt="Inside of the Research Lab"></img><br><br>
+	
+	<font class="text">Activate 3 Laptops around the Map</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Laptop_1.webp" alt="Outside Stamin-Up Room in the Corner"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Laptop_2.webp" alt="Outside Quick Revive Room in the Corner"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Laptop_3.webp" alt="On the Platform down by the Docks"></img><br><br>
+	
 	<font class="text">3 Sticky Notes will will be Taped to the Computer, that show you which Symbol corresponds to X, Y, and Z</font><br>
-	<font class="text">Look on the Whiteboard to get the Values corresponding to the 3 variables</font><br>
-	<font class="text">Solve the 3 Algebraic Equations on the Whiteboard, then Input the answers into the Computer</font><br>
+	<font class="text">Look on the Whiteboard to get the Values Corresponding to the 3 variables</font><br>
+	<font class="text">Solve the 3 Algebraic Equations on the Whiteboard, then Input the answers into the Computer</font><br><br>
+	
+	<center>
+		<div id="Symbol1" align="center"><br>
+			<input type="image" class="algebra" id="0" onClick="updateSelection(0, 0, '0', 'x')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/0.webp"></input>
+			<input type="image" class="algebra" id="1" onClick="updateSelection(0, 1, '10', 'x')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/10.webp"></input>
+			<input type="image" class="algebra" id="2" onClick="updateSelection(0, 2, '11', 'x')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/11.webp"></input>
+			<input type="image" class="algebra" id="3" onClick="updateSelection(0, 3, '20', 'x')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/20.webp"></input>
+			<input type="image" class="algebra" id="4" onClick="updateSelection(0, 4, '21', 'x')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/21.webp"></input>
+			<input type="image" class="algebra" id="5" onClick="updateSelection(0, 5, '22', 'x')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/22.webp"></input><br>
+		</div>
+	
+		<div id="Symbol2" align="center"><br>
+			<input type="image" class="algebra" id="6" onClick="updateSelection(6, 6, '0', 'y')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/0.webp"></input>
+			<input type="image" class="algebra" id="7" onClick="updateSelection(6, 7, '10', 'y')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/10.webp"></input>
+			<input type="image" class="algebra" id="8" onClick="updateSelection(6, 8, '11', 'y')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/11.webp"></input>
+			<input type="image" class="algebra" id="9" onClick="updateSelection(6, 9, '20', 'y')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/20.webp"></input>
+			<input type="image" class="algebra" id="10" onClick="updateSelection(6, 10, '21', 'y')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/21.webp"></input>
+			<input type="image" class="algebra" id="11" onClick="updateSelection(6, 11, '22', 'y')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/22.webp"></input><br>
+		</div>
+	
+		<div id="Symbol3" align="center"><br>
+			<input type="image" class="algebra" id="12" onClick="updateSelection(12, 12, '0', 'z')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/0.webp"></input>
+			<input type="image" class="algebra" id="13" onClick="updateSelection(12, 13, '10', 'z')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/10.webp"></input>
+			<input type="image" class="algebra" id="14" onClick="updateSelection(12, 14, '11', 'z')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/11.webp"></input>
+			<input type="image" class="algebra" id="15" onClick="updateSelection(12, 15, '20', 'z')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/20.webp"></input>
+			<input type="image" class="algebra" id="16" onClick="updateSelection(12, 16, '21', 'z')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/21.webp"></input>
+			<input type="image" class="algebra" id="17" onClick="updateSelection(12, 17, '22', 'z')" src="../../Images/Zombies/Black_Ops_6/Terminus/Symbols/22.webp"></input><br><br>
+		</div>
+		
+		<textarea id="equation1" rows="1" cols="1" maxlength="2" placeholder="00"></textarea>
+		<textarea id="equation2" rows="1" cols="1" maxlength="2" placeholder="00"></textarea>
+		<textarea id="equation3" rows="1" cols="1" maxlength="2" placeholder="00"></textarea><br><br>
+	</center>
+
 	<font class="text">Wait until the Resonator is Calibrated and Pick it up (Should work after you pass a Round after Round 9)</font><br>
 	<font class="text">Grab the Resonator from the Computer</font><br>
 	<font class="text">Go to 3 different islands and Fill up an Orb with Sparks</font><br><br>
 	
-	<font class="text">&nbsp; -Go to Castle Rock Island (Right Side of the Map) and Fill the Glowing Blue Orb</font><br>
-	<font class="text">&nbsp; -Head to Crab Island (Large Island at the Bottom of the Map) and Fill the Glowing Green Orb</font><br>
-	<font class="text">&nbsp; -Head to Temple Island (Top Left Corner of the Map) and Fill the Glowing Purple Orb</font><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Orb_1.webp" alt="Go to Castle Rock Island (Right Side of the Map) and Fill the Glowing Blue Orb"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Orb_2.webp" alt="Head to Crab Island (Large Island at the Bottom of the Map) and Fill the Glowing Green Orb"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Orb_3.webp" alt="Head to Temple Island (Top Left Corner of the Map) and Fill the Glowing Purple Orb"></img>
 	
 	<font class="text">Repeat the following Steps at Each Island</font><br><br>
 	
@@ -89,9 +164,9 @@
 	
 	<font class="text">Locate the Numbers for the Chamber Code</font><br><br>
 	
-	<font class="text">&nbsp; -The Hour hand on the Clock in the Holding Cells by Quick Revive</font><br>
-	<font class="text">&nbsp; -Playing Card Number on the Bulletin in the Mess Room</font><br>
-	<font class="text">&nbsp; -Days Since the Last Injury in the Engineering Room</font><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Code_1.webp" alt="The Hour hand on the Clock in the Holding Cells by Quick Revive"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Code_2.webp" alt="Playing Card Number on the Bulletin in the Mess Room"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Code_3.webp" alt="Days Since the Last Injury in the Engineering Room"></img><br><br>
 	
 	<font class="text">In the center of the Lab there will be a Chamber containing Nathan</font><br>
 	<font class="text">Input the code, and have all Players turn the Valves on the Chamber at the same time</font><br>
@@ -103,9 +178,9 @@
 	
 	<font class="text">The Missing Section can be in the following Locations:</font><br><br>
 	
-	<font class="text">&nbsp; -Crab Island, across from the Workbench</font><br>
-	<font class="text">&nbsp; -Under the Sea Tower</font><br>
-	<font class="text">&nbsp; -In the Sea Caves by Speed Cola</font><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Node_1.webp" alt="Crab Island, across from the Workbench"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Node_2.webp" alt="Under the Sea Tower"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Terminus/Node_3.webp" alt="In the Sea Caves by Speed Cola"></img><br><br>
 	
 	<font class="text">Retrieve the Hacking Device from Peck</font><br>
 	<font class="text">Go to the 3 Buoys around the Map and Hack them by Holding Interact with the Hacking Device</font><br>
@@ -123,6 +198,62 @@
 
 <!--Nav Template Start-->
 </div>
+<script>
+x = null
+y = null
+z = null
+
+function updateSelection(startID, selectedID, symbolValue, variable) {
+	if (variable == 'x') {
+    x =  Number(symbolValue)
+  } else if (variable == 'y') {
+    y = Number(symbolValue)
+  } else if (variable == 'z') {
+    z = Number(symbolValue)
+  }
+
+  if (x != null) {
+		equation1 = x * 2 + 11
+		document.getElementById('equation1').value = addDigit(equation1)
+	}
+  if (y != null && z != null) {
+		equation2 = z * 2 + y - 5
+		document.getElementById('equation2').value = addDigit(equation2)
+	}
+  if (x != null && y != null && z != null) {
+		equation3 = Math.abs(z + y - x)
+		document.getElementById('equation3').value = addDigit(equation3)
+  }
+
+	if (document.getElementsByClassName('algebra')[selectedID].className == 'algebra') {
+		document.getElementsByClassName('algebra')[selectedID].className = 'algebra selected'
+	} else {
+		document.getElementsByClassName('algebra')[selectedID].className = 'algebra'
+	}
+
+	if (startID == '0') {
+		endID = 6
+	} else if (startID == '6') {
+		endID = 12
+	} else if (startID == '12') {
+		endID = 18
+	}
+	
+	for (let i = startID; i < endID; i++) {
+		if (i != selectedID) {
+			document.getElementsByClassName('algebra')[i].className = 'algebra'
+		}
+	}
+}
+
+function addDigit(variable) {
+	if (variable.toString().length == 1) {
+		variable = '0' + variable.toString()
+	}
+	return variable
+}
+</script>
+<script src="../ImageModal.js"></script>
 <script src="../ZombiesEEs.js"></script>
 <script src="../../GlobalNavbar.js"></script>
 <script src="../../GlobalNavbarFixer.js"></script>
