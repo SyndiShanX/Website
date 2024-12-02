@@ -181,7 +181,7 @@ function setPaths() {
 	
 	for (i = 1; i < img.length; i++) {
 		imgSrc = img[i].outerHTML.split('src="')[1].split('.webp"')[0]
-		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Gold Tiger" || imgSrc == "King's Ransom" || imgSrc == "Catalyst" || imgSrc == "Abyss" || imgSrc == "Progressing Gold Tiger" || imgSrc == "Progressing King's Ransom" || imgSrc == "Progressing Catalyst" || imgSrc == "Progressing Abyss") {
+		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Gold Tiger" || imgSrc == "King's Ransom" || imgSrc == "Catalyst" || imgSrc == "Abyss") {
 			img[i].src = imgPath + imgSrc + '.webp'
 		}
 	}
