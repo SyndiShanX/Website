@@ -1,13 +1,36 @@
 font {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
+	line-height: 1.15;
+}
+
+font.title {
+	color: #8d2424;
+	font-size: xxx-large;
+}
+
+font.subtitle {
+	color: #cc6600;
+	font-size: x-large;
+}
+
+font.sub-subtitle {
+	color: #d9d900;
+	font-size: large;
 }
 
 font.text {
-	font-family: 'Montserrat', sans-serif;
-	letter-spacing: 0.15em;
-	line-height: 1.15;
-	font-weight: bold;
+	letter-spacing: 0.10em;
+}
+
+font.note {
+	color: #9555c2;
+	font-size: small;
+}
+
+font.notice {
+	color: #9555c2;
+	font-size: x-large;
 }
 
 img.Easter_Egg {
