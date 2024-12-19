@@ -181,7 +181,7 @@ function setPaths() {
 	
 	for (i = 1; i < img.length; i++) {
 		imgSrc = img[i].outerHTML.split('src="')[1].split('.webp"')[0]
-		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Gold Tiger" || imgSrc == "King's Ransom" || imgSrc == "Catalyst" || imgSrc == "Abyss") {
+		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Quartz" || imgSrc == "Tundra" || imgSrc == "Canyon" || imgSrc == "Pine" || imgSrc == "Undergrowth" || imgSrc == "Snakeskin" || imgSrc == "Siberia" || imgSrc == "Smolder" || imgSrc == "Blue Tiger" || imgSrc == "Gold Tiger" || imgSrc == "King's Ransom" || imgSrc == "Catalyst" || imgSrc == "Abyss") {
 			img[i].src = imgPath + imgSrc + '.webp'
 		}
 	}

@@ -181,7 +181,7 @@ function setPaths() {
 	
 	for (i = 1; i < img.length; i++) {
 		imgSrc = img[i].outerHTML.split('src="')[1].split('.webp"')[0]
-		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Mystic Gold" || imgSrc == "Opal" || imgSrc == "Afterlife" || imgSrc == "Nebula") {
+		if (imgSrc == "Empty" || imgSrc == "None" || imgSrc == "Slate" || imgSrc == "Desert" || imgSrc == "Evergreen" || imgSrc == "Rugged" || imgSrc == "Grim" || imgSrc == "Stripe" || imgSrc == "Oceanic" || imgSrc == "Whiteout" || imgSrc == "Purple Tiger" || imgSrc == "Mystic Gold" || imgSrc == "Opal" || imgSrc == "Afterlife" || imgSrc == "Nebula") {
 			img[i].src = imgPath + imgSrc + '.webp'
 		}
 	}
