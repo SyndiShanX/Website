@@ -27,7 +27,7 @@ hr {
 }
 
 pre {
-  font-family: monospace, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1em;
 }
 
@@ -46,7 +46,7 @@ b, strong {
 }
 
 code, kbd, samp {
-  font-family: monospace, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1em;
 }
 
@@ -74,7 +74,7 @@ img {
 }
 
 button, input, optgroup, select, textarea {
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
@@ -204,7 +204,6 @@ body {
 
 h2 {
 	color: #fff;
-	font-family: 'Birdseye', sans-serif;
 	font-size: 80px;
 	font-weight: 100;
 	line-height: 1.15;
@@ -423,7 +422,7 @@ img.logo:hover {
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
+	font-family: 'Montserrat', sans-serif;
 	font-size:15px;
 	padding:9px 23px;
 	text-decoration:none;
@@ -482,7 +481,7 @@ img.logo:hover {
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
+	font-family: 'Montserrat', sans-serif;
 	font-size:15px;
 	padding:9px 23px;
 	text-decoration:none;

@@ -126,7 +126,7 @@ createNavDropdown('more', 'More')
 
 /* Nav Dropdown Items */
 
-createNavDropdownItems(5, 'moreDropdown', ['Dokucraft Banner Editor', 'Gold Weapons Selector', 'Console Dokucraft', 'Downloads', 'Update Classes'], ['Dokucraft/Banner_Editor.html', 'Gold_Weapons/Selector.html', 'Downloads/Console_Dokucraft.html', 'Downloads/Downloads.html', 'Update_Classes.html'])
+createNavDropdownItems(5, 'moreDropdown', ['Dokucraft Banner Editor', 'Gold Weapons Selector', 'Challenges', 'Console Dokucraft', 'Downloads', 'Update Classes'], ['Dokucraft/Banner_Editor.html', 'Gold_Weapons/Selector.html', 'Challenges/Selector.html', 'Downloads/Console_Dokucraft.html', 'Downloads/Downloads.html', 'Update_Classes.html'])
 
 /* Nav Finalization */
 
