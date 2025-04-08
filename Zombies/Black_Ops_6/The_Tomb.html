@@ -9,6 +9,33 @@
 <link rel="stylesheet" href="../../GlobalCSS.css">
 <link rel="stylesheet" href="../ImageModal.css">
 <link rel="stylesheet" href="../ZombiesEEs.css">
+<style type="text/css">
+input.symbol {
+	width: 100px;
+	height: 100px;
+	border: 2px transparent solid;
+	user-drag: none;
+	user-select: none;
+  -webkit-user-drag: none;
+	-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+	filter: grayscale(100%);
+}
+input.selected {
+	filter: grayscale(0%);
+}
+font.symbolNum {
+	position: relative;
+	color: transparent;
+}
+font.symbolNum.selected {
+	color: #00ff00;
+}
+.hidden {
+	display: none;
+}
+</style>
 </head>
 <body lang="../../">
 <div class="MainWrapper" align="left">
@@ -171,6 +198,17 @@
 	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/The_Tomb/Staff/7.webp"></img>
 	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/The_Tomb/Staff/8.webp"></img><br><br>
 	
+	<center>
+		<input type="image" class="symbol" onClick="updateSelection(0)" src="../../Images/Zombies/Black_Ops_6/The_Tomb/Symbols/1.webp"></input>
+		<input type="image" class="symbol" onClick="updateSelection(1)" src="../../Images/Zombies/Black_Ops_6/The_Tomb/Symbols/2.webp"></input>
+		<input type="image" class="symbol" onClick="updateSelection(2)" src="../../Images/Zombies/Black_Ops_6/The_Tomb/Symbols/3.webp"></input>
+		<input type="image" class="symbol" onClick="updateSelection(3)" src="../../Images/Zombies/Black_Ops_6/The_Tomb/Symbols/4.webp"></input>
+		<input type="image" class="symbol" onClick="updateSelection(4)" src="../../Images/Zombies/Black_Ops_6/The_Tomb/Symbols/5.webp"></input>
+		<input type="image" class="symbol" onClick="updateSelection(5)" src="../../Images/Zombies/Black_Ops_6/The_Tomb/Symbols/6.webp"></input>
+		<input type="image" class="symbol" onClick="updateSelection(6)" src="../../Images/Zombies/Black_Ops_6/The_Tomb/Symbols/7.webp"></input>
+		<input type="image" class="symbol" onClick="updateSelection(7)" src="../../Images/Zombies/Black_Ops_6/The_Tomb/Symbols/8.webp"></input>
+	</center><br><br>
+	
 	<font class="text">One of the Portals will close itself Go to that Portal in the Overworld and Shoot the Symbols that were on the Rocks to open the Portal</font><br>
 	<font class="text">A Symbol will Spawn on the Ground in front of the Portal if you Shot the Correct Symbols, if there isn't a Symbol, then you will Fall to your Death</font><br><br>
 	
@@ -247,6 +285,22 @@
 
 <!--Nav Template Start-->
 </div>
+<script>
+numSelected = 0
+
+function updateSelection(selectedID) {
+console.log(document.getElementsByClassName('symbol')[selectedID].className == 'symbol')
+	if(document.getElementsByClassName('symbol')[selectedID].className == 'symbol') {
+		if(numSelected <= 2) {
+			numSelected++
+			document.getElementsByClassName('symbol')[selectedID].className = 'symbol selected'
+		}
+	} else {
+		document.getElementsByClassName('symbol')[selectedID].className = 'symbol'
+		numSelected--
+	}
+}
+</script>
 <script src="../ImageModal.js"></script>
 <script src="../ZombiesEEs.js"></script>
 <script src="../../GlobalNavbar.js"></script>
