@@ -10,7 +10,39 @@
 <link rel="stylesheet" href="../ImageModal.css">
 <link rel="stylesheet" href="../ZombiesEEs.css">
 <style type="text/css">
-
+input.folder {
+	width: 219px;
+	height: 141px;
+	border: 2px transparent solid;
+	user-drag: none;
+	user-select: none;
+  -webkit-user-drag: none;
+	-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+input.codeword {
+	width: 192px;
+	height: 108px;
+	border: 2px transparent solid;
+	user-drag: none;
+	user-select: none;
+  -webkit-user-drag: none;
+	-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+input.selected {
+	background-color: white;
+	border-radius: 12px;
+}
+textarea {
+	font-size: 25px;
+	color: #248d6c;
+	background-color: #383838;
+	border: none;
+	resize: none;
+}
 </style>
 </head>
 <body lang="../../">
@@ -31,17 +63,17 @@
 	
 	<font class="text">Shoot Powerup Items around the Map</font><br><br>
 	
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Max_Ammo.webp" alt="Max Ammo - "></img>
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Bonus_Points.webp" alt="Bonus Points - "></img>
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Instakill.webp" alt="Instakill - "></img>
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Nuke.webp" alt="Nuke - "></img><br><br>
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Double_Points.webp" alt="Double Points - "></img>
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Max_Armor.webp" alt="Max Armor - "></img>
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Full_Power.webp" alt="Full Power - "></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Max_Ammo.webp" alt="Max Ammo - On an Electric Box in Android Assembly "></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Bonus_Points.webp" alt="Bonus Points - On a Tower on top of the Executive Suite"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Instakill.webp" alt="Instakill - On a Control Panel inside of a Zombie Barrier in Dark Entity Containment"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Nuke.webp" alt="Nuke - On a Blue Pipe in the Particle Accelerator Room"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Double_Points.webp" alt="Double Points - Under a Mushroom in Quantum Computing"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Max_Armor.webp" alt="Max Armor - On a Tank outside of the Map in Reception"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Full_Power.webp" alt="Full Power - Under the Catwalk in Mutant Lab"></img><br><br>
 	
 	<font class="text">After Shooting all of the Other Powerups a Fire Sale Powerup will Spawn</font><br><br>
 	
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Fire_Sale.webp" alt="Fire Sale - "></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Powerups/Fire_Sale.webp" alt="Fire Sale - Inside of a Flaming Box in a Zombie Barrier by Quick Revive"></img><br><br>
 	
 	<font class="title">Free Perks</font><br><br>
 	
@@ -51,35 +83,9 @@
 	
 	
 	
-	<font class="title">Mutant Lab Parts</font><br><br>
-
-	<font class="text">Open the Box near the Mangler in a Containment Tank in the Mutant Lab and pick up the Syringe</font><br><br>
-	
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Syringe.webp" alt="In the Box near the Mangler in the Mutant Lab"></img><br><br>
-	
-	<font class="text">Go into the Particle Accelerator Beam while in Low Gravity, a body will fall onto the ground, then interact with it to fill the Syringe with their Blood</font><br>
-	<font class="text">Interact with the Monitor next to the Mangler in a Tank in the Mutant Lab</font><br><br>
-	
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Body.webp" alt="On the Ground under the Particle Accelerator Beam"></img>
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Monitor.webp" alt="To the Right of the Mangler in the Tank in the Mutant Lab"></img><br><br>
-	
-	<font class="text">Kill the Mangler and pick up the Mutant Injector, then scan yourself at the Locked Door in Dark Entity Containment after using the Mutant Injector</font><br><br>
-	
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Injector.webp" alt="On the Ground under the Particle Accelerator Beam"></img>
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Containment_Door.webp" alt="To the Right of the Mangler in the Tank in the Mutant Lab"></img><br><br>
-	
-	<font class="text">Melee the Container with the 3 Green Lights in Quantum Computing using Melee Macchiato to open it</font><br>
-	<font class="text">Pick up the Brain from Quantum Computing and take it through the Teleporter in Dark Entity Containment</font><br><br>
-	
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Brain_1.webp" alt="In the Container in Quantum Computing"></img>
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Brain_2.webp" alt="Through the Teleporter in Dark Entity Containment"></img><br><br>
-	
-	
-	
-	
 	<font class="title">Klaus</font><br><br>
 	
-	<font class="text">Pick up Klaus' Legs from one of the following areas in Android Assembly</font><br>
+	<font class="text">Pick up Klaus' Legs from one of the following areas in Android Assembly</font><br><br>
 	
 	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Klaus/Leg_1.webp" alt="Behind the Door near the Lower Flinger"></img>
 	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Klaus/Leg_2.webp" alt="In a Pile of Scrap Parts near the Conveyor Belt"></img>
@@ -111,9 +117,18 @@
 	
 	<font class="text">Sort the Folders by the Archival Date in Chronological Order, then enter that 4 digit code into the Computer through the Teleporter in Dark Entity Containment</font><br><br>
 	
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Folders/Computer.webp" alt="Through the Teleporter in Dark Entity Containment"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Folders/Computer.webp" alt="Through the Teleporter in Dark Entity Containment"></img><br><br><br><br>
 	
-	
+	<center>
+		<input type="image" class="folder" onClick="select_folder(1)" src="../../Images/Zombies/Black_Ops_6/Reckoning/Folders/Icons/Collar.webp"></input>
+		<input type="image" class="folder" onClick="select_folder(2)" src="../../Images/Zombies/Black_Ops_6/Reckoning/Folders/Icons/Katana.webp"></input>
+		<input type="image" class="folder" onClick="select_folder(3)" src="../../Images/Zombies/Black_Ops_6/Reckoning/Folders/Icons/Scarf.webp"></input>
+		<input type="image" class="folder" onClick="select_folder(4)" src="../../Images/Zombies/Black_Ops_6/Reckoning/Folders/Icons/Watch.webp"></input>
+		<input type="image" class="folder" onClick="select_folder(5)" src="../../Images/Zombies/Black_Ops_6/Reckoning/Folders/Icons/Goggles.webp"></input>
+		<input type="image" class="folder" onClick="select_folder(6)" src="../../Images/Zombies/Black_Ops_6/Reckoning/Folders/Icons/Badge.webp"></input><br><br>
+		
+		<textarea id="code_1" rows="1" cols="4" maxlength="4" placeholder="0000"></textarea><br><br>
+	</center>
 	
 	
 	<font class="title">CASTER Upgrade</font><br><br>
@@ -137,32 +152,63 @@
 	
 	
 	
-	<font class="title">The Cyst</font><br><br>
+	<font class="title">The Gorgofex</font><br><br>
 	
-	<font class="text">Get the Codewords from the Monitors in Mutant Lab</font><br>
+	<font class="text">Get the Codewords from the Monitors in Mutant Lab</font><br><br>
 	
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Codeword_1.webp" alt="On the Monitor behind the Tank containing Richtofen's Family"></img>
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Codeword_2.webp" alt="On the Monitor by Deadshot"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Codeword_1.webp" alt="On the Monitor behind the Tank containing Richtofen's Family"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Codeword_2.webp" alt="On the Monitor by Deadshot"></img><br><br>
 	
 	<font class="text">Use the First Letter of each word and find the Element using those letters on the Periodic Table and Input the Element Number of that Element (Start with 0's if it's not 3 Digits)</font><br><br>
 	
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Periodic_Table.webp"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Periodic_Table.webp"></img><br><br>
 	
-	<font class="text">Bring Parasites and Vermin near the Container with the Cyst on a Petri Dish to gow it, then pick it up</font><br><br>
+	<center>
+		<input type="image" class="codeword" onClick="select_codeword(0, 'Belicose')" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Words/Belicose.webp"></input>
+		<input type="image" class="codeword" onClick="select_codeword(1, 'Castigate')" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Words/Castigate.webp"></input>
+		<input type="image" class="codeword" onClick="select_codeword(2, 'Enervate')" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Words/Enervate.webp"></input>
+		<input type="image" class="codeword" onClick="select_codeword(3, 'Inhumane')" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Words/Inhumane.webp"></input>
+		<input type="image" class="codeword" onClick="select_codeword(4, 'Liability')" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Words/Liability.webp"></input>
+		<input type="image" class="codeword" onClick="select_codeword(5, 'Malediction')" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Words/Malediction.webp"></input>
+		<input type="image" class="codeword" onClick="select_codeword(6, 'Nettlesome')" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Words/Nettlesome.webp"></input>
+		<input type="image" class="codeword" onClick="select_codeword(7, 'Obsequious')" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Words/Obsequious.webp"></input>
+		<input type="image" class="codeword" onClick="select_codeword(8, 'Pejorative')" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Words/Pejorative.webp"></input>
+		<input type="image" class="codeword" onClick="select_codeword(9, 'Ruinous')" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Words/Ruinous.webp"></input>
+		<input type="image" class="codeword" onClick="select_codeword(10, 'Scorn')" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Words/Scorn.webp"></input>
+		<input type="image" class="codeword" onClick="select_codeword(11, 'Traitor')" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Words/Traitor.webp"></input>
+		<input type="image" class="codeword" onClick="select_codeword(12, 'Yobbish')" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Words/Yobbish.webp"></input><br><br>
+		
+		<textarea id="code_2" rows="1" cols="3" maxlength="3" placeholder="000"></textarea>
+		<font class="text" style="position: relative;top: -10px;">or</font>
+		<textarea id="code_3" rows="1" cols="3" maxlength="3" placeholder="000"></textarea><br><br>
+	</center>
 	
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Cyst.webp"></img><br><br>
+	<font class="text">Kill 3 Vermin near the Container with the Cyst to grow it, Kill 3 Zombies near it, then pick it up</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Cyst_1.webp"></img><br><br>
+	
+	<font class="text">Go to 3 Areas in Quantum Computing and fill the Cyst</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Cyst_2.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Cyst_3.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Cyst_3.webp"></img><br><br>
+	
+	<font class="text">Go to Dark Entity Containment and Interact with a Beeping Computer, then quickly interact with the other 3 around the Room</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Terminal_1.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Terminal_2.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Terminal_3.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Terminal_3.webp"></img><br><br>
+	
+	<font class="text">Kill the Uber Klaus and Pick up the Ball to Obtain the Gorgofex</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Ball.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Gorgofex/Gorgofex.webp"></img><br><br>
 	
 	
 	
 	
-	<font class="text">Boost the Particle Accelerator to spawn Quantum Vermin</font><br><br>
-	
-	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Boost.webp" alt="In the Particle Accelerator Control Room"></img><br><br>
-	
-	<font class="text">Fill up the Soul-Box and Kill at Least 1 Quantum Vermin using Shadow Damage (Dark Flare, LT33 Kazamir, or Shadow Rift)</font><br><br>
-	
-	
-	
+	<font class="title">Safe Key</font><br><br>
 	
 	<font class="text">Use an ARC-XD to go under the Forsaken and Explode near the Aetherium Crystals to Spawn Crystals on the back of the Box containing the Forsaken</font><br>
 	<font class="text">Break the Crystals to get the Safe Key</font><br><br>
@@ -174,6 +220,46 @@
 	
 	<font class="text"></font><br>
 	<font class="text"></font><br>
+	
+
+	
+	
+	<font class="title">Main Quest</font><br><br>
+
+	<font class="text">Open the Box near the Mangler in a Containment Tank in the Mutant Lab and pick up the Syringe</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Syringe.webp" alt="In the Box near the Mangler in the Mutant Lab"></img><br><br>
+	
+	<font class="text">Go into the Particle Accelerator Beam while in Low Gravity, a body will fall onto the ground, then interact with it to fill the Syringe with their Blood</font><br>
+	<font class="text">Interact with the Monitor next to the Mangler in a Tank in the Mutant Lab</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Body.webp" alt="On the Ground under the Particle Accelerator Beam"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Monitor.webp" alt="To the Right of the Mangler in the Tank in the Mutant Lab"></img><br><br>
+	
+	<font class="text">Kill the Mangler and pick up the Mutant Injector, then scan yourself at the Locked Door in Dark Entity Containment after using the Mutant Injector</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Injector.webp" alt="On the Ground under the Particle Accelerator Beam"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Containment_Door.webp" alt="To the Right of the Mangler in the Tank in the Mutant Lab"></img><br><br>
+	
+	<font class="text">Melee the Container with the 3 Green Lights in Quantum Computing using Melee Macchiato to open it</font><br>
+	<font class="text">Pick up the Brain from Quantum Computing and take it through the Teleporter in Dark Entity Containment</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Brain_1.webp" alt="In the Container in Quantum Computing"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Brain_2.webp" alt="Through the Teleporter in Dark Entity Containment"></img><br><br>
+	
+	<font class="text">Boost the Particle Accelerator to spawn Quantum Vermin</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Boost.webp" alt="In the Particle Accelerator Control Room"></img><br><br>
+	
+	<font class="text">Fill up the Soul Box and Kill at least 1 Quantum Vermin using Shadow Damage (Dark Flare, LT33 Kazamir, or Shadow Rift)</font><br>
+	<font class="text">Once you have Collected enough Souls you can Interact with the Blue Orb on top of the Soul Box to Charge the Gorgofex</font><br>
+	<font class="text">Shoot the Portal through the Teleporter in Dark Entity Containment with the Charged Gorgofex to open it</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Orb.webp" alt="In the Particle Accelerator Control Room"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/Black_Ops_6/Reckoning/Teleporter.webp" alt="Through the Teleporter in Dark Entity Containment"></img><br><br>
+	
+	
+	
 
 	<font class="notice">**PREPARE FOR THE BOSS FIGHT**</font><br><br>
 	
@@ -186,7 +272,143 @@
 <!--Nav Template Start-->
 </div>
 <script>
+//Belicose
+//Castigate
+//Enervate
+//Inhumane
+//Liability
+//Malediction
+//Nettlesome
+//Obsequious
+//Pe
+//Ruinous
+//Traitor
+//Yobbish
 
+//Trebuchet MS - Size 40 - Bold - #28C628 - #252623
+
+//element_names = ["Actinium", "Silver", "Aluminum", "Americium", "Argon", "Arsenic", "Astatine", "Gold", "Barium", "Beryllium", "Bohrium", "Bismuth", "Berkelium", "Bromine", "Calcium", "Cadmium", "Cerium", "Californium", "Chlorine", "Curium", "Cobalt", "Chromium", "Cesium", "Copper", "Dubnium", "Dysprosium", "Erbium", "Einsteinium", "Europium", "Iron", "Fermium", "Francium", "Gallium", "Gadolinium", "Germanium", "Helium", "Hafnium", "Mercury", "Holmium", "Hassium", "Indium", "Iridium", "Krypton", "Lanthanum", "Lithium", "Lawrencium", "Lutetium", "Mendelevium", "Magnesium", "Manganese", "Molybdenum", "Meitnerium", "Sodium", "Niobium", "Neodymium", "Neon", "Nickel", "Nobelium", "Neptunium", "Osmium", "Protactinium", "Lead", "Palladium", "Promethium", "Polonium", "Praseodymium", "Platinum", "Plutonium", "Radium", "Rubidium", "Rhenium", "Rutherfordium", "Rhodium", "Radon", "Ruthenium", "Antimony", "Scandium", "Selenium", "Seaborgium", "Silicon", "Samarium", "Tin", "Strontium", "Tantalum", "Terbium", "Technetium", "Tellurium", "Thorium", "Titanium", "Thallium", "Thulium", "Xenon", "Ytterbium", "Zinc", "Zirconium"]
+elements = ["ac", "ag", "al", "am", "ar", "as", "at", "au", "ba", "be", "bh", "bi", "bk", "br", "ca", "cd", "ce", "cf", "cl", "cm", "co", "cr", "cs", "cu", "db", "dy", "er", "es", "eu", "fe", "fm", "fr", "ga", "gd", "ge", "he", "hf", "hg", "ho", "hs", "in", "ir", "kr", "la", "li", "lr", "lu", "md", "mg", "mn", "mo", "mt", "na", "nb", "nd", "ne", "ni", "no", "np", "os", "pa", "pb", "pd", "pm", "po", "pr", "pt", "pu", "ra", "rb", "re", "rf", "rh", "rn", "ru", "sb", "sc", "se", "sg", "si", "sm", "sn", "sr", "ta", "tb", "tc", "te", "th", "ti", "tl", "tm", "xe", "yb", "zn", "zr"]
+element_nums = ["89", "47", "13", "95", "18", "33", "85", "79", "56", "4", "107", "83", "97", "35", "20", "48", "58", "98", "17", "96", "27", "24", "55", "29", "105", "66", "68", "99", "63", "26", "100", "87", "31", "64", "32", "2", "72", "80", "67", "108", "49", "77", "36", "57", "3", "103", "71", "101", "12", "25", "42", "109", "11", "41", "60", "10", "28", "102", "93", "76", "91", "82", "46", "61", "84", "59", "78", "94", "88", "37", "75", "104", "45", "86", "44", "51", "21", "34", "106", "14", "62", "50", "38", "73", "65", "43", "52", "90", "22", "81", "69", "54", "70", "30", "40"]
+
+num_selected_words = 0
+
+selected_words = []
+
+function select_codeword(selected_id, selected_word) {
+	if(document.getElementsByClassName('codeword')[selected_id].className == 'codeword') {
+		if(num_selected_words <= 1) {
+			document.getElementsByClassName('codeword')[selected_id].className = 'codeword selected'
+			num_selected_words++
+			
+			selected_words.push(selected_word)
+			
+			console.log(selected_words)
+		}
+	} else {
+		document.getElementsByClassName('codeword')[selected_id].className = 'codeword'
+		num_selected_words--
+		
+		removeFromArray(selected_words, selected_word)
+	}
+	
+	if(num_selected_words == 2) {
+		code = ""
+		
+		if(elements.includes(selected_words[0][0].toString().toLowerCase() + selected_words[1][0].toString().toLowerCase())) {
+			possible_combo_1 = element_nums[elements.indexOf(selected_words[0][0].toString().toLowerCase() + selected_words[1][0].toString().toLowerCase())]
+		} else {
+			possible_combo_1 = null
+		}
+		
+		if(elements.includes(selected_words[1][0].toString().toLowerCase() + selected_words[0][0].toString().toLowerCase())) {
+			possible_combo_2 = element_nums[elements.indexOf(selected_words[1][0].toString().toLowerCase() + selected_words[0][0].toString().toLowerCase())]
+		} else {
+			possible_combo_2 = null
+		}
+		
+		if(possible_combo_1 != null && possible_combo_1.length == 2) {
+			possible_combo_1 = "0" + possible_combo_1
+		} else if(possible_combo_1 != null && possible_combo_1.length == 1) {
+			possible_combo_1 = "00" + possible_combo_1
+		}
+		
+		if(possible_combo_2 != null && possible_combo_2.length == 2) {
+			possible_combo_2 = "0" + possible_combo_2
+		} else if(possible_combo_2 != null && possible_combo_2.length == 1) {
+			possible_combo_2 = "00" + possible_combo_2
+		}
+		
+		document.getElementById("code_2").value = possible_combo_1
+		document.getElementById("code_3").value = possible_combo_2
+	} else {
+		document.getElementById("code_2").value = ""
+		document.getElementById("code_3").value = ""
+	}
+}
+
+//BND Badge = 6
+//Collar = 1
+//Scarf = 3
+//Watch = 4
+//Goggles = 5
+//Katana = 2
+
+num_selected_folders = 0
+
+selected_folders = []
+
+function select_folder(selected_id) {
+	if(document.getElementsByClassName('folder')[selected_id - 1].className == 'folder') {
+		if(num_selected_folders < 4) {
+			document.getElementsByClassName('folder')[selected_id - 1].className = 'folder selected'
+			num_selected_folders++
+			
+			selected_folders.push(selected_id)
+			
+			console.log(selected_folders)
+		}
+	} else {
+		document.getElementsByClassName('folder')[selected_id - 1].className = 'folder'
+		num_selected_folders--
+		
+		removeFromArray(selected_folders, selected_id)
+	}
+	
+	if(num_selected_folders != 0) {
+		code = []
+		
+		if(selected_folders.includes(6)) {
+			code.push(6)
+		}
+		if(selected_folders.includes(1)) {
+			code.push(1)
+		}
+		if(selected_folders.includes(3)) {
+			code.push(3)
+		}
+		if(selected_folders.includes(4)) {
+			code.push(4)
+		}
+		if(selected_folders.includes(5)) {
+			code.push(5)
+		}
+		if(selected_folders.includes(2)) {
+			code.push(2)
+		}
+		
+		document.getElementById("code_1").value = code.toString().replaceAll(',', '')
+	} else {
+		document.getElementById("code_1").value = ""
+	}
+}
+
+function removeFromArray(array, value) {
+	index = array.indexOf(value);
+	if(index > -1) {
+		array.splice(index, 1);
+	}
+}
 </script>
 <script src="../ImageModal.js"></script>
 <script src="../ZombiesEEs.js"></script>
