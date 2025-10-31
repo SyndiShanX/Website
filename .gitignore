@@ -2,6 +2,8 @@
 *.bat
 *.py
 
+Creed/*
+
 Images/Gold_Weapons/MW2/Assault_Rifles/*
 Images/Gold_Weapons/MW2/Battle_Rifles/*
 Images/Gold_Weapons/MW2/Sub_Machine_Guns/*
