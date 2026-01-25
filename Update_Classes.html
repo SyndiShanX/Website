@@ -97,9 +97,9 @@
 		<input id='theme-file' type='file' class='fileInput' onchange='loadThemeFile()'style='color: #fff;'><br>
 		<input id='diff-file' type='file' class='fileInput' onchange='loadChangesFile()'style='color: #fff;'><br><br><br>
 		
-		<font style='color: #fff; font: 18px Arial; font-weight: bold;' id='textAreaStatus'>If you use the Textarea, you have to Click off after you Paste your Theme for it to Update</font><br><br>
+		<font style='color: #fff; font: 18px Arial; font-weight: bold;' id='textAreaStatus'>Awaiting Input...</font><br><br>
 		
-		<textarea id='themeTextArea' onchange='updateClasses("textarea")'></textarea><br><br>
+		<textarea id='themeTextArea' placeholder="Paste CSS here to update it"></textarea><br><br>
 		
 		<button class='outputButton' onClick='output("file")'>Download Updated Theme</button>
 		<button class='outputButton' onClick='output("clipboard")'>Copy to Clipboard</button><br>
@@ -114,6 +114,13 @@
 <!--Nav Template Start-->
 </div>
 <script>
+let update_timeout;
+
+document.getElementById('themeTextArea').addEventListener('input', () => {
+	clearTimeout(update_timeout);
+	update_timeout = setTimeout(updateClasses("textarea"), 200);
+});
+
 async function loadChangesFileURL() {
 	const url = 'https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt'
 	let rawFile = await fetch(url);
