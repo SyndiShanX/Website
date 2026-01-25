@@ -92,15 +92,21 @@
 	<div class='container'><br><br>
 		<h3 style='color: #fff;'>Either Upload your Theme File or Paste it into the Textarea</h3>
 		<h4 style='color: #fff;'>(Optional) Either Upload a Custom Diff File or Use the <a class="link" target=”_blank” href="https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt">Included One</a></h3><br><br><br>
+		
 		<label for='theme-file' class='fileInputVisible theme' role='button'>Upload Theme File</label><label for='diff-file' class='fileInputVisible' role='button' style="margin-left: 5%;">Upload Diff File</label>
 		<input id='theme-file' type='file' class='fileInput' onchange='loadThemeFile()'style='color: #fff;'><br>
 		<input id='diff-file' type='file' class='fileInput' onchange='loadChangesFile()'style='color: #fff;'><br><br><br>
+		
 		<font style='color: #fff; font: 18px Arial; font-weight: bold;' id='textAreaStatus'>If you use the Textarea, you have to Click off after you Paste your Theme for it to Update</font><br><br>
+		
 		<textarea id='themeTextArea' onchange='updateClasses("textarea")'></textarea><br><br>
-		<button class='outputButton' onClick='updateClasses("file")'>Download Updated Theme</button>
-		<button class='outputButton' onClick='updateClasses("clipboard")'>Copy to Clipboard</button><br>
+		
+		<button class='outputButton' onClick='output("file")'>Download Updated Theme</button>
+		<button class='outputButton' onClick='output("clipboard")'>Copy to Clipboard</button><br>
+		
 		<h4 style='color: #fff;'>Credits:</h4>
 		<div id='creditsURL'></div>
+		<font style='display: none;' id='regex'></font>
 		<font style='display: none;' id='diffFileURL'></font>
 		<font style='display: none;' id='diffFile'></font>
 	</div>
@@ -113,6 +119,12 @@ async function loadChangesFileURL() {
 	let rawFile = await fetch(url);
 	let rawText = await rawFile.text();
 	document.getElementById('diffFileURL').innerHTML = rawText
+	
+	const regexUrl = 'https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Regex_Changes.txt'
+	let rawRegexFile = await fetch(regexUrl);
+	let rawRegexText = await rawRegexFile.text();
+	document.getElementById('regex').innerHTML = rawRegexText
+	
 	const creditsURL = 'https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Credits.txt'
 	let rawCreditsFile = await fetch(creditsURL);
 	let rawCreditsText = await rawCreditsFile.text();
@@ -161,9 +173,8 @@ function loadThemeFile() {
 		fr.readAsText(file);
 		outputName = file.name
 		themeFile = fr
-		document.getElementById('textAreaStatus').style = 'display: none;'
 		document.getElementById('themeTextArea').style = 'display: none;'
-		document.getElementsByTagName('br')[12].remove()
+		document.getElementById('textAreaStatus').innerHTML = 'Updating...'
 		document.getElementsByTagName('br')[12].remove()
 		document.getElementsByTagName('br')[12].remove()
 	}
@@ -171,9 +182,13 @@ function loadThemeFile() {
 	async function receivedText(e) {
 		let lines = e.target.result;
 	}
+	
+	setTimeout(() => {updateClasses();}, 500);
 }
 
-function updateClasses(outputMethod) {
+function updateClasses(inputMethod) {
+	document.getElementById('textAreaStatus').innerHTML = 'Updating...'
+	
 	var i = 0
 	if (document.getElementsByClassName('fileInput')[1].files.length != 1) {
 		rawText = document.getElementById('diffFileURL').innerHTML
@@ -183,7 +198,7 @@ function updateClasses(outputMethod) {
 	//console.log(rawText)
 	classNum = rawText.split('\n').length - 1
 	changesText = rawText.split('\n')
-	if (outputMethod == 'textarea') {
+	if (inputMethod == 'textarea') {
 		themeText = document.getElementById('themeTextArea').value
 	} else {
 		if (document.getElementById('themeTextArea').value != '') {
@@ -193,23 +208,36 @@ function updateClasses(outputMethod) {
 		}
 	}
 	
-	while (i < classNum) {
-		class1 = changesText[i].split('\r')[0]
-		class2 = changesText[i + 1].split('\r')[0]
+	rawRegexText = document.getElementById('regex').innerHTML
+	rawRegexTextSplit = rawRegexText.split('\n')
+	regex_replaced = false
 	
-		themeText = themeText.replaceAll(class1, class2)
-	
-		i = i + 2
+	for (let x = 0; x < rawRegexTextSplit.length; x++) {
+		if(themeText.includes(rawRegexTextSplit[x])) {
+			themeText = themeText.replace(/\.([_0-9a-f]{6})[0-9a-f]{10,11}-([A-Za-z0-9_\-]+)/g, '.$2_$1')
+			regex_replaced = true
+		}
 	}
 	
-	if (outputMethod == 'textarea') {
-		document.getElementById('textAreaStatus').innerHTML = 'Updated!'
-		document.getElementById('themeTextArea').value = themeText
-	} else if (outputMethod == 'file') {
+	if(regex_replaced == false) {
+		while (i < classNum) {
+			class1 = changesText[i].split('\r')[0]
+			class2 = changesText[i + 1].split('\r')[0]
+		
+			themeText = themeText.replaceAll(class1, class2)
+		
+			i = i + 2
+		}
+	}
+	
+	document.getElementById('themeTextArea').value = themeText
+	document.getElementById('textAreaStatus').innerHTML = 'Updated!'
+}
+
+function output(outputMethod) {
+	if (outputMethod == 'file') {
 		var synOutput = document.createElement('a');
 		if (document.getElementById('themeTextArea').value != '') {
-			document.getElementById('textAreaStatus').innerHTML = 'Updated!'
-			document.getElementById('themeTextArea').value = themeText
 			outputName = 'Output.theme.css'
 		}
 		const blob = new Blob([themeText], { type: 'text/plain' });
@@ -219,8 +247,6 @@ function updateClasses(outputMethod) {
 		synOutput.click();
 	} else if (outputMethod == 'clipboard') {
 		if (document.getElementById('themeTextArea').value != '') {
-			document.getElementById('textAreaStatus').innerHTML = 'Updated!'
-			document.getElementById('themeTextArea').value = themeText
 			navigator.clipboard.writeText(document.getElementById('themeTextArea').value);
 		} else {
 			navigator.clipboard.writeText(themeText);
