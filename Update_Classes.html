@@ -91,7 +91,7 @@
 	<br><br><br>
 	<div class='container'><br><br>
 		<h3 style='color: #fff;'>Either Upload your Theme File or Paste it into the Textarea</h3>
-		<h4 style='color: #fff;'>(Optional) Either Upload a Custom Diff File or Use the <a class="link" target=”_blank” href="https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt">Included One</a></h3><br><br><br>
+		<h4 style='color: #fff;'>(Optional) Either Upload a Custom Diff File or Use the <a class="link" target=”_blank” href="https://syndishanx.github.io/Update-Classes/Changes.txt">Included One</a></h3><br><br><br>
 		
 		<label for='theme-file' class='fileInputVisible theme' role='button'>Upload Theme File</label><label for='diff-file' class='fileInputVisible' role='button' style="margin-left: 5%;">Upload Diff File</label>
 		<input id='theme-file' type='file' class='fileInput' onchange='loadThemeFile()'style='color: #fff;'><br>
@@ -122,17 +122,17 @@ document.getElementById('themeTextArea').addEventListener('input', () => {
 });
 
 async function loadChangesFileURL() {
-	const url = 'https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt'
+	const url = 'https://syndishanx.github.io/Update-Classes/Changes.txt'
 	let rawFile = await fetch(url);
 	let rawText = await rawFile.text();
 	document.getElementById('diffFileURL').innerHTML = rawText
 	
-	const regexUrl = 'https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Regex_Changes.txt'
+	const regexUrl = 'https://syndishanx.github.io/Update-Classes/Regex_Changes.txt'
 	let rawRegexFile = await fetch(regexUrl);
 	let rawRegexText = await rawRegexFile.text();
 	document.getElementById('regex').innerHTML = rawRegexText
 	
-	const creditsURL = 'https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Credits.txt'
+	const creditsURL = 'https://syndishanx.github.io/Update-Classes/Credits.txt'
 	let rawCreditsFile = await fetch(creditsURL);
 	let rawCreditsText = await rawCreditsFile.text();
 	document.getElementById('creditsURL').innerHTML = rawCreditsText
