@@ -35,6 +35,12 @@ img.Zombies {
 	width: 468px;
 	height: 263px;
 }
+img.BO7 {
+	border-radius: 20px;
+	margin: 10px;
+	width: 582px;
+	height: 286px;
+}
 img.IW {
 	border-radius: 10px;
 	margin: 10px;
@@ -58,7 +64,8 @@ img.IW {
 	<a onclick="revealMaps('Cold_War'); select(8)"><img class="game unselected" onmouseover="hover(8)" onmouseout="hover(8)" src="../Images/Zombies/Selector/Cold_War.webp"></img></a>
 	<a onclick="revealMaps('Vanguard'); select(9)"><img class="game unselected" onmouseover="hover(9)" onmouseout="hover(9)" src="../Images/Zombies/Selector/Vanguard.webp"></img></a>
 	<a onclick="revealMaps('Black_Ops_6'); select(10)"><img class="game unselected" onmouseover="hover(10)" onmouseout="hover(10)" src="../Images/Zombies/Selector/Black_Ops_6.webp"></img></a>
-
+	<a onclick="revealMaps('Black_Ops_7'); select(11)"><img class="game unselected" onmouseover="hover(11)" onmouseout="hover(11)" src="../Images/Zombies/Selector/Black_Ops_7.webp"></img></a>
+	
 	<br><br><br><br><br>
 	
 	<div class="revealed_game"></div>
@@ -136,7 +143,10 @@ function revealMaps(game) {
 	} else if (game == 'Black_Ops_6') {
 		maps.push("Liberty_Falls", "Terminus", "Citadelle_Des_Morts", "The_Tomb", "Shattered_Veil", "Reckoning");
 		createMap(6, maps)
-	}
+	}  else if (game == 'Black_Ops_7') {
+		maps.push("Ashes_of_the_Damned", "Astra_Malorum", "Paradox_Junction");
+		createMap(3, maps)
+	} 
 	
 	function createMap(mapNum, map) {
 		for (let num = 0; num < mapNum; num++) {
@@ -147,7 +157,7 @@ function revealMaps(game) {
 			tempMapImg.setAttribute('loading', 'lazy')
 			if (map[num] == "Zombies_in_Spaceland" || map[num] == "Rave_in_The_Redwoods" || map[num] == "Shaolin_Shuffle" || map[num] == "Attack_of_The_Radioactive_Thing" || map[num] == "The_Beast_from_Beyond") {
 				tempMapImg.className = 'Zombies IW'
-			} else if (map[num] == "Ashes_of_the_Damned" || map[num] == "Astra_Malorum") {
+			} else if (map[num] == "Ashes_of_the_Damned" || map[num] == "Astra_Malorum" || map[num] == "Paradox_Junction") {
 				tempMapImg.className = 'Zombies BO7'
 			} else {
 				tempMapImg.className = 'Zombies'
