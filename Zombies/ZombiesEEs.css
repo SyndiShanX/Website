@@ -37,7 +37,7 @@ font.notice {
 img.Easter_Egg {
 	width: 320px;
 	height: 180px;
-	margin-left: 5%;
+	margin-left: 4%;
 }
 
 a:-webkit-any-link:not(.dropbtn):not(.nav-item):not(.dropdown-item):not(.zombies-link) {
