@@ -144,8 +144,8 @@ function revealMaps(game) {
 		maps.push("Liberty_Falls", "Terminus", "Citadelle_Des_Morts", "The_Tomb", "Shattered_Veil", "Reckoning");
 		createMap(6, maps)
 	}  else if (game == 'Black_Ops_7') {
-		maps.push("Ashes_of_The_Damned", "Astra_Malorum", "Paradox_Junction");
-		createMap(3, maps)
+		maps.push("Ashes_of_The_Damned", "Astra_Malorum", "Paradox_Junction", "Totenreich");
+		createMap(4, maps)
 	} 
 	
 	function createMap(mapNum, map) {
@@ -157,7 +157,7 @@ function revealMaps(game) {
 			tempMapImg.setAttribute('loading', 'lazy')
 			if (map[num] == "Zombies_in_Spaceland" || map[num] == "Rave_in_The_Redwoods" || map[num] == "Shaolin_Shuffle" || map[num] == "Attack_of_The_Radioactive_Thing" || map[num] == "The_Beast_from_Beyond") {
 				tempMapImg.className = 'Zombies IW'
-			} else if (map[num] == "Ashes_of_the_Damned" || map[num] == "Astra_Malorum" || map[num] == "Paradox_Junction") {
+			} else if (map[num] == "Ashes_of_the_Damned" || map[num] == "Astra_Malorum" || map[num] == "Paradox_Junction" || map[num] == "Totenreich") {
 				tempMapImg.className = 'Zombies BO7'
 			} else {
 				tempMapImg.className = 'Zombies'
