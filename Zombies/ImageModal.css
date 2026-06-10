@@ -1,12 +1,7 @@
-/*!
- * some animations from animate.css
- * @see {@link https://github.com/daneden/animate.css}
- * daneden.github.io/animate.css/
- */
-/* .animated {
-	animation-duration: 2s;
-	animation-fill-mode: both;
-} */
+/*
+ @link https://github.com/daneden/animate.css
+*/
+
 @-webkit-keyframes fadeIn {
 	0% {
 		opacity: 0;

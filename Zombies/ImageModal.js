@@ -1,18 +1,7 @@
-/*!
- * @see {@link https://github.com/englishextra/img-lightbox}
- * imgLightbox
- * requires this very img-lightbox.js, and animate.css, img-lightbox.css
- * @params {String} linkClass
- * @params {Object} settings object
- * imgLightbox(linkClass, settings)
- * passes jshint
- */
+/*
+ @link https://github.com/englishextra/img-lightbox
+*/
 
-/*jslint browser: true */
-
-/*jslint node: true */
-
-/*jshint -W014 */
 (function(root, document) {
 	"use strict";
 
@@ -29,17 +18,9 @@
 	var imgLightboxOpenClass = "img-lightbox--open";
 	var imgLightboxLinkIsBindedClass = "img-lightbox-link--is-binded";
 	var isLoadedClass = "is-loaded";
-	var dummySrc =
-		"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
-	var isMobile = navigator.userAgent.match(
-		/(iPad)|(iPhone)|(iPod)|(Android)|(PlayBook)|(BB10)|(BlackBerry)|(Opera Mini)|(IEMobile)|(webOS)|(MeeGo)/i
-	);
-	var isTouch =
-		isMobile !== null ||
-		document.createTouch !== undefined ||
-		"ontouchstart" in root ||
-		"onmsgesturechange" in root ||
-		navigator.msMaxTouchPoints;
+	var dummySrc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
+	var isMobile = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(Android)|(PlayBook)|(BB10)|(BlackBerry)|(Opera Mini)|(IEMobile)|(webOS)|(MeeGo)/i);
+	var isTouch = isMobile !== null || document.createTouch !== undefined || "ontouchstart" in root || "onmsgesturechange" in root || navigator.msMaxTouchPoints;
 
 	var debounce = function debounce(func, wait) {
 		var timeout;
@@ -147,29 +128,20 @@
 		var onCreated = options.onCreated;
 		var onClosed = options.onClosed;
 		var link = document.getElementsByClassName(_linkClass) || "";
-		var container =
-			document.getElementsByClassName(containerClass)[0] || "";
-		var img = container
-			? container.getElementsByTagName("img")[0] || ""
-			: "";
+		var container = document.getElementsByClassName(containerClass)[0] || "";
+		var img = container ? container.getElementsByTagName("img")[0] || "" : "";
 
 		if (!container) {
 			container = document.createElement("div");
 			container.classList.add(containerClass);
 			var html = [];
 			html.push('<img src="' + dummySrc + '" alt="" />');
-			html.push(
-				'<div class="half-circle-spinner"><div class="circle circle-1"></div><div class="circle circle-2"></div></div>'
-			);
+			html.push('<div class="half-circle-spinner"><div class="circle circle-1"></div><div class="circle circle-2"></div></div>');
 			html.push('<a href="javascript:void(0);" class="btn-close"></a>');
 			container.innerHTML = html.join("");
 			docBody.appendChild(container);
-			img = container
-				? container.getElementsByTagName("img")[0] || ""
-				: "";
-			var btnClose = container
-				? container.getElementsByClassName(btnCloseClass)[0] || ""
-				: "";
+			img = container	? container.getElementsByTagName("img")[0] || "" : "";
+			var btnClose = container ? container.getElementsByClassName(btnCloseClass)[0] || "" : "";
 
 			var handleImgLightboxContainer = function handleImgLightboxContainer() {
 				/* Custom */
@@ -274,15 +246,15 @@
 
 function addTitle() {
 	img = document.getElementsByClassName('animated fadeInUp')[0]
-	
+
 	customTitle = document.createElement('font')
 	customTitle.className = 'imgTitle'
 	customTitle.size = 6
 	customTitle.textContent = img.alt
-	
+
 	lightBoxElem = document.getElementsByClassName('img-lightbox animated fadeIn is-loaded')[0]
 	lightBoxElem.appendChild(customTitle)
-}	
+}
 
 /* Create A Class with Lightbox Classes */
 
@@ -293,11 +265,13 @@ for (i = 0; i < imgClass.length; i++) {
 	customA.className = 'img-lightbox-link'
 	customA.href = img.src
 	customA.type = img.alt
-	
+
 	imgHTML = img.outerHTML
 	customASplit = customA.outerHTML.split('</a>')
 	img.outerHTML = customASplit[0] + imgHTML + '</a>'
 }
+
+/* Element Functions */
 
 (function (root) {
 	"use strict";
