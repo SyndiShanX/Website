@@ -5,835 +5,375 @@
 <meta name="viewport" content="width=device-width, initial-scale=0.5">
 <title>The Final Reich - SyndiShanX</title>
 <link rel="stylesheet" href="../../Fonts/Font_Awesome.min.css">
-<link rel="icon" href="../../Images/Global/Icon.webp">
+<link rel="icon" href="../../Images/Global/Icon_Tab.webp">
 <link rel="stylesheet" href="../../GlobalCSS.css">
+<link rel="stylesheet" href="../ImageModal.css">
+<link rel="stylesheet" href="../ZombiesEEs.css">
 <style type="text/css">
 input.symbol {
 	width: 100px;
 	height: 100px;
+	filter: saturate(20%);
 }
-input:focus, textarea:focus, select:focus{
-	outline: none;
-}
-img.symbol {
-	width: 100px;
-	height: 100px;
+
+input.symbol.selected {
+	filter: saturate(100%)!important;
 }
 </style>
 </head>
-<body lang="../../" onload="setVars()">
-<div class="MainWrapper" align="center">
+<body lang="../../">
+<div class="MainWrapper" align="left">
 <!--Nav Template End-->
 
+	<font class="title">Classic PPSH Easter Egg</font><br><br>
+	
+	<font class="text">Drop Jolts onto 4 Money Bowls around the Map</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/PPSH_1.webp" alt="In the Vallage Square between the Sewer Trap and Clock Tower"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/PPSH_2.webp" alt="Near the Sandbags in the Fenced area on the Riverside"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/PPSH_3.webp" alt="Near Double Tap in the Bar"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/PPSH_4.webp" alt="In the Morgue, near the Tesla Gun Core Machine"></img><br><br>
+	
+	<font class="text">Spin the Box until you get the Classic PPSH</font><br><br>
+	
+
+	<font class="title">Main Easter Egg</font><br><br>
+
+	<font class="text">Open 3 Gas Valves around the Town, then Interact with the Sewer Trap</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Valve_1.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Valve_2.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Valve_3.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Sewer_Trap.webp"></img><br><br>
+	
+	<font class="text">Turn on the Generator, then turn on the Power in the Bunker</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Generator.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Switch_1.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Switch_2.webp"></img><br><br>
+	
+	<font class="text">Open the Salt Mine Doots, Interact with the Hilt, then fill the Geistkraft Machine by Killing Zombies near it</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Hilt.webp"></img><br><br>
+	
+	<font class="text">Interact with the Machine at the top of the Command Center, then Escort the Geistkraft Machine by Killing Zombies near it</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Control_Panel.webp"></img><br><br>
+	
+	<font class="text">Pick up the Barrel and Core, then go back to the Command Center and pick up the Tesla Gun</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Barrel.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Core.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Tesla_Gun.webp"></img><br><br>
+	
+	<font class="text">Interact with the Panel on the wall behind the Tesla Gun and Note the Colors in Order</font><br>
+	<font class="text">Go around the Map and set the Switch Panels to the Correct Color in Order</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Tower_Switch_1.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Tower_Switch_2.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Tower_Switch_3.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Tower_Switch_4.webp"></img><br><br>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Tower_Switch_5.webp"></img><br><br>
+	
+	<font class="text">Defend the Lighning Tower Levers, then activate the Right Hand of God</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Tower_1.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Tower_2.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Right_Hand_of_God.webp"></img><br><br>
+	
+	<font class="text">Shoot the Orange/Red Lights on the Zeppelin until it drops an Ubershnelle, then Kill Zombies near it until the Battery Drops</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Zeppelin.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Ubershnelle_1.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Ubershnelle_2.webp"></img><br><br>
+	
+	<font class="text">Take the Battery to the Left Hand of God, then Repeat this 2 more times, then Activate the Left Hand of God</font><font size="3" class="note">&nbsp; (The third one will have to be shot down twice)</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Ubershnelle_3.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Left_Hand_of_God.webp"></img><br><br>
+	
+	<font class="text">Shine the UV light from the Brenner's Head onto 4 Paintings around the Map and Take Note of the Number for each of the 4 Bird Symbols</font><br><br>
+
 	<div id="Dome" align="center">
-		<input type="image" class="symbol" id="1" onClick="chooseDome('Dome_I');selected(1)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_I.webp"></input>
-		<input type="image" class="symbol" id="2" onClick="chooseDome('Dome_II');selected(2)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_II.webp"></input>
-		<input type="image" class="symbol" id="3" onClick="chooseDome('Dome_III');selected(3)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_III.webp"></input>
-		<input type="image" class="symbol" id="4" onClick="chooseDome('Dome_IV');selected(4)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_IV.webp"></input>
-		<input type="image" class="symbol" id="5" onClick="chooseDome('Dome_V');selected(5)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_V.webp"></input>
+		<input type="image" class="symbol" id="1" onClick="chooseDome('Dome_I');selected(1)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Dome_1.webp"></input>
+		<input type="image" class="symbol" id="2" onClick="chooseDome('Dome_II');selected(2)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Dome_2.webp"></input>
+		<input type="image" class="symbol" id="3" onClick="chooseDome('Dome_III');selected(3)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Dome_3.webp"></input>
+		<input type="image" class="symbol" id="4" onClick="chooseDome('Dome_IV');selected(4)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Dome_4.webp"></input>
+		<input type="image" class="symbol" id="5" onClick="chooseDome('Dome_V');selected(5)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Dome_5.webp"></input>
 	</div>
 
 	<div id="Out" align="center">
-		<input type="image" class="symbol" id="6" onClick="chooseOut('Out_I');selected(6)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_I.webp"></input>
-		<input type="image" class="symbol" id="7" onClick="chooseOut('Out_II');selected(7)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_II.webp"></input>
-		<input type="image" class="symbol" id="8" onClick="chooseOut('Out_III');selected(8)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_III.webp"></input>
-		<input type="image" class="symbol" id="9" onClick="chooseOut('Out_IV');selected(9)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_IV.webp"></input>
-		<input type="image" class="symbol" id="10" onClick="chooseOut('Out_V');selected(10)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_V.webp"></input>
+		<input type="image" class="symbol" id="6" onClick="chooseOut('Out_I');selected(6)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Out_1.webp"></input>
+		<input type="image" class="symbol" id="7" onClick="chooseOut('Out_II');selected(7)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Out_2.webp"></input>
+		<input type="image" class="symbol" id="8" onClick="chooseOut('Out_III');selected(8)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Out_3.webp"></input>
+		<input type="image" class="symbol" id="9" onClick="chooseOut('Out_IV');selected(9)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Out_4.webp"></input>
+		<input type="image" class="symbol" id="10" onClick="chooseOut('Out_V');selected(10)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Out_5.webp"></input>
 	</div>
 
 	<div id="Crack" align="center"><br>
-		<input type="image" class="symbol" id="11" onClick="chooseCrack('Crack_I');selected(11)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_I.webp"></input>
-		<input type="image" class="symbol" id="12" onClick="chooseCrack('Crack_II');selected(12)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_II.webp"></input>
-		<input type="image" class="symbol" id="13" onClick="chooseCrack('Crack_III');selected(13)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_III.webp"></input>
-		<input type="image" class="symbol" id="14" onClick="chooseCrack('Crack_IV');selected(14)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_IV.webp"></input>
-		<input type="image" class="symbol" id="15" onClick="chooseCrack('Crack_V');selected(15)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_V.webp"></input>
+		<input type="image" class="symbol" id="11" onClick="chooseCrack('Crack_I');selected(11)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Crack_1.webp"></input>
+		<input type="image" class="symbol" id="12" onClick="chooseCrack('Crack_II');selected(12)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Crack_2.webp"></input>
+		<input type="image" class="symbol" id="13" onClick="chooseCrack('Crack_III');selected(13)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Crack_3.webp"></input>
+		<input type="image" class="symbol" id="14" onClick="chooseCrack('Crack_IV');selected(14)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Crack_4.webp"></input>
+		<input type="image" class="symbol" id="15" onClick="chooseCrack('Crack_V');selected(15)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Crack_5.webp"></input>
 	</div>
 
 	<div id="Back" align="center"><br>
-		<input type="image" class="symbol" id="16" onClick="chooseBack('Back_I');selected(16)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_I.webp"></input>
-		<input type="image" class="symbol" id="17" onClick="chooseBack('Back_II');selected(17)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_II.webp"></input>
-		<input type="image" class="symbol" id="18" onClick="chooseBack('Back_III');selected(18)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_III.webp"></input>
-		<input type="image" class="symbol" id="19" onClick="chooseBack('Back_IV');selected(19)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_IV.webp"></input>
-		<input type="image" class="symbol" id="20" onClick="chooseBack('Back_V');selected(20)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_V.webp"></input>
+		<input type="image" class="symbol" id="16" onClick="chooseBack('Back_I');selected(16)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Back_1.webp"></input>
+		<input type="image" class="symbol" id="17" onClick="chooseBack('Back_II');selected(17)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Back_2.webp"></input>
+		<input type="image" class="symbol" id="18" onClick="chooseBack('Back_III');selected(18)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Back_3.webp"></input>
+		<input type="image" class="symbol" id="19" onClick="chooseBack('Back_IV');selected(19)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Back_4.webp"></input>
+		<input type="image" class="symbol" id="20" onClick="chooseBack('Back_V');selected(20)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/Back_5.webp"></input>
 	</div>
 
+	<font class="text">Enter the Numbers for each Symbol into the Voice of God, then Confirm it</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Casual/Voice_of_God.webp"></img><br><br>
+	
+	<font class="text">This is the Point where you Choose whether to do the Casual Boss Fight or Continue for the Hardcore Boss Fight</font><br><br>
+	
+	<font class="notice">**PREPARE FOR THE BOSS FIGHT**</font><br><br>
+	
+	<font class="text">Shoot the Hilt with the Tesla Gun, the Interact with it to Start the Boss Fight</font><br>
+	<font class="text">Shoot the Glowing Lights on the Zeppelin, then fill the Ubershnelle</font><br>
+	<font class="text">Stun the Boss by Shooting him, the Attach the Battery to him</font><font size="3" class="note">&nbsp; (You will see a Text Popup when the Boss is Stunned/Unstunned)</font><br>
+	<font class="text">Wait for the Boss to Return to the Map, then Repeat the Process until you get the Ending Cutscene</font><br><br>
+	
+	<font class="title">Hardcore Easter Egg</font><br><br>
+	
+	<font class="subtitle">Keepsakes</font><br><br>
+	
+	<font class="text">Interact with the Weather Vane near the Water Wheel, the go where it pointed and Shoot a small Yellow Circle on the wall using a Bullet Weapon</font><br>
+	<font class="text">Pick up the 3 Colored Tops around the Map, then Place them on the Wall near the Bunker Entrance</font><br><br>
+	
+	<font class="sub-subtitle">Yellow</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Keepsakes/Yellow_1.webp" alt="On the Balcony in Spawn"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Keepsakes/Yellow_1.webp" alt="In the Planter Pot near the Bar"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Keepsakes/Yellow_3.webp" alt="In the Planter Pot above the Valve near the Bar"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Keepsakes/Yellow_4.webp" alt="On the roof above the Sewer Entrance"></img><br><br>
+	
+	<font class="sub-subtitle">Red</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Keepsakes/Red_1.webp" alt="On the Wall above the Bar Towards Spawn"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Keepsakes/Red_2.webp" alt="On the Roof near the Toy Shop"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Keepsakes/Red_3.webp" alt="On the Wall above the Geistchild Machine by ther Bar"></img><br><br>
+	
+	<font class="sub-subtitle">Green</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Keepsakes/Green_1.webp" alt="Window above Bunker Entrance"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Keepsakes/Green_2.webp" alt="On Clock Tower Ledge"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Keepsakes/Green_3.webp" alt="On the roof above the S-Mine Trap"></img><br><br>
+	
+	<font class="subtitle">Enigma Machines</font><br><br>
+	
+	<font class="text">Find the Enigma Machines around the Map</font><br><br>
+	
+	<font class="sub-subtitle">Yellow</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Enigma/Yellow_1.webp" alt="Spawn Window"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Enigma/Yellow_2.webp" alt="Toy Shop Window"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Enigma/Yellow_3.webp" alt="Couch near Valve"></img><br><br>
+	
+	<font class="sub-subtitle">Red</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Enigma/Red_1.webp" alt="Window by the Type 100"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Enigma/Red_2.webp" alt="Window upstairs in the House"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Enigma/Red_3.webp" alt="Window in the Command Room near the Grease Gun"></img><br><br>
+	
+	<font class="sub-subtitle">Green (Blue)</font><br><br>
+	<font class="text">Use the Sewer Trap to launch yourself and interact with the wall above the Generator</font><br><br>
+	
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Enigma/Green_1.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Enigma/Green_2.webp"></img>
+	<img loading=lazy class="Easter_Egg" src="../../Images/Zombies/World_War_2/The_Final_Reich/Hardcore/Enigma/Green_3.webp"></img><br><br>
+	
+	<font class="text">Set the Tops on the Wall to the Numbers on the Enigma Machines</font><font size="3" class="note">&nbsp; (They act like a Clock)</font><br>
+	<font class="text">Pick up the Record from the Drawer</font><br><br>
+	
 	<div id="Yellow" align="center"><br>
-		<input type="image" class="symbol" id="21" onClick="chooseYellow('Yellow_Top_1');selected(21)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp"></input>
-		<input type="image" class="symbol" id="22" onClick="chooseYellow('Yellow_Top_2');selected(22)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp"></input>
-		<input type="image" class="symbol" id="23" onClick="chooseYellow('Yellow_Top_3');selected(23)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp"></input>
-		<input type="image" class="symbol" id="24" onClick="chooseYellow('Yellow_Top_4');selected(24)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp"></input>
-		<input type="image" class="symbol" id="25" onClick="chooseYellow('Yellow_Top_5');selected(25)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp"></input>
-		<input type="image" class="symbol" id="26" onClick="chooseYellow('Yellow_Top_6');selected(26)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp"></input>
-		<input type="image" class="symbol" id="27" onClick="chooseYellow('Yellow_Top_7');selected(27)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp"></input>
-		<input type="image" class="symbol" id="28" onClick="chooseYellow('Yellow_Top_8');selected(28)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp"></input>
-		<input type="image" class="symbol" id="29" onClick="chooseYellow('Yellow_Top_9');selected(29)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp"></input>
-		<input type="image" class="symbol" id="30" onClick="chooseYellow('Yellow_Top_10');selected(30)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp"></input>
-		<input type="image" class="symbol" id="31" onClick="chooseYellow('Yellow_Top_11');selected(31)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp"></input>
-		<input type="image" class="symbol" id="32" onClick="chooseYellow('Yellow_Top_12');selected(32)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp"></input>
+		<input type="image" class="symbol" id="21" onClick="chooseYellow('Yellow_Top_1');selected(21)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Yellow_1.webp"></input>
+		<input type="image" class="symbol" id="22" onClick="chooseYellow('Yellow_Top_2');selected(22)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Yellow_2.webp"></input>
+		<input type="image" class="symbol" id="23" onClick="chooseYellow('Yellow_Top_3');selected(23)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Yellow_3.webp"></input>
+		<input type="image" class="symbol" id="24" onClick="chooseYellow('Yellow_Top_4');selected(24)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Yellow_4.webp"></input>
+		<input type="image" class="symbol" id="25" onClick="chooseYellow('Yellow_Top_5');selected(25)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Yellow_5.webp"></input>
+		<input type="image" class="symbol" id="26" onClick="chooseYellow('Yellow_Top_6');selected(26)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Yellow_6.webp"></input>
+		<input type="image" class="symbol" id="27" onClick="chooseYellow('Yellow_Top_7');selected(27)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Yellow_7.webp"></input>
+		<input type="image" class="symbol" id="28" onClick="chooseYellow('Yellow_Top_8');selected(28)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Yellow_8.webp"></input>
+		<input type="image" class="symbol" id="29" onClick="chooseYellow('Yellow_Top_9');selected(29)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Yellow_9.webp"></input>
+		<input type="image" class="symbol" id="30" onClick="chooseYellow('Yellow_Top_10');selected(30)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Yellow_10.webp"></input>
+		<input type="image" class="symbol" id="31" onClick="chooseYellow('Yellow_Top_11');selected(31)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Yellow_11.webp"></input>
+		<input type="image" class="symbol" id="32" onClick="chooseYellow('Yellow_Top_12');selected(32)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Yellow_12.webp"></input>
 	</div>
 
 	<div id="Red" align="center"><br>
-		<input type="image" class="symbol" id="33" onClick="chooseRed('Red_Top_1');selected(33)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_1.webp"></input>
-		<input type="image" class="symbol" id="34" onClick="chooseRed('Red_Top_2');selected(34)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_2.webp"></input>
-		<input type="image" class="symbol" id="35" onClick="chooseRed('Red_Top_3');selected(35)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_3.webp"></input>
-		<input type="image" class="symbol" id="36" onClick="chooseRed('Red_Top_4');selected(36)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_4.webp"></input>
-		<input type="image" class="symbol" id="37" onClick="chooseRed('Red_Top_5');selected(37)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_5.webp"></input>
-		<input type="image" class="symbol" id="38" onClick="chooseRed('Red_Top_6');selected(38)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6.webp"></input>
-		<input type="image" class="symbol" id="39" onClick="chooseRed('Red_Top_7');selected(39)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_7.webp"></input>
-		<input type="image" class="symbol" id="40" onClick="chooseRed('Red_Top_8');selected(40)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_8.webp"></input>
-		<input type="image" class="symbol" id="41" onClick="chooseRed('Red_Top_9');selected(41)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_9.webp"></input>
-		<input type="image" class="symbol" id="42" onClick="chooseRed('Red_Top_10');selected(42)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_10.webp"></input>
-		<input type="image" class="symbol" id="43" onClick="chooseRed('Red_Top_11');selected(43)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_11.webp"></input>
-		<input type="image" class="symbol" id="44" onClick="chooseRed('Red_Top_12');selected(44)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_12.webp"></input>
+		<input type="image" class="symbol" id="33" onClick="chooseRed('Red_Top_1');selected(33)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Red_1.webp"></input>
+		<input type="image" class="symbol" id="34" onClick="chooseRed('Red_Top_2');selected(34)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Red_2.webp"></input>
+		<input type="image" class="symbol" id="35" onClick="chooseRed('Red_Top_3');selected(35)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Red_3.webp"></input>
+		<input type="image" class="symbol" id="36" onClick="chooseRed('Red_Top_4');selected(36)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Red_4.webp"></input>
+		<input type="image" class="symbol" id="37" onClick="chooseRed('Red_Top_5');selected(37)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Red_5.webp"></input>
+		<input type="image" class="symbol" id="38" onClick="chooseRed('Red_Top_6');selected(38)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Red_6.webp"></input>
+		<input type="image" class="symbol" id="39" onClick="chooseRed('Red_Top_7');selected(39)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Red_7.webp"></input>
+		<input type="image" class="symbol" id="40" onClick="chooseRed('Red_Top_8');selected(40)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Red_8.webp"></input>
+		<input type="image" class="symbol" id="41" onClick="chooseRed('Red_Top_9');selected(41)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Red_9.webp"></input>
+		<input type="image" class="symbol" id="42" onClick="chooseRed('Red_Top_10');selected(42)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Red_10.webp"></input>
+		<input type="image" class="symbol" id="43" onClick="chooseRed('Red_Top_11');selected(43)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Red_11.webp"></input>
+		<input type="image" class="symbol" id="44" onClick="chooseRed('Red_Top_12');selected(44)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Red_12.webp"></input>
 	</div>
 
 	<div id="Green" align="center"><br>
-		<input type="image" class="symbol" id="45" onClick="chooseGreen('Green_Top_1');selected(45)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_1.webp"></input>
-		<input type="image" class="symbol" id="46" onClick="chooseGreen('Green_Top_2');selected(46)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_2.webp"></input>
-		<input type="image" class="symbol" id="47" onClick="chooseGreen('Green_Top_3');selected(47)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_3.webp"></input>
-		<input type="image" class="symbol" id="48" onClick="chooseGreen('Green_Top_4');selected(48)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_4.webp"></input>
-		<input type="image" class="symbol" id="49" onClick="chooseGreen('Green_Top_5');selected(49)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_5.webp"></input>
-		<input type="image" class="symbol" id="50" onClick="chooseGreen('Green_Top_6');selected(50)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6.webp"></input>
-		<input type="image" class="symbol" id="51" onClick="chooseGreen('Green_Top_7');selected(51)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_7.webp"></input>
-		<input type="image" class="symbol" id="52" onClick="chooseGreen('Green_Top_8');selected(52)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_8.webp"></input>
-		<input type="image" class="symbol" id="53" onClick="chooseGreen('Green_Top_9');selected(53)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_9.webp"></input>
-		<input type="image" class="symbol" id="54" onClick="chooseGreen('Green_Top_10');selected(54)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_10.webp"></input>
-		<input type="image" class="symbol" id="55" onClick="chooseGreen('Green_Top_11');selected(55)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_11.webp"></input>
-		<input type="image" class="symbol" id="56" onClick="chooseGreen('Green_Top_12');selected(56)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_12.webp"></input>
+		<input type="image" class="symbol" id="45" onClick="chooseGreen('Green_Top_1');selected(45)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Green_1.webp"></input>
+		<input type="image" class="symbol" id="46" onClick="chooseGreen('Green_Top_2');selected(46)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Green_2.webp"></input>
+		<input type="image" class="symbol" id="47" onClick="chooseGreen('Green_Top_3');selected(47)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Green_3.webp"></input>
+		<input type="image" class="symbol" id="48" onClick="chooseGreen('Green_Top_4');selected(48)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Green_4.webp"></input>
+		<input type="image" class="symbol" id="49" onClick="chooseGreen('Green_Top_5');selected(49)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Green_5.webp"></input>
+		<input type="image" class="symbol" id="50" onClick="chooseGreen('Green_Top_6');selected(50)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Green_6.webp"></input>
+		<input type="image" class="symbol" id="51" onClick="chooseGreen('Green_Top_7');selected(51)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Green_7.webp"></input>
+		<input type="image" class="symbol" id="52" onClick="chooseGreen('Green_Top_8');selected(52)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Green_8.webp"></input>
+		<input type="image" class="symbol" id="53" onClick="chooseGreen('Green_Top_9');selected(53)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Green_9.webp"></input>
+		<input type="image" class="symbol" id="54" onClick="chooseGreen('Green_Top_10');selected(54)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Green_10.webp"></input>
+		<input type="image" class="symbol" id="55" onClick="chooseGreen('Green_Top_11');selected(55)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Green_11.webp"></input>
+		<input type="image" class="symbol" id="56" onClick="chooseGreen('Green_Top_12');selected(56)" src="../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Keepsakes/Green_12.webp"></input>
 	</div><br><br>
-
-	<div id="ResultButton" align="center">
-		<button class="goldButton" onClick="{ allResults() }">Show Results</button><br><br>
-		<img class="symbol" style="display: none" id="resultEndDome"></img>
-		<img class="symbol" style="display: none" id="resultEndOut"></img>
-		<img class="symbol" style="display: none" id="resultEndCrack"></img>
-		<img class="symbol" style="display: none" id="resultEndBack"></img><br>
-		<img class="symbol" style="display: none" id="resultEndYellow"></img>
-		<img class="symbol" style="display: none" id="resultEndRed"></img>
-		<img class="symbol" style="display: none" id="resultEndGreen"></img>
-	</div>
+	
+	
+	<font class="subtitle">Tesla Gun Upgrades</font><br><br>
+	
+	<font class="text">The Lightning Tower Defense Step needs to be Completed before you can start the Battery Defense Steps</font><br><br>
+	
+	<font class="sub-subtitle">Hurricane</font><br><br>
+	
+	<font class="text">Take a Bomber to the stairs near Electric Cherry and have him blow open the Panel on the Wall</font><br>
+	<font class="text">Pick up the Battery and Place it into the Charger inside of the Electric Trap Hallway</font><br>
+	<font class="text">Kill 2 Wustlings using the Electric Trap at the same time twice, then pick it up and place it into the Right Socket on the Wall near the Tesla Barrel Fabricator</font><br>
+	<font class="text">Protect the Battery for 2 minutes, then Pick up the Barrel</font><br><br>
+	
+	<font class="sub-subtitle">Midnight</font><br><br>
+	
+	<font class="text">Obtain a Brenner Head, then Shine the Light onto the Statue on the Railing at the Cemetary, the pick up the Battery and Place it into the Charger</font><br>
+	<font class="text">Kill Zombies using the Mine Trap until the Battery is Charged, then pick it up and place it into the Socket to the Left of the Tesla Barrel Fabricator</font><br>
+	<font class="text">Protect the Battery for 2 minutes, then Pick up the Barrel</font><br><br>
+	
+	<font class="sub-subtitle">Bloodthirst</font><br><br>
+	
+	<font class="text">Shoot the Light near the Docks with the Tesla Gun, then with a Bullet Weapon</font><br>
+	<font class="text">Follow the light to the Morgue by shooting the Sparking Light Bulb with a Bullet Weapon</font><br>
+	<font class="text">Pick up the Battery and Place it in the Charger near the Wall</font><br>
+	<font class="text">Kill 5 Pests, 5 times to Charge the Battery, then pick it up and place it into the Left Socket on the Wall near the Tesla Core Fabricator</font><br>
+	<font class="text">Protect the Battery for 2 minutes, then Pick up the Core</font><br><br>
+	
+	<font class="sub-subtitle">Reaper</font><br><br>
+	<font class="text">Make a Wustling Slam the Panel in Sewers, then pick up the Battery and place it into the Charger</font><br>
+	<font class="text">Kill 2 Bombers using the Saw Trap at the same time twice to Charge the Battery, then pick it up and place it into the Right Socket on the Wall near the Tesla Core Fabricator</font><br>
+	<font class="text">Protect the Battery for 2 minutes, then Pick up the Core</font><br><br>
+	
+	
+	<font class="subtitle">Raven Sword</font><br><br>
+	
+	<font class="text">Turn on the Power Switches again, then Turn on the Third Switch in the Contol Room</font><br>
+	<font class="text">Shoot the Coils using the Tesla Gun to turn off the Lights</font><br>
+	<font class="text">Shine the UV light from the Brenner's Head onto 2 Panels on each side of the Command Room while the Lights are off</font><br>
+	<font class="text">Spin the Code Dials until all 5 have a Blue Fingerprint, then Pick up the Medallions</font><br>
+	<font class="text">Interact with the Medallion behinf the Hilt in the Altar Room to get the Raven Sword</font><br><br>
+	
+	
+	<font class="subtitle">Record Player</font><br><br>
+	
+	<font class="text">Interact with the Weather Vane on the Stone Wall near the Bar</font><br>
+	<font class="text">Find the Yellow Dot on a Wall in the Direction the Weather Vane is Pointing, then Shoot it with a Bullet Weapon</font><br>
+	<font class="text">Shoot the Coils on the Waterwheel from the Docks</font><br>
+	<font class="text">Place the Record in the Bar, then get a lot of Kills using the Raven Sword while the Song is Playing</font><font size="3" class="note">&nbsp; (Lasts around 1 minute)</font><br>
+	<font class="text">You're done getting kills when the Music starts playing Backwards and you hear a Ticking Sound</font><br>
+	<font class="text">Obtain all 4 Tesla Gun Upgrades, the count the Green Flashes on the left side of the Record Player in Order</font><font size="3" class="note">&nbsp; (The Red Light indicates the Start of the Sequence)</font><br>
+	<font class="text">Enter the Code into the Voice of God, starting from the Left</font><font size="3" class="note">&nbsp; ((You will know if it's correct if you can't interact witht he Voice of God again)</font><br>
+	<font class="text">Shoot the Ring above the Hilt with all 4 Tesla Guns</font><font size="3" class="note">&nbsp; (The Ring will Glow if done Correctly)</font><br><br>
+	
+	<font class="notice">**PREPARE FOR THE BOSS FIGHT**</font><br><br>
+	
+	<font class="text">Shoot the Hilt with the Tesla Gun, the Interact with it to Start the Boss Fight</font><br>
+	<font class="text">Shoot the Glowing Light on the Zeppelin, then fill the Ubershnelle</font><br>
+	<font class="text">Stun the Boss by Shooting him, the Attach the Battery to him</font><font size="3" class="note">&nbsp; (You will see a Text Popup when the Boss is Stunned/Unstunned)</font><br>
+	<font class="text">Wait for the Boss to Return to the Map, then Repeat the Process until you get a Cutscene</font><br>
+	<font class="text">Escort Klaus to the Sewer Trap</font><font size="3" class="note">&nbsp; (Stay near him for Infinite Ammo)</font>
 
 <!--Nav Template Start-->
 </div>
 <script>
 function selected(id) {
-	if (id == '1') {
-		document.getElementById('1').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_I_Selected.webp'
-		document.getElementById('2').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_II.webp'
-		document.getElementById('3').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_III.webp'
-		document.getElementById('4').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_IV.webp'
-		document.getElementById('5').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_V.webp'
-	} else {}
-	if (id == '2') {
-		document.getElementById('1').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_I.webp'
-		document.getElementById('2').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_II_Selected.webp'
-		document.getElementById('3').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_III.webp'
-		document.getElementById('4').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_IV.webp'
-		document.getElementById('5').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_V.webp'
-	} else {}
-	if (id == '3') {
-		document.getElementById('1').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_I.webp'
-		document.getElementById('2').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_II.webp'
-		document.getElementById('3').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_III_Selected.webp'
-		document.getElementById('4').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_IV.webp'
-		document.getElementById('5').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_V.webp'
-	} else {}
-	if (id == '4') {
-		document.getElementById('1').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_I.webp'
-		document.getElementById('2').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_II.webp'
-		document.getElementById('3').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_III.webp'
-		document.getElementById('4').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_IV_Selected.webp'
-		document.getElementById('5').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_V.webp'
-	} else {}
-	if (id == '5') {
-		document.getElementById('1').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_I.webp'
-		document.getElementById('2').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_II.webp'
-		document.getElementById('3').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_III.webp'
-		document.getElementById('4').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_IV.webp'
-		document.getElementById('5').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_V_Selected.webp'
-	} else {}
-	if (id == '6') {
-		document.getElementById('6').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_I_Selected.webp'
-		document.getElementById('7').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_II.webp'
-		document.getElementById('8').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_III.webp'
-		document.getElementById('9').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_IV.webp'
-		document.getElementById('10').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_V.webp'
-	} else {}
-	if (id == '7') {
-		document.getElementById('6').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_I.webp'
-		document.getElementById('7').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_II_Selected.webp'
-		document.getElementById('8').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_III.webp'
-		document.getElementById('9').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_IV.webp'
-		document.getElementById('10').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_V.webp'
-		} else
-	if (id == '8') {
-		document.getElementById('6').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_I.webp'
-		document.getElementById('7').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_II.webp'
-		document.getElementById('8').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_III_Selected.webp'
-		document.getElementById('9').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_IV.webp'
-		document.getElementById('10').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_V.webp'
-	} else {}
-	if (id == '9') {
-		document.getElementById('6').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_I.webp'
-		document.getElementById('7').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_II.webp'
-		document.getElementById('8').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_III.webp'
-		document.getElementById('9').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_IV_Selected.webp'
-		document.getElementById('10').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_V.webp'
-	} else {}
-	if (id == '10') {
-		document.getElementById('6').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_I.webp'
-		document.getElementById('7').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_II.webp'
-		document.getElementById('8').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_III.webp'
-		document.getElementById('9').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_IV.webp'
-		document.getElementById('10').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_V_Selected.webp'
-	} else {}
-	if (id == '11') {
-		document.getElementById('11').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_I_Selected.webp'
-		document.getElementById('12').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_II.webp'
-		document.getElementById('13').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_III.webp'
-		document.getElementById('14').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_IV.webp'
-		document.getElementById('15').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_V.webp'
-	} else {}
-	if (id == '12') {
-		document.getElementById('11').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_I.webp'
-		document.getElementById('12').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_II_Selected.webp'
-		document.getElementById('13').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_III.webp'
-		document.getElementById('14').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_IV.webp'
-		document.getElementById('15').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_V.webp'
-	} else {}
-	if (id == '13') {
-		document.getElementById('11').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_I.webp'
-		document.getElementById('12').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_II.webp'
-		document.getElementById('13').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_III_Selected.webp'
-		document.getElementById('14').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_IV.webp'
-		document.getElementById('15').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_V.webp'
-	} else {}
-	if (id == '14') {
-		document.getElementById('11').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_I.webp'
-		document.getElementById('12').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_II.webp'
-		document.getElementById('13').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_III.webp'
-		document.getElementById('14').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_IV_Selected.webp'
-		document.getElementById('15').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_V.webp'
-	} else {}
-	if (id == '15') {
-		document.getElementById('11').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_I.webp'
-		document.getElementById('12').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_II.webp'
-		document.getElementById('13').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_III.webp'
-		document.getElementById('14').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_IV.webp'
-		document.getElementById('15').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_V_Selected.webp'
-	} else {}
-	if (id == '16') {
-		document.getElementById('16').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_I_Selected.webp'
-		document.getElementById('17').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_II.webp'
-		document.getElementById('18').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_III.webp'
-		document.getElementById('19').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_IV.webp'
-		document.getElementById('20').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_V.webp'
-	} else {}
-	if (id == '17') {
-		document.getElementById('16').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_I.webp'
-		document.getElementById('17').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_II_Selected.webp'
-		document.getElementById('18').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_III.webp'
-		document.getElementById('19').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_IV.webp'
-		document.getElementById('20').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_V.webp'
-	} else {}
-	if (id == '18') {
-		document.getElementById('16').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_I.webp'
-		document.getElementById('17').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_II.webp'
-		document.getElementById('18').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_III_Selected.webp'
-		document.getElementById('19').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_IV.webp'
-		document.getElementById('20').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_V.webp'
-	} else {}
-	if (id == '19') {
-		document.getElementById('16').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_I.webp'
-		document.getElementById('17').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_II.webp'
-		document.getElementById('18').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_III.webp'
-		document.getElementById('19').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_IV_Selected.webp'
-		document.getElementById('20').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_V.webp'
-	} else {}
-	if (id == '20') {
-		document.getElementById('16').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_I.webp'
-		document.getElementById('17').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_II.webp'
-		document.getElementById('18').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_III.webp'
-		document.getElementById('19').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_IV.webp'
-		document.getElementById('20').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_V_Selected.webp'
-	} else {}
-	if (id == '21') {
-		document.getElementById('21').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_1_Selected.webp';
-		document.getElementById('22').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
-		document.getElementById('23').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
-		document.getElementById('24').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
-		document.getElementById('25').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
-		document.getElementById('26').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
-		document.getElementById('27').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
-		document.getElementById('28').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
-		document.getElementById('29').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
-		document.getElementById('30').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
-		document.getElementById('31').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
-		document.getElementById('32').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
-	} else {}
-	if (id == '22') {
-		document.getElementById('21').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
-		document.getElementById('22').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_2_Selected.webp';
-		document.getElementById('23').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
-		document.getElementById('24').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
-		document.getElementById('25').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
-		document.getElementById('26').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
-		document.getElementById('27').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
-		document.getElementById('28').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
-		document.getElementById('29').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
-		document.getElementById('30').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
-		document.getElementById('31').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
-		document.getElementById('32').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
-	} else {}
-	if (id == '23') {
-		document.getElementById('21').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
-		document.getElementById('22').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
-		document.getElementById('23').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_3_Selected.webp';
-		document.getElementById('24').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
-		document.getElementById('25').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
-		document.getElementById('26').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
-		document.getElementById('27').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
-		document.getElementById('28').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
-		document.getElementById('29').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
-		document.getElementById('30').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
-		document.getElementById('31').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
-		document.getElementById('32').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
-	} else {}
-	if (id == '24') {
-		document.getElementById('21').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
-		document.getElementById('22').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
-		document.getElementById('23').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
-		document.getElementById('24').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_4_Selected.webp';
-		document.getElementById('25').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
-		document.getElementById('26').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
-		document.getElementById('27').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
-		document.getElementById('28').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
-		document.getElementById('29').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
-		document.getElementById('30').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
-		document.getElementById('31').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
-		document.getElementById('32').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
-	} else {}
-	if (id == '25') {
-		document.getElementById('21').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
-		document.getElementById('22').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
-		document.getElementById('23').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
-		document.getElementById('24').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
-		document.getElementById('25').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_5_Selected.webp';
-		document.getElementById('26').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
-		document.getElementById('27').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
-		document.getElementById('28').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
-		document.getElementById('29').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
-		document.getElementById('30').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
-		document.getElementById('31').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
-		document.getElementById('32').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
-	} else {}
-	if (id == '26') {
-		document.getElementById('21').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
-		document.getElementById('22').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
-		document.getElementById('23').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
-		document.getElementById('24').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
-		document.getElementById('25').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
-		document.getElementById('26').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6_Selected.webp';
-		document.getElementById('27').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
-		document.getElementById('28').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
-		document.getElementById('29').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
-		document.getElementById('30').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
-		document.getElementById('31').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
-		document.getElementById('32').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
-	} else {}
-	if (id == '27') {
-		document.getElementById('21').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
-		document.getElementById('22').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
-		document.getElementById('23').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
-		document.getElementById('24').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
-		document.getElementById('25').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
-		document.getElementById('26').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
-		document.getElementById('27').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_7_Selected.webp';
-		document.getElementById('28').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
-		document.getElementById('29').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
-		document.getElementById('30').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
-		document.getElementById('31').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
-		document.getElementById('32').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
-	} else {}
-	if (id == '28') {
-		document.getElementById('21').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
-		document.getElementById('22').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
-		document.getElementById('23').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
-		document.getElementById('24').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
-		document.getElementById('25').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
-		document.getElementById('26').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
-		document.getElementById('27').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
-		document.getElementById('28').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_8_Selected.webp';
-		document.getElementById('29').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
-		document.getElementById('30').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
-		document.getElementById('31').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
-		document.getElementById('32').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
-	} else {}
-	if (id == '29') {
-		document.getElementById('21').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
-		document.getElementById('22').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
-		document.getElementById('23').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
-		document.getElementById('24').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
-		document.getElementById('25').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
-		document.getElementById('26').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
-		document.getElementById('27').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
-		document.getElementById('28').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
-		document.getElementById('29').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_9_Selected.webp';
-		document.getElementById('30').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
-		document.getElementById('31').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
-		document.getElementById('32').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
-	} else {}
-	if (id == '30') {
-		document.getElementById('21').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
-		document.getElementById('22').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
-		document.getElementById('23').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
-		document.getElementById('24').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
-		document.getElementById('25').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
-		document.getElementById('26').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
-		document.getElementById('27').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
-		document.getElementById('28').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
-		document.getElementById('29').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
-		document.getElementById('30').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_10_Selected.webp';
-		document.getElementById('31').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
-		document.getElementById('32').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
-	} else {}
-	if (id == '31') {
-		document.getElementById('21').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
-		document.getElementById('22').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
-		document.getElementById('23').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
-		document.getElementById('24').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
-		document.getElementById('25').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
-		document.getElementById('26').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
-		document.getElementById('27').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
-		document.getElementById('28').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
-		document.getElementById('29').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
-		document.getElementById('30').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
-		document.getElementById('31').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_11_Selected.webp';
-		document.getElementById('32').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_12.webp';
-	} else {}
-	if (id == '32') {
-		document.getElementById('21').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_1.webp';
-		document.getElementById('22').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_2.webp';
-		document.getElementById('23').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_3.webp';
-		document.getElementById('24').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_4.webp';
-		document.getElementById('25').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_5.webp';
-		document.getElementById('26').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6.webp';
-		document.getElementById('27').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_7.webp';
-		document.getElementById('28').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_8.webp';
-		document.getElementById('29').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_9.webp';
-		document.getElementById('30').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_10.webp';
-		document.getElementById('31').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_11.webp';
-		document.getElementById('32').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_12_Selected.webp';
-	} else {}
-	if (id == '33') {
-		document.getElementById('33').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_1_Selected.webp';
-		document.getElementById('34').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_2.webp';
-		document.getElementById('35').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_3.webp';
-		document.getElementById('36').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_4.webp';
-		document.getElementById('37').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_5.webp';
-		document.getElementById('38').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6.webp';
-		document.getElementById('39').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_7.webp';
-		document.getElementById('40').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_8.webp';
-		document.getElementById('41').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_9.webp';
-		document.getElementById('42').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_10.webp';
-		document.getElementById('43').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_11.webp';
-		document.getElementById('44').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_12.webp';
-	} else {}
-	if (id == '34') {
-		document.getElementById('33').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_1.webp';
-		document.getElementById('34').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_2_Selected.webp';
-		document.getElementById('35').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_3.webp';
-		document.getElementById('36').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_4.webp';
-		document.getElementById('37').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_5.webp';
-		document.getElementById('38').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6.webp';
-		document.getElementById('39').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_7.webp';
-		document.getElementById('40').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_8.webp';
-		document.getElementById('41').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_9.webp';
-		document.getElementById('42').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_10.webp';
-		document.getElementById('43').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_11.webp';
-		document.getElementById('44').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_12.webp';
-	} else {}
-	if (id == '35') {
-		document.getElementById('33').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_1.webp';
-		document.getElementById('34').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_2.webp';
-		document.getElementById('35').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_3_Selected.webp';
-		document.getElementById('36').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_4.webp';
-		document.getElementById('37').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_5.webp';
-		document.getElementById('38').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6.webp';
-		document.getElementById('39').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_7.webp';
-		document.getElementById('40').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_8.webp';
-		document.getElementById('41').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_9.webp';
-		document.getElementById('42').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_10.webp';
-		document.getElementById('43').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_11.webp';
-		document.getElementById('44').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_12.webp';
-	} else {}
-	if (id == '36') {
-		document.getElementById('33').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_1.webp';
-		document.getElementById('34').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_2.webp';
-		document.getElementById('35').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_3.webp';
-		document.getElementById('36').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_4_Selected.webp';
-		document.getElementById('37').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_5.webp';
-		document.getElementById('38').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6.webp';
-		document.getElementById('39').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_7.webp';
-		document.getElementById('40').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_8.webp';
-		document.getElementById('41').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_9.webp';
-		document.getElementById('42').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_10.webp';
-		document.getElementById('43').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_11.webp';
-		document.getElementById('44').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_12.webp';
-	} else {}
-	if (id == '37') {
-		document.getElementById('33').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_1.webp';
-		document.getElementById('34').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_2.webp';
-		document.getElementById('35').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_3.webp';
-		document.getElementById('36').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_4.webp';
-		document.getElementById('37').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_5_Selected.webp';
-		document.getElementById('38').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6.webp';
-		document.getElementById('39').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_7.webp';
-		document.getElementById('40').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_8.webp';
-		document.getElementById('41').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_9.webp';
-		document.getElementById('42').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_10.webp';
-		document.getElementById('43').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_11.webp';
-		document.getElementById('44').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_12.webp';
-	} else {}
-	if (id == '38') {
-		document.getElementById('33').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_1.webp';
-		document.getElementById('34').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_2.webp';
-		document.getElementById('35').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_3.webp';
-		document.getElementById('36').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_4.webp';
-		document.getElementById('37').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_5.webp';
-		document.getElementById('38').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6_Selected.webp';
-		document.getElementById('39').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_7.webp';
-		document.getElementById('40').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_8.webp';
-		document.getElementById('41').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_9.webp';
-		document.getElementById('42').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_10.webp';
-		document.getElementById('43').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_11.webp';
-		document.getElementById('44').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_12.webp';
-	} else {}
-	if (id == '39') {
-		document.getElementById('33').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_1.webp';
-		document.getElementById('34').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_2.webp';
-		document.getElementById('35').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_3.webp';
-		document.getElementById('36').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_4.webp';
-		document.getElementById('37').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_5.webp';
-		document.getElementById('38').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6.webp';
-		document.getElementById('39').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_7_Selected.webp';
-		document.getElementById('40').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_8.webp';
-		document.getElementById('41').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_9.webp';
-		document.getElementById('42').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_10.webp';
-		document.getElementById('43').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_11.webp';
-		document.getElementById('44').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_12.webp';
-	} else {}
-	if (id == '40') {
-		document.getElementById('33').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_1.webp';
-		document.getElementById('34').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_2.webp';
-		document.getElementById('35').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_3.webp';
-		document.getElementById('36').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_4.webp';
-		document.getElementById('37').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_5.webp';
-		document.getElementById('38').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6.webp';
-		document.getElementById('39').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_7.webp';
-		document.getElementById('40').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_8_Selected.webp';
-		document.getElementById('41').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_9.webp';
-		document.getElementById('42').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_10.webp';
-		document.getElementById('43').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_11.webp';
-		document.getElementById('44').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_12.webp';
-	} else {}
-	if (id == '41') {
-		document.getElementById('33').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_1.webp';
-		document.getElementById('34').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_2.webp';
-		document.getElementById('35').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_3.webp';
-		document.getElementById('36').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_4.webp';
-		document.getElementById('37').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_5.webp';
-		document.getElementById('38').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6.webp';
-		document.getElementById('39').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_7.webp';
-		document.getElementById('40').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_8.webp';
-		document.getElementById('41').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_9_Selected.webp';
-		document.getElementById('42').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_10.webp';
-		document.getElementById('43').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_11.webp';
-		document.getElementById('44').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_12.webp';
-	} else {}
-	if (id == '42') {
-		document.getElementById('33').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_1.webp';
-		document.getElementById('34').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_2.webp';
-		document.getElementById('35').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_3.webp';
-		document.getElementById('36').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_4.webp';
-		document.getElementById('37').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_5.webp';
-		document.getElementById('38').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6.webp';
-		document.getElementById('39').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_7.webp';
-		document.getElementById('40').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_8.webp';
-		document.getElementById('41').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_9.webp';
-		document.getElementById('42').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_10_Selected.webp';
-		document.getElementById('43').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_11.webp';
-		document.getElementById('44').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_12.webp';
-	} else {}
-	if (id == '43') {
-		document.getElementById('33').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_1.webp';
-		document.getElementById('34').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_2.webp';
-		document.getElementById('35').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_3.webp';
-		document.getElementById('36').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_4.webp';
-		document.getElementById('37').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_5.webp';
-		document.getElementById('38').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6.webp';
-		document.getElementById('39').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_7.webp';
-		document.getElementById('40').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_8.webp';
-		document.getElementById('41').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_9.webp';
-		document.getElementById('42').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_10.webp';
-		document.getElementById('43').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_11_Selected.webp';
-		document.getElementById('44').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_12.webp';
-	} else {}
-	if (id == '44') {
-		document.getElementById('33').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_1.webp';
-		document.getElementById('34').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_2.webp';
-		document.getElementById('35').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_3.webp';
-		document.getElementById('36').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_4.webp';
-		document.getElementById('37').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_5.webp';
-		document.getElementById('38').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6.webp';
-		document.getElementById('39').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_7.webp';
-		document.getElementById('40').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_8.webp';
-		document.getElementById('41').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_9.webp';
-		document.getElementById('42').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_10.webp';
-		document.getElementById('43').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_11.webp';
-		document.getElementById('44').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_12_Selected.webp';
-	} else {}
-	if (id == '45') {
-		document.getElementById('45').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_1_Selected.webp';
-		document.getElementById('46').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_2.webp';
-		document.getElementById('47').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_3.webp';
-		document.getElementById('48').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_4.webp';
-		document.getElementById('49').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_5.webp';
-		document.getElementById('50').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6.webp';
-		document.getElementById('51').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_7.webp';
-		document.getElementById('52').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_8.webp';
-		document.getElementById('53').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_9.webp';
-		document.getElementById('54').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_10.webp';
-		document.getElementById('55').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_11.webp';
-		document.getElementById('56').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_12.webp';
-	} else {}
-	if (id == '46') {
-		document.getElementById('45').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_1.webp';
-		document.getElementById('46').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_2_Selected.webp';
-		document.getElementById('47').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_3.webp';
-		document.getElementById('48').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_4.webp';
-		document.getElementById('49').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_5.webp';
-		document.getElementById('50').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6.webp';
-		document.getElementById('51').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_7.webp';
-		document.getElementById('52').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_8.webp';
-		document.getElementById('53').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_9.webp';
-		document.getElementById('54').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_10.webp';
-		document.getElementById('55').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_11.webp';
-		document.getElementById('56').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_12.webp';
-	} else {}
-	if (id == '47') {
-		document.getElementById('45').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_1.webp';
-		document.getElementById('46').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_2.webp';
-		document.getElementById('47').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_3_Selected.webp';
-		document.getElementById('48').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_4.webp';
-		document.getElementById('49').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_5.webp';
-		document.getElementById('50').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6.webp';
-		document.getElementById('51').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_7.webp';
-		document.getElementById('52').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_8.webp';
-		document.getElementById('53').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_9.webp';
-		document.getElementById('54').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_10.webp';
-		document.getElementById('55').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_11.webp';
-		document.getElementById('56').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_12.webp';
-	} else {}
-	if (id == '48') {
-		document.getElementById('45').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_1.webp';
-		document.getElementById('46').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_2.webp';
-		document.getElementById('47').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_3.webp';
-		document.getElementById('48').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_4_Selected.webp';
-		document.getElementById('49').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_5.webp';
-		document.getElementById('50').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6.webp';
-		document.getElementById('51').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_7.webp';
-		document.getElementById('52').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_8.webp';
-		document.getElementById('53').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_9.webp';
-		document.getElementById('54').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_10.webp';
-		document.getElementById('55').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_11.webp';
-		document.getElementById('56').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_12.webp';
-	} else {}
-	if (id == '49') {
-		document.getElementById('45').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_1.webp';
-		document.getElementById('46').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_2.webp';
-		document.getElementById('47').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_3.webp';
-		document.getElementById('48').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_4.webp';
-		document.getElementById('49').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_5_Selected.webp';
-		document.getElementById('50').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6.webp';
-		document.getElementById('51').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_7.webp';
-		document.getElementById('52').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_8.webp';
-		document.getElementById('53').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_9.webp';
-		document.getElementById('54').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_10.webp';
-		document.getElementById('55').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_11.webp';
-		document.getElementById('56').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_12.webp';
-	} else {}
-	if (id == '50') {
-		document.getElementById('45').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_1.webp';
-		document.getElementById('46').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_2.webp';
-		document.getElementById('47').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_3.webp';
-		document.getElementById('48').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_4.webp';
-		document.getElementById('49').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_5.webp';
-		document.getElementById('50').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6_Selected.webp';
-		document.getElementById('51').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_7.webp';
-		document.getElementById('52').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_8.webp';
-		document.getElementById('53').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_9.webp';
-		document.getElementById('54').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_10.webp';
-		document.getElementById('55').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_11.webp';
-		document.getElementById('56').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_12.webp';
-	} else {}
-	if (id == '51') {
-		document.getElementById('45').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_1.webp';
-		document.getElementById('46').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_2.webp';
-		document.getElementById('47').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_3.webp';
-		document.getElementById('48').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_4.webp';
-		document.getElementById('49').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_5.webp';
-		document.getElementById('50').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6.webp';
-		document.getElementById('51').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_7_Selected.webp';
-		document.getElementById('52').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_8.webp';
-		document.getElementById('53').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_9.webp';
-		document.getElementById('54').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_10.webp';
-		document.getElementById('55').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_11.webp';
-		document.getElementById('56').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_12.webp';
-	} else {}
-	if (id == '52') {
-		document.getElementById('45').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_1.webp';
-		document.getElementById('46').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_2.webp';
-		document.getElementById('47').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_3.webp';
-		document.getElementById('48').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_4.webp';
-		document.getElementById('49').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_5.webp';
-		document.getElementById('50').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6.webp';
-		document.getElementById('51').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_7.webp';
-		document.getElementById('52').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_8_Selected.webp';
-		document.getElementById('53').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_9.webp';
-		document.getElementById('54').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_10.webp';
-		document.getElementById('55').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_11.webp';
-		document.getElementById('56').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_12.webp';
-	} else {}
-	if (id == '53') {
-		document.getElementById('45').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_1.webp';
-		document.getElementById('46').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_2.webp';
-		document.getElementById('47').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_3.webp';
-		document.getElementById('48').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_4.webp';
-		document.getElementById('49').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_5.webp';
-		document.getElementById('50').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6.webp';
-		document.getElementById('51').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_7.webp';
-		document.getElementById('52').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_8.webp';
-		document.getElementById('53').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_9_Selected.webp';
-		document.getElementById('54').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_10.webp';
-		document.getElementById('55').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_11.webp';
-		document.getElementById('56').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_12.webp';
-	} else {}
-	if (id == '54') {
-		document.getElementById('45').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_1.webp';
-		document.getElementById('46').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_2.webp';
-		document.getElementById('47').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_3.webp';
-		document.getElementById('48').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_4.webp';
-		document.getElementById('49').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_5.webp';
-		document.getElementById('50').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6.webp';
-		document.getElementById('51').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_7.webp';
-		document.getElementById('52').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_8.webp';
-		document.getElementById('53').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_9.webp';
-		document.getElementById('54').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_10_Selected.webp';
-		document.getElementById('55').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_11.webp';
-		document.getElementById('56').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_12.webp';
-	} else {}
-	if (id == '55') {
-		document.getElementById('45').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_1.webp';
-		document.getElementById('46').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_2.webp';
-		document.getElementById('47').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_3.webp';
-		document.getElementById('48').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_4.webp';
-		document.getElementById('49').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_5.webp';
-		document.getElementById('50').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6.webp';
-		document.getElementById('51').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_7.webp';
-		document.getElementById('52').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_8.webp';
-		document.getElementById('53').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_9.webp';
-		document.getElementById('54').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_10.webp';
-		document.getElementById('55').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_11_Selected.webp';
-		document.getElementById('56').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_12.webp';
-	} else {}
-	if (id == '56') {
-		document.getElementById('45').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_1.webp';
-		document.getElementById('46').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_2.webp';
-		document.getElementById('47').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_3.webp';
-		document.getElementById('48').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_4.webp';
-		document.getElementById('49').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_5.webp';
-		document.getElementById('50').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6.webp';
-		document.getElementById('51').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_7.webp';
-		document.getElementById('52').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_8.webp';
-		document.getElementById('53').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_9.webp';
-		document.getElementById('54').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_10.webp';
-		document.getElementById('55').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_11.webp';
-		document.getElementById('56').src = '../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_12_Selected.webp';
-	} else {}
+	if (parseInt(id) >= 1 && parseInt(id) <= 5) {
+		for(i = 1; i <= 5; i++) {
+			document.getElementById(i).className = 'symbol';
+		}
+		document.getElementById(parseInt(id)).className = 'symbol selected';
+	}
+	if (parseInt(id) >= 6 && parseInt(id) <= 10) {
+		for(i = 6; i <= 10; i++) {
+			document.getElementById(i).className = 'symbol';
+		}
+		document.getElementById(parseInt(id)).className = 'symbol selected';
+	}
+	if (parseInt(id) >= 11 && parseInt(id) <= 15) {
+		for(i = 11; i <= 15; i++) {
+			document.getElementById(i).className = 'symbol';
+		}
+		document.getElementById(parseInt(id)).className = 'symbol selected';
+	}
+	if (parseInt(id) >= 16 && parseInt(id) <= 20) {
+		for(i = 16; i <= 20; i++) {
+			document.getElementById(i).className = 'symbol';
+		}
+		document.getElementById(parseInt(id)).className = 'symbol selected';
+	}
+	if (parseInt(id) >= 21 && parseInt(id) <= 32) {
+		for(i = 21; i <= 32; i++) {
+			document.getElementById(i).className = 'symbol';
+		}
+		document.getElementById(parseInt(id)).className = 'symbol selected';
+	}
+	if (parseInt(id) >= 33 && parseInt(id) <= 44) {
+		for(i = 33; i <= 44; i++) {
+			document.getElementById(i).className = 'symbol';
+		}
+		document.getElementById(parseInt(id)).className = 'symbol selected';
+	}
+	if (parseInt(id) >= 45) {
+		for(i = 45; i <= 56; i++) {
+			document.getElementById(i).className = 'symbol';
+		}
+		document.getElementById(parseInt(id)).className = 'symbol selected';
+	}
 }
-</script>
-<script>
-var Dome;
+
 function chooseDome(choiceDome){
-	Dome = "../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/" + choiceDome + "_Selected.webp";
+	var Dome = "../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/" + choiceDome + "_Selected.webp";
 }
-</script>
-<script>
-var Out;
+
 function chooseOut(choiceOut){
-	Out = "../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/" + choiceOut + "_Selected.webp";
+	var Out = "../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/" + choiceOut + "_Selected.webp";
 }
-</script>
-<script>
-var Crack;
+
 function chooseCrack(choiceCrack){
-	Crack = "../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/" + choiceCrack + "_Selected.webp";
+	var Crack = "../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/" + choiceCrack + "_Selected.webp";
 }
-</script>
-<script>
-var Back;
+
 function chooseBack(choiceBack){
-	Back = "../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/" + choiceBack + "_Selected.webp";
+	var Back = "../../Images/Zombies/World_War_2/The_Final_Reich/Icons/Paintings/" + choiceBack + "_Selected.webp";
+}
+
+function chooseYellow(choiceYellow) {
+	var Yellow = "../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/" + choiceYellow + "_Selected.webp";
+}
+
+function chooseRed(choiceRed) {
+	var Red = "../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/" + choiceRed + "_Selected.webp";
+}
+
+function chooseGreen(choiceGreen) {
+	var Green = "../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/" + choiceGreen + "_Selected.webp";
 }
 </script>
-<script>
-var Yellow;
-function chooseYellow(choiceYellow){
-	Yellow = "../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/" + choiceYellow + "_Selected.webp";
-}
-</script>
-<script>
-var Red;
-function chooseRed(choiceRed){
-	Red = "../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/" + choiceRed + "_Selected.webp";
-}
-</script>
-<script>
-var Green;
-function chooseGreen(choiceGreen){
-	Green = "../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/" + choiceGreen + "_Selected.webp";
-}
-</script>
-<script>
-function allResults() {
-	document.getElementById("resultEndDome").src = Dome;
-	document.getElementById("resultEndOut").src = Out;
-	document.getElementById("resultEndCrack").src = Crack;
-	document.getElementById("resultEndBack").src = Back;
-	document.getElementById("resultEndYellow").src = Yellow;
-	document.getElementById("resultEndRed").src = Red;
-	document.getElementById("resultEndGreen").src = Green;
-	document.getElementById("resultEndDome").style = "display: inline-block";
-	document.getElementById("resultEndOut").style = "display: inline-block";
-	document.getElementById("resultEndCrack").style = "display: inline-block";
-	document.getElementById("resultEndBack").style = "display: inline-block";
-	document.getElementById("resultEndYellow").style = "display: inline-block";
-	document.getElementById("resultEndRed").style = "display: inline-block";
-	document.getElementById("resultEndGreen").style = "display: inline-block";
-}
-</script>
-<script>
-function setVars() {
-	Dome = "../../Images/Zombies/World_War_2/The_Final_Reich/Dome_Bird/Dome_I_Selected.webp"
-	Out = "../../Images/Zombies/World_War_2/The_Final_Reich/Out_Bird/Out_I_Selected.webp"
-	Crack = "../../Images/Zombies/World_War_2/The_Final_Reich/Crack_Bird/Crack_I_Selected.webp"
-	Back = "../../Images/Zombies/World_War_2/The_Final_Reich/Back_Bird/Back_I_Selected.webp"
-	Yellow = "../../Images/Zombies/World_War_2/The_Final_Reich/Yellow_Top/Yellow_Top_6_Selected.webp"
-	Red = "../../Images/Zombies/World_War_2/The_Final_Reich/Red_Top/Red_Top_6_Selected.webp"
-	Green = "../../Images/Zombies/World_War_2/The_Final_Reich/Green_Top/Green_Top_6_Selected.webp"
-}
-</script>
+<script src="../ImageModal.js"></script>
+<script src="../ZombiesEEs.js"></script>
 <script src="../../GlobalNavbar.js"></script>
 <script src="../../GlobalNavbarFixer.js"></script>
 </body>
